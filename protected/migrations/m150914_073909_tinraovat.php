@@ -11,9 +11,10 @@ class m150914_073909_tinraovat extends CDbMigration {
             'tinh' => "VARCHAR(30)",
             'tieu_de_tin' => "VARCHAR(100)",
             'noi_dung' => "TEXT",
+            'anh1' => "VARCHAR(200)",
+            'anh1' => "VARCHAR(200)",
+            'loai_xe' => "VARCHAR(40)",
             'ngay_dang' => "DATETIME",
-            'anh1' => "VARCHAR(200)",
-            'anh1' => "VARCHAR(200)",
             'ma_loai_tin' => "INT(11) NOT NULL"
         ));
 
