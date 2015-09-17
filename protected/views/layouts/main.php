@@ -102,7 +102,7 @@
                         <div class="row">
                             <section id="search">
                                 <div class="col-md-12">
-                                    <h6>Tìm kiếm khách hàng</h6>
+                                    <h6>Tìm kiếm khách</h6>
                                     <form action="" method="" name="frm" class="form-horizontal">
                                         <select>
                                             <option>Chọn nơi đi</option>
