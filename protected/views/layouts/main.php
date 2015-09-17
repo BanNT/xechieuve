@@ -22,80 +22,41 @@
                     <div class="col-md-12">
                         <header id="header"><!--BEGIN header-->
                             <div class="row">
-                                <div id="logo" class="col-md-12">
-                                    <h1>LOGO</h1>
-                                </div>
-                                <div id="menu" class="col-md-12">
-                                    <ul class="list-unstyled text-center">
-                                        <li class="selected"><a href="index.html">Trang chủ</a></li>
-                                        <li><a href="xetimkhach.html">Xe tìm khách</a></li>
-                                        <li><a href="khachtimxe.html">Khách tìm xe</a></li>
-                                        <li><a href="">Tin tức</a></li>
-                                        <li><a href="">Trợ giúp</a></li>
-                                        <li><a href="">Rao vặt</a></li>
-                                        <li><a href="">Liên hệ</a></li>
-                                        <li><a href="">Đăng tin</a></li>
-                                    </ul>
-                                </div> 
+                                <section id="logo">
+                                    <?php $this->widget('application.widgets.logo') ?>
+                                </section><!--end logo-->
+                                <section id="menu">
+                                    <div class="col-md-12">
+                                        <ul class="list-unstyled text-center">
+                                            <li class="selected"><a href="index.html">Trang chủ</a></li>
+                                            <li><a href="xetimkhach.html">Xe tìm khách</a></li>
+                                            <li><a href="khachtimxe.html">Khách tìm xe</a></li>
+                                            <li><a href="">Tin tức</a></li>
+                                            <li><a href="">Trợ giúp</a></li>
+                                            <li><a href="">Rao vặt</a></li>
+                                            <li><a href="">Liên hệ</a></li>
+                                            <li><a href="">Đăng tin</a></li>
+                                        </ul>
+                                    </div>
+                                </section><!--end menu-->
                             </div>
-                        </header><!--END header-->
+                        </header><!--end header-->
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         <aside id="coll-left">
+                            <!--filter-->
                             <section id="filter">
-                                <div class="row">
-                                    <div class="col-md-12 headbox">
-                                        <p class="headbox">Lọc theo loại xe</p>
-                                    </div>
-                                    <div class="col-md-12 box boxfilter">
-                                        <ul class="list-unstyled" >
-                                            <div class="row">
-                                                <li><a href="">Xe tải Suzuki 12 tấn</a></li>
-                                                <li><a href="">Xe rơ moóc</a></li>
-                                                <li><a href="">Xe container</a></li>
-                                                <li><a href="">Xe ba gác</a></li>
-                                            </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section><!-- end filter-->
+                                <?php $this->widget('application.widgets.filter'); ?>
+                            </section><!--end filter-->
                             <section id="support">
-                                <div class="row">
-                                    <div class="col-md-12 headbox">
-                                        <p class="headbox">Hỗ trợ trực tuyến</p>
-                                    </div>
-                                    <div class="col-md-12 box">
-                                        <ul class="list-unstyled">
-                                            <div class="row">
-                                                <li><p>Hot line: <a href="">0936 212 856</a></p></li>
-                                                <li><p>Yahoo: <a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/yahoo.png" alt="skype" /></a></p></li>
-                                                <li><p>Skype: <a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/skype.png" alt="skype" /></a></p></li>
-                                                <li><p>Email: <a href="">Contact@hatthaco683.vn</a></p></li>
-                                            </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section><!-- end support-->
+                                <?php $this->widget('application.widgets.support'); ?>
+                            </section><!--end support-->
                             <section id="partner">
-                                <div class="row">
-                                    <div class="col-md-12 headbox">
-                                        <p class="headbox">Đối tác khách hàng</p>
-                                    </div>
-                                    <div class="col-md-12 box">
-                                        <ul class="list-unstyled text-center">
-                                            <div class="row">
-                                                <a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/doitac1.png" alt="skype" /></a>
-                                                <a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/doitac2.png" alt="skype" /></a>
-                                                <a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/doitac3.png" alt="skype" /></a>
-                                                <a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/doitac4.png" alt="skype" /></a>
-                                                <a href=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/doitac5.png" alt="skype" /></a>    
-                                            </div>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section><!-- end partner-->
+                                <?php $this->widget('application.widgets.partner'); ?>
+                            </section><!--end partner-->
+
                         </aside><!--end col-left-->
                     </div>
                     <div class="col-md-9">
@@ -124,8 +85,9 @@
                                 </div>
                             </section><!--end search-->
                             <section id="slide">
-                                <img class="img-responsive" src="<?php echo Yii::app()->request->baseUrl; ?>/images/slide.png" title="slide" />
+                                <?php $this->widget('application.widgets.slide'); ?>
                             </section><!--end slide-->
+
                             <section id="table-car">
                                 <div class="pribox">Xe tìm khách</div>    
                                 <div class="table-responsive">
