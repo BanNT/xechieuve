@@ -1,45 +1,42 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+ul{
+    margin: 0;
+    padding: 0;
 }
-ul
-{
-    padding:0;
-    margin:0;
-    list-style:none;
+
+
+@media (min-width: 1170px) {
+    .wrapper{
+        padding: 0 105px;
+    }
 }
-#main {
-    width: 960px;
-    margin: 0 auto;
+/*----------------------------------------------------------------------------*/
+/*--------------------------------begin header--------------------------------*/
+#header{
+    margin-bottom: 9px;
 }
-/*** HEADER ***/
-header {
+
+#header #logo{
     background: #0063a1;
-    width: 960px;
     height: 135px;
 }
-header h1 {
-    font-size: 40px;
-    text-transform: uppercase;
-    margin: 40px 30px;
-    color: #fff;
-}
-nav {
+
+/*-----------begin menu------------*/
+#menu {
     background-image: url(../images/nav.png);
-    width: 960px;
     height: 40px;
     border-top: 1px solid #fff;
 }
-nav ul {
+#menu ul {
     float: left;
 }
-nav ul li {
+
+#menu ul li {
     float: left;
     width: auto;
     height: auto;
     line-height: 40px;
 }
-nav ul li a {
+#menu ul li a {
     position: relative;
     padding: 12px 0;
     margin-left: 40px;
@@ -48,14 +45,14 @@ nav ul li a {
     font-size: 12px;
     font-weight:600;
 }
-nav ul li:hover>a, nav ul li.selected a
+#menu ul li:hover>a, #menu ul li.selected a
 {
     background: #0063a1;
     color: #fff;
     top: 0;
     text-decoration: none;
 }
-nav ul li:hover>a:after, nav ul li.selected a:after {
+#menu ul li:hover>a:after, #menu ul li.selected a:after {
     content: "";
     position: absolute;
     right: auto;
@@ -63,7 +60,7 @@ nav ul li:hover>a:after, nav ul li.selected a:after {
     border-bottom: 38px solid transparent;
     border-left: 30px solid #0063a1;
 }
-nav ul li:hover>a:before,  nav ul li.selected a:before {
+#menu ul li:hover>a:before,  #menu ul li.selected a:before {
     content: "";
     border-top: 38px solid transparent;
     border-right: 30px solid #0063a1;
@@ -71,25 +68,17 @@ nav ul li:hover>a:before,  nav ul li.selected a:before {
     bottom: 0;
     left: -30px
 }
-/*** CONTENT ***/							
-#content {
-    clear:both;
-    width: 960px;
-    height: auto;
-}
-/*** SIDEBAR ***/
-aside {
-    float: left;
-    width: 240px;
-    height: auto;
-    margin: 0 25px 0 -16px;
-}
-.nav {
-    width: 240px;
-    border: 1px solid #ccc;
-}
-.headbox {
-    width: 238px;
+/*-------------end menu--------------*/
+
+/*-------------------------------end header-----------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*------------------------------begin coll-left-------------------------------*/
+
+
+#coll-left .headbox {
     height: 40px;
     background: #6d6d6d;
     text-align: center;
@@ -97,187 +86,167 @@ aside {
     text-transform: uppercase;
     color: #fff;
 }
-.nav ul {
-    width: auto;
-    height: auto;
-    float: left;
+
+#coll-left .box{
+    border: 1px #ccc solid;
+    text-indent: 28px;
+    line-height: 40px;
 }
-.nav ul li {
-    width: 238px;
+
+#coll-left .boxfilter li{
+    border-bottom: 1px #ccc solid;
     height: 45px;
-    line-height: 45px;
-    padding: 0 20px;
-    border-bottom: 1px solid #ccc;
+    font-weight:590;
 }
-.nav ul li a {
-    text-decoration: none;
+
+#coll-left #support,#coll-left #partner{
+    margin-top: 22px;
 }
-.support {
-    width: 240px;
-    margin-top: 30px;
+
+
+#coll-left #partner img{
+    margin-top: 37px;
 }
-.support ul li {
-    border: none;
+/*-------------------------------end coll-left--------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*--------------------------------begin search--------------------------------*/
+
+
+#search{
+    margin-bottom: 15px;
 }
-.support ul li p {
-    text-transform: uppercase;
-    margin-left: -5px;
-    color: #0063a1;
-}
-.support ul li a {
-    text-decoration: none;
-    padding: 0 0 0 5px;
-    font-weight: normal;
-    text-transform: none;
-    color: #999;
-}
-.partner {
-    width: 240px;
-    margin-top: 30px;
-    border: 1px solid #ccc;
-}
-.partner ul li {
-    border: none;
-    padding: 10px 20px;
-}
-.partner ul li a {
-    text-align: center;
-}
-/*** PRIMARY ***/
-section {
-    float: left;
-    width: 710px;
-    height: 1000px;
-}
-.search {
-    float: left;
-    width: 710px;
-    height: 50px;
-}
-.r1 h6 {
+
+#search h6 {
     font-weight: bold;
+    float: left;
     text-transform: uppercase;
-    float: left;
     color: red;
-    padding: 0 10px;
 }
-.r2 {
-    float: left;
+#search form{
+    float: right;
+    margin-right: -15px;
 }
-.r2 select {
-    width: 170px;
-    padding: 5px 20px 5px 5px;
+
+#search form select {
+    width: 167px;
+    border: 1px #b4b3b3 solid;
     color: #0163a2;
-    border: #333;
+    height: 30px;
     background: url(../images/select.png)no-repeat right #dad8d9;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin-bottom: 11px;
 }
-.r2 button {
+#search form input[type="submit"] {
     width: 90px;
     padding: 5px;
     background: #0063a1;
-    border-radius: 0;
     color: #fff;
-    border: none;
-    border: #333
+    border:none;
+    margin-bottom: 11px; 
+
 }
-.r2 input[type=date] 
+#search form input[type=date] 
 {
-    width: 120px;
+    width: 124px;
     background: url(../images/n.png)no-repeat right #dad8d9;
     height: 30px;
     color: #0163a2;
-    border: #333;
+    border: 1px #b4b3b3 solid;
 }
-.r2 input[type=date]:hover
-{
-    background:#dad8d9;
+/*---------------------------------end search---------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*-------------------------------begin slide----------------------------------*/
+
+#slide{
+    margin: 5px 0 8px 10px;
 }
-.text
-{
-    margin-top:10px;
-    font-weight:600;
-    color:#0063A1;
+
+#table-car,#table-customer{
+    border: 1px solid #ccc;
 }
-.text span
-{
-    color:#FC1111;
+
+@media (min-width: 1170px) {
+    #slide,#table-car,#table-customer{
+        width: 710px !important;
+        margin-left: 10px;
+    }
+
+
 }
-.slide
-{
-    margin:0 0 10px 0;
-    padding:0;
-    width: 710px;
+#table-customer{
+    margin-top: 8px;
 }
 .pribox {
-    width: 710px;
     background: #0063a1;
     height: 40px;
-}
-.pribox p {
     text-transform: uppercase;
     color: #fff;
     line-height: 40px;
     padding: 0 20px;
 }
-.boxpage
-{
-    width:710px;
-}
-.boxpage span
-{
-    font-size:14px;
-    padding-right:10px;
-    float:right;
-}
-.boxpage .page
-{
-    float:right;
-}
-.boxpage .page li
-{
-    float:left;
-    height:20px;
-    width:20px;
-    text-align:center;
-    line-height:20px;
-    background:#DAD9D9;
-    margin:0 10px;
-}
-.boxpage .page li a
-{
-    text-decoration:none;
-    color:#333;
-    display:block;
-}
-.boxpage .page li a:hover,.boxpage .page li.selected a
-{
-    background:#0063A1;
-    color:#fff;
-}
-/*** FOOTER ***/
-footer {
+
+/*--------------------------------end content---------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*-------------------------------begin footer---------------------------------*/
+#footer .row{
     margin-top: 10px;
-    width: 960px;
-    height: 170px;
     border-top: 5px solid #6d6d6d;
     background: #f0f0f0;
 }
-footer .box {
+
+#footer .box {
     width: 320px;
-    height: 150px;
 }
-footer .box h5 {
+#footer .box h5 {
     color: #0063A1;
     font-weight: bold;
     text-transform: uppercase;
 }
-footer .box h6 {
+#footer .box h6 {
     color: #D9201E;
     font-weight: bold;
 }
-footer .box p a {
+#footer .box p a {
     color: #333;
+}
+
+/*-------------------------------end footer-----------------------------------*/
+/*----------------------------------------------------------------------------*/
+////////////////////////////////////////////////////////////////////////////////
+.paginator{
+    padding-bottom: 30px;
+}
+
+.paginator li a{
+    height:20px;
+    width:20px;
+    text-decoration:none;
+    color:#333;
+    display:block;
+    text-align:center;
+    background:#DAD9D9;
+}
+
+.paginator  li a:hover,.paginator  li.selected a
+{
+    background:#0063A1;
+    color:#fff;
+
+}
+
+.paginator span
+{
+    font-size:14px;
+    padding-right:20px;
 }
