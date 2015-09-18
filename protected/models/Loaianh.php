@@ -50,8 +50,8 @@ class Loaianh extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ma_loai_anh' => 'Ma Loai Anh',
-			'ten_loai_anh' => 'Ten Loai Anh',
+			'ma_loai_anh' => 'Mã loại ảnh',
+			'ten_loai_anh' => 'Tên loại ảnh',
 		);
 	}
 

@@ -54,7 +54,7 @@ class Paginate {
     }
 
     /**
-     * @param integer $RecordDisplay
+     * @param integer $RecordDisplay The limited record
      * @return string
      */
     public function limitSQl($RecordDisplay) {

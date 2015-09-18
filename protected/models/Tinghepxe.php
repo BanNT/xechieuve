@@ -71,22 +71,22 @@ class Tinghepxe extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ma_tin' => 'Ma Tin',
-			'ma_khach_hang' => 'Ma Khach Hang',
-			'noi_di_tinh' => 'Noi Di Tinh',
-			'noi_di_huyen' => 'Noi Di Huyen',
-			'noi_den_tinh' => 'Noi Den Tinh',
-			'noi_den_huyen' => 'Noi Den Huyen',
-			'lich_trinh' => 'Lich Trinh',
-			'ngay_khoi_hanh' => 'Ngay Khoi Hanh',
-			'gio_khoi_hanh' => 'Gio Khoi Hanh',
-			'so_dien_thoai' => 'So Dien Thoai',
-			'nguoi_lien_lac' => 'Nguoi Lien Lac',
-			'tieu_de_tin' => 'Tieu De Tin',
-			'noi_dung' => 'Noi Dung',
-			'loai_xe' => 'Loai Xe',
-			'ngay_dang' => 'Ngay Dang',
-			'ma_loai_tin' => 'Ma Loai Tin',
+			'ma_tin' => 'Mã tin',
+			'ma_khach_hang' => 'Mã khách hàng',
+			'noi_di_tinh' => 'Nơi đi(tỉnh)',
+			'noi_di_huyen' => 'Nơi đi(huyện)',
+			'noi_den_tinh' => 'Nơi đến(tỉnh)',
+			'noi_den_huyen' => 'Nơi đến(huyện)',
+			'lich_trinh' => 'Lịch trình',
+			'ngay_khoi_hanh' => 'Ngày khởi hành',
+			'gio_khoi_hanh' => 'Giờ khởi hành',
+			'so_dien_thoai' => 'Số điện thoại',
+			'nguoi_lien_lac' => 'Người liên lạc',
+			'tieu_de_tin' => 'Tiêu đề tin',
+			'noi_dung' => 'Nội dung',
+			'loai_xe' => 'Loại xe',
+			'ngay_dang' => 'Ngày đăng',
+			'ma_loai_tin' => 'Mã loại tin',
 		);
 	}
 

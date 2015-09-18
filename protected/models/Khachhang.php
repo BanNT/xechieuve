@@ -62,15 +62,15 @@ class Khachhang extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ma_khach_hang' => 'Ma Khach Hang',
-			'ten_dang_nhap' => 'Ten Dang Nhap',
-			'ten_khach_hang' => 'Ten Khach Hang',
+			'ma_khach_hang' => 'Mã khách hàng',
+			'ten_dang_nhap' => 'Tên đăng nhập',
+			'ten_khach_hang' => 'Tên khách hàng',
 			'email' => 'Email',
 			'password' => 'Password',
-			'dia_chi' => 'Dia Chi',
-			'so_dien_thoai' => 'So Dien Thoai',
-			'so_du_tai_khoan' => 'So Du Tai Khoan',
-			'anh_dai_dien' => 'Anh Dai Dien',
+			'dia_chi' => 'Địa chỉ',
+			'so_dien_thoai' => 'Số điện thoại',
+			'so_du_tai_khoan' => 'Số dư tài khoản',
+			'anh_dai_dien' => 'Ảnh đại diện',
 		);
 	}
 

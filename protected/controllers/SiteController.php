@@ -31,12 +31,13 @@ class SiteController extends Controller {
         $limit = $paginatorXe->limitSQl(1);
         $sql = "SELECT * FROM tinghepxe WHERE ma_loai_tin = 2".$limit;
         $xetimkhach = $table->findAllBySql($sql);
-//        
-//        $paginatorKhach = new Paginator(0, $table, ' ma_loai_tin = 3');
-//        $limit = $paginatorKhach->limitSQl(4);
-//        echo $limit;die;
-        $sql = "SELECT * FROM tinghepxe WHERE ma_loai_tin = 2 LIMIT 0,2";
+        
+        
+        $paginatorKhach = new Paginate(0, $table, ' ma_loai_tin = 3');
+        $limit = $paginatorKhach->limitSQl(2);
+        $sql = "SELECT * FROM tinghepxe WHERE ma_loai_tin = 3".$limit;
         $khachtimxe = $table->findAllBySql($sql);
+
 //        
         $this->render('index', array(
             'khachtimxe' => $khachtimxe,
