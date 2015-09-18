@@ -1,5 +1,6 @@
-<section id="table-customer">
-    <div class="pribox">Khách tìm xe</div>    
+<?php /* @var $this Controller */ ?>
+<section id="table-car">
+    <div class="pribox">Xe tìm khách</div>    
     <div class="table-responsive">
         <table class="table table-striped table-hover" id="user">
             <thead>
@@ -14,18 +15,20 @@
             </thead>
             <tbody class="text-justify">
                 <?php
-                foreach ($this->khachtimxe as $data):
+                foreach ($this->xetimkhach as $data):
                     ?>
                     <tr>
                         <td><?php echo CHtml::encode($data->tieu_de_tin); ?></td>
                         <td><?php
                             echo CHtml::encode($data->noi_di_huyen);
                             echo "<br>" . CHtml::encode($data->noi_di_tinh);
-                            ?></td>
+                            ?>
+                        </td>
                         <td><?php
                             echo CHtml::encode($data->noi_den_huyen);
                             echo "<br>" . CHtml::encode($data->noi_den_tinh);
-                            ?></td>
+                            ?>
+                        </td>
                         <td><?php echo CHtml::encode($data->ngay_khoi_hanh); ?></td>
                         <td><?php echo CHtml::encode($data->nguoi_lien_lac); ?></td>
                         <td>Đang chờ</td>
@@ -35,6 +38,8 @@
                 ?>  
             </tbody>
         </table>
-        <?php $this->widget('application.widgets.paginator') ?>
+        <?php
+        $this->widget('application.widgets.paginator');
+        ?>
     </div>
-</section><!--end table-customer-->
+</section><!--end table-car-->

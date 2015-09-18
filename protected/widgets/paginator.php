@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This class will reponsible for paginate and render paginator view
  */
@@ -11,7 +12,7 @@ class paginator extends CWidget {
     public $paginator;
 
     public function init() {
-        echo (sizeof($this->paginator));
+        
     }
 
     public function run() {

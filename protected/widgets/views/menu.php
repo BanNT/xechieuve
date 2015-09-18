@@ -1,6 +1,6 @@
 <div class="col-md-12">
     <ul class="list-unstyled text-center">
-        <li class="selected"><a href="index.html">Trang chủ</a></li>
+        <li class="selected"><a href="<?php echo Yii::app()->request->baseUrl; ?>">Trang chủ</a></li>
         <li><a href="xetimkhach.html">Xe tìm khách</a></li>
         <li><a href="khachtimxe.html">Khách tìm xe</a></li>
         <li><a href="">Tin tức</a></li>

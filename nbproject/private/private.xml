@@ -3,12 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/xechieuve/protected/views/site/index.php</file>
-            <file>file:/C:/xampp/htdocs/xechieuve/protected/config/main.php</file>
-            <file>file:/C:/xampp/htdocs/xechieuve/protected/views/layouts/main.php</file>
-            <file>file:/C:/xampp/htdocs/xechieuve/protected/widgets/khachtimxe.php</file>
-            <file>file:/C:/xampp/htdocs/xechieuve/protected/widgets/paginator.php</file>
-            <file>file:/C:/xampp/htdocs/xechieuve/protected/widgets/views/paginator.php</file>
+            <file>file:/C:/xampp/htdocs/xechieuve/protected/models/Tinghepxe.php</file>
+            <file>file:/C:/xampp/htdocs/xechieuve/protected/controllers/SiteController.php</file>
+            <file>file:/C:/xampp/htdocs/xechieuve/protected/models/Paginate.php</file>
+            <file>file:/C:/xampp/htdocs/xechieuve/protected/models/Loaianh.php</file>
+            <file>file:/C:/xampp/htdocs/xechieuve/protected/controllers/LoaianhController.php</file>
         </group>
     </open-files>
 </project-private>
