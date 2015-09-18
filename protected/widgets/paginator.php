@@ -1,11 +1,21 @@
 <?php
-class paginator extends CWidget{
-    public $hello;
-    public function init(){
-        
+/**
+ * This class will reponsible for paginate and render paginator view
+ */
+class paginator extends CWidget {
+
+    /**
+     * This variable contain some info about page like current page, total page...
+     * @var mixed 
+     */
+    public $paginator;
+
+    public function init() {
+        echo (sizeof($this->paginator));
     }
-    
-    public function run(){
+
+    public function run() {
         $this->render('paginator');
     }
+
 }

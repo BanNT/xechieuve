@@ -8,4 +8,3 @@
         <li><a href="">5</a></li>
     </ul>
 </div>
-<?php echo $this->hello?>

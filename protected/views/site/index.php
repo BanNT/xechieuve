@@ -39,13 +39,13 @@
             </tbody>
         </table>
         <?php
-        $this->widget('application.widgets.paginator', array(
-            'hello' => '99/99/9999'
+        $this->widget('application.widgets.paginator',array(
+            'paginator'=>$khachtimxe
         ));
         ?>
     </div>
 </section><!--end table-car-->
-<section id="table-customer">
+<!--<section id="table-customer">
     <div class="pribox">Xe tìm khách</div>    
     <div class="table-responsive">
         <table class="table table-striped table-hover" id="user">
@@ -61,27 +61,27 @@
             </thead>
             <tbody class="text-justify">
                 <?php
-                foreach ($xetimkhach as $data):
+//                foreach ($xetimkhach as $data):
                     ?>
                     <tr>
-                        <td><?php echo CHtml::encode($data->tieu_de_tin); ?></td>
+                        <td><?php // echo CHtml::encode($data->tieu_de_tin); ?></td>
                         <td><?php
-                            echo CHtml::encode($data->noi_di_huyen);
-                            echo "<br>" . CHtml::encode($data->noi_di_tinh);
+//                            echo CHtml::encode($data->noi_di_huyen);
+//                            echo "<br>" . CHtml::encode($data->noi_di_tinh);
                             ?></td>
                         <td><?php
-                            echo CHtml::encode($data->noi_den_huyen);
-                            echo "<br>" . CHtml::encode($data->noi_den_tinh);
+//                            echo CHtml::encode($data->noi_den_huyen);
+//                            echo "<br>" . CHtml::encode($data->noi_den_tinh);
                             ?></td>
-                        <td><?php echo CHtml::encode($data->ngay_khoi_hanh); ?></td>
-                        <td><?php echo CHtml::encode($data->nguoi_lien_lac); ?></td>
+                        <td><?php // echo CHtml::encode($data->ngay_khoi_hanh); ?></td>
+                        <td><?php // echo CHtml::encode($data->nguoi_lien_lac); ?></td>
                         <td>Đang chờ</td>
                     </tr>
                     <?php
-                endforeach;
+//                endforeach;
                 ?>  
             </tbody>
         </table>
-        <?php $this->widget('application.widgets.paginator') ?>
+        <?php // $this->widget('application.widgets.paginator') ?>
     </div>
-</section><!--end table-customer-->
+</section>end table-customer-->
