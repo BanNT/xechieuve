@@ -6,7 +6,7 @@ ul{
 
 @media (min-width: 1170px) {
     .wrapper{
-        padding: 0 105px;
+        margin: 0 105px;
     }
 }
 /*----------------------------------------------------------------------------*/
@@ -15,7 +15,7 @@ ul{
     margin-bottom: 9px;
 }
 
-#header #logo{
+#logo{
     background: #0063a1;
     height: 135px;
 }

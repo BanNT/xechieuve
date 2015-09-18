@@ -9,7 +9,6 @@
         <!-- Bootstrap -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5shiv.min.js"></script>
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/respond.min.js"></script>
@@ -18,229 +17,68 @@
     <body>
         <div class="container">
             <div class="wrapper">
-                <div class="row">
-                    <div class="col-md-12">
-                        <header id="header"><!--BEGIN header-->
-                            <div class="row">
-                                <section id="logo">
-                                    <?php $this->widget('application.widgets.logo') ?>
-                                </section><!--end logo-->
-                                <section id="menu">
-                                    <div class="col-md-12">
-                                        <ul class="list-unstyled text-center">
-                                            <li class="selected"><a href="index.html">Trang chủ</a></li>
-                                            <li><a href="xetimkhach.html">Xe tìm khách</a></li>
-                                            <li><a href="khachtimxe.html">Khách tìm xe</a></li>
-                                            <li><a href="">Tin tức</a></li>
-                                            <li><a href="">Trợ giúp</a></li>
-                                            <li><a href="">Rao vặt</a></li>
-                                            <li><a href="">Liên hệ</a></li>
-                                            <li><a href="">Đăng tin</a></li>
-                                        </ul>
-                                    </div>
-                                </section><!--end menu-->
-                            </div>
-                        </header><!--end header-->
+                <header id="header"><!--BEGIN header-->
+                    <div class="row">
+                        <section id="logo">
+                            <?php $this->widget('application.widgets.logo') ?>
+                        </section><!--end logo-->
+                        <section id="menu">
+                            <?php $this->widget('application.widgets.menu') ?>
+                        </section><!--end menu-->
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
+                </header><!--end header-->
+
+                <section id="content">
+                    <div class="row">
                         <aside id="coll-left">
-                            <!--filter-->
-                            <section id="filter">
-                                <?php $this->widget('application.widgets.filter'); ?>
-                            </section><!--end filter-->
-                            <section id="support">
-                                <?php $this->widget('application.widgets.support'); ?>
-                            </section><!--end support-->
-                            <section id="partner">
-                                <?php $this->widget('application.widgets.partner'); ?>
-                            </section><!--end partner-->
-
+                            <div class="col-md-3">
+                                <!--filter-->
+                                <section id="filter">
+                                    <?php $this->widget('application.widgets.filter'); ?>
+                                </section><!--end filter-->
+                                <section id="support">
+                                    <?php $this->widget('application.widgets.support'); ?>
+                                </section><!--end support-->
+                                <section id="partner">
+                                    <?php $this->widget('application.widgets.partner'); ?>
+                                </section><!--end partner-->
+                            </div>
                         </aside><!--end col-left-->
+                        <section id="coll-right">
+                            <div class="col-md-9">
+                                <div class="row">
+                                    <section id="search">
+                                        <div class="col-md-12">
+                                            <h6>Tìm kiếm khách</h6>
+                                            <form action="" method="">
+                                                <select>
+                                                    <option>Chọn nơi đi</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                                <select>
+                                                    <option>Chọn nơi đến</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                                <input type="date"/>
+                                                <input type="submit" value="Tìm kiếm"/>
+                                            </form>
+                                        </div>
+                                    </section><!--end search-->
+                                    <section id="slide">
+                                        <?php $this->widget('application.widgets.slide'); ?>
+                                    </section><!--end slide-->
+                                    <?php echo $content ?>
+                                </div>
+                            </div>
+                        </section><!--end coll-right-->
                     </div>
-                    <div class="col-md-9">
-                        <div class="row">
-                            <section id="search">
-                                <div class="col-md-12">
-                                    <h6>Tìm kiếm khách</h6>
-                                    <form action="" method="" name="frm" class="form-horizontal">
-                                        <select>
-                                            <option>Chọn nơi đi</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                        <select>
-                                            <option>Chọn nơi đến</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                        <input type="date"/>
-                                        <input type="submit" value="Tìm kiếm"/>
-                                    </form>
-                                </div>
-                            </section><!--end search-->
-                            <section id="slide">
-                                <?php $this->widget('application.widgets.slide'); ?>
-                            </section><!--end slide-->
-
-                            <section id="table-car">
-                                <div class="pribox">Xe tìm khách</div>    
-                                <div class="table-responsive">
-                                    <table class="table table-striped table-hover" id="user">
-                                        <thead>
-                                            <tr style="color:#2C7BAC;" bgcolor="DAD9D9">
-                                                <th width="195">Tiêu đề</th>
-                                                <th width="77">Nơi đi</th>
-                                                <th width="83">Nơi đến</th>
-                                                <th width="84">Ngày đi</th>
-                                                <th width="164">Liên hệ</th>
-                                                <th width="79">Trạng thái</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-justify">
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="paginator" style="padding-bottom: 30px;">
-                                        <ul class="list-unstyled list-inline pull-right">
-                                            <span>Trang</span>
-                                            <li class="selected"><a href="">1</a></li>
-                                            <li><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><a href="">4</a></li>
-                                            <li><a href="">5</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section><!--end table-car-->
-
-                            <section id="table-customer">
-                                <div class="pribox">Xe tìm khách</div>    
-                                <div class="table-responsive">
-                                    <table class="table table-striped table-hover" id="user">
-                                        <thead>
-                                            <tr style="color:#2C7BAC;" bgcolor="DAD9D9">
-                                                <th width="195">Tiêu đề</th>
-                                                <th width="77">Nơi đi</th>
-                                                <th width="83">Nơi đến</th>
-                                                <th width="84">Ngày đi</th>
-                                                <th width="164">Liên hệ</th>
-                                                <th width="79">Trạng thái</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="text-justify">
-
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                            <tr>
-                                                <td>Xe khách Tân Việt- Thanh Hà- Hải Dương- Phú Thọ </td>
-                                                <th>Cầu Giấy Hà Nội</th>
-                                                <th>Thanh Hà Phú Thọ</th>
-                                                <th>22/6/2015</th>
-                                                <th>Mr. Lâm (0986.263.301)</th>
-                                                <th>Đang chờ</th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="paginator" style="padding-bottom: 30px;">
-                                        <ul class="list-unstyled list-inline pull-right">
-                                            <span>Trang</span>
-                                            <li class="selected"><a href="">1</a></li>
-                                            <li><a href="">2</a></li>
-                                            <li><a href="">3</a></li>
-                                            <li><a href="">4</a></li>
-                                            <li><a href="">5</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </section><!--end table-customer-->
-                        </div>
-                    </div>
-                </div>
-
-
+                </section><!--end content-->
                 <section id="footer">
                     <div class="row">
                         <div class="col-md-4 box">
@@ -267,7 +105,7 @@
                             <p><a href="">Email: sale1@xechieuve.vn</a></p>
                         </div>
                     </div>
-                </section>
+                </section><!--end footer-->
             </div><!--end wrapper-->
         </div>
     </body>

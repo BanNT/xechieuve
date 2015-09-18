@@ -4,17 +4,15 @@
  * This is the model class for table "khachhang".
  *
  * The followings are the available columns in table 'khachhang':
- * @property integer $MaKhachHang
- * @property string $TenDangNhap
- * @property string $TenKhachHang
- * @property string $Email
- * @property string $Password
- * @property string $DiaChi
- * @property string $AnhDaiDien
- *
- * The followings are the available model relations:
- * @property Tinghepxe $tinghepxe
- * @property Tinraovat[] $tinraovats
+ * @property integer $ma_khach_hang
+ * @property string $ten_dang_nhap
+ * @property string $ten_khach_hang
+ * @property string $email
+ * @property string $password
+ * @property string $dia_chi
+ * @property string $so_dien_thoai
+ * @property integer $so_du_tai_khoan
+ * @property string $anh_dai_dien
  */
 class Khachhang extends CActiveRecord
 {
@@ -34,12 +32,16 @@ class Khachhang extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('TenDangNhap, TenKhachHang, Email, Password, DiaChi, AnhDaiDien', 'required'),
-			array('TenDangNhap, TenKhachHang, Email, Password', 'length', 'max'=>80),
-			array('DiaChi, AnhDaiDien', 'length', 'max'=>200),
+			array('ten_dang_nhap, ten_khach_hang, email, password, dia_chi, so_dien_thoai, so_du_tai_khoan', 'required'),
+			array('so_du_tai_khoan', 'numerical', 'integerOnly'=>true),
+			array('ten_dang_nhap, ten_khach_hang, email', 'length', 'max'=>80),
+			array('password', 'length', 'max'=>40),
+			array('dia_chi', 'length', 'max'=>30),
+			array('so_dien_thoai', 'length', 'max'=>11),
+			array('anh_dai_dien', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('MaKhachHang, TenDangNhap, TenKhachHang, Email, Password, DiaChi, AnhDaiDien', 'safe', 'on'=>'search'),
+			array('ma_khach_hang, ten_dang_nhap, ten_khach_hang, email, password, dia_chi, so_dien_thoai, so_du_tai_khoan, anh_dai_dien', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,8 +53,6 @@ class Khachhang extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'tinghepxe' => array(self::HAS_ONE, 'Tinghepxe', 'MaKhachHang'),
-			'tinraovats' => array(self::HAS_MANY, 'Tinraovat', 'MaKhachHang'),
 		);
 	}
 
@@ -62,13 +62,15 @@ class Khachhang extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'MaKhachHang' => 'Ma Khach Hang',
-			'TenDangNhap' => 'Ten Dang Nhap',
-			'TenKhachHang' => 'Ten Khach Hang',
-			'Email' => 'Email',
-			'Password' => 'Password',
-			'DiaChi' => 'Dia Chi',
-			'AnhDaiDien' => 'Anh Dai Dien',
+			'ma_khach_hang' => 'Ma Khach Hang',
+			'ten_dang_nhap' => 'Ten Dang Nhap',
+			'ten_khach_hang' => 'Ten Khach Hang',
+			'email' => 'Email',
+			'password' => 'Password',
+			'dia_chi' => 'Dia Chi',
+			'so_dien_thoai' => 'So Dien Thoai',
+			'so_du_tai_khoan' => 'So Du Tai Khoan',
+			'anh_dai_dien' => 'Anh Dai Dien',
 		);
 	}
 
@@ -90,13 +92,15 @@ class Khachhang extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('MaKhachHang',$this->MaKhachHang);
-		$criteria->compare('TenDangNhap',$this->TenDangNhap,true);
-		$criteria->compare('TenKhachHang',$this->TenKhachHang,true);
-		$criteria->compare('Email',$this->Email,true);
-		$criteria->compare('Password',$this->Password,true);
-		$criteria->compare('DiaChi',$this->DiaChi,true);
-		$criteria->compare('AnhDaiDien',$this->AnhDaiDien,true);
+		$criteria->compare('ma_khach_hang',$this->ma_khach_hang);
+		$criteria->compare('ten_dang_nhap',$this->ten_dang_nhap,true);
+		$criteria->compare('ten_khach_hang',$this->ten_khach_hang,true);
+		$criteria->compare('email',$this->email,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('dia_chi',$this->dia_chi,true);
+		$criteria->compare('so_dien_thoai',$this->so_dien_thoai,true);
+		$criteria->compare('so_du_tai_khoan',$this->so_du_tai_khoan);
+		$criteria->compare('anh_dai_dien',$this->anh_dai_dien,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
