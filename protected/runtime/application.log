@@ -1,0 +1,14 @@
+2015/09/21 11:02:49 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "runEnd".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\index.php(12): CComponent->__call('runEnd', Array)
+#1 C:\xampp\htdocs\xechieuve\index.php(12): CWebApplication->runEnd('front')
+#2 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/21 11:03:45 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "runEnd".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\index.php(12): CComponent->__call('runEnd', Array)
+#1 C:\xampp\htdocs\xechieuve\index.php(12): CWebApplication->runEnd('front')
+#2 {main}
+REQUEST_URI=/xechieuve/
+---
