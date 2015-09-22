@@ -18,17 +18,19 @@
                 foreach ($this->khachtimxe as $data):
                     ?>
                     <tr>
-                        <td><?php echo CHtml::encode($data->tieu_de_tin); ?></td>
+                        <td><?php echo CHtml::encode($data['tieu_de_tin']); ?></td>
                         <td><?php
-                            echo CHtml::encode($data->noi_di_huyen);
-                            echo "<br>" . CHtml::encode($data->noi_di_tinh);
-                            ?></td>
+                            echo CHtml::encode($data['dia_chi_di']);
+                            echo "<br>" . CHtml::encode($data['tinh_thanh']);
+                            ?>
+                        </td>
                         <td><?php
-                            echo CHtml::encode($data->noi_den_huyen);
-                            echo "<br>" . CHtml::encode($data->noi_den_tinh);
-                            ?></td>
-                        <td><?php echo CHtml::encode($data->ngay_khoi_hanh); ?></td>
-                        <td><?php echo CHtml::encode($data->nguoi_lien_lac); ?></td>
+                            echo CHtml::encode($data['dia_chi_den']);
+                            echo "<br>" . CHtml::encode($data['noi_den_tinh']);
+                            ?>
+                        </td>
+                        <td><?php echo CHtml::encode($data['ngay_khoi_hanh']); ?></td>
+                        <td><?php echo CHtml::encode($data['nguoi_lien_lac']); ?></td>
                         <td>Đang chờ</td>
                     </tr>
                     <?php

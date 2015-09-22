@@ -3,14 +3,14 @@
     /* @var $this Controller */
     $this->widget('application.widgets.xetimkhach', array(
         'xetimkhach' => $xetimkhach,
-        'paginatorKhach' => $paginatorKhach,
+        'paginatorKhach' => $paginatorXTK,
         'urlPaginatorKhach' => $urlPaginatorKhach,
         'ajaxElementId'=>$ajaxElementId
     ));
 
     $this->widget('application.widgets.khachtimxe', array(
         'khachtimxe' => $khachtimxe,
-        'paginatorXe' => $paginatorXe,
+        'paginatorXe' => $paginatorKTX,
         'urlPaginatorXe' => $urlPaginatorXe,
         'ajaxElementId'=>$ajaxElementId
     ));

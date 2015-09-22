@@ -273,3 +273,1305 @@ REQUEST_URI=/xechieuve/
 in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (5)
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (62)
 in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 03:44:00 [error] [php] Undefined variable: xetimkhach (C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(62): SiteController->render()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (5)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (62)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 03:44:09 [error] [php] Undefined variable: xetimkhach (C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(62): SiteController->render()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (5)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (62)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 04:14:39 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ma_loai_tin' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `tinghepxe` `t` WHERE  ma_loai_tin = 3.
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (75)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (64)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (43)
+2015/09/22 04:14:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ma_loai_tin' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `tinghepxe` `t` WHERE  ma_loai_tin = 3' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(75): CActiveRecord->count(' ma_loai_tin = ...')
+#3 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(64): Paginate->__getTotalPage()
+#4 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(43): Paginate->__setCurrentPage(NULL)
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(36): Paginate->__construct(NULL, Object(Tinghepxe), 1, ' ma_loai_tin = ...')
+#6 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#7 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#19 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#20 {main}
+REQUEST_URI=/xechieuve/
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 04:15:09 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ma_loai_tin' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `tinghepxe` `t` WHERE  ma_loai_tin = 3.
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (75)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (64)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (43)
+2015/09/22 04:15:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ma_loai_tin' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `tinghepxe` `t` WHERE  ma_loai_tin = 3' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1606): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(75): CActiveRecord->count(' ma_loai_tin = ...')
+#3 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(64): Paginate->__getTotalPage()
+#4 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(43): Paginate->__setCurrentPage(NULL)
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(36): Paginate->__construct(NULL, Object(Tinghepxe), 1, ' ma_loai_tin = ...')
+#6 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#7 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#19 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#20 {main}
+REQUEST_URI=/xechieuve/
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 04:17:27 [error] [php] Undefined variable: xetimkhach (C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(60): SiteController->render()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (5)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (60)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 04:19:21 [error] [php] Undefined variable: paginatorKhach (C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php:52)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#8 unknown(0): WebApplicationEndBehavior->runEnd()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (52)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 04:20:59 [error] [php] Undefined variable: xetimkhach (C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(60): SiteController->render()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (5)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (60)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 04:23:14 [error] [php] Undefined variable: xetimkhach (C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(60): SiteController->render()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (5)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (60)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 04:23:35 [error] [php] Undefined variable: xetimkhach (C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php:3)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(60): SiteController->render()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (3)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (60)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 04:28:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dia_chi_di' in 'field list'. The SQL statement executed was: SELECT `tieu_de_tin`, `dia_chi_di`, `dia_chi_den`, `ngay_khoi_hanh`, `nguoi_lien_lac`, `so_dien_thoai`
+FROM `tinkhachhang`
+WHERE ma_loai_tin = 1.
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (125)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (38)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 04:28:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dia_chi_di' in 'field list'. The SQL statement executed was: SELECT `tieu_de_tin`, `dia_chi_di`, `dia_chi_den`, `ngay_khoi_hanh`, `nguoi_lien_lac`, `so_dien_thoai`
+FROM `tinkhachhang`
+WHERE ma_loai_tin = 1' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(125): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(38): Tinghepxe->listXeTimKhach('0,3')
+#3 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#13 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#17 {main}
+REQUEST_URI=/xechieuve/
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 04:42:54 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (21)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 04:47:12 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (21)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 04:47:58 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (22)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 04:52:26 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (22)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 05:59:46 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (22)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 06:03:28 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (22)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 07:26:13 [error] [exception.CException] exception 'CException' with message 'CDbCommand and its behaviors do not have a method or closure named "fetchAll".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(122): CComponent->__call('fetchAll', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(122): CDbCommand->fetchAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(38): Tinghepxe->listXeTimKhach(Object(Paginate))
+#3 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#13 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#17 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/22 10:08:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\xampp\htdocs\xechieuve\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\xechieuve\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\xechieuve\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(2384): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Tinghepxe))
+#7 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(33): CActiveRecord->__construct()
+#9 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#23 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/22 10:08:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in C:\xampp\htdocs\xechieuve\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\xampp\htdocs\xechieuve\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\xechieuve\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(458): CModule->getComponent('db')
+#4 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(637): CApplication->getDb()
+#5 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(2384): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Tinghepxe))
+#7 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(33): CActiveRecord->__construct()
+#9 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#19 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#23 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/22 10:23:43 [error] [exception.CException] exception 'CException' with message 'Property "Tinghepxe.tieu_de_tin" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('tieu_de_tin')
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php(22): CActiveRecord->__get('tieu_de_tin')
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(130): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, false)
+#4 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, false)
+#5 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): CWidget->render('xetimkhach')
+#6 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#7 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(10): CBaseController->widget('application.wid...', Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#12 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): CController->render('index', Array)
+#13 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#14 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#15 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#16 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#20 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#21 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#23 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#24 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#25 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#26 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#27 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/22 10:35:01 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(10): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(53): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (22)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (10)
+2015/09/22 10:35:16 [error] [php] Object of class CDbCommand could not be converted to string (C:\xampp\htdocs\xechieuve\framework\db\schema\CDbCommandBuilder.php:484)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1475): Tinghepxe->query()
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(125): Tinghepxe->findAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(37): Tinghepxe->listXeTimKhach()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (125)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (37)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 10:35:46 [error] [php] Object of class CDbCommand could not be converted to string (C:\xampp\htdocs\xechieuve\framework\db\schema\CDbCommandBuilder.php:484)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1475): Tinghepxe->query()
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(125): Tinghepxe->findAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(37): Tinghepxe->listXeTimKhach()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (125)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (37)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 10:35:48 [error] [php] Object of class CDbCommand could not be converted to string (C:\xampp\htdocs\xechieuve\framework\db\schema\CDbCommandBuilder.php:484)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1475): Tinghepxe->query()
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(125): Tinghepxe->findAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(37): Tinghepxe->listXeTimKhach()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (125)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (37)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 10:40:43 [error] [php] Object of class CDbCommand could not be converted to string (C:\xampp\htdocs\xechieuve\framework\db\schema\CDbCommandBuilder.php:484)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1475): Tinghepxe->query()
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(125): Tinghepxe->findAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(50): Tinghepxe->listXeTimKhach()
+#3 unknown(0): SiteController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (125)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 10:45:33 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN tinghepxe
+           ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+      ' at line 4. The SQL statement executed was: 
+           SELECT tieu_de_tin,dia_chi_di,dia_chi_den,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai
+           FROM tinkhachhang
+           WHERE ma_loai_tin = 1
+           INNER JOIN tinghepxe
+           ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+           ORDER BY ngay_dang ASC
+           LIMIT 1, 0
+        .
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 10:45:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INNER JOIN tinghepxe
+           ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+      ' at line 4. The SQL statement executed was: 
+           SELECT tieu_de_tin,dia_chi_di,dia_chi_den,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai
+           FROM tinkhachhang
+           WHERE ma_loai_tin = 1
+           INNER JOIN tinghepxe
+           ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+           ORDER BY ngay_dang ASC
+           LIMIT 1, 0
+        ' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1563): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(134): CActiveRecord->findBySql('\n           SEL...')
+#3 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(50): Tinghepxe->listXeTimKhach(Object(Paginate))
+#4 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/22 10:47:16 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xe.ngay_dang' in 'order clause'. The SQL statement executed was: 
+           SELECT kh.tieu_de_tin
+           FROM tinkhachhang kh
+           INNER JOIN tinghepxe xe
+           ON kh.ma_tin = xe.ma_tin
+           WHERE kh.ma_loai_tin = 1
+           ORDER BY xe.ngay_dang ASC
+           LIMIT 1, 0
+        .
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 10:47:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'xe.ngay_dang' in 'order clause'. The SQL statement executed was: 
+           SELECT kh.tieu_de_tin
+           FROM tinkhachhang kh
+           INNER JOIN tinghepxe xe
+           ON kh.ma_tin = xe.ma_tin
+           WHERE kh.ma_loai_tin = 1
+           ORDER BY xe.ngay_dang ASC
+           LIMIT 1, 0
+        ' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1563): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(134): CActiveRecord->findBySql('\n           SEL...')
+#3 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(50): Tinghepxe->listXeTimKhach(Object(Paginate))
+#4 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/22 10:51:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dia_chi_di' in 'field list'. The SQL statement executed was: SELECT `tieu_de_tin`, `dia_chi_di`, `dia_chi_den`, `ngay_khoi_hanh`, `nguoi_lien_lac`, `so_dien_thoai`
+FROM `tinkhachhang`.
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (125)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 10:51:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'dia_chi_di' in 'field list'. The SQL statement executed was: SELECT `tieu_de_tin`, `dia_chi_di`, `dia_chi_den`, `ngay_khoi_hanh`, `nguoi_lien_lac`, `so_dien_thoai`
+FROM `tinkhachhang`' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(125): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(50): Tinghepxe->listXeTimKhach(Object(Paginate))
+#3 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#13 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#17 {main}
+REQUEST_URI=/xechieuve/
+---
+2015/09/22 11:00:22 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(66): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (22)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 11:04:23 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): xetimkhach->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php(15): xetimkhach->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): xetimkhach->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php(9): SiteController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(66): SiteController->render()
+#9 unknown(0): SiteController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#19 unknown(0): WebApplicationEndBehavior->runEnd()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\xetimkhach.php (22)
+in C:\xampp\htdocs\xechieuve\protected\widgets\xetimkhach.php (15)
+in C:\xampp\htdocs\xechieuve\protected\views\user\site\index.php (9)
+2015/09/22 11:18:52 [error] [php] Undefined variable: paginatorXTK (C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#8 unknown(0): WebApplicationEndBehavior->runEnd()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 11:24:41 [error] [php] Undefined variable: paginatorXTK (C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#8 unknown(0): WebApplicationEndBehavior->runEnd()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 11:26:07 [error] [php] Undefined variable: paginatorXTK (C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#8 unknown(0): WebApplicationEndBehavior->runEnd()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 11:26:38 [error] [php] Undefined variable: khachtimxe (C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php:60)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#8 unknown(0): WebApplicationEndBehavior->runEnd()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (60)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 11:27:24 [error] [php] Undefined variable: paginatorXTK (C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#8 unknown(0): WebApplicationEndBehavior->runEnd()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 11:27:37 [error] [php] Undefined variable: paginatorXTK (C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php:50)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#8 unknown(0): WebApplicationEndBehavior->runEnd()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (50)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 11:52:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xe-tim-khach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe-tim-khach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xe-tim-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 11:59:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xe-tim-khach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe-tim-khach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xe-tim-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/xe-tim-khach
+---
+2015/09/22 11:59:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xe-tim-khach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe-tim-khach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xe-tim-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/xe-tim-khach
+---
+2015/09/22 11:59:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xe-tim-khach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe-tim-khach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xe-tim-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 11:59:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xe-tim-khach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe-tim-khach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xe-tim-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 11:59:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+HTTP_REFERER=http://localhost:8888/xechieuve/xe-tim-khach
+---
+2015/09/22 11:59:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+HTTP_REFERER=http://localhost:8888/xechieuve/xe-tim-khach
+---
+2015/09/22 11:59:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('Xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/Xetimkhach
+HTTP_REFERER=http://localhost:8888/xechieuve/xetimkhach
+---
+2015/09/22 12:00:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+---
+2015/09/22 12:00:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+---
+2015/09/22 12:00:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+---
+2015/09/22 12:03:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xe-tim-khach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe-tim-khach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xe-tim-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 12:03:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xe-tim-khach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe-tim-khach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xe-tim-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 12:03:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+HTTP_REFERER=http://localhost:8888/xechieuve/xe-tim-khach
+---
+2015/09/22 12:03:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe
+HTTP_REFERER=http://localhost:8888/xechieuve/xetimkhach
+---
+2015/09/22 12:03:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 12:04:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "xetimkhach".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xetimkhach')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/xetimkhach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/22 12:04:29 [error] [php] Undefined variable: currentPageXe (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (11)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/22 12:04:53 [error] [php] Undefined variable: xetimkhach (C:\xampp\htdocs\xechieuve\protected\views\user\xe_tim_khach\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Xe_tim_khachController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Xe_tim_khachController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php(14): Xe_tim_khachController->render()
+#3 unknown(0): Xe_tim_khachController->actionIndex()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach
+in C:\xampp\htdocs\xechieuve\protected\views\user\xe_tim_khach\index.php (5)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (14)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/22 12:09:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
+---
+2015/09/22 12:09:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
+---
+2015/09/22 12:10:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe
+HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
+---
+2015/09/22 12:16:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe
+HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
+---
+2015/09/22 12:16:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe
+HTTP_REFERER=http://localhost:8888/xechieuve/khach-tim-xe
+---
+2015/09/22 12:18:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-tin')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang-tin
+HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
+---
+2015/09/22 12:18:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-tin')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang-tin
+HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
+---
+2015/09/22 12:21:44 [error] [php] Undefined variable: currentPageKTX (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_tim_xeController.php:8)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_tim_xeController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_tim_xeController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_tim_xeController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/khach_tim_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_tim_xeController.php (8)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)

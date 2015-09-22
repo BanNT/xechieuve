@@ -1,8 +1,8 @@
-<?php /* @var $this Controller */ ?>
+<?php // /* @var $this Controller */    ?>
 <section id="table-car">
     <div class="pribox">Xe tìm khách</div>    
     <div class="table-responsive">
-        <table class="table table-striped table-hover" id="user">
+        <table class="table table-striped table-hover">
             <thead>
                 <tr style="color:#2C7BAC;" bgcolor="DAD9D9">
                     <th width="195">Tiêu đề</th>
@@ -13,24 +13,27 @@
                     <th width="79">Trạng thái</th>
                 </tr>
             </thead>
-            <tbody class="text-justify">
+            <tbody>
                 <?php
                 foreach ($this->xetimkhach as $data):
                     ?>
                     <tr>
-                        <td><?php echo CHtml::encode($data->tieu_de_tin); ?></td>
+                        <td><?php echo CHtml::encode($data['tieu_de_tin']); ?></td>
                         <td><?php
-                            echo CHtml::encode($data->noi_di_huyen);
-                            echo "<br>" . CHtml::encode($data->noi_di_tinh);
+                            echo CHtml::encode($data['dia_chi_di']);
+                            echo "<br>" . CHtml::encode($data['tinh_thanh']);
                             ?>
                         </td>
                         <td><?php
-                            echo CHtml::encode($data->noi_den_huyen);
-                            echo "<br>" . CHtml::encode($data->noi_den_tinh);
+                            echo CHtml::encode($data['dia_chi_den']);
+                            echo "<br>" . CHtml::encode($data['noi_den_tinh']);
                             ?>
                         </td>
-                        <td><?php echo CHtml::encode($data->ngay_khoi_hanh); ?></td>
-                        <td><?php echo CHtml::encode($data->nguoi_lien_lac); ?></td>
+                        <td><?php echo CHtml::encode($data['ngay_khoi_hanh']); ?></td>
+                        <td>
+                            <?php echo CHtml::encode($data['nguoi_lien_lac']); ?>
+                            <?php echo CHtml::encode($data['so_dien_thoai']); ?>
+                        </td>
                         <td>Đang chờ</td>
                     </tr>
                     <?php

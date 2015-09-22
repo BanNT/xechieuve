@@ -12,14 +12,20 @@ class Paginate {
     public $currentPage;
 
     /**
+     * @var integer
+     */
+    public $limit;
+
+    /**
+     * @var integer
+     */
+    public $offset;
+
+    /**
      * @var CActiveRecord 
      */
     private $__table;
 
-    /**
-     * @var integer 
-     */
-    private $__limitedRecord;
     /**
      * @var string 
      */
@@ -36,11 +42,13 @@ class Paginate {
      * @param integer $limitedRecord
      * @param string $condition
      */
-    public function __construct($currentPage = null, CActiveRecord $table,$limitedRecord, $condition = null) {
+    public function __construct($currentPage = null, CActiveRecord $table, $limitedRecord, $condition = null) {
         $this->__setCondition($condition);
         $this->__setTable($table);
-        $this->__setRecordDisplay($limitedRecord);
+        $this->limit = $limitedRecord;
         $this->__setCurrentPage($currentPage);
+        $this->offset = $this->__getOffset();
+        
     }
 
     private function __setCondition($condition) {
@@ -54,9 +62,6 @@ class Paginate {
         $this->__table = $table;
     }
 
-    private function __setRecordDisplay($limitedRecord){
-        $this->__limitedRecord = $limitedRecord;
-    }
     /**
      * @param integer $currentPage
      */
@@ -73,25 +78,23 @@ class Paginate {
     private function __getTotalPage() {
         $table = $this->__table;
         $quantityRecord = $table->count($this->__condition);
-        $RecordDisplay = $this->__limitedRecord;
+        $RecordDisplay = $this->limit;
         $this->totalPage = ceil($quantityRecord / $RecordDisplay);
         return $this->totalPage;
     }
 
     /**
-     * @param integer $limitedRecord The limited record
-     * @return string
+     * @return integer
      */
-    public function limitSQl() {
-        $limitedRecord = $this->__limitedRecord;
+    private function __getOffset() {
+        $limitedRecord = $this->limit;
         $currentPage = $this->currentPage;
         if (($currentPage == null) || ($currentPage == 1)) {
-            $start = 0;
+            $offset = 0;
         } else {
-            $start = ($currentPage - 1) * $limitedRecord;
+            $offset = ($currentPage - 1) * $limitedRecord;
         }
-        $sql = " LIMIT $start,$limitedRecord";
-        return $sql;
+        return $offset;
     }
 
 }

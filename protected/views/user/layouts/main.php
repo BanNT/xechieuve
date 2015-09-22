@@ -134,7 +134,9 @@
                                     <section id="slide">
                                         <?php $this->widget('application.widgets.slide'); ?>
                                     </section><!--end slide-->
+                                    <!--begin content-->
                                     <?php echo $content ?>
+                                    <!--end content-->
                                 </div>
                             </div>
                         </section><!--end coll-right-->

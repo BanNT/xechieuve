@@ -1,6 +1,17 @@
 <?php
 
 class SiteController extends Controller {
+
+    /**
+     * Số bản ghi tối đa hiển thị của bảng xe tìm khách
+     */
+    const LIMITED_RECORD_XTK = 1;
+
+    /**
+     * Số bản ghi tối đa hiển thị của bảng khách tìm xe
+     */
+    const LIMITED_RECORD_KTX = 1;
+
 //
 //    /**
 //     * Declares class-based actions.
@@ -24,63 +35,58 @@ class SiteController extends Controller {
      * This is the default 'index' action that is invoked
      * By defaul i will display the list of tinghepxe table
      */
-    public function actionIndex($currentPageXe = null, $currentPageKhach = null, $call = false) {
-//        die('hello world');
-//        if (!$call) {
-//            $app = Yii::app();
-//            $app->session['currentPageXeAtHome'] = 1;
-//            $app->session['currentPageKhachAtHome'] = 1;
-//        }
-//        $table = new Tinghepxe();
-//
-//        //table xe tim khach
-//        $paginatorXe = new Paginate($currentPageXe, $table, 3, ' ma_loai_tin = 3');
-//        $limit = $paginatorXe->limitSQl();
-//        $sql = "SELECT * FROM tinghepxe WHERE ma_loai_tin = 3" . $limit;
-//        $khachtimxe = $table->findAllBySql($sql);
-//
-//        //table khach tim xe
-//        $paginatorKhach = new Paginate($currentPageKhach, $table, 3);
-//        $limit = $paginatorKhach->limitSQl();
-//        $sql = "SELECT * FROM tinghepxe " . $limit;
-//        $xetimkhach = $table->findAllBySql($sql);
-//
-//        //render view
-//        $data = array(
-//            'khachtimxe' => $khachtimxe,
-//            'paginatorXe' => $paginatorXe,
-//            'urlPaginatorXe' => 'site/pagexe?p=',
-//            'xetimkhach' => $xetimkhach,
-//            'paginatorKhach' => $paginatorKhach,
-//            'urlPaginatorKhach' => 'site/pagekhach?p=',
-//            'ajaxElementId' => '#indexPage'
-//        );
-//
-//        if (Yii::app()->request->isAjaxRequest) {
-//            $this->renderPartial('index', $data);
-//        } else {
-            $this->render('index');
-//        }
+    public function actionIndex($currentPageXe = null, $currentPageKTX = null, $callIndirectly = false) {
+        if (!$callIndirectly) {
+            $app = Yii::app();
+            $app->session['currentPageXeAtHome'] = 1;
+            $app->session['currentPageKhachAtHome'] = 1;
+        }
+
+        $tinghepxe = new Tinghepxe();
+        //table khách tìm xe
+        $paginatorKTX = new Paginate($currentPageKTX, new Tinkhachhang(), self::LIMITED_RECORD_KTX, ' ma_loai_tin = ' . Tinghepxe::CODE_KTX);
+        $khachtimxe = $tinghepxe->listTinGhepXeByType($paginatorKTX, Tinghepxe::CODE_KTX);
+        
+        //table xe tim khach
+        $paginatorXTK = new Paginate($currentPageXe, new Tinkhachhang(), self::LIMITED_RECORD_XTK, ' ma_loai_tin = ' . Tinghepxe::CODE_XTK);
+        $xetimkhach = $tinghepxe->listTinGhepXeByType($paginatorXTK, Tinghepxe::CODE_XTK);
+
+        //render view
+        $data = array(
+            'khachtimxe' => $khachtimxe,
+            'paginatorKTX' => $paginatorKTX,
+            'urlPaginatorXe' => 'site/pagektx?p=',
+            'xetimkhach' => $xetimkhach,
+            'paginatorXTK' => $paginatorXTK,
+            'urlPaginatorKhach' => 'site/pagextk?p=',
+            'ajaxElementId' => '#indexPage'
+        );
+
+        if (Yii::app()->request->isAjaxRequest) {
+            $this->renderPartial('index', $data);
+        } else {
+            $this->render('index', $data);
+        }
     }
 
     /**
      * paginate khachtimxe table at home page
      */
-    public function actionPagexe() {
+    public function actionPagektx() {
         $app = Yii::app();
-        $app->session['currentPageXeAtHome'] = $_GET['p'];
-        $app->session['currentPageKhachAtHome'] = isset($app->session['currentPageKhachAtHome']) ? $app->session['currentPageKhachAtHome'] : 1;
-        $this->actionIndex($app->session['currentPageXeAtHome'], $app->session['currentPageKhachAtHome'],true);
+        $currentPageXeAtHome = $app->session['currentPageXeAtHome'] = isset($app->session['currentPageXeAtHome']) ? $app->session['currentPageXeAtHome'] : 1;
+        $currentPageKhachAtHome = $app->session['currentPageKhachAtHome'] = $_GET['p'];
+        $this->actionIndex($currentPageXeAtHome, $currentPageKhachAtHome, true);
     }
 
     /**
      * paginate xetimkhach table at home page
      */
-    public function actionPagekhach() {
+    public function actionPagextk() {
         $app = Yii::app();
-        $currentPageXeAtHome = $app->session['currentPageXeAtHome'] = isset($app->session['currentPageXeAtHome']) ? $app->session['currentPageXeAtHome'] : 1;
-        $currentPageKhachAtHome = $app->session['currentPageKhachAtHome'] = $_GET['p'];
-        $this->actionIndex($currentPageXeAtHome, $currentPageKhachAtHome,true);
+        $app->session['currentPageXeAtHome'] = $_GET['p'];
+        $app->session['currentPageKhachAtHome'] = isset($app->session['currentPageKhachAtHome']) ? $app->session['currentPageKhachAtHome'] : 1;
+        $this->actionIndex($app->session['currentPageXeAtHome'], $app->session['currentPageKhachAtHome'], true);
     }
 
     /**

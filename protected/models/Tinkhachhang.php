@@ -126,4 +126,5 @@ class Tinkhachhang extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
 }
