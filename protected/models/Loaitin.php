@@ -5,8 +5,11 @@
  *
  * The followings are the available columns in table 'loaitin':
  * @property integer $ma_loai_tin
- * @property string $ten_loai_tin
- * @property integer $gia_tien
+ * @property string $loai_tin
+ * @property integer $gia_dang
+ *
+ * The followings are the available model relations:
+ * @property Tinkhachhang[] $tinkhachhangs
  */
 class Loaitin extends CActiveRecord
 {
@@ -26,12 +29,12 @@ class Loaitin extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ten_loai_tin, gia_tien', 'required'),
-			array('gia_tien', 'numerical', 'integerOnly'=>true),
-			array('ten_loai_tin', 'length', 'max'=>80),
+			array('loai_tin, gia_dang', 'required'),
+			array('gia_dang', 'numerical', 'integerOnly'=>true),
+			array('loai_tin', 'length', 'max'=>80),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ma_loai_tin, ten_loai_tin, gia_tien', 'safe', 'on'=>'search'),
+			array('ma_loai_tin, loai_tin, gia_dang', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -43,6 +46,7 @@ class Loaitin extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'tinkhachhangs' => array(self::HAS_MANY, 'Tinkhachhang', 'ma_loai_tin'),
 		);
 	}
 
@@ -53,8 +57,8 @@ class Loaitin extends CActiveRecord
 	{
 		return array(
 			'ma_loai_tin' => 'Ma Loai Tin',
-			'ten_loai_tin' => 'Ten Loai Tin',
-			'gia_tien' => 'Gia Tien',
+			'loai_tin' => 'Loai Tin',
+			'gia_dang' => 'Gia Dang',
 		);
 	}
 
@@ -77,8 +81,8 @@ class Loaitin extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ma_loai_tin',$this->ma_loai_tin);
-		$criteria->compare('ten_loai_tin',$this->ten_loai_tin,true);
-		$criteria->compare('gia_tien',$this->gia_tien);
+		$criteria->compare('loai_tin',$this->loai_tin,true);
+		$criteria->compare('gia_dang',$this->gia_dang);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

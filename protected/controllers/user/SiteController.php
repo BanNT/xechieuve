@@ -25,41 +25,42 @@ class SiteController extends Controller {
      * By defaul i will display the list of tinghepxe table
      */
     public function actionIndex($currentPageXe = null, $currentPageKhach = null, $call = false) {
-        if (!$call) {
-            $app = Yii::app();
-            $app->session['currentPageXeAtHome'] = 1;
-            $app->session['currentPageKhachAtHome'] = 1;
-        }
-        $table = new Tinghepxe();
-
-        //table xe tim khach
-        $paginatorXe = new Paginate($currentPageXe, $table, 3, ' ma_loai_tin = 3');
-        $limit = $paginatorXe->limitSQl();
-        $sql = "SELECT * FROM tinghepxe WHERE ma_loai_tin = 3" . $limit;
-        $khachtimxe = $table->findAllBySql($sql);
-
-        //table khach tim xe
-        $paginatorKhach = new Paginate($currentPageKhach, $table, 3);
-        $limit = $paginatorKhach->limitSQl();
-        $sql = "SELECT * FROM tinghepxe " . $limit;
-        $xetimkhach = $table->findAllBySql($sql);
-
-        //render view
-        $data = array(
-            'khachtimxe' => $khachtimxe,
-            'paginatorXe' => $paginatorXe,
-            'urlPaginatorXe' => 'site/pagexe?p=',
-            'xetimkhach' => $xetimkhach,
-            'paginatorKhach' => $paginatorKhach,
-            'urlPaginatorKhach' => 'site/pagekhach?p=',
-            'ajaxElementId' => '#indexPage'
-        );
-
-        if (Yii::app()->request->isAjaxRequest) {
-            $this->renderPartial('index', $data);
-        } else {
-            $this->render('index', $data);
-        }
+//        die('hello world');
+//        if (!$call) {
+//            $app = Yii::app();
+//            $app->session['currentPageXeAtHome'] = 1;
+//            $app->session['currentPageKhachAtHome'] = 1;
+//        }
+//        $table = new Tinghepxe();
+//
+//        //table xe tim khach
+//        $paginatorXe = new Paginate($currentPageXe, $table, 3, ' ma_loai_tin = 3');
+//        $limit = $paginatorXe->limitSQl();
+//        $sql = "SELECT * FROM tinghepxe WHERE ma_loai_tin = 3" . $limit;
+//        $khachtimxe = $table->findAllBySql($sql);
+//
+//        //table khach tim xe
+//        $paginatorKhach = new Paginate($currentPageKhach, $table, 3);
+//        $limit = $paginatorKhach->limitSQl();
+//        $sql = "SELECT * FROM tinghepxe " . $limit;
+//        $xetimkhach = $table->findAllBySql($sql);
+//
+//        //render view
+//        $data = array(
+//            'khachtimxe' => $khachtimxe,
+//            'paginatorXe' => $paginatorXe,
+//            'urlPaginatorXe' => 'site/pagexe?p=',
+//            'xetimkhach' => $xetimkhach,
+//            'paginatorKhach' => $paginatorKhach,
+//            'urlPaginatorKhach' => 'site/pagekhach?p=',
+//            'ajaxElementId' => '#indexPage'
+//        );
+//
+//        if (Yii::app()->request->isAjaxRequest) {
+//            $this->renderPartial('index', $data);
+//        } else {
+            $this->render('index');
+//        }
     }
 
     /**

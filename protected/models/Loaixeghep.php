@@ -1,20 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "loaianh".
+ * This is the model class for table "loaixeghep".
  *
- * The followings are the available columns in table 'loaianh':
- * @property integer $ma_loai_anh
- * @property string $ten_loai_anh
+ * The followings are the available columns in table 'loaixeghep':
+ * @property integer $ma_loai_xe_ghep
+ * @property string $loai_xe_ghep
+ *
+ * The followings are the available model relations:
+ * @property Tinghepxe[] $tinghepxes
  */
-class Loaianh extends CActiveRecord
+class Loaixeghep extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'loaianh';
+		return 'loaixeghep';
 	}
 
 	/**
@@ -25,11 +28,11 @@ class Loaianh extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ten_loai_anh', 'required'),
-			array('ten_loai_anh', 'length', 'max'=>80),
+			array('loai_xe_ghep', 'required'),
+			array('loai_xe_ghep', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ma_loai_anh, ten_loai_anh', 'safe', 'on'=>'search'),
+			array('ma_loai_xe_ghep, loai_xe_ghep', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -41,6 +44,7 @@ class Loaianh extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'tinghepxes' => array(self::HAS_MANY, 'Tinghepxe', 'ma_loai_xe_ghep'),
 		);
 	}
 
@@ -50,8 +54,8 @@ class Loaianh extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ma_loai_anh' => 'Mã loại ảnh',
-			'ten_loai_anh' => 'Tên loại ảnh',
+			'ma_loai_xe_ghep' => 'Ma Loai Xe Ghep',
+			'loai_xe_ghep' => 'Loai Xe Ghep',
 		);
 	}
 
@@ -73,8 +77,8 @@ class Loaianh extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ma_loai_anh',$this->ma_loai_anh);
-		$criteria->compare('ten_loai_anh',$this->ten_loai_anh,true);
+		$criteria->compare('ma_loai_xe_ghep',$this->ma_loai_xe_ghep);
+		$criteria->compare('loai_xe_ghep',$this->loai_xe_ghep,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -85,7 +89,7 @@ class Loaianh extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Loaianh the static model class
+	 * @return Loaixeghep the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
