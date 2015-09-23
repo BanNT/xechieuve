@@ -248,3 +248,24 @@ ul{
 }
 /*------------------------------end paginator----------------------------------*/
 /*----------------------------------------------------------------------------*/
+/*-----css dang ki----*/
+#formdangki
+{
+    border:1px solid #333333;
+    margin-left: 3px;
+    font-size: 14px;
+}
+ .tieude
+{
+    color:#ffffff;
+    background-color: #336699;
+    text-align: left;
+   -webkit-border-radius: 1px 1px 1px 1px;
+border-radius: 1px 1px 1px 1px;
+    font-size: 17px;
+    padding-left: 20px;
+}
+.tbdangki
+{
+margin-left: 10px;    
+}
