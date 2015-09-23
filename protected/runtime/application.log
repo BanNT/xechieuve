@@ -5391,3 +5391,16 @@ REQUEST_URI=/xechieuve/xe_tim_khach/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
 >>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 ---
+2015/09/23 19:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_tin
+HTTP_REFERER=http://localhost/xechieuve/index.php
+---
