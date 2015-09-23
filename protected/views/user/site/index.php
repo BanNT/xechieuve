@@ -1,3 +1,4 @@
+<?php $this->pageTitle=Yii::app()->name;?>
 <section id="indexPage">
     <?php
     /* @var $this Controller */

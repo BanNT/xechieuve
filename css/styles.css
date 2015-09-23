@@ -169,7 +169,7 @@ ul{
 }
 
 @media (min-width: 1170px) {
-    #slide,#table-car,#table-customer{
+    #slide,#table-car,#table-customer,#dangtinrv{
         width: 710px !important;
         margin-left: 10px;
     }
@@ -248,6 +248,7 @@ ul{
 }
 /*------------------------------end paginator----------------------------------*/
 /*----------------------------------------------------------------------------*/
+<<<<<<< HEAD
 /*-----css dang ki----*/
 #formdangki
 {
@@ -268,4 +269,9 @@ border-radius: 1px 1px 1px 1px;
 .tbdangki
 {
 margin-left: 10px;    
+=======
+
+.errorMessage{
+    color: red;
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 }
