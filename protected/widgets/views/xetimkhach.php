@@ -1,4 +1,7 @@
-<?php // /* @var $this Controller */    ?>
+<?php // /* @var $this Controller */     ?>
+<section id="slide">
+    <?php $this->widget('application.widgets.slide'); ?>
+</section><!--end slide-->
 <section id="table-car">
     <div class="pribox">Xe tìm khách</div>    
     <div class="table-responsive">

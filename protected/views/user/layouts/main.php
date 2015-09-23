@@ -131,9 +131,8 @@
                                             </form>
                                         </div>
                                     </section><!--end search-->
-                                    <section id="slide">
-                                        <?php $this->widget('application.widgets.slide'); ?>
-                                    </section><!--end slide-->
+                                  
+                           
                                     <!--begin content-->
                                     <?php echo $content ?>
                                     <!--end content-->
