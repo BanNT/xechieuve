@@ -1,4 +1,6 @@
-<?php // /* @var $this Controller */    ?>
+<?php // /* @var $this Controller */    
+$provinces = Province::listProvinces();
+?>
 <section id="table-car">
     <div class="pribox">Xe tìm khách</div>    
     <div class="table-responsive">
@@ -21,12 +23,12 @@
                         <td><?php echo CHtml::encode($data['tieu_de_tin']); ?></td>
                         <td><?php
                             echo CHtml::encode($data['dia_chi_di']);
-                            echo "<br>" . CHtml::encode($data['tinh_thanh']);
+                            echo "<br>" . CHtml::encode($provinces[$data['tinh_thanh']]);
                             ?>
                         </td>
                         <td><?php
                             echo CHtml::encode($data['dia_chi_den']);
-                            echo "<br>" . CHtml::encode($data['noi_den_tinh']);
+                            echo "<br>" . CHtml::encode($provinces[$data['noi_den_tinh']]);
                             ?>
                         </td>
                         <td><?php echo CHtml::encode($data['ngay_khoi_hanh']); ?></td>

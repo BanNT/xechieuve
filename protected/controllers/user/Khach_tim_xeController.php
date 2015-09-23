@@ -1,6 +1,13 @@
 <?php
-
+/**
+ * Chủ yếu sử dụng để hiển thị danh sách khách tìm xe, hiển thị chi tiết tin
+ * khách tìm xe và đăng tin khách tìm xe
+ */
 class Khach_tim_xeController extends Controller {
+    
+    /**
+     * Số bản ghi khách tìm xe tối đa được hiển thị
+     */
     const LIMITED_RECORD_KTX = 1;
     
     public function actionIndex($currentPage=1) {
@@ -27,6 +34,16 @@ class Khach_tim_xeController extends Controller {
     public function actionPagektx(){
         $this->actionIndex($_GET['p']);
     }
+    
+    /**
+     * Đăng tin khách tìm xe
+     */
+    public function actionDang_tin(){}
+    
+    /**
+     * Hiển thị chi tiết tin khách tìm xe
+     */
+    public function actionChi_tiet_tin(){}
     
 
 }

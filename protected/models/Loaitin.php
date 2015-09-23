@@ -99,4 +99,6 @@ class Loaitin extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+        
+        
 }

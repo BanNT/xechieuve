@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * 
+ */
 class Xe_tim_khachController extends Controller {
 
     const LIMITED_RECORD_XTK = 1;

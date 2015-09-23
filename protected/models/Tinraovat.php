@@ -13,96 +13,124 @@
  * @property Loaitinraovat $maLoaiTinRv
  * @property Tinkhachhang $maTin
  */
-class Tinraovat extends CActiveRecord
-{
-	/**
-	 * @return string the associated database table name
-	 */
-	public function tableName()
-	{
-		return 'tinraovat';
-	}
+class Tinraovat extends CActiveRecord {
 
-	/**
-	 * @return array validation rules for model attributes.
-	 */
-	public function rules()
-	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(
-			array('ma_tin, ma_loai_tin_rv', 'required'),
-			array('ma_tin, ma_loai_tin_rv', 'numerical', 'integerOnly'=>true),
-			array('anh', 'length', 'max'=>510),
-			array('gia_rao_vat', 'length', 'max'=>30),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('ma_tin, anh, gia_rao_vat, ma_loai_tin_rv', 'safe', 'on'=>'search'),
-		);
-	}
+    /**
+     * Mã loại tin rao vặt trong database
+     */
+    const CODE_RV = 3;
 
-	/**
-	 * @return array relational rules.
-	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-			'maLoaiTinRv' => array(self::BELONGS_TO, 'Loaitinraovat', 'ma_loai_tin_rv'),
-			'maTin' => array(self::BELONGS_TO, 'Tinkhachhang', 'ma_tin'),
-		);
-	}
+    /**
+     * @return string the associated database table name
+     */
+    public function tableName() {
+        return 'tinraovat';
+    }
 
-	/**
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels()
-	{
-		return array(
-			'ma_tin' => 'Ma Tin',
-			'anh' => 'Anh',
-			'gia_rao_vat' => 'Gia Rao Vat',
-			'ma_loai_tin_rv' => 'Ma Loai Tin Rv',
-		);
-	}
+    /**
+     * @return array validation rules for model attributes.
+     */
+    public function rules() {
+        // NOTE: you should only define rules for those attributes that
+        // will receive user inputs.
+        return array(
+            array('ma_loai_tin_rv,gia_rao_vat', 'required',
+                'message' => 'Bạn chưa nhập {attribute}'
+            ),
+            array('ma_tin, ma_loai_tin_rv', 'numerical', 'integerOnly' => true),
+            array('anh', 'length', 'max' => 510),
+            array('gia_rao_vat', 'length', 'max' => 30),
+            // The following rule is used by search().
+            // @todo Please remove those attributes that should not be searched.
+            array('ma_tin, anh, gia_rao_vat, ma_loai_tin_rv', 'safe', 'on' => 'search'),
+        );
+    }
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
+    /**
+     * @return array relational rules.
+     */
+    public function relations() {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'maLoaiTinRv' => array(self::BELONGS_TO, 'Loaitinraovat', 'ma_loai_tin_rv'),
+            'maTin' => array(self::BELONGS_TO, 'Tinkhachhang', 'ma_tin'),
+        );
+    }
 
-		$criteria=new CDbCriteria;
+    /**
+     * @return array customized attribute labels (name=>label)
+     */
+    public function attributeLabels() {
+        return array(
+            'ma_tin' => 'Ma Tin',
+            'anh' => 'Ảnh',
+            'gia_rao_vat' => 'Giá tiền',
+            'ma_loai_tin_rv' => 'Loại tin rao vặt',
+        );
+    }
 
-		$criteria->compare('ma_tin',$this->ma_tin);
-		$criteria->compare('anh',$this->anh,true);
-		$criteria->compare('gia_rao_vat',$this->gia_rao_vat,true);
-		$criteria->compare('ma_loai_tin_rv',$this->ma_loai_tin_rv);
+    /**
+     * Retrieves a list of models based on the current search/filter conditions.
+     *
+     * Typical usecase:
+     * - Initialize the model fields with values from filter form.
+     * - Execute this method to get CActiveDataProvider instance which will filter
+     * models according to data in model fields.
+     * - Pass data provider to CGridView, CListView or any similar widget.
+     *
+     * @return CActiveDataProvider the data provider that can return the models
+     * based on the search/filter conditions.
+     */
+    public function search() {
+        // @todo Please modify the following code to remove attributes that should not be searched.
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+        $criteria = new CDbCriteria;
 
-	/**
-	 * Returns the static model of the specified AR class.
-	 * Please note that you should have this exact method in all your CActiveRecord descendants!
-	 * @param string $className active record class name.
-	 * @return Tinraovat the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
-	}
+        $criteria->compare('ma_tin', $this->ma_tin);
+        $criteria->compare('anh', $this->anh, true);
+        $criteria->compare('gia_rao_vat', $this->gia_rao_vat, true);
+        $criteria->compare('ma_loai_tin_rv', $this->ma_loai_tin_rv);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+        ));
+    }
+
+    /**
+     * Returns the static model of the specified AR class.
+     * Please note that you should have this exact method in all your CActiveRecord descendants!
+     * @param string $className active record class name.
+     * @return Tinraovat the static model class
+     */
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
+    }
+
+    /**
+     * trừ tiền khi đăng tin rao vặt
+     */
+    public function trutien() {
+        //chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
+        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
+        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
+        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
+        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
+        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
+        //
+        //lấy giá tiền cần có để đăng tin rao vặt
+        $giaTien = Loaitin::model()->findByPk(self::CODE_RV)->gia_dang;
+        //lấy tổng số tiền trong tài khoản của khách hàng
+        $tongTien = Khachhang::model()->findByPk(1)->so_du_tai_khoan;
+        
+        //Nếu không đủ tiền sẽ không cho đăng tin
+        if ($tongTien < $giaTien) {
+            return false;
+        }
+        
+        if (Khachhang::model()->updateByPk(1, array('so_du_tai_khoan' => ($tongTien - $giaTien)))) {
+            return true;
+        }
+    }
+
 }

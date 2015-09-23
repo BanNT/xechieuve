@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Mặc định actionIndex sẽ hiển thị trang chủ
+ */
 class SiteController extends Controller {
 
     /**
@@ -10,26 +12,7 @@ class SiteController extends Controller {
     /**
      * Số bản ghi tối đa hiển thị của bảng khách tìm xe
      */
-    const LIMITED_RECORD_KTX = 1;
-
-//
-//    /**
-//     * Declares class-based actions.
-//     */
-//    public function actions() {
-//        return array(
-//            // captcha action renders the CAPTCHA image displayed on the contact page
-//            'captcha' => array(
-//                'class' => 'CCaptchaAction',
-//                'backColor' => 0xFFFFFF,
-//            ),
-//            // page action renders "static" pages stored under 'protected/views/site/pages'
-//            // They can be accessed via: index.php?r=site/page&view=FileName
-//            'page' => array(
-//                'class' => 'CViewAction',
-//            ),
-//        );
-//    }
+    const LIMITED_RECORD_KTX = 2;
 
     /**
      * This is the default 'index' action that is invoked

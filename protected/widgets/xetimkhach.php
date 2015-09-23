@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Quản lý hiển thị bảng xe tìm khách
+ */
 class xetimkhach extends CWidget {
 
     public $xetimkhach;

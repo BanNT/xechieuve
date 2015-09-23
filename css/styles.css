@@ -169,7 +169,7 @@ ul{
 }
 
 @media (min-width: 1170px) {
-    #slide,#table-car,#table-customer{
+    #slide,#table-car,#table-customer,#dangtinrv{
         width: 710px !important;
         margin-left: 10px;
     }
@@ -248,3 +248,7 @@ ul{
 }
 /*------------------------------end paginator----------------------------------*/
 /*----------------------------------------------------------------------------*/
+
+.errorMessage{
+    color: red;
+}
