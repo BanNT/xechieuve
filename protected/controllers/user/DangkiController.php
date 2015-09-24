@@ -6,6 +6,30 @@ class DangkiController extends Controller
 	{
 		$this->render('index');
 	}
+     
+
+    /**
+     * Đăng kí
+     */
+    public function actionDangki() {
+        $form = new CForm('application.views.user.dangki.formdangki');
+        $form['khachhang']->model = new Khachhang();
+        
+        
+        if ($form->submitted('dang_ki') && $form->validate()) {
+            $khachhang = $form['khachhang']->model;
+           
+            //Nếu không đủ tiền để đăng tin sẽ không đăng
+            
+                    echo "đăng tin rao vặt thành công";
+                    return;
+                
+            }
+        $this->render('dangki', array('form'=>$form));
+    }
+
+
+
 
 	// Uncomment the following methods and override them if needed
 	/*

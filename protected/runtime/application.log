@@ -5404,3 +5404,80 @@ Stack trace:
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost/xechieuve/index.php
 ---
+2015/09/24 07:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_ki/
+---
+2015/09/24 10:37:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangtin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangtin')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dangtin
+---
+2015/09/24 10:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "danngki".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(270): CController->missingAction('danngki')
+#1 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('danngki')
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki/danngki')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#6 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#9 {main}
+REQUEST_URI=/xechieuve/dangki/danngki
+---
+2015/09/24 10:53:38 [error] [exception.CException] exception 'CException' with message 'CForm and its behaviors do not have a method or closure named "beginWidget".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\views\user\dangki\formdangki.php(11): CComponent->__call('beginWidget', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\views\user\dangki\formdangki.php(11): CForm->beginWidget('CActiveForm', Array)
+#2 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(141): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(48): CFormElement->configure('application.vie...')
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(178): CFormElement->__construct('application.vie...', Object(DangkiController))
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\DangkiController.php(15): CForm->__construct('application.vie...')
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): DangkiController->actionDangki()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dangki')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki/dangki')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/dangki/dangki
+---
+2015/09/24 10:55:39 [error] [php] Indirect modification of overloaded element of CForm has no effect (C:\xampp\htdocs\xechieuve\protected\controllers\user\DangkiController.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): DangkiController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): DangkiController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): DangkiController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dangki/dangki
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\DangkiController.php (16)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
