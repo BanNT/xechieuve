@@ -23,7 +23,7 @@ class Rao_vatController extends Controller {
         $tinraovat = new Tinraovat();
         $paginatorRV = new Paginate($currentPage, new Tinkhachhang(), $limit, ' ma_loai_tin = ' . Tinraovat::CODE_RV);
         $listTinRV = $tinraovat->listTinRV($paginatorRV);
-
+        
         //render view
         $data = array(
             'listTinRV' => $listTinRV,
@@ -50,24 +50,22 @@ class Rao_vatController extends Controller {
         $form = new CForm('application.views.user.rao_vat.dang_tinForm');
         $form['tinkhachhang']->model = new Tinkhachhang();
         $form['tinraovat']->model = $tinraovat = new Tinraovat();
-
+        
         if ($form->submitted('dangtin') && $form->validate()) {
             $tinkhachhang = $form['tinkhachhang']->model;
             $tinraovat = $form['tinraovat']->model;
 
             //Nếu không đủ tiền để đăng tin sẽ không đăng
             if ($tinraovat->trutien()) {
-                if ($tinkhachhang->save(false)) {
-                    $image = CUploadedFile::getInstance($tinraovat, 'anh');
+                if ($tinkhachhang->save(false)) {// thì upload ảnh
+                    $image = CUploadedFile::getInstance($tinraovat, 'anh');//tên ảnh rồi còn phải cho cái ảnh đấy lên đây chứ
                     $newName = md5(microtime(true) . 'xechieuve') . $image->name;
 
                     $tinraovat->ma_tin = $tinkhachhang->ma_tin;
                     $tinraovat->anh = $newName;
                     $tinraovat->save(false);
-
-                    //upload image
+                    
                     $image->saveAs(Tinraovat::IMAGE_DIR_RV . $newName);
-
 
                     echo "đăng tin rao vặt thành công";
                     return;
