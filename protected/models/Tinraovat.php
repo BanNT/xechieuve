@@ -16,6 +16,11 @@
 class Tinraovat extends CActiveRecord {
 
     /**
+     * Đường dẫn ảnh tin rao vặt
+     */
+    const IMAGE_DIR_RV = 'images/tinraovat/';
+
+    /**
      * Mã loại tin rao vặt trong database
      */
     const CODE_RV = 3;
@@ -35,10 +40,18 @@ class Tinraovat extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('ma_loai_tin_rv,gia_rao_vat', 'required',
-                'message' => 'Bạn chưa nhập {attribute}'
+                'message' => 'Bạn chưa nhập thông tin vào ô "{attribute}"'
             ),
             array('ma_tin, ma_loai_tin_rv', 'numerical', 'integerOnly' => true),
-            array('anh', 'length', 'max' => 510),
+            array('anh', 'length', 'max' => 510, 'message' => 'Tên file quá dài'),
+            array('anh', 'file', 'allowEmpty' => true, 'safe' => true, 
+                'types' => 'jpg, jpeg, gif, png',
+                'wrongType'=>'Chỉ chấp nhận các file jpg, jpeg, gif, png',
+                'maxSize' => 1024*1024, // 1MB                
+                'tooLarge' => 'Kích cỡ ảnh phải nhỏ hơn 1MB',
+                'maxFiles'=>1,
+                'tooMany'=>'Bạn chỉ được upload 1 file ảnh duy nhất'
+            ),
             array('gia_rao_vat', 'length', 'max' => 30),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -117,20 +130,36 @@ class Tinraovat extends CActiveRecord {
         ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
         ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
         ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
-        //
         //lấy giá tiền cần có để đăng tin rao vặt
         $giaTien = Loaitin::model()->findByPk(self::CODE_RV)->gia_dang;
         //lấy tổng số tiền trong tài khoản của khách hàng
         $tongTien = Khachhang::model()->findByPk(1)->so_du_tai_khoan;
-        
+
         //Nếu không đủ tiền sẽ không cho đăng tin
         if ($tongTien < $giaTien) {
             return false;
         }
-        
+
         if (Khachhang::model()->updateByPk(1, array('so_du_tai_khoan' => ($tongTien - $giaTien)))) {
             return true;
         }
+    }
+
+    /**
+     * Lấy ra danh sách tin rao vặt
+     * @param Paginate $paginator
+     * @return array
+     */
+    public function listTinRV(Paginate $paginator) {
+        return Yii::app()->db->createCommand()
+                        ->select('tieu_de_tin,tinh_thanh,gia_rao_vat,nguoi_lien_lac,so_dien_thoai,anh')
+                        ->from('tinraovat')
+                        ->where('ma_loai_tin = ' . self::CODE_RV)
+                        ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
+                        ->order('ngay_dang ASC')
+                        ->limit($paginator->limit, $paginator->offset)
+                        ->queryAll()
+        ;
     }
 
 }

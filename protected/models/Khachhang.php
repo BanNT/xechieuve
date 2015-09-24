@@ -33,7 +33,7 @@ class Khachhang extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('ten_khach_hang, ten_dang_nhap, password, so_dien_thoai', 'required',
-                'message' => 'Bạn cần nhập {attribute}'
+                'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
             ),
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,

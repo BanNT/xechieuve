@@ -67,12 +67,13 @@
                                             </form>
                                         </div>
                                     </section><!--end search-->
-                                    <section id="slide">
-                                        <?php $this->widget('application.widgets.slide'); ?>
-                                    </section><!--end slide-->
-                                    <!--begin content-->
-                                    <?php echo $content ?>
-                                    <!--end content-->
+                                    <section id="main-content">
+                                        <section id="slide">
+                                            <?php $this->widget('application.widgets.slide'); ?>
+                                        </section><!--end slide-->
+
+                                        <?php echo $content ?>
+                                    </section><!--end main-content-->
                                 </div>
                             </div>
                         </section><!--end coll-right-->
