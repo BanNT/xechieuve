@@ -111,7 +111,7 @@ ul{
 /*----------------------------------------------------------------------------*/
 /*--------------------------------begin search--------------------------------*/
 #search{
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
 
 #search h6 {
@@ -161,7 +161,7 @@ ul{
 /*----------------------------------------------------------------------------*/
 /*---------------------------begin slide/ table-------------------------------*/
 #slide{
-    margin: 5px 0 8px 10px;
+    margin-bottom: 8px;
 }
 
 #table-car,#table-customer{
@@ -169,7 +169,7 @@ ul{
 }
 
 @media (min-width: 1170px) {
-    #slide,#table-car,#table-customer,#dangtinrv{
+    #main-content{
         width: 710px !important;
         margin-left: 10px;
     }
@@ -251,4 +251,8 @@ ul{
 
 .errorMessage{
     color: red;
+}
+
+#dangtinrv{
+    margin-bottom: 20px;
 }

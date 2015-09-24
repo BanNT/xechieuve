@@ -91,8 +91,8 @@ class Loaitinraovat extends CActiveRecord {
     }
 
     /**
-     * Lấy ra danh sách loại tin rao vặt theo kiểu mảng với ma_loai_tin_rv là key
-     * loai_tin_rv là value
+     * Lấy ra danh sách loại tin rao vặt theo kiểu mảng với
+     * ma_loai_tin_rv là key loai_tin_rv là value
      * @return array
      */
     public static function optionLoaiTinRV() {
