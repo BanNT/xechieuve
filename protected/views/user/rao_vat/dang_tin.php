@@ -1,4 +1,4 @@
-<?php $this->pageTitle = Yii::app()->name . ' - Đăng tin rao vặt'; ?>
+<?php $this->pageTitle = Yii::app()->name . ' - đăng tin rao vặt'; ?>
 <section id="dangtinrv">
     <?php echo $form; ?>
 </section>

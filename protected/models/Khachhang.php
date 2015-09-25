@@ -32,7 +32,7 @@ class Khachhang extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ten_khach_hang, ten_dang_nhap, password, so_dien_thoai', 'required',
+            array('ten_khach_hang, ten_dang_nhap,dia_chi, password, so_dien_thoai', 'required',
                 'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
             ),
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),

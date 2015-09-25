@@ -1,4 +1,4 @@
-<?php $this->pageTitle=Yii::app()->name;?>
+<?php $this->pageTitle = Yii::app()->name . ' - trang chủ'; ?>
 <section id="indexPage">
     <?php
     /* @var $this Controller */

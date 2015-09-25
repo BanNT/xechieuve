@@ -51,21 +51,7 @@
                             <div class="col-md-9">
                                 <div class="row">
                                     <section id="search">
-                                        <div class="col-md-12">
-                                            <h6>Tìm kiếm khách</h6>
-                                            <form action="" method="">
-                                                <select>
-                                                    <option>Chọn nơi đi</option>
-                                                    <?php $this->widget('application.widgets.provinces'); ?>
-                                                </select>
-                                                <select>
-                                                    <option>Chọn nơi đến</option>
-                                                    <?php $this->widget('application.widgets.provinces'); ?>
-                                                </select>
-                                                <input type="date"/>
-                                                <input type="submit" value="Tìm kiếm"/>
-                                            </form>
-                                        </div>
+                                         <?php $this->widget('application.widgets.searchSelect'); ?>
                                     </section><!--end search-->
                                     <section id="main-content">
                                         <section id="slide">

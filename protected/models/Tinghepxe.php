@@ -18,12 +18,12 @@
 class Tinghepxe extends CActiveRecord {
 
     /**
-     * Mã loại tin 'xe tìm khách'
+     * Mã loại tin 'xe tìm khách' trong database
      */
     const CODE_XTK = 1;
-    
+
     /**
-     * Mã loại tin 'khách tìm xe'
+     * Mã loại tin 'khách tìm xe' trong database
      */
     const CODE_KTX = 2;
 
@@ -121,19 +121,34 @@ class Tinghepxe extends CActiveRecord {
      * Lấy danh sách xe tìm khách hoặc khách tìm xe dựa vào mã loại tin
      * @param Paginate $paginator
      * @param integer $maLoaiTin
+     * @param string $condition Điều kiện thêm vào
      * @return array
      */
-    public function listTinGhepXeByType(Paginate $paginator,$maLoaiTin) {
+    public function listTinGhepXeByType(Paginate $paginator, $maLoaiTin, $condition = null) {
         return Yii::app()->db->createCommand()
-            ->select('tieu_de_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai')
-            ->from('tinghepxe')
-            ->where('ma_loai_tin = ' . $maLoaiTin)
-            ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
-            ->order('ngay_dang ASC')
-            ->limit($paginator->limit, $paginator->offset)
-            ->queryAll()
+                        ->select('tieu_de_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai')
+                        ->from('tinghepxe')
+                        ->where('ma_loai_tin = ' . $maLoaiTin . $condition)
+                        ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
+                        ->order('ngay_dang ASC')
+                        ->limit($paginator->limit, $paginator->offset)
+                        ->queryAll()
         ;
     }
 
+    /**
+     * Lấy ra danh sách mã loại tin
+     * @param string $maLoaiTin
+     * @param string $conditions
+     * @return string
+     */
+    public static function listMaTin($maLoaiTin, $conditions) {
+        return Yii::app()->db->createCommand()
+                        ->select('tinghepxe.ma_tin')
+                        ->from('tinghepxe')
+                        ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
+                        ->where('ma_loai_tin = ' . $maLoaiTin . $conditions)
+                        ->queryAll();
+    }
 
 }
