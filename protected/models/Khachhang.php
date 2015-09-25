@@ -17,6 +17,15 @@
  * @property Tinkhachhang[] $tinkhachhangs
  */
 class Khachhang extends CActiveRecord {
+    const AVARTAR_DIR = 'images/avartars';
+    
+    /**
+     *Xác nhận password
+     * @var string
+     */
+    public $confirmPassword;
+    public $diachi;
+    public $dieukhoan;
 
     /**
      * @return string the associated database table name
@@ -32,17 +41,28 @@ class Khachhang extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ten_khach_hang, ten_dang_nhap,dia_chi, password, so_dien_thoai', 'required',
-                'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
+            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,diachi,dieukhoan', 'required',
+                'message' => 'Bạn không được bỏ trống "{attribute}"'// đây required là bắt buộc, cái này là tên hàm của yii viết sẵn
+            ),
+            array('password', 'compare', 'compareAttribute' => 'confirmPassword',
+                'message' => 'password không khớp'
             ),
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
                 'message' => '{attribute} phải dưới 80 kí tự'
             ),
-            array('email','email','message'=>'email không hợp lệ'),
+            array('email', 'email', 'message' => 'Email không hợp lệ'),
             array('password', 'length', 'max' => 40),
             array('so_dien_thoai', 'length', 'max' => 11),
             array('anh_dai_dien', 'length', 'max' => 255),
+            array('anh_dai_dien', 'file', 'allowEmpty' => true, 'safe' => true, 
+                'types' => 'jpg, jpeg, gif, png',
+                'wrongType'=>'Chỉ chấp nhận các file jpg, jpeg, gif, png',
+                'maxSize' => 1024*1024, // 1MB                
+                'tooLarge' => 'Kích cỡ ảnh phải nhỏ hơn 1MB',
+                'maxFiles'=>1,
+                'tooMany'=>'Bạn chỉ được upload 1 file ảnh duy nhất'
+            ),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password, email, so_dien_thoai, so_du_tai_khoan, anh_dai_dien', 'safe', 'on' => 'search'),
@@ -66,13 +86,16 @@ class Khachhang extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'ma_khach_hang' => 'Ma Khach Hang',
-            'ten_khach_hang' => 'Tên khách hàng',
-            'ten_dang_nhap' => 'Ten Dang Nhap',
-            'password' => 'Password',
-            'email' => 'Email',
-            'so_dien_thoai' => 'So Dien Thoai',
-            'so_du_tai_khoan' => 'So Du Tai Khoan',
-            'anh_dai_dien' => 'Anh Dai Dien',
+            'ten_khach_hang' => 'Tên khách hàng:',
+            'ten_dang_nhap' =>'Tên đăng nhập:',
+            'password' => 'Password:',
+            'email' => 'Email:',
+            'so_dien_thoai' =>'Số điện thoại:',
+            'so_du_tai_khoan' =>'Số dư tài khoản:',
+            'anh_dai_dien'=>'Ảnh đại diện:',
+            'confirmPassword' => 'Nhập lại password:',
+            'diachi'=>'Địa chỉ:',
+            'dieukhoan'=>'<a>Bạn có đồng ý với điều khoản</a>'
         );
     }
 

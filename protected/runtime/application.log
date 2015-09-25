@@ -1575,9 +1575,16 @@ REQUEST_URI=/xechieuve/khach_tim_xe
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_tim_xeController.php (8)
 in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
 in C:\xampp\htdocs\xechieuve\index.php (11)
+<<<<<<< HEAD
+2015/09/23 09:43:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xechieuve.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2015/09/23 10:10:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+=======
 2015/09/22 12:44:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -1585,6 +1592,14 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/xe_tim_khach
+---
+2015/09/23 10:11:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/dang-tin
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
@@ -1886,6 +1901,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 2015/09/22 15:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -1893,12 +1909,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 10:14:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
 2015/09/22 15:55:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -1906,10 +1930,16 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 10:18:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 ---
 2015/09/22 15:55:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
@@ -1920,11 +1950,18 @@ Stack trace:
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
 REQUEST_URI=/xechieuve/lien_he
+<<<<<<< HEAD
+---
+2015/09/23 10:18:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+=======
 HTTP_REFERER=http://localhost:8888/xechieuve/dang_tin
 ---
 2015/09/22 15:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -1932,6 +1969,14 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/lien_he
+---
+2015/09/23 10:18:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('index')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/lien_he
 ---
@@ -1953,6 +1998,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 2015/09/22 15:58:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -1960,6 +2006,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/index
+---
+2015/09/23 10:21:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
@@ -1981,6 +2034,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 2015/09/22 15:58:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -1988,6 +2042,14 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/index.php
+---
+2015/09/23 10:29:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/site/dangtin
 ---
@@ -2009,6 +2071,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 2015/09/22 15:58:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2016,12 +2079,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/khach_tim_xe
+---
+2015/09/23 10:29:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lienhe".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lienhe')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/site/dangtin
 ---
 2015/09/22 15:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2029,12 +2101,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lienhe
+---
+2015/09/23 11:23:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
 2015/09/22 15:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2042,6 +2122,14 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/khach_tim_xe?
+---
+2015/09/23 11:23:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
@@ -2108,6 +2196,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach/dangtin
 2015/09/22 16:01:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2115,6 +2204,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 11:25:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
 ---
@@ -2166,6 +2262,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/site/dangtin
 2015/09/22 16:02:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2173,6 +2270,14 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/lien_he
+---
+2015/09/23 11:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/site/dangtin
 ---
@@ -2194,6 +2299,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 2015/09/22 16:09:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2201,6 +2307,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 11:26:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
 ---
@@ -2312,6 +2425,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
 2015/09/22 16:12:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2319,12 +2433,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 11:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach/dangtin
 ---
 2015/09/22 16:12:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2332,12 +2454,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 11:29:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/dang_tin
 ---
 2015/09/22 16:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2345,12 +2475,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 11:41:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
 2015/09/22 16:12:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2358,12 +2496,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_ki
+---
+2015/09/23 11:42:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/dang_tin
 ---
 2015/09/22 16:12:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2371,6 +2517,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_ki
+---
+2015/09/23 11:44:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 ---
@@ -2392,6 +2545,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 2015/09/22 16:13:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2399,12 +2553,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_ki
+---
+2015/09/23 11:48:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-ki')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe/dangtin
 ---
 2015/09/22 16:13:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2412,12 +2574,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang-ki
+---
+2015/09/23 11:48:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang ki')
+=======
 REQUEST_URI=/xechieuve/lien_he
 HTTP_REFERER=http://localhost:8888/xechieuve/dang_tin
 ---
 2015/09/22 16:13:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2425,12 +2595,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang%20ki
+---
+2015/09/23 11:48:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/lien_he
 ---
 2015/09/22 16:14:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2438,12 +2616,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dangki
+---
+2015/09/23 11:49:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/lien_he
 ---
 2015/09/22 16:14:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2451,6 +2637,11 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_ki
+---
+2015/09/23 11:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/dang_tin
 ---
@@ -2468,6 +2659,7 @@ REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/dang_tin
 ---
 2015/09/22 16:14:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
@@ -2478,6 +2670,12 @@ Stack trace:
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
 REQUEST_URI=/xechieuve/dang_tin
+<<<<<<< HEAD
+---
+2015/09/23 11:54:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 ---
 2015/09/22 16:14:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dangtin".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:483
@@ -2498,6 +2696,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 2015/09/22 16:15:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2505,6 +2704,11 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 11:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe/dangtin
 ---
@@ -2524,6 +2728,7 @@ REQUEST_URI=/xechieuve/khach_tim_xe/dangtin
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 ---
 2015/09/22 16:17:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
@@ -2534,11 +2739,18 @@ Stack trace:
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
 REQUEST_URI=/xechieuve/lien_he
+<<<<<<< HEAD
+---
+2015/09/23 11:56:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('Lien_he')
+=======
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe/dangtin
 ---
 2015/09/22 16:18:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2546,12 +2758,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/Lien_he
+---
+2015/09/23 11:57:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
 2015/09/22 16:22:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2559,12 +2779,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 12:02:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/rao_vat
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
 2015/09/22 16:22:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2572,6 +2800,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 12:02:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
@@ -2639,6 +2874,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 2015/09/22 16:26:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2646,6 +2882,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 12:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dangtin
 ---
@@ -2667,6 +2910,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 2015/09/22 18:09:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2674,6 +2918,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien_he
+---
+2015/09/23 12:08:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lienhe".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lienhe')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 ---
@@ -2763,6 +3014,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
 2015/09/23 01:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2770,12 +3022,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lienhe
+---
+2015/09/23 12:12:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "2/lienhe".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('2/lienhe')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
 2015/09/23 01:56:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2783,6 +3043,40 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve2/lienhe
+---
+2015/09/23 12:16:55 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\xechieuve\protected\widgets\views\khachtimxe.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): khachtimxe->renderFile()
+#1 C:\xampp\htdocs\xechieuve\protected\widgets\khachtimxe.php(18): khachtimxe->render()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): khachtimxe->run()
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\dangnhap\index.php(2): DangnhapController->widget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): DangnhapController->renderInternal()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): DangnhapController->renderFile()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): DangnhapController->renderPartial()
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\DangnhapController.php(7): DangnhapController->render()
+#9 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): DangnhapController->actionIndex()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): DangnhapController->runAction()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): DangnhapController->runActionWithFilters()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): DangnhapController->run()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#17 unknown(0): WebApplicationEndBehavior->runEnd()
+#18 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#19 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#20 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dangnhap
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\khachtimxe.php (18)
+in C:\xampp\htdocs\xechieuve\protected\widgets\khachtimxe.php (18)
+in C:\xampp\htdocs\xechieuve\protected\views\user\dangnhap\index.php (2)
+2015/09/23 19:11:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin-tuc')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 ---
@@ -2864,6 +3158,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 2015/09/23 02:06:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2871,12 +3166,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/tin-tuc
+HTTP_REFERER=http://localhost/xechieuve/khach_tim_xe
+---
+2015/09/23 19:11:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro-giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro-giup')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 ---
 2015/09/23 02:07:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2884,12 +3188,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost/xechieuve/tin-tuc
+---
+2015/09/23 19:11:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
 2015/09/23 02:27:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -2897,6 +3210,14 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/rao-vat
+HTTP_REFERER=http://localhost/xechieuve/tro-giup
+---
+2015/09/23 19:11:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien-he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien-he')
+=======
 REQUEST_URI=/xechieuve/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
@@ -3178,6 +3499,7 @@ in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php 
 2015/09/23 03:37:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -3185,12 +3507,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---
+2015/09/23 19:11:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-tin')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin
 ---
 2015/09/23 03:37:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -3198,12 +3529,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang-tin
+HTTP_REFERER=http://localhost/xechieuve/lien-he
+---
+2015/09/23 19:12:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 ---
 2015/09/23 03:41:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -3211,6 +3551,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_tin
+---
+2015/09/23 19:13:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 ---
@@ -3255,6 +3602,7 @@ in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php 
 2015/09/23 03:45:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -3262,6 +3610,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_tin
+---
+2015/09/23 19:13:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 ---
@@ -3669,6 +4024,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin
 2015/09/23 06:29:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tinkhachhang".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tinkhachhang')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -3676,6 +4032,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_tin
+---
+2015/09/23 19:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+=======
 REQUEST_URI=/xechieuve/tinkhachhang
 ---
 2015/09/23 06:37:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index’".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:483
@@ -3834,6 +4197,7 @@ in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php 
 2015/09/23 08:39:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -3841,6 +4205,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/THxechieuve/xechieuve2/dang_tin
+---
+2015/09/23 19:18:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin
 ---
@@ -4016,6 +4387,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin
 2015/09/23 09:42:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -4023,6 +4395,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/THxechieuve/xechieuve2/rao_vat
+---
+2015/09/23 19:20:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
@@ -4624,6 +5003,7 @@ in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (1
 2015/09/23 12:11:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -4631,12 +5011,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/THxechieuve/rao_vat
+HTTP_REFERER=http://localhost/THxechieuve/
+---
+2015/09/23 19:21:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao_vat/dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/dang_ti...')
+=======
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin
 ---
 2015/09/23 12:11:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -4644,6 +5033,9 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/THxechieuve/rao_vat/dang_tin
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 ---
@@ -4997,7 +5389,26 @@ Stack trace:
 #9 {main}
 REQUEST_URI=/xechieuve/xe_tim_khach/dang_tin
 HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
+>>>>>>> 7ccf22ea4fb1b62c9842ac8fcbe10f0503a1846a
 ---
+2015/09/23 19:41:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_tin
+HTTP_REFERER=http://localhost/xechieuve/index.php
+---
+<<<<<<< HEAD
+2015/09/24 07:39:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+=======
 2015/09/23 18:42:55 [error] [php] Undefined variable: model (C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php:32)
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
@@ -5413,6 +5824,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin/
 2015/09/24 09:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.eot".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+>>>>>>> f8f2eb5bdc5a2284275c8173f301d758ae9dec98
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -5420,12 +5832,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_ki/
+---
+2015/09/24 10:37:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangtin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangtin')
+=======
 REQUEST_URI=/xechieuve/fonts/glyphicons-halflings-regular.eot?
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin/
 ---
 2015/09/24 09:40:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+>>>>>>> f8f2eb5bdc5a2284275c8173f301d758ae9dec98
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -5433,6 +5853,15 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dangtin
+---
+2015/09/24 10:42:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "danngki".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(270): CController->missingAction('danngki')
+#1 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('danngki')
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki/danngki')
+=======
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
@@ -5597,6 +6026,7 @@ Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(270): CController->missingAction('pagerv')
 #1 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('pagerv')
 #2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/pagerv')
+>>>>>>> f8f2eb5bdc5a2284275c8173f301d758ae9dec98
 #3 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #4 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #5 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -5604,6 +6034,49 @@ Stack trace:
 #7 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #9 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dangki/danngki
+---
+2015/09/24 10:53:38 [error] [exception.CException] exception 'CException' with message 'CForm and its behaviors do not have a method or closure named "beginWidget".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\views\user\dangki\formdangki.php(11): CComponent->__call('beginWidget', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\views\user\dangki\formdangki.php(11): CForm->beginWidget('CActiveForm', Array)
+#2 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(141): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(48): CFormElement->configure('application.vie...')
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(178): CFormElement->__construct('application.vie...', Object(DangkiController))
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\DangkiController.php(15): CForm->__construct('application.vie...')
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): DangkiController->actionDangki()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dangki')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki/dangki')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/dangki/dangki
+---
+2015/09/24 10:55:39 [error] [php] Indirect modification of overloaded element of CForm has no effect (C:\xampp\htdocs\xechieuve\protected\controllers\user\DangkiController.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): DangkiController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): DangkiController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): DangkiController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dangki/dangki
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\DangkiController.php (16)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+=======
 REQUEST_URI=/xechieuve/rao_vat/pagerv?p=2&_=1443081738707
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
@@ -5781,6 +6254,7 @@ Stack trace:
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/tro_giup
 ---
+<<<<<<< HEAD
 2015/09/24 15:53:36 [error] [exception.CException] exception 'CException' with message 'Alias "application.widgets.selectSearch" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\xechieuve\framework\YiiBase.php:323
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWidgetFactory.php(146): YiiBase::import('application.wid...', true)
@@ -5948,6 +6422,64 @@ HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 2015/09/24 16:27:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+=======
+>>>>>>> f8f2eb5bdc5a2284275c8173f301d758ae9dec98
+2015/09/24 11:57:52 [error] [exception.CException] exception 'CException' with message 'Dang_kiController cannot find the requested view "index".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(6): CController->render('index')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/dang_ki
+---
+2015/09/24 12:00:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(270): CController->missingAction('dang_ki')
+#1 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dang_ki')
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki/dang_ki')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#6 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#9 {main}
+REQUEST_URI=/xechieuve/dang_ki/dang_ki
+---
+2015/09/24 12:00:34 [error] [exception.CException] exception 'CException' with message 'Dang_kiController cannot find the requested view "dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('dangki', Array, true)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(23): CController->render('dangki', Array)
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionDang_ki()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dang_ki')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki/dang_ki')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/dang_ki/dang_ki
+---
+2015/09/24 12:01:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangki/dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki/dangki')
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -5955,12 +6487,59 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/tin_tuc
 ---
 2015/09/24 16:27:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+=======
+REQUEST_URI=/xechieuve/dangki/dangki
+---
+2015/09/24 12:01:20 [error] [exception.CException] exception 'CException' with message 'Dang_kiController cannot find the requested view "dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('dangki', Array, true)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(23): CController->render('dangki', Array)
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionDangki()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dangki')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki/dangki')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/dang_ki/dangki
+---
+2015/09/24 12:02:11 [error] [php] require(C:\xampp\htdocs\xechieuve\protected\views\user\dangki\formdangki.php): failed to open stream: No such file or directory (C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php:141)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(178): CForm->__construct()
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(18): CForm->__construct()
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionDangki()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kiController->runAction()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kiController->runActionWithFilters()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kiController->run()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ki/dangki
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (18)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/24 12:24:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki')
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -5968,12 +6547,158 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 ---
 2015/09/24 16:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
+REQUEST_URI=/xechieuve/dangki/
+---
+2015/09/24 18:55:22 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.email " is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('email ')
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('email ')
+#2 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(Khachhang), 'email ')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(Khachhang), NULL)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): CModel->validate()
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(16): CForm->validate()
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/dang_ki
+HTTP_REFERER=http://localhost/xechieuve/dang_ki
+---
+2015/09/24 18:56:29 [warning] [application] Failed to set unsafe attribute "confirmPassword" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (16)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/24 18:56:29 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.confirmPassword " is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('confirmPassword...')
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('confirmPassword...')
+#2 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(Khachhang), 'confirmPassword...')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(Khachhang), NULL)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): CModel->validate()
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(16): CForm->validate()
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/dang_ki
+HTTP_REFERER=http://localhost/xechieuve/dang_ki
+---
+2015/09/24 18:57:17 [warning] [application] Failed to set unsafe attribute "confirmPassword" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (16)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/24 18:57:17 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.confirmPassword " is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('confirmPassword...')
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('confirmPassword...')
+#2 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(Khachhang), 'confirmPassword...')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(Khachhang), NULL)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): CModel->validate()
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(16): CForm->validate()
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/dang_ki
+HTTP_REFERER=http://localhost/xechieuve/dang_ki
+---
+2015/09/24 19:55:18 [error] [exception.CException] exception 'CException' with message 'CForm and its behaviors do not have a method or closure named "save".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(16): CComponent->__call('save', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(16): CForm->save()
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/dang_ki
+HTTP_REFERER=http://localhost/xechieuve/dang_ki
+---
+2015/09/24 19:58:20 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/dang_tin
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/24 20:10:19 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/dang_tin
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/25 05:10:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki')
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -5981,12 +6706,135 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/lien_he
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
 2015/09/24 16:31:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+=======
+REQUEST_URI=/xechieuve/dangki
+---
+2015/09/25 05:21:23 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/dang_tin
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/25 05:22:32 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/dang_tin
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/25 05:22:36 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/dang_tin
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/25 05:24:02 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/dang_tin
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/25 05:24:07 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php:134)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#9 unknown(0): WebApplicationEndBehavior->runEnd()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/dang_tin
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (134)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/25 05:28:33 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.anh" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(161): CComponent->__set('anh', 'd8010bd70ed5d59...')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(20): CActiveRecord->__set('anh', 'd8010bd70ed5d59...')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/dang_ki
+HTTP_REFERER=http://localhost/xechieuve/dang_ki
+---
+2015/09/25 05:45:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki')
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -5994,6 +6842,7 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/lien_he
 HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat
 ---
@@ -6039,6 +6888,104 @@ HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach
 2015/09/24 16:45:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+=======
+REQUEST_URI=/xechieuve/dangki
+---
+2015/09/25 06:05:33 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(352): tag()
+#2 C:\xampp\htdocs\xechieuve\framework\web\widgets\CActiveForm.php(333): beginForm()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(147): CActiveForm->init()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(197): Dang_kiController->createWidget()
+#5 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(437): Dang_kiController->beginWidget()
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(405): CForm->renderBegin()
+#7 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(61): CForm->render()
+#8 C:\xampp\htdocs\xechieuve\protected\views\user\dang_ki\index.php(4): CForm->__toString()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Dang_kiController->renderInternal()
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Dang_kiController->renderFile()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Dang_kiController->renderPartial()
+#13 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(30): Dang_kiController->render()
+#14 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kiController->runAction()
+#17 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kiController->runActionWithFilters()
+#18 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kiController->run()
+#19 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#22 unknown(0): WebApplicationEndBehavior->runEnd()
+#23 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#24 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#25 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ki
+in C:\xampp\htdocs\xechieuve\protected\views\user\dang_ki\index.php (4)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (30)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/09/25 09:50:13 [error] [php] Undefined variable: pass (C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php:24)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kiController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kiController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kiController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ki
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (24)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/25 10:08:37 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.confirmPassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('confirmPassword')
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('confirmPassword')
+#2 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(Khachhang), 'confirmPassword')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(Khachhang), NULL)
+#4 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(808): CModel->validate(NULL)
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(21): CActiveRecord->save()
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/dang_ki
+HTTP_REFERER=http://localhost/xechieuve/dang_ki
+---
+2015/09/25 10:09:26 [error] [exception.CException] exception 'CException' with message 'Property "CForm.password" is not defined.' in C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php:85
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php(19): CFormElement->__get('password')
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kiController->actionIndex()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#9 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#13 {main}
+REQUEST_URI=/xechieuve/dang_ki
+HTTP_REFERER=http://localhost/xechieuve/dang_ki
+---
+2015/09/25 11:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangki')
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -6046,12 +6993,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/tro_giup
 HTTP_REFERER=http://localhost:8888/xechieuve/tin_tuc
 ---
 2015/09/24 16:45:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_tuc')
+=======
+REQUEST_URI=/xechieuve/dangki
+---
+2015/09/25 11:09:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dangkitk".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dangkitk')
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -6059,6 +7014,7 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/tin_tuc
 HTTP_REFERER=http://localhost:8888/xechieuve/khach_tim_xe
 ---
@@ -6113,6 +7069,15 @@ Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
 #1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
 #2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+=======
+REQUEST_URI=/xechieuve/dangkitk
+---
+2015/09/25 11:18:33 [error] [php] Undefined index: Khachhang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kiController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kiController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kiController->run()
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
 #4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
@@ -6120,6 +7085,7 @@ Stack trace:
 #7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
 #8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
 #9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_khach
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (36)
 in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
@@ -6648,6 +7614,17 @@ Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
 #1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
 #2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+=======
+REQUEST_URI=/xechieuve/dang_ki
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (23)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/25 11:18:39 [error] [php] Undefined index: Khachhang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kiController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kiController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kiController->run()
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
 #3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
 #4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
@@ -6655,6 +7632,7 @@ Stack trace:
 #7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
 #8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
 #9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_khach
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (49)
 in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
@@ -8728,3 +9706,9 @@ Stack trace:
 REQUEST_URI=/xechieuve/rao_vat
 ---
 2015/09/25 11:34:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xechieuve.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+=======
+REQUEST_URI=/xechieuve/dang_ki
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (23)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+>>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848

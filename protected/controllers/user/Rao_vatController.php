@@ -59,16 +59,14 @@ class Rao_vatController extends Controller {
             if ($tinraovat->trutien()) {
                 if ($tinkhachhang->save(false)) {
                     $image = CUploadedFile::getInstance($tinraovat, 'anh');
-                    //nếu có image thì upload image lên
+
                     if ($image) {
                         $newName = md5(microtime(true) . 'xechieuve') . $image->name;
                         $tinraovat->anh = $newName;
                         $image->saveAs(Tinraovat::IMAGE_DIR_RV . $newName);
                     }
-
                     $tinraovat->ma_tin = $tinkhachhang->ma_tin;
                     $tinraovat->save(false);
-
                     echo "đăng tin rao vặt thành công";
                     return;
                 }
