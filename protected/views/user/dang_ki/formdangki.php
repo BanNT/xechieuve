@@ -5,12 +5,10 @@ return array(
     'id'=>'formdangki',
     'class'=>'form-inline',
     'elements' => array(
-        //chú ý cái ten_khach_hang, ở trong model, nó sẽ đối chiếu validate trong đấy
-        //ở trong model mình set validate
           '<div class="row">',
          '<div class="col-xs-12">',
         'ten_khach_hang' => array(
-            'type' => 'text',//ở đây chị để ý là mình chỉ set loại input,class nhưng không set validate, bới nó tham chiếu trong model rồi
+            'type' => 'text',
             'class' => 'form-input'
             ),
         '</div>',
@@ -72,7 +70,13 @@ return array(
         ),
         '</div>',
         '</div>',
-        
+        '<div class="row">',
+        '<div class="col-xs-12  ">',
+         'dieukhoan' => array(
+            'type' => 'checkbox',
+        ),
+        '</div>',
+        '</div>',
     ),
     'buttons' => array(
         'dangki' => array(
@@ -81,6 +85,7 @@ return array(
             'class'=>'btndangki'
         ),
     ),
+    
 );
 
 

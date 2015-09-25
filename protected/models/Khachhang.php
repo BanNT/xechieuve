@@ -25,6 +25,7 @@ class Khachhang extends CActiveRecord {
      */
     public $confirmPassword;
     public $diachi;
+    public $dieukhoan;
 
     /**
      * @return string the associated database table name
@@ -40,7 +41,7 @@ class Khachhang extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,diachi', 'required',
+            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,diachi,dieukhoan', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"'// đây required là bắt buộc, cái này là tên hàm của yii viết sẵn
             ),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
@@ -93,7 +94,8 @@ class Khachhang extends CActiveRecord {
             'so_du_tai_khoan' =>'Số dư tài khoản:',
             'anh_dai_dien'=>'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại password:',
-            'diachi'=>'Địa chỉ:'
+            'diachi'=>'Địa chỉ:',
+            'dieukhoan'=>'<a>Bạn có đồng ý với điều khoản</a>'
         );
     }
 
