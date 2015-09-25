@@ -82,7 +82,8 @@ return array(
         'dangki' => array(
             'type' => 'submit',
             'label' => 'Đăng kí',
-            'class'=>'btndangki'
+            'class'=>'btndangki',
+            'action'=>'dangkitk',
         ),
     ),
     

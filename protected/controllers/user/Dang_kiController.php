@@ -19,9 +19,11 @@ class Dang_kiController extends Controller {
             $khachHang->password = md5($khachHang->password);
             $khachHang->save(false);
             return;
+            
         }
+     
         
         $this->render('index', array('form' => $form));
     }
-
+    
 }
