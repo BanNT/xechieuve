@@ -18,12 +18,12 @@
 class Tinghepxe extends CActiveRecord {
 
     /**
-     * Mã loại tin xe tìm khách
+     * Mã loại tin 'xe tìm khách'
      */
     const CODE_XTK = 1;
     
     /**
-     * Mã loại tin khách tìm xe
+     * Mã loại tin 'khách tìm xe'
      */
     const CODE_KTX = 2;
 
@@ -118,7 +118,7 @@ class Tinghepxe extends CActiveRecord {
     }
 
     /**
-     * Lấy danh sách xe tìm khách hoặc khách tìm xe
+     * Lấy danh sách xe tìm khách hoặc khách tìm xe dựa vào mã loại tin
      * @param Paginate $paginator
      * @param integer $maLoaiTin
      * @return array
@@ -134,22 +134,6 @@ class Tinghepxe extends CActiveRecord {
             ->queryAll()
         ;
     }
-//    
-//    /**
-//     * Lấy danh sách khách tìm xe
-//     * @param Paginate $paginatortinh_thanh
-//     * @return array
-//     */
-//    public function listKhachTimXe(Paginate $paginator) {
-//        return Yii::app()->db->createCommand()
-//            ->select('tieu_de_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai')
-//            ->from('tinghepxe')
-//            ->where('ma_loai_tin = ' . self::CODE_KTX)
-//            ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
-//            ->order('ngay_dang ASC')
-//            ->limit($paginator->limit, $paginator->offset)
-//            ->queryAll()
-//        ;
-//    }
+
 
 }

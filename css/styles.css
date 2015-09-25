@@ -111,7 +111,7 @@ ul{
 /*----------------------------------------------------------------------------*/
 /*--------------------------------begin search--------------------------------*/
 #search{
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
 
 #search h6 {
@@ -161,7 +161,7 @@ ul{
 /*----------------------------------------------------------------------------*/
 /*---------------------------begin slide/ table-------------------------------*/
 #slide{
-    margin: 5px 0 8px 10px;
+    margin-bottom: 8px;
 }
 
 #table-car,#table-customer{
@@ -169,7 +169,7 @@ ul{
 }
 
 @media (min-width: 1170px) {
-    #slide,#table-car,#table-customer{
+    #main-content{
         width: 710px !important;
         margin-left: 10px;
     }
@@ -249,16 +249,14 @@ ul{
 /*------------------------------end paginator----------------------------------*/
 /*----------------------------------------------------------------------------*/
 /*-----css dang ki----*/
-#formdangki
+#dangki
 {
-    border:1px solid #333333;
-    margin-left: 3px;
-    font-size: 14px;
+    border:1px solid #0099cc;
 }
- .tieude
+.tieude
 {
     color:#ffffff;
-    background-color: #336699;
+    background-color: #369;
     text-align: left;
    -webkit-border-radius: 1px 1px 1px 1px;
 border-radius: 1px 1px 1px 1px;
@@ -268,4 +266,48 @@ border-radius: 1px 1px 1px 1px;
 .tbdangki
 {
 margin-left: 10px;    
+
+}
+.errorMessage{
+    color: red;
+    margin-top: 15px
+}
+
+#dangtinrv{
+    margin-bottom: 20px;
+}
+#formdangki
+{
+    margin-left:100px;
+    margin-right: 200px;
+    padding-top: 20px;
+}
+.form-input
+{
+    float:right;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 34px;
+    border: 1px solid #CCC;
+border-radius: 4px;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.anh
+{
+     margin-left: 140px;
+    margin-top: 5px;
+}
+.btndangki
+{
+    color: #ffffff;
+    background: #369 none repeat scroll 0% 0%;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+.ckb
+{
+    
 }

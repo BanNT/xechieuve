@@ -1,3 +1,4 @@
+<?php $this->pageTitle=Yii::app()->name . ' - xe tìm khách';?>
 <section id="xetimkhach">
     <?php
     /* @var $this Controller */

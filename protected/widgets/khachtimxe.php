@@ -1,7 +1,7 @@
 <?php
 
 /**
- * display khachtimxe
+ * Quản lý hiển thị bảng khách tìm xe
  */
 class khachtimxe extends CWidget {
 

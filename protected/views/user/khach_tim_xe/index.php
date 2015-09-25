@@ -1,6 +1,8 @@
+<?php $this->pageTitle=Yii::app()->name . ' - khách tìm xe';?>
 <section id="khachtimxe">
     <?php
-    /* @var $this Controller */$this->widget('application.widgets.khachtimxe', array(
+    /* @var $this Controller */
+    $this->widget('application.widgets.khachtimxe', array(
         'khachtimxe' => $khachtimxe,
         'paginatorXe' => $paginatorKTX,
         'urlPaginatorXe' => $urlPaginatorXe,
