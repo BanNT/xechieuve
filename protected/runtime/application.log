@@ -9712,3 +9712,4 @@ in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kiController.php (2
 in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
 in C:\xampp\htdocs\xechieuve\index.php (11)
 >>>>>>> d878e494f39ca2b193c4a235d06d8ced2e3b4848
+2015/09/25 12:08:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'xechieuve.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.

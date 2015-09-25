@@ -130,7 +130,7 @@ class Tinghepxe extends CActiveRecord {
                         ->from('tinghepxe')
                         ->where('ma_loai_tin = ' . $maLoaiTin . $condition)
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
-                        ->order('ngay_dang ASC')
+                        ->order('ngay_dang DESC')
                         ->limit($paginator->limit, $paginator->offset)
                         ->queryAll()
         ;

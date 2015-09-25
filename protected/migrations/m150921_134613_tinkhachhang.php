@@ -11,7 +11,7 @@ class m150921_134613_tinkhachhang extends CDbMigration {
             'tieu_de_tin' => 'VARCHAR(80)',
             'noi_dung_tin' => 'TEXT',
             'tinh_thanh' => 'VARCHAR(2)',
-            'ngay_dang' => 'DATETIME DEFAULT NOW()',
+            'ngay_dang' => 'TIMESTAMP DEFAULT CURRENT_TIMESTAMP',
             'ma_loai_tin' => 'INT(11)'
         ));
 
