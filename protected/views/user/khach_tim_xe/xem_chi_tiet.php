@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-12">
 
-        <header></header>
+        <header><?php ?></header>
         <article>
             
         </article>

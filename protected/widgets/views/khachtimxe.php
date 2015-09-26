@@ -24,7 +24,7 @@ $provinces = Province::listProvinces();
 
                     <tr>
 
-                        <td><a href="<?php echo $urlChiTietTin ?>"><?php echo CHtml::encode($data['tieu_de_tin']); ?></a></td>
+                        <td><?php echo CHtml::encode($data['tieu_de_tin']); ?></td>
                         <td><?php
                             echo CHtml::encode($data['dia_chi_di']);
                             echo "<br>" . CHtml::encode($provinces[$data['tinh_thanh']]);
