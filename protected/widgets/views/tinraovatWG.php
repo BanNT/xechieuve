@@ -1,4 +1,5 @@
-<?php // /* @var $this Controller */    
+<?php
+// /* @var $this Controller */    
 $provinces = Province::listProvinces();
 ?>
 <section id="table-rv">
@@ -7,11 +8,11 @@ $provinces = Province::listProvinces();
         <table class="table table-striped table-hover">
             <thead>
                 <tr style="color:#2C7BAC;" bgcolor="DAD9D9">
+                    <th width="100">Ngày đăng</th>
                     <th width="195">Tiêu đề</th>
-                    <th width="77">Địa điểm</th>
-                    <th width="83">Nơi đến</th>
-                    <th width="100">Liên hệ</th>
-                    <th width="164">Giá tiền</th>
+                    <th width="87">Địa điểm</th>
+                    <th width="120">Liên hệ</th>
+                    <th width="80">Giá tiền</th>
                     <th width="79">Trạng thái</th>
                 </tr>
             </thead>
@@ -20,15 +21,9 @@ $provinces = Province::listProvinces();
                 foreach ($this->tinraovat as $data):
                     ?>
                     <tr>
+                        <td><?php echo CHtml::encode($data['ngay_dang']) ?></td>
                         <td><?php echo CHtml::encode($data['tieu_de_tin']); ?></td>
-                        <td><?php
-                            echo "<br>" . CHtml::encode($provinces[$data['tinh_thanh']]);
-                            ?>
-                        </td>
-                        <td><?php
-                            echo 'hello'
-                            ?>
-                        </td>
+                        <td><?php echo CHtml::encode($provinces[$data['tinh_thanh']]); ?></td>
                         <td>
                             <?php echo CHtml::encode($data['nguoi_lien_lac']); ?>
                             <?php echo CHtml::encode($data['so_dien_thoai']); ?>

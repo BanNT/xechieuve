@@ -7,12 +7,12 @@ class SiteController extends Controller {
     /**
      * Số bản ghi tối đa hiển thị của bảng xe tìm khách
      */
-    const LIMITED_RECORD_XTK = 1;
+    const LIMITED_RECORD_XTK = 7;
 
     /**
      * Số bản ghi tối đa hiển thị của bảng khách tìm xe
      */
-    const LIMITED_RECORD_KTX = 2;
+    const LIMITED_RECORD_KTX = 3;
 
     /**
      * This is the default 'index' action that is invoked

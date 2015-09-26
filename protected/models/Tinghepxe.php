@@ -41,7 +41,9 @@ class Tinghepxe extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ma_tin, dia_chi_di, dia_chi_den, noi_den_tinh, ma_loai_xe_ghep', 'required'),
+            array('dia_chi_di,ngay_khoi_hanh, dia_chi_den, noi_den_tinh, ma_loai_xe_ghep', 'required',
+                'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
+            ),
             array('ma_tin, ma_loai_xe_ghep', 'numerical', 'integerOnly' => true),
             array('dia_chi_di, dia_chi_den', 'length', 'max' => 200),
             array('noi_den_tinh', 'length', 'max' => 2),
@@ -70,11 +72,11 @@ class Tinghepxe extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'ma_tin' => 'Ma Tin',
-            'dia_chi_di' => 'Dia Chi Di',
-            'dia_chi_den' => 'Dia Chi Den',
-            'noi_den_tinh' => 'Noi Den Tinh',
-            'ngay_khoi_hanh' => 'Ngay Khoi Hanh',
-            'ma_loai_xe_ghep' => 'Ma Loai Xe Ghep',
+            'dia_chi_di' => 'Địa chỉ đi',
+            'dia_chi_den' => 'Địa chỉ đến',
+            'noi_den_tinh' => 'Địa chỉ đến(Tỉnh)',
+            'ngay_khoi_hanh' => 'Ngày khởi hành',
+            'ma_loai_xe_ghep' => 'Loại xe ghép',
         );
     }
 
@@ -126,18 +128,28 @@ class Tinghepxe extends CActiveRecord {
      */
     public function listTinGhepXeByType(Paginate $paginator, $maLoaiTin, $condition = null) {
         return Yii::app()->db->createCommand()
-                        ->select('tieu_de_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai')
+                        ->select('tinghepxe.ma_tin,tieu_de_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai')
                         ->from('tinghepxe')
                         ->where('ma_loai_tin = ' . $maLoaiTin . $condition)
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
-                        ->order('ngay_dang DESC')
                         ->limit($paginator->limit, $paginator->offset)
+                        ->order('ngay_dang DESC')
                         ->queryAll()
         ;
     }
 
+    public function getTinGhepXe($maLoaiTin, $id) {
+        return Yii::app()->db->createCommand()
+                ->select('tieu_de_tin,nguoi_lien_lac,so_dien_thoai,dia_chi_di,tinh_thanh,dia_chi_den,noi_den_tinh,noi_dung_tin')
+                ->from('tinghepxe')
+                ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
+//                ->where('ma_loai_tin =:maLT AND ma_tin=:maTin',[':maLT'=>$maLoaiTin,':maTin'=>$id])
+                ->queryRow()
+                ;
+    }
+
     /**
-     * Lấy ra danh sách mã loại tin
+     * Lấy ra danh sách mã loại tin theo điều kiện
      * @param string $maLoaiTin
      * @param string $conditions
      * @return string

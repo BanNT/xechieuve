@@ -1,6 +1,6 @@
 <div class="col-md-12">
     <h6>Tìm kiếm xe</h6>
-    <form action="<?php echo Yii::app()->request->baseUrl.'/xe_tim_khach/tim_kiem_xe'; ?>" method="post">
+    <form action="<?php echo CHtml::encode(Yii::app()->request->baseUrl).'/xe_tim_khach/tim_kiem_xe'; ?>" method="post">
         <select name="noi-di">
             <option value="-1">Chọn nơi đi</option>
             <?php $this->widget('application.widgets.provinces'); ?>
