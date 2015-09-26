@@ -45,7 +45,9 @@ class Tinghepxe extends CActiveRecord {
                 'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
             ),
             array('ma_tin, ma_loai_xe_ghep', 'numerical', 'integerOnly' => true),
-            array('dia_chi_di, dia_chi_den', 'length', 'max' => 200),
+            array('dia_chi_di, dia_chi_den', 'length', 'max' => 200,
+                'message' => '"{attribute}" của bạn vượt quá 200 kí tự cho phép'
+            ),
             array('noi_den_tinh', 'length', 'max' => 2),
             array('ngay_khoi_hanh', 'safe'),
             // The following rule is used by search().
@@ -140,12 +142,12 @@ class Tinghepxe extends CActiveRecord {
 
     public function getTinGhepXe($maLoaiTin, $id) {
         return Yii::app()->db->createCommand()
-                ->select('tieu_de_tin,nguoi_lien_lac,so_dien_thoai,dia_chi_di,tinh_thanh,dia_chi_den,noi_den_tinh,noi_dung_tin')
-                ->from('tinghepxe')
-                ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
+                        ->select('tieu_de_tin,nguoi_lien_lac,so_dien_thoai,dia_chi_di,tinh_thanh,dia_chi_den,noi_den_tinh,noi_dung_tin')
+                        ->from('tinghepxe')
+                        ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
 //                ->where('ma_loai_tin =:maLT AND ma_tin=:maTin',[':maLT'=>$maLoaiTin,':maTin'=>$id])
-                ->queryRow()
-                ;
+                        ->queryRow()
+        ;
     }
 
     /**

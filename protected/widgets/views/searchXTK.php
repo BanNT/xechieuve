@@ -10,6 +10,6 @@
             <?php $this->widget('application.widgets.provinces'); ?>
         </select>
         <input name="ngay-khoi-hanh" type="date"/>
-        <input type="submit" value="Tìm kiếm"/>
+        <input name="tim-kiem" type="submit" value="Tìm kiếm"/>
     </form>
 </div>

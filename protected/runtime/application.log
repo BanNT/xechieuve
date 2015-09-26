@@ -13021,3 +13021,276 @@ in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (129)
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (59)
 in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
 >>>>>>> 92d213ffa5a46d41ba672939c93069b9580b9f91
+2015/09/26 12:54:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro_giup
+HTTP_REFERER=http://localhost:8888/xechieuve/tin_tuc
+---
+2015/09/26 13:32:33 [error] [php] Undefined index: noi-den (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:57)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (57)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:42:47 [error] [php] Undefined variable: listMaTin1 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:80)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (80)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:42:49 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND tinkhachhang.ma_tin=-1 AND AND tinkhachhang.ma_tin=-1' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = 1 AND tinh_thanh=3 AND AND tinkhachhang.ma_tin=-1 AND AND tinkhachhang.ma_tin=-1.
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (83)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (68)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (49)
+2015/09/26 13:42:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND tinkhachhang.ma_tin=-1 AND AND tinkhachhang.ma_tin=-1' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = 1 AND tinh_thanh=3 AND AND tinkhachhang.ma_tin=-1 AND AND tinkhachhang.ma_tin=-1' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1654): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(83): CActiveRecord->countBySql('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(68): Paginate->__getTotalPage()
+#4 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(49): Paginate->__setCurrentPage(NULL)
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php(24): Paginate->__construct(NULL, Object(Tinkhachhang), 10, ' ma_loai_tin = ...')
+#6 C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php(103): Xe_tim_khachController->actionIndex(NULL, ' AND tinh_thanh...', false)
+#7 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Xe_tim_khachController->actionTim_kiem_xe()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('tim_kiem_xe')
+#12 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('xe_tim_khach/ti...')
+#13 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#15 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#16 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#18 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#19 {main}
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+HTTP_REFERER=http://localhost:8888/xechieuve/xe_tim_khach/tim_kiem_xe
+---
+2015/09/26 13:42:53 [error] [php] Undefined variable: listMaTin1 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:80)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (80)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:43:30 [error] [php] Undefined variable: listMaTin1 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:80)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (80)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:44:51 [error] [php] Undefined variable: listMaTin1 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:81)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (81)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:45:05 [error] [php] Undefined variable: listMaTin1 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:80)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (80)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:47:55 [error] [php] Undefined index: ngay-dang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php:118)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/tim_kiem
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (118)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:48:00 [error] [php] Undefined index: ngay-dang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php:118)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao_vat/tim_kiem
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (118)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:54:08 [error] [php] Undefined variable: ngayKH (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:70)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (70)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 13:54:53 [error] [php] Undefined variable: listMaTin1 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:76)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (76)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 15:29:36 [error] [php] Undefined variable: listMaTin1 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:74)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (74)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 15:47:35 [error] [php] Array to string conversion (C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php:76)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe_tim_khach/tim_kiem_xe
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (76)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/26 15:55:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_tin
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/26 16:22:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_tin".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_tin')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_tin
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/09/26 16:24:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro_giup
+HTTP_REFERER=http://localhost:8888/xechieuve/rao_vat/dang_tin
+---

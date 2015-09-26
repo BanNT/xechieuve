@@ -109,9 +109,10 @@ class Rao_vatController extends Controller {
     }
 
     public function actionTim_kiem() {
-        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+        if (!Yii::app()->request->getParam('tim-kiem')) {
             $this->actionIndex();
         }
+        
         $condition = '';
         $condition .= (isset($_POST['dia-diem']) && $_POST['dia-diem'] != -1 && $_POST['dia-diem'] != 0) ? " AND tinh_thanh=" . $_POST['dia-diem'] : '';
         $condition .= ($ngayDang = $_POST['ngay-dang']) ? " AND DATE(ngay_dang)='$ngayDang'" : '';

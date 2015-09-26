@@ -54,19 +54,36 @@ class Khach_tim_xeController extends Controller {
      * Tìm kiếm khách dựa theo nơi di, nới đến, ngày khởi hành
      */
     public function actionTim_kiem_khach() {
-        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+        //Nếu không submit form thì chỉ gọi action index
+        if (!Yii::app()->request->getParam('tim-kiem')) {
             $this->actionIndex();
         }
+        
+        $condition = $listMaTin = $listMaTin1 = $listMaTin2 = '';
+        $noiDi = Yii::app()->request->getParam('noi-di');
+        $noiDen = Yii::app()->request->getParam('noi-den');
+        $ngayKhoiHanh = Yii::app()->request->getParam('ngay-khoi-hanh');
 
-        $condition = $listMaTin = '';
-        $condition .= (isset($_POST['noi-di']) && $_POST['noi-di'] != -1 && $_POST['noi-di'] != 0) ?
-                " AND tinh_thanh=" . (int) $_POST['noi-di'] : '';
-        $listMaTin1 = ($_POST['noi-den']) ?
-                Tinghepxe::listMaTin(Tinghepxe::CODE_KTX, ' AND noi_den_tinh=' . $_POST['noi-den']) : null;
-        $listMaTin2 = ($ngayKH = $_POST['ngay-khoi-hanh']) ?
-                Tinghepxe::listMaTin(Tinghepxe::CODE_KTX, " AND ngay_khoi_hanh='$ngayKH'") : null;
+        //-1(không chọn) và 0(chọn toàn quốc) là 2 giá trị cho biết cần bỏ qua
+        $condition .= (isset($noiDi) && $noiDi != -1 && $noiDi != 0) ?
+                " AND tinh_thanh=" . $noiDi : '';
+        
+        if ($noiDen != -1 && $noiDen != 0) {
+            //Nếu không lấy được ra danh sách mã tin thì sẽ đặt điều kiện cho kết quả không thể được tìm thấy
+            if (!$listMaTin1 = Tinghepxe::listMaTin(Tinghepxe::CODE_KTX, ' AND noi_den_tinh=' . $noiDen)) {
+                $condition.=' AND tinkhachhang.ma_tin=-1';
+            }
+        }
+        
+        //giá trị rỗng(không chọn) cho biết cần bỏ qua
+        if ($ngayKhoiHanh != '') {
+            //tương tự bên trên
+            if (!$listMaTin2 = Tinghepxe::listMaTin(Tinghepxe::CODE_KTX, " AND ngay_khoi_hanh='$ngayKhoiHanh'")) {
+                $condition.=' AND tinkhachhang.ma_tin=-1';
+            }
+        }
 
-        if (($listMaTin1) AND ( $listMaTin2)) {
+        if (($listMaTin1) && ( $listMaTin2)) {//Tìm ra mã tin giống nhau giữa 2 danh sách mã tin để cho vào $listMaTin
             foreach ($listMaTin1 as $matin1) {
                 foreach ($listMaTin2 as $matin2) {
                     if ($matin1['ma_tin'] == $matin2['ma_tin']) {
@@ -74,18 +91,20 @@ class Khach_tim_xeController extends Controller {
                     }
                 }
             }
-        } elseif ($listMaTin1) {
+        } elseif ($listMaTin1) {//Nếu chỉ có 1 danh sách mã tin thì cho luôn vào $listMaTin
             foreach ($listMaTin1 as $matin1) {
                 $listMaTin.=$matin1['ma_tin'] . ',';
             }
-        } elseif ($listMaTin2) {
+        } elseif ($listMaTin2) {//Nếu chỉ có 1 danh sách mã tin thì cho luôn vào $listMaTin
             foreach ($listMaTin2 as $matin2) {
                 $listMaTin.=$matin2['ma_tin'] . ',';
             }
         }
 
+        //xác định điều kiện để gửi cho action index va lưu lại vào session để phân trang
         $condition .= ($listMaTin != '') ? ' AND tinkhachhang.ma_tin IN (' . $listMaTin . '0)' : '';
         Yii::app()->session['condition'] = $condition;
+
         $this->actionIndex(null, $condition, false);
     }
 
@@ -102,6 +121,7 @@ class Khach_tim_xeController extends Controller {
         }
         $ma .= '0)';
         $condition = " AND tinkhachhang.ma_tin IN $ma";
+        Yii::app()->session['condition'] = $condition;
         $this->actionIndex(null, $condition, false);
     }
 
@@ -127,7 +147,7 @@ class Khach_tim_xeController extends Controller {
                     $noticeMessage = "<h4 style='color:green'>Tin đăng của bạn đã được hiển thị tại trang rao vặt<h4>";
                 }
             } else {
-                $noticeMessage = "<h4 style='color:red'>Tài khoản của bạn không đủ để đăng tin</h4>";
+                $noticeMessage = "<h4 style='color:red'>Tài khoản của bạn không đủ để đăng tin này</h4>";
             }
         }
 
