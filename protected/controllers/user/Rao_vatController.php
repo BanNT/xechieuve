@@ -109,19 +109,17 @@ class Rao_vatController extends Controller {
     }
 
     public function actionTim_kiem() {
-        if (!Yii::app()->request->getParam('tim-kiem')) {
-            $this->actionIndex();
+        if (Yii::app()->request->isAjaxRequest) {
+            $condition = '';
+            $condition .= (isset($_POST['dia-diem']) && $_POST['dia-diem'] != -1 && $_POST['dia-diem'] != 0) ? " AND tinh_thanh=" . $_POST['dia-diem'] : '';
+            $condition .= ($ngayDang = $_POST['ngay-dang']) ? " AND DATE(ngay_dang)='$ngayDang'" : '';
+            $condition .=($_POST['ma-loai-tin-rv'] && $_POST['ma-loai-tin-rv'] != -1) ?
+                    ' AND tinkhachhang.ma_tin IN (' .
+                    Tinraovat::listMaTin(' AND ma_loai_tin_rv =' . $_POST['ma-loai-tin-rv'])
+                    . ')' : '';
+            Yii::app()->session['condition'] = $condition;
+            $this->actionIndex(null, self::LIMITED_RECORD_RVI, $condition, false);
         }
-        
-        $condition = '';
-        $condition .= (isset($_POST['dia-diem']) && $_POST['dia-diem'] != -1 && $_POST['dia-diem'] != 0) ? " AND tinh_thanh=" . $_POST['dia-diem'] : '';
-        $condition .= ($ngayDang = $_POST['ngay-dang']) ? " AND DATE(ngay_dang)='$ngayDang'" : '';
-        $condition .=($_POST['ma-loai-tin-rv'] && $_POST['ma-loai-tin-rv'] != -1) ?
-                ' AND tinkhachhang.ma_tin IN (' .
-                Tinraovat::listMaTin(' AND ma_loai_tin_rv =' . $_POST['ma-loai-tin-rv'])
-                . ')' : '';
-        Yii::app()->session['condition'] = $condition;
-        $this->actionIndex(null, self::LIMITED_RECORD_RVI, $condition, false);
     }
 
 }

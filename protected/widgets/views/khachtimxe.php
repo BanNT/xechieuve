@@ -2,7 +2,7 @@
 /* @var Paginate $this->paginatorXe */
 $provinces = Province::listProvinces();
 ?>
-<section id="table-customer">
+<section id="tableKTX">
     <div class="pribox">Khách tìm xe</div>    
     <div class="table-responsive">
         <table class="table table-striped table-hover" id="user">

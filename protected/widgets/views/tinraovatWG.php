@@ -2,7 +2,7 @@
 // /* @var $this Controller */    
 $provinces = Province::listProvinces();
 ?>
-<section id="table-rv">
+<section id="tableRV">
     <div class="pribox">Tin rao vặt</div>    
     <div class="table-responsive">
         <table class="table table-striped table-hover">
