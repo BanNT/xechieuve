@@ -1,5 +1,5 @@
 <?php $provinces = Province::listProvinces(); ?>
 <?php foreach ($provinces as $key => $province): ?>
-    <option value="<?php echo $key ?>"><?php echo $province ?></option>
+    <option value="<?php echo CHtml::encode($key); ?>"><?php echo CHtml::encode($province); ?></option>
 <?php endforeach; ?>
 

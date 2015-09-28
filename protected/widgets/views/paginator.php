@@ -22,14 +22,6 @@ if ($totalPage > 1):
             for ($i = 2; $i < $totalPage; $i++)://for middle number
                 ?>
                 <?php
-                if ($i > $currentPage + 3):
-                    ?>
-                    <li><a>...</a></li>
-                    <?php
-                    break;
-                endif;
-                ?>
-                <?php
                 $selected = ($currentPage == $i) ? 'class="selected"' : '';
                 $url = CHtml::encode(Yii::app()->request->baseUrl . '/' . $this->urlPaginator . $i);
                 ?>

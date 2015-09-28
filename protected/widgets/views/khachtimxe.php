@@ -1,7 +1,8 @@
-<?php /* @var Paginate $this->paginatorXe */ 
+<?php
+/* @var Paginate $this->paginatorXe */
 $provinces = Province::listProvinces();
 ?>
-<section id="table-customer">
+<section id="tableKTX">
     <div class="pribox">Khách tìm xe</div>    
     <div class="table-responsive">
         <table class="table table-striped table-hover" id="user">
@@ -15,12 +16,17 @@ $provinces = Province::listProvinces();
                     <th width="79">Trạng thái</th>
                 </tr>
             </thead>
-            <tbody class="text-justify">
+            <tbody>
                 <?php
                 foreach ($this->khachtimxe as $data):
+//                    $urlChiTietTin = Yii::app()->createUrl('khach-tim-xe/xem-chi-tiet', array(
+//                        'id' => $data['ma_tin'],
+//                        'title' => ConvertURL::refine($data['tieu_de_tin'])
+//                    ));
+                    $urlChiTietTin = Yii::app()->request->baseUrl . '/khach-tim-xe/xem-chi-tiet/' . ConvertURL::refine($data['tieu_de_tin']) . '/' . $data['ma_tin'];
                     ?>
                     <tr>
-                        <td><?php echo CHtml::encode($data['tieu_de_tin']); ?></td>
+                        <td><a title="<?php echo CHtml::encode($data['tieu_de_tin']) ?>" href="<?php echo $urlChiTietTin ?>"><?php echo CHtml::encode($data['tieu_de_tin']); ?></a></td>
                         <td><?php
                             echo CHtml::encode($data['dia_chi_di']);
                             echo "<br>" . CHtml::encode($provinces[$data['tinh_thanh']]);
@@ -34,6 +40,7 @@ $provinces = Province::listProvinces();
                         <td><?php echo CHtml::encode($data['ngay_khoi_hanh']); ?></td>
                         <td><?php echo CHtml::encode($data['nguoi_lien_lac']); ?></td>
                         <td>Đang chờ</td>
+
                     </tr>
                     <?php
                 endforeach;

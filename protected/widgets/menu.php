@@ -14,16 +14,16 @@ class menu extends CWidget {
      * Mặc định $urlDangTin là controller dang_tin action index.
      * @var string
      */
-    public $urlDangTin = 'dang_tin';
+    public $urlDangTin = 'dang-tin';
 
     /**
      * Danh sách những loại tin khách hàng có thể đăng
      * @var array
      */
     private $__tinDang = [
-        'xe_tim_khach',
-        'khach_tim_xe',
-        'rao_vat'
+        'xe-tim-khach',
+        'khach-tim-xe',
+        'rao-vat'
     ];
 
     public function init() {
@@ -32,12 +32,13 @@ class menu extends CWidget {
 
     public function run() {
         $route = explode('/', Yii::app()->controller->route);
-        $this->controller = array_shift($route);
+        $controller =  array_shift($route);
+        $this->controller = str_replace('_', '-', $controller);
 
         //Nếu controller có trong $__tinDang thì dang_tin sẽ là action của
         //controller đó
         if (in_array($this->controller, $this->__tinDang)) {
-            $this->urlDangTin = $this->controller . '/dang_tin';
+            $this->urlDangTin = $this->controller . '/dang-tin';
         }
 
         $this->render('menu');

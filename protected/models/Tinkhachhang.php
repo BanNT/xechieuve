@@ -36,7 +36,7 @@ class Tinkhachhang extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ma_loai_tin,nguoi_lien_lac, so_dien_thoai, tieu_de_tin,noi_dung_tin,tinh_thanh', 'required',
+            array('nguoi_lien_lac, so_dien_thoai, tieu_de_tin,noi_dung_tin,tinh_thanh', 'required',
                 'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
             ),
             array('ma_khach_hang, ma_loai_tin,so_dien_thoai', 'numerical', 'integerOnly' => true,
@@ -125,6 +125,25 @@ class Tinkhachhang extends CActiveRecord {
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
+    }
+
+    /**
+     * trừ tiền khi đăng tin
+     */
+    public function trutien($maLoaiTin) {
+        //lấy giá tiền cần có để đăng tin rao vặt
+        $giaTien = Loaitin::model()->findByPk($maLoaiTin)->gia_dang;
+        //lấy tổng số tiền trong tài khoản của khách hàng
+        $tongTien = Khachhang::model()->findByPk(1)->so_du_tai_khoan;
+
+        //Nếu không đủ tiền sẽ không cho đăng tin
+        if ($tongTien < $giaTien) {
+            return false;
+        }
+
+        if (Khachhang::model()->updateByPk(1, array('so_du_tai_khoan' => ($tongTien - $giaTien)))) {
+            return true;
+        }
     }
 
 }
