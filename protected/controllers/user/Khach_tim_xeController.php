@@ -112,7 +112,7 @@ class Khach_tim_xeController extends Controller {
      * Lọc tin khách tìm xe theo loại xe
      */
     public function actionLoc_theo_xe() {
-        $maLoaiXe = $_GET['id'];
+        $maLoaiXe = Yii::app()->request->getParam('id');
         $matins = Tinghepxe::listMaTin(Tinghepxe::CODE_KTX, ' AND ma_loai_xe_ghep= ' . $maLoaiXe);
 
         $ma = '(';
@@ -166,13 +166,12 @@ class Khach_tim_xeController extends Controller {
      * Xem chi tiết tin khách tìm xe
      */
     public function actionXem_chi_tiet() {
-        $id = $_GET['id'];
-//        die('hello world');
+        $maTin = Yii::app()->request->getParam('id');
         $modelKTX = new Tinghepxe();
-        if (!$tinKTX = $modelKTX->getTinGhepXe(Tinghepxe::CODE_KTX, $id)) {
+        if (!$tinKTX = $modelKTX->getTinGhepXe($maTin)) {
             $this->redirect(['site/index']);
         }
-        var_dump($tinKTX);die;
+
         $this->render('xem_chi_tiet',[
             'tinKTX'=>$tinKTX
         ]);

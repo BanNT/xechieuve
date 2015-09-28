@@ -14,10 +14,10 @@ class filter extends CWidget {
     public function run() {
         $route = explode('/', Yii::app()->controller->route);
         $controller = array_shift($route);
-        if ($controller == 'xe_tim_khach') {
-            $this->url = Yii::app()->request->baseUrl . '/xe_tim_khach/loc_theo_xe/';
+        if ($controller == 'xe-tim-khach') {
+            $this->url = Yii::app()->request->baseUrl . '/xe-tim-khach/loc-theo-xe/';
         } else {
-            $this->url = Yii::app()->request->baseUrl . '/khach_tim_xe/loc_theo_xe/';
+            $this->url = Yii::app()->request->baseUrl . '/khach-tim-xe/loc-theo-xe/';
         }
 
 

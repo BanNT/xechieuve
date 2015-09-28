@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Hiển thị 63 tỉnh thành của Việt Nam
+ * Hiển thị mục searh tùy theo controller hiện tại
  */
 class searchSelect extends CWidget {
 

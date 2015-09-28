@@ -1,14 +1,14 @@
 <?php
 
-class Dang_kiController extends Controller {
+class Dang_kyController extends Controller {
 
     /**
      * Đăng kí tài khoản người dùng
      */
     public function actionIndex() {
         $khachHang = new Khachhang();
-        $form = new CForm('application.views.user.dang_ki.formdangki', $khachHang);
-        if ($form->submitted('dangki') && $form->validate()) {
+        $form = new CForm('application.views.user.dang_ky.formdangky', $khachHang);
+        if ($form->submitted('dangky') && $form->validate()) {
             $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
             if ($image) {
                 $newName = md5(microtime(true) . 'xechieuve') . $image->name;

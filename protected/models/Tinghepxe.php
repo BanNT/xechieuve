@@ -140,12 +140,12 @@ class Tinghepxe extends CActiveRecord {
         ;
     }
 
-    public function getTinGhepXe($maLoaiTin, $id) {
+    public function getTinGhepXe($maTin) {
         return Yii::app()->db->createCommand()
                         ->select('tieu_de_tin,nguoi_lien_lac,so_dien_thoai,dia_chi_di,tinh_thanh,dia_chi_den,noi_den_tinh,noi_dung_tin')
                         ->from('tinghepxe')
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
-//                ->where('ma_loai_tin =:maLT AND ma_tin=:maTin',[':maLT'=>$maLoaiTin,':maTin'=>$id])
+                        ->where("tinghepxe.ma_tin=:matin", array(':matin' => $maTin))
                         ->queryRow()
         ;
     }

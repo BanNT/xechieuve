@@ -2,7 +2,7 @@
 
 return array(
     'enctype' => 'multipart/form-data',
-    'id'=>'formdangki',
+    'id'=>'formdangky',
     'class'=>'form-inline',
     'elements' => array(
           '<div class="row">',
@@ -81,7 +81,7 @@ return array(
     'buttons' => array(
         'dangki' => array(
             'type' => 'submit',
-            'label' => 'Đăng kí',
+            'label' => 'Đăng ký',
             'class'=>'btndangki',
             'action'=>'dangkitk',
         ),

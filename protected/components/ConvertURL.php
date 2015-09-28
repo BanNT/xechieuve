@@ -20,12 +20,12 @@ class ConvertURL extends CComponent {
         $str = preg_replace("/(ỳ|ý|ỵ|ỷ|ỹ|Ỳ|Ý|Ỵ|Ỷ|Ỹ)/", 'y', $str);
         $str = strtolower($str);
         
-        // lọc kí tự nối từ:
+        // lọc một số kí tự đặc biệt thành dấu '-':
         $str = trim($str);
         $str = preg_replace("/\./", '', $str);
         $str = preg_replace("/(\!|\@|\#|\%|\^|\&|\*|\(|\)|\+|\~)/", ' ', $str);
         $str = str_replace(" ", "-", str_replace("&*#39;","",$str));
-        $str = preg_replace("/-{2,}/", '-', $str);
+        $str = preg_replace("/-{2,}/", '-', $str);//từ 2 kí tự nối trở lên thì cho thành 1
         return $str;
     }
 
