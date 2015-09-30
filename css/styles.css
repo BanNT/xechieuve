@@ -278,11 +278,11 @@ body,ul,h4{
 #dangtinrv{
     margin-bottom: 20px;
 }
-#formdangki
+#formdangkytaikhoan
 {
-    margin-left:100px;
-    margin-right: 200px;
-    padding-top: 20px;
+   margin-right: 100px;
+padding-top: 20px;
+margin-left: 60px;
 }
 .form-input
 {
@@ -309,6 +309,7 @@ body,ul,h4{
     margin-left: 200px;
     margin-bottom: 10px;
 }
+/*--------END DANG KI-----------*/
 #detail-ktx section{
     margin: 10px 0 0 20px;
 }
@@ -328,4 +329,13 @@ body,ul,h4{
     
 }
 /*------------------------------end dang-tin----------------------------------*/
-/*----------------------------------------------------------------------------*/
+/*----------------------------------BEGIN DANG-NHAP------------------------------------------*/
+
+#dangnhap
+{
+   // width: 500px;
+     border:1px solid #ccccff;
+     margin-top: 30px;
+     margin-left: 70px;
+     margin-right: 70px;
+}

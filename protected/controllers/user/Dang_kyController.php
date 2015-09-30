@@ -17,12 +17,14 @@ class Dang_kyController extends Controller {
             }
 
             $khachHang->password = md5($khachHang->password);
+            
             $khachHang->save(false);
             return;
             
         }
      
-        
+       // $listkhachHang=$khachHang->listKhachhang();
+           // echo"abc".$listkhachHang;
         $this->render('index', array('form' => $form));
     }
     

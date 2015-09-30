@@ -16,6 +16,8 @@
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5shiv.min.js"></script>
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/respond.min.js"></script>
         <![endif]-->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js" type="text/javascript"></script>
+        
     </head>
     <body>
         <div class="container">

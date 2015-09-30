@@ -26,6 +26,7 @@ class Khachhang extends CActiveRecord {
     public $confirmPassword;
     public $diachi;
     public $dieukhoan;
+     public $ghinho=false;
 
     /**
      * @return string the associated database table name
@@ -41,7 +42,7 @@ class Khachhang extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,diachi,dieukhoan', 'required',
+            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,diachi,dieukhoan,ghinho', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"'// đây required là bắt buộc, cái này là tên hàm của yii viết sẵn
             ),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
@@ -95,10 +96,33 @@ class Khachhang extends CActiveRecord {
             'anh_dai_dien'=>'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại password:',
             'diachi'=>'Địa chỉ:',
-            'dieukhoan'=>'<a>Bạn có đồng ý với điều khoản</a>'
+            'ghinho'=>'Ghi nhớ đăng nhập',
+            'dieukhoan'=>'<!-- Button trigger modal -->
+<a  data-toggle="modal" data-target="#myModal">
+  ban đồng ý
+</a>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>'
         );
     }
-
+   
     /**
      * Retrieves a list of models based on the current search/filter conditions.
      *
@@ -128,6 +152,7 @@ class Khachhang extends CActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
+        
     }
 
     /**
