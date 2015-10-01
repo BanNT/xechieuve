@@ -1,9 +1,8 @@
 <?php
-
 return array(
     'enctype' => 'multipart/form-data',
-    'id'=>'formdangkytaikhoan',
-    'class'=>'form-inline',
+    'class'=>'formdangkytaikhoan',
+    //'id'=>'login-form',
     'elements' => array(
           '<div class="row">',
          '<div class="col-xs-12">',
@@ -74,6 +73,7 @@ return array(
         '<div class="col-xs-12">',
          'dieukhoan' => array(
             'type' => 'checkbox',
+            
         ),
         '</div>',
         '</div>',
@@ -82,11 +82,10 @@ return array(
         'dangky' => array(
             'type' => 'submit',
             'label' => 'Đăng ký',
-            'class'=>'btndangki',
-            
+            'class'=>'btndangki btn',
+            'action'=>'dangkitk',
+
         ),
     ),
     
 );
-
-

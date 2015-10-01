@@ -278,7 +278,7 @@ body,ul,h4{
 #dangtinrv{
     margin-bottom: 20px;
 }
-#formdangkytaikhoan
+.formdangkytaikhoan
 {
    margin-right: 100px;
 padding-top: 20px;
@@ -296,16 +296,16 @@ margin-left: 60px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
+
 .anh
 {
-    margin-left: 140px;
+    margin-left: 270px;
     margin-top: 5px;
 }
 .btndangki
 {
     color: #ffffff;
     background: #369 none repeat scroll 0% 0%;
-    margin-top: 20px;
     margin-left: 200px;
     margin-bottom: 10px;
 }
@@ -329,6 +329,7 @@ margin-left: 60px;
     
 }
 /*------------------------------end dang-tin----------------------------------*/
+
 /*----------------------------------BEGIN DANG-NHAP------------------------------------------*/
 
 #dangnhap
@@ -338,4 +339,27 @@ margin-left: 60px;
      margin-top: 30px;
      margin-left: 70px;
      margin-right: 70px;
+}
+#dang
+{
+   margin-left: 750px;
+    width: 150px;
+    padding-top: 5px;
+}
+#dang a
+{
+    color:#fff;
+}
+
+.ckb
+{
+    color: #369;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+/*----------------------------------------------------------------------------*/
+
+.modal-content
+{
+    margin: 10px;
 }

@@ -2,13 +2,12 @@
 <?php
 
 return array(
-    'id'=>'formdangkytaikhoan',
-    'class'=>'form-inline',
+    'class'=>'formdangkytaikhoan',
     'label'=>'ĐĂNG NHẬP',
     'elements' => array(   
        '<div class="row">',
          '<div class="col-xs-12">',
-        'ten_dang_nhap' => array(
+        'username' => array(
             'type' => 'text',
             'class' => 'form-input'
         ),
@@ -23,20 +22,20 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-        '<div class="col-xs-12">',
-        'ghinho' => array(
-            'type' => "checkbox",
-            
+        '<div class="col-xs-12 ckb">',
+        'rememberMe' => array(
+            'type' => "checkbox",   
         ),
         '</div>',
         '</div>',
         
     ),
     'buttons' => array(
-        'dangnhap' => array(
+        'Login' => array(
             'type' => 'submit',
             'label' => 'Đăng nhập',
-            'class'=>'btndangki',
+            'class'=>'btndangki btn',
+            'action'=>'Login',
             
         ),
     ),

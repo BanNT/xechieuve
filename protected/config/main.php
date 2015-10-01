@@ -32,4 +32,5 @@ return array(
         // this is used in contact page
         'email' => 'webmaster@example.com',
     ),
+    
 );
