@@ -15282,3 +15282,291 @@ Stack trace:
 #7 {main}
 REQUEST_URI=/xechieuve/dang_ki
 ---
+2015/09/30 00:16:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ki')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_ki
+---
+2015/09/30 00:16:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-ki".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-ki')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang-ki
+---
+2015/09/30 00:16:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khachhang".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khachhang')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khachhang
+---
+2015/09/30 00:16:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach_hang".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach_hang
+---
+2015/09/30 01:24:22 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kyController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kyController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kyController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php (16)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/30 01:24:53 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php:16)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kyController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kyController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kyController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php (16)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/30 01:28:00 [error] [php] mysql_select_db() expects parameter 1 to be string, resource given (C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kyController->runAction()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kyController->runActionWithFilters()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kyController->run()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php (14)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/30 01:53:47 [error] [php] Missing argument 2 for CUserIdentity::__construct(), called in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php on line 21 and defined (C:\xampp\htdocs\xechieuve\framework\web\auth\CUserIdentity.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kyController->runAction()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kyController->runActionWithFilters()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kyController->run()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php (21)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/30 01:54:15 [error] [php] Missing argument 2 for CUserIdentity::__construct(), called in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php on line 21 and defined (C:\xampp\htdocs\xechieuve\framework\web\auth\CUserIdentity.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kyController->runAction()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kyController->runActionWithFilters()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kyController->run()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php (21)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/30 02:05:11 [error] [php] Missing argument 2 for CUserIdentity::__construct(), called in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php on line 21 and defined (C:\xampp\htdocs\xechieuve\framework\web\auth\CUserIdentity.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kyController->runAction()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kyController->runActionWithFilters()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kyController->run()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php (21)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/30 02:05:58 [error] [php] Missing argument 2 for CUserIdentity::__construct(), called in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php on line 21 and defined (C:\xampp\htdocs\xechieuve\framework\web\auth\CUserIdentity.php:43)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Dang_kyController->runAction()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Dang_kyController->runActionWithFilters()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Dang_kyController->run()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#7 unknown(0): WebApplicationEndBehavior->runEnd()
+#8 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#10 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang_ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php (21)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/09/30 23:17:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "remote.html".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('remote.html')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/remote.html
+HTTP_REFERER=http://localhost/xechieuve/dang_ky
+---
+2015/09/30 23:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "remote.html".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('remote.html')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/remote.html
+---
+2015/10/01 00:13:29 [error] [exception.CException] exception 'CException' with message 'CForm and its behaviors do not have a method or closure named "addError".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php(13): CComponent->__call('addError', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Dang_kyController.php(13): CForm->addError('dieukhoan', 'Inceuorrect use...')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Dang_kyController->actionIndex()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_ky')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/dang_ky
+HTTP_REFERER=http://localhost/xechieuve/dang_ky
+---
+2015/10/01 01:04:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost/xechieuve/tin-tuc
+---
+2015/10/01 02:07:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost/xechieuve/tin-tuc
+---
+2015/10/01 02:19:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/dang-tin
+---
+2015/10/01 02:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/dang-tin
+---
+2015/10/01 02:19:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---
+2015/10/01 02:19:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---

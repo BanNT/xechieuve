@@ -17,8 +17,8 @@ class Dang_kyController extends Controller {
             }
 
             $khachHang->password = md5($khachHang->password);
-            $khachHang->save(false);
             return;
+            
             
         }
      

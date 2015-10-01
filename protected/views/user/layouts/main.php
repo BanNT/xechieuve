@@ -12,6 +12,7 @@
         <!-- Bootstrap -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" rel="stylesheet">
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
         <!--[if lt IE 9]>
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5shiv.min.js"></script>
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/respond.min.js"></script>

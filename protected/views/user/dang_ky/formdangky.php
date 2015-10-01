@@ -1,8 +1,7 @@
 <?php
-
 return array(
     'enctype' => 'multipart/form-data',
-    'id'=>'formdangky',
+    'id'=>'formdangki',
     'class'=>'form-inline',
     'elements' => array(
           '<div class="row">',
@@ -79,14 +78,12 @@ return array(
         '</div>',
     ),
     'buttons' => array(
-        'dangki' => array(
+        'dangky' => array(
             'type' => 'submit',
             'label' => 'Đăng ký',
-            'class'=>'btndangki',
+            'class'=>'btndangki btn',
             'action'=>'dangkitk',
         ),
     ),
     
 );
-
-
