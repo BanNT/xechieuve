@@ -16111,3 +16111,96 @@ REQUEST_URI=/xechieuve/lien-he
 HTTP_REFERER=http://localhost/xechieuve/rao-vat
 >>>>>>> 2887fe1810daf3f028ed8659c772be4577658f66
 ---
+2015/10/01 12:13:13 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\Xem_chi_tiet.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Rao_vatController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Rao_vatController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(134): Rao_vatController->render()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Rao_vatController->actionXem_chi_tiet()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Rao_vatController->runAction()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Rao_vatController->runActionWithFilters()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Rao_vatController->run()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/rao-vat/xem-chi-tiet/dasd/37
+in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\Xem_chi_tiet.php (11)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (134)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/01 12:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost/xechieuve/rao-vat/xem-chi-tiet/dasd/37
+---
+2015/10/01 12:13:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost/xechieuve/rao-vat/xem-chi-tiet/dasd/37
+---
+2015/10/01 12:18:53 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'so_dien_thoai' in field list is ambiguous. The SQL statement executed was: SELECT tinraovat.ma_tin ,date(ngay_dang) as ngay_dang,email,tieu_de_tin ,nguoi_lien_lac , so_dien_thoai ,tinh_thanh,noi_dung_tin,anh
+FROM `tinraovat`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinraovat.ma_tin
+JOIN `khachhang` ON tinkhachhang.ma_khach_hang = khachhang.ma_khach_hang
+WHERE tinraovat.ma_tin=38.
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (167)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (128)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/01 12:18:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'so_dien_thoai' in field list is ambiguous. The SQL statement executed was: SELECT tinraovat.ma_tin ,date(ngay_dang) as ngay_dang,email,tieu_de_tin ,nguoi_lien_lac , so_dien_thoai ,tinh_thanh,noi_dung_tin,anh
+FROM `tinraovat`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinraovat.ma_tin
+JOIN `khachhang` ON tinkhachhang.ma_khach_hang = khachhang.ma_khach_hang
+WHERE tinraovat.ma_tin=38' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php(167): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(128): Tinraovat->getTinraovat('38')
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Rao_vatController->actionXem_chi_tiet()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('xem_chi_tiet')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/xem_chi...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/rao-vat/xem-chi-tiet/dasd/38
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---
+2015/10/01 12:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/xem-chi-tiet/dasd/bb45e370c6056051e27c4b2bba60844ddoitac2.png".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/xem-chi...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/rao-vat/xem-chi-tiet/dasd/bb45e370c6056051e27c4b2bba60844ddoitac2.png
+HTTP_REFERER=http://localhost/xechieuve/rao-vat/xem-chi-tiet/dasd/38
+---
