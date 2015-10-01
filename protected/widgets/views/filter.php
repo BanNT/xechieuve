@@ -5,10 +5,15 @@
     <div class="col-md-12 box boxfilter">
         <ul class="list-unstyled" >
             <div class="row">
-                <li><a href="">Xe tải Suzuki 12 tấn</a></li>
-                <li><a href="">Xe rơ moóc</a></li>
-                <li><a href="">Xe container</a></li>
-                <li><a href="">Xe ba gác</a></li>
+                <?php
+                foreach ($loaiXeGhep as $loai):
+                    $url = Chtml::encode($this->url . ConvertURL::refine($loai->loai_xe_ghep) . '/' . $loai->ma_loai_xe_ghep);
+                    $loaiXeGhep = Chtml::encode($loai->loai_xe_ghep);
+                    ?>
+                    <li><a href="<?php echo $url; ?>"><?php echo $loaiXeGhep ?></a></li>
+                    <?php
+                endforeach;
+                ?>
             </div>
         </ul>
     </div>

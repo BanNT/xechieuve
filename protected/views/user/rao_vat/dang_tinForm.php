@@ -1,3 +1,4 @@
+
 <?php
 
 return array(
@@ -39,15 +40,11 @@ return array(
                 . '<div class="col-md-12">',
                 'noi_dung_tin' => array(
                     'type' => 'textarea',
-                    'rows'=>'10',
-                    'class' => 'form-control'
+                    'rows' => '10',
+                    'class' => 'form-control',
+                    'id'=>'noi-dung-tin'
                 ),
-                '</div>',
-                'ma_loai_tin' => array(
-                    'type' => 'hidden',
-                    'value' => Tinraovat::CODE_RV,
-                    'class' => 'form-control'
-                )
+                '</div>'
             ),
         ),
         'tinraovat' => array(
@@ -66,7 +63,7 @@ return array(
                     'class' => 'form-control'
                 ),
                 '</div>'
-                .'<div class="col-xs-12 col-md-5">',
+                . '<div class="col-xs-12 col-md-5">',
                 'anh' => array(
                     'type' => 'file'
                 ),
@@ -84,3 +81,4 @@ return array(
         '</div>'
     ),
 );
+?>

@@ -1,7 +1,7 @@
 <?php // /* @var $this Controller */    
 $provinces = Province::listProvinces();
 ?>
-<section id="table-car">
+<section id="tableXTK">
     <div class="pribox">Xe tìm khách</div>    
     <div class="table-responsive">
         <table class="table table-striped table-hover">

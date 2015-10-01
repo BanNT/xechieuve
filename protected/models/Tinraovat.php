@@ -44,13 +44,13 @@ class Tinraovat extends CActiveRecord {
             ),
             array('ma_tin, ma_loai_tin_rv', 'numerical', 'integerOnly' => true),
             array('anh', 'length', 'max' => 510, 'message' => 'Tên file quá dài'),
-            array('anh', 'file', 'allowEmpty' => true, 'safe' => true, 
+            array('anh', 'file', 'allowEmpty' => true, 'safe' => true,
                 'types' => 'jpg, jpeg, gif, png',
-                'wrongType'=>'Chỉ chấp nhận các file jpg, jpeg, gif, png',
-                'maxSize' => 1024*1024, // 1MB                
+                'wrongType' => 'Chỉ chấp nhận các file jpg, jpeg, gif, png',
+                'maxSize' => 1024 * 1024, // 1MB                
                 'tooLarge' => 'Kích cỡ ảnh phải nhỏ hơn 1MB',
-                'maxFiles'=>1,
-                'tooMany'=>'Bạn chỉ được upload 1 file ảnh duy nhất'
+                'maxFiles' => 1,
+                'tooMany' => 'Bạn chỉ được upload 1 file ảnh duy nhất'
             ),
             array('gia_rao_vat', 'length', 'max' => 30),
             // The following rule is used by search().
@@ -121,45 +121,41 @@ class Tinraovat extends CActiveRecord {
     }
 
     /**
-     * trừ tiền khi đăng tin rao vặt
-     */
-    public function trutien() {
-        //chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
-        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
-        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
-        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
-        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
-        ////chú ý sau này nhớ chuyển id thành id của khách hàng đăng nhập
-        //lấy giá tiền cần có để đăng tin rao vặt
-        $giaTien = Loaitin::model()->findByPk(self::CODE_RV)->gia_dang;
-        //lấy tổng số tiền trong tài khoản của khách hàng
-        $tongTien = Khachhang::model()->findByPk(1)->so_du_tai_khoan;
-
-        //Nếu không đủ tiền sẽ không cho đăng tin
-        if ($tongTien < $giaTien) {
-            return false;
-        }
-
-        if (Khachhang::model()->updateByPk(1, array('so_du_tai_khoan' => ($tongTien - $giaTien)))) {
-            return true;
-        }
-    }
-
-    /**
      * Lấy ra danh sách tin rao vặt
      * @param Paginate $paginator
      * @return array
      */
-    public function listTinRV(Paginate $paginator) {
+    public function listTinRV(Paginate $paginator, $condition = NULL) {
         return Yii::app()->db->createCommand()
-                        ->select('tieu_de_tin,tinh_thanh,gia_rao_vat,nguoi_lien_lac,so_dien_thoai,anh')
+                        ->select('date(ngay_dang) as ngay_dang,tieu_de_tin,tinh_thanh,gia_rao_vat,nguoi_lien_lac,so_dien_thoai,anh')
                         ->from('tinraovat')
-                        ->where('ma_loai_tin = ' . self::CODE_RV)
+                        ->where('ma_loai_tin = ' . self::CODE_RV . $condition)
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
-                        ->order('ngay_dang ASC')
+                        ->order('ngay_dang DESC')
                         ->limit($paginator->limit, $paginator->offset)
                         ->queryAll()
         ;
+    }
+
+    /**
+     * Lấy ra danh sách mã tin được ngăn cách bởi dấu phẩy dựa theo điều kiện
+     * @param type $conditions
+     * @return string
+     */
+    public static function listMaTin($conditions) {
+        $matins = Yii::app()->db->createCommand()
+                ->select('tinraovat.ma_tin')
+                ->from('tinraovat')
+                ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
+                ->where('ma_loai_tin = ' . self::CODE_RV . $conditions)
+                ->queryAll();
+
+        $string = '';
+        foreach ($matins as $matin) {
+            $string .=$matin['ma_tin'] . ',';
+        }
+        $string .= '0';
+        return $string;
     }
 
 }
