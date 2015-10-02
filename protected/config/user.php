@@ -30,8 +30,14 @@ return CMap::mergeArray(
                         //url lọc theo loại xe
                         'khach-tim-xe/loc-theo-xe/<title>/<id:\d+>' => 'khach_tim_xe/loc_theo_xe',
                         'xe-tim-khach/loc-theo-xe/<title>/<id:\d+>' => 'xe_tim_khach/loc_theo_xe',
-                        //d
+                        //url đăng ký tài khoản
                         'dang-ky' => 'dang_ky',
+                        //url quản lý của khách hàng
+                        'tin-da-dang/<title>/<id:\d+>'=>'khach_hang/tin_da_dang',
+                        'lam-moi-tin-dang/<title>/<id:\d+>'=>'khach_hang/lam_moi_tin',
+                        'xoa-tin/<title>/<id:\d+>'=>'khach_hang/xoa_tin_da_dang',
+                        'sua-tin/<title>/<id:\d+>'=>'khach_hang/sua_tin_dang',
+                        //url mặc định của yii
                         '<controller:\w+>/<id:\d+>' => '<controller>/view',
                         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                         '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
@@ -62,6 +68,12 @@ return CMap::mergeArray(
                      */
                     ),
                 ),
+//                'cache' => array(
+//                    'class' => 'system.caching.CMemCache',
+//                    'servers' => array(
+//                        array('host' => 'localhost', 'port' => 11211, 'weight' => 60),
+//                    ),
+//                ),
             ),
                 )
 );

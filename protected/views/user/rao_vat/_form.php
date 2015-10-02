@@ -1,4 +1,3 @@
-
 <?php
 
 return array(
@@ -6,7 +5,6 @@ return array(
     'elements' => array(
         'tinkhachhang' => array(
             'type' => 'form',
-            'title' => 'Đăng tin rao vặt:',
             'elements' => array(
                 'ma_khach_hang' => array(
                     'type' => 'hidden',
@@ -24,6 +22,7 @@ return array(
                     'class' => 'form-control'
                 ),
                 '</div>'
+                . '<div class="clearfix"></div>'
                 . '<div class="col-xs-12 col-sm-6 col-md-6">',
                 'tieu_de_tin' => array(
                     'type' => 'text',
@@ -42,7 +41,7 @@ return array(
                     'type' => 'textarea',
                     'rows' => '10',
                     'class' => 'form-control',
-                    'id'=>'noi-dung-tin'
+                    'id' => 'noi-dung-tin'
                 ),
                 '</div>'
             ),
@@ -81,4 +80,3 @@ return array(
         '</div>'
     ),
 );
-?>

@@ -36,7 +36,7 @@ $provinces = Province::listProvinces();
                             <?php echo CHtml::encode($data['nguoi_lien_lac']); ?>
                             <?php echo CHtml::encode($data['so_dien_thoai']); ?>
                         </td>
-                        <td>Đang chờ</td>
+                        <td><?php echo CHtml::encode($data['trang_thai_tin']);?></td>
                     </tr>
                     <?php
                 endforeach;

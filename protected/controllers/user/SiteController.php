@@ -5,12 +5,12 @@
 class SiteController extends Controller {
 
     /**
-     * Số bản ghi tối đa hiển thị của bảng xe tìm khách
+     * Số bản ghi tối đa hiển thị của bảng xe tìm khách tại trang chủ
      */
     const LIMITED_RECORD_XTK = 7;
 
     /**
-     * Số bản ghi tối đa hiển thị của bảng khách tìm xe
+     * Số bản ghi tối đa hiển thị của bảng khách tìm xe tại trang chủ
      */
     const LIMITED_RECORD_KTX = 3;
 

@@ -32,7 +32,7 @@ $provinces = Province::listProvinces();
                         <td>
                             <?php echo CHtml::encode($data['gia_rao_vat']); ?>
                         </td>
-                        <td>Đang chờ</td>
+                        <td><?php echo CHtml::encode($data['trang_thai_tin']); ?></td>
                     </tr>
                     <?php
                 endforeach;

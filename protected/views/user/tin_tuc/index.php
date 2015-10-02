@@ -1,4 +1,4 @@
-<?php $this->pageTitle = Yii::app()->name . ' - tin tức'; ?>
+<?php $this->pageTitle = Yii::app()->name . ' - Tin tức'; ?>
 <div class="row">
     <div class="col-md-4">
         <figure>

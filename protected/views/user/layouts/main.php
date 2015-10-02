@@ -59,7 +59,6 @@
                                         <section id="slide">
                                             <?php $this->widget('application.widgets.slide'); ?>
                                         </section><!--end slide-->
-
                                         <?php echo $content ?>
                                     </section><!--end main-content-->
                                 </div>
