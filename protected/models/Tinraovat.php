@@ -26,6 +26,7 @@ class Tinraovat extends CActiveRecord {
     const CODE_RV = 3;
 
     /**
+
      * @return string the associated database table name
      */
     public function tableName() {
@@ -52,7 +53,9 @@ class Tinraovat extends CActiveRecord {
                 'maxFiles' => 1,
                 'tooMany' => 'Bạn chỉ được upload 1 file ảnh duy nhất'
             ),
-            array('gia_rao_vat', 'length', 'max' => 30),
+            array('gia_rao_vat', 'length', 'max' => 30,
+                'message' => '{attribute} giới hạn 30 kí tự'
+            ),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_tin, anh, gia_rao_vat, ma_loai_tin_rv', 'safe', 'on' => 'search'),
@@ -127,11 +130,16 @@ class Tinraovat extends CActiveRecord {
      */
     public function listTinRV(Paginate $paginator, $condition = NULL) {
         return Yii::app()->db->createCommand()
-                        ->select('tinraovat.ma_tin,date(ngay_dang) as ngay_dang,tieu_de_tin,tinh_thanh,gia_rao_vat,nguoi_lien_lac,so_dien_thoai,anh')
+                        ->select('tinraovat.ma_tin,date(ngay_dang) as ngay_dang_tin,tieu_de_tin,tinh_thanh,gia_rao_vat,nguoi_lien_lac,so_dien_thoai,anh'
+                                . ',CASE '
+                                . 'WHEN trang_thai=0 THEN "Đang tìm" '
+                                . 'WHEN trang_thai=1 THEN "Đã xong" '
+                                . 'END AS trang_thai_tin'
+                        )
                         ->from('tinraovat')
                         ->where('ma_loai_tin = ' . self::CODE_RV . $condition)
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
-                        ->order('ngay_dang DESC')
+                        ->order('trang_thai,ngay_dang DESC')
                         ->limit($paginator->limit, $paginator->offset)
                         ->queryAll()
         ;
@@ -157,6 +165,7 @@ class Tinraovat extends CActiveRecord {
         $string .= '0';
         return $string;
     }
+
     public function getTinraovat($matin) {
         return Yii::app()->db->createCommand()
                         ->select('tinraovat.ma_tin ,tieu_de_tin ,nguoi_lien_lac , so_dien_thoai ,tinh_thanh,noi_dung_tin,anh')
@@ -166,4 +175,25 @@ class Tinraovat extends CActiveRecord {
                         ->queryRow()
         ;
     }
+
+
+    /**
+     * @return array
+     */
+    public static function getStatusTinDang(){
+        return [
+            '0'=>'Đang tìm',
+            '1'=>'Đã xong'
+        ];
+    }
+
+    public static function updateTinRV($maLoaiTinRV, $giaRaoVat, $anh='null', $maTin) {
+        $sql = "UPDATE ".Tinraovat::model()->tableName()
+                . " SET ma_loai_tin_rv = $maLoaiTinRV,gia_rao_vat= '$giaRaoVat', anh = '$anh'"
+                . " WHERE ma_tin =$maTin"
+        ;
+        Yii::app()->db->createCommand($sql)->execute();
+    }
+
+
 }

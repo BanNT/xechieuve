@@ -161,7 +161,7 @@ body,ul,h4{
 /*----------------------------------------------------------------------------*/
 /*---------------------------begin slide/ table-------------------------------*/
 #slide{
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 #table-car,#table-customer{
@@ -253,6 +253,7 @@ body,ul,h4{
 #dangki
 {
     border:1px solid #0099cc;
+    margin-top: 10px;
 }
 .tieude
 {
@@ -269,20 +270,33 @@ body,ul,h4{
     margin-left: 10px;    
 
 }
+#dangki .errorMessage{
+    color: red;
+    margin-top: 15px;
+    margin-left: 280px;
+}
 .errorMessage{
     color: red;
-    margin-top: 15px
+    margin-top: 15px;
+    margin-left: 140px;
 }
 
 #dangtinrv{
     margin-bottom: 20px;
 }
-#formdangki
+.formdangkytaikhoan
 {
-    margin-left:100px;
-    margin-right: 200px;
+    margin-right: 100px;
     padding-top: 20px;
+    margin-left: 60px;
 }
+#dangki .checkb + .errorMessage
+{
+    margin-left: 20px;
+    margin-top: 0px;
+    display: inline;
+}
+
 .form-input
 {
     float:right;
@@ -295,19 +309,20 @@ body,ul,h4{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 }
+
 .anh
 {
-    margin-left: 140px;
+    margin-left: 270px;
     margin-top: 5px;
 }
 .btndangki
 {
     color: #ffffff;
     background: #369 none repeat scroll 0% 0%;
-    margin-top: 20px;
     margin-left: 200px;
     margin-bottom: 10px;
 }
+/*--------END DANG KI-----------*/
 #detail-ktx section{
     margin: 10px 0 0 20px;
 }
@@ -323,8 +338,45 @@ body,ul,h4{
 
 /*----------------------------------------------------------------------------*/
 /*------------------------------begin dang-tin----------------------------------*/
-#dang-tin div{
-    
+#dang-tin{
+    line-height: 20px;
 }
 /*------------------------------end dang-tin----------------------------------*/
 /*----------------------------------------------------------------------------*/
+#chi-tiet-ktx{
+    line-height: 30px;
+}
+
+/*----------------------------------BEGIN DANG-NHAP------------------------------------------*/
+
+#dangnhap
+{
+    // width: 500px;
+    border:1px solid #ccccff;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+#dang
+{
+    margin-left: 750px;
+    width: 150px;
+    padding-top: 5px;
+}
+#dang a
+{
+    color:#fff;
+}
+
+.ckb
+{
+    color: #369;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+/*----------------------------------------------------------------------------*/
+
+.modal-content
+{
+    margin: 10px;
+}

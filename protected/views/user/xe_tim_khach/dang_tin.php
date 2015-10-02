@@ -1,4 +1,4 @@
-<?php $this->pageTitle = Yii::app()->name . ' - đăng tin xe tìm khách'; ?>
+<?php $this->pageTitle = Yii::app()->name . ' - Đăng tin xe tìm khách'; ?>
 <section id="dangtinrv">
     <script src="<?php echo Yii::app()->baseUrl . '/js/ckeditor/ckeditor.js'; ?>"></script>
     <?php echo $form; ?>

@@ -126,6 +126,10 @@ class Khach_tim_xeController extends Controller {
      * Đăng tin khách tìm xe
      */
     public function actionDang_tin() {
+        if (Yii::app()->user->name == 'Guest') {
+            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
+        }
+
         $form = new CForm('application.views.user.khach_tim_xe.dang_tinForm');
         $form['tinkhachhang']->model = new Tinkhachhang();
         $form['tinghepxe']->model = $tinghepxe = new Tinghepxe();

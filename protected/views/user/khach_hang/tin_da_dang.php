@@ -24,7 +24,7 @@
                         <td><?php echo CHtml::encode($i+=1); ?></td>
                         <td><?php echo CHtml::encode($tin['ngay_dang_tin']); ?></td>
                         <td class="text-left"><?php echo CHtml::encode($tin['tieu_de_tin']); ?></td>
-                        <td>Đang chờ</td>
+                        <td><?php echo CHtml::encode($tin['trang_thai_tin']) ?></td>
                         <td><a href="javascript:confirmURL('<?php echo $urlLamMoi; ?>')">Làm mới</a></td>
                         <td><a href="<?php echo $urlSua; ?>" >Sửa</a></td>
                         <td><a href="javascript:confirmDelete('<?php echo $urlXoa; ?>')">Xóa</a></td>

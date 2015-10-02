@@ -21,6 +21,7 @@ return array(
                     'class' => 'form-control'
                 ),
                 '</div>'
+                .'<div class="clearfix"></div>'
                 . '<div class="col-xs-12 col-sm-6 col-md-6">',
                 'tieu_de_tin' => array(
                     'type' => 'text',
@@ -59,6 +60,7 @@ return array(
                     'class' => 'form-control'
                 ],
                 '</div>'
+                .'<div class="clearfix"></div>'
                 . '<div class ="col-md-6">',
                 'noi_den_tinh' => [
                     'type' => 'dropdownlist',
@@ -73,6 +75,7 @@ return array(
                     'class' => 'form-control'
                 ],
                 '</div>'
+                .'<div class="clearfix"></div>'
                 . '<div class ="col-md-3">',
                 'ngay_khoi_hanh' => [
                     'type' => 'date',
@@ -92,7 +95,3 @@ return array(
         '</div>'
     ),
 );
-?>
-<script type="text/javascript">
-//    CKEDITOR.replace( 'editor1' );
-</script>

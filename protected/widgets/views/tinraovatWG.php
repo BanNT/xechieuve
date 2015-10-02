@@ -22,7 +22,7 @@ $provinces = Province::listProvinces();
                     $urlChiTietTin = Yii::app()->request->baseUrl . '/rao-vat/xem-chi-tiet/' . ConvertURL::refine($data['tieu_de_tin']) . '/' . $data['ma_tin'];
                     ?>
                     <tr>
-                        <td><?php echo CHtml::encode($data['ngay_dang']) ?></td>
+                        <td><?php echo CHtml::encode($data['ngay_dang_tin']) ?></td>
                         <td><a href="<?php echo $urlChiTietTin ?>"><?php echo CHtml::encode($data['tieu_de_tin']); ?></a></td>
                         <td><?php echo CHtml::encode($provinces[$data['tinh_thanh']]); ?></td>
                         <td>
@@ -32,7 +32,7 @@ $provinces = Province::listProvinces();
                         <td>
                             <?php echo CHtml::encode($data['gia_rao_vat']); ?>
                         </td>
-                        <td>Đang chờ</td>
+                        <td><?php echo CHtml::encode($data['trang_thai_tin']); ?></td>
                     </tr>
                     <?php
                 endforeach;

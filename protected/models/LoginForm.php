@@ -22,7 +22,7 @@ class LoginForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('username, password', 'required'),
+			array('username, password', 'required','message' => 'Bạn không được bỏ trống "{attribute}"'),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
@@ -36,7 +36,9 @@ class LoginForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'rememberMe'=>'Remember me next time',
+                        'username'=>'Tên đăng nhập:',
+                        'password'=>'Mật khẩu:',
+			'rememberMe'=>'Ghi nhớ đăng nhập',
 		);
 	}
 
@@ -48,9 +50,9 @@ class LoginForm extends CFormModel
 	{
 		if(!$this->hasErrors())
 		{
-			$this->_identity=new UserIdentity($this->username,$this->password);
+			$this->_identity=new UserIdentity($this->username,md5($this->password));
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+				$this->addError('password','Mật khẩu và tên đăng nhập không khớp.');
 		}
 	}
 
@@ -60,6 +62,7 @@ class LoginForm extends CFormModel
 	 */
 	public function login()
 	{
+            
 		if($this->_identity===null)
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);

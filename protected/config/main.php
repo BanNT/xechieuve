@@ -2,7 +2,7 @@
 
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'Xechieuve.vn',
+    'name' => 'Xeghephang.vn',
     // preloading 'log' component
     'preload' => array('log'),
     // autoloading model and component classes
@@ -32,4 +32,5 @@ return array(
         // this is used in contact page
         'email' => 'webmaster@example.com',
     ),
+    
 );

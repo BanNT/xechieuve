@@ -12,7 +12,8 @@ class m150921_134613_tinkhachhang extends CDbMigration {
             'noi_dung_tin' => 'TEXT',
             'tinh_thanh' => 'VARCHAR(2)',
             'ngay_dang' => 'TIMESTAMP DEFAULT CURRENT_TIMESTAMP',
-            'ma_loai_tin' => 'INT(11)'
+            'ma_loai_tin' => 'INT(11)',
+            'trang_thai'=>'TINYINT(1) DEFAULT 0'
         ));
 
         $this->addForeignKey('PK_tinkhachhang_khachhang', 'tinkhachhang', 'ma_khach_hang', 'khachhang', 'ma_khach_hang');

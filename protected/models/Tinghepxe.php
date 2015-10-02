@@ -130,12 +130,17 @@ class Tinghepxe extends CActiveRecord {
      */
     public function listTinGhepXeByType(Paginate $paginator, $maLoaiTin, $condition = null) {
         return Yii::app()->db->createCommand()
-                        ->select('tinghepxe.ma_tin,tieu_de_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai')
+                        ->select('tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai,'
+                                . 'CASE '
+                                    . 'WHEN trang_thai=0 THEN "Đang chờ" '
+                                    . 'WHEN trang_thai=1 THEN "Đã tìm được" '
+                                . 'END AS trang_thai_tin'
+                        )
                         ->from('tinghepxe')
                         ->where('ma_loai_tin = ' . $maLoaiTin . $condition)
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
                         ->limit($paginator->limit, $paginator->offset)
-                        ->order('ngay_dang DESC')
+                        ->order('trang_thai,ngay_dang DESC')
                         ->queryAll()
         ;
     }
@@ -163,6 +168,36 @@ class Tinghepxe extends CActiveRecord {
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
                         ->where('ma_loai_tin = ' . $maLoaiTin . $conditions)
                         ->queryAll();
+    }
+
+    /**
+     * @return array
+     */
+    public static function getStatusTinDang() {
+        return [
+            '0' => 'Đang chờ',
+            '1' => 'Đã tìm được'
+        ];
+    }
+
+    /**
+     * Update tin ghép xe
+     * @param string $diaChiDi Địa chỉ đi
+     * @param string $diaChiDen Địa chỉ đến
+     * @param integer $noiDenTinh Mã tỉnh
+     * @param integer $maLoaiXeGhep Mã loại xe muốn ghép
+     * @param string $ngayKhoiHanh Ngày khởi hành
+     * @param integer $maTin Mã tin đăng
+     */
+    public static function updateTinGhepXe($diaChiDi, $diaChiDen, $noiDenTinh,
+            $maLoaiXeGhep, $ngayKhoiHanh, $maTin) {
+        $sql = "UPDATE " . Tinghepxe::model()->tableName()
+                . " SET dia_chi_di = '$diaChiDi',dia_chi_den= '$diaChiDen',"
+                . " noi_den_tinh = $noiDenTinh,ma_loai_xe_ghep = $maLoaiXeGhep,"
+                . " ngay_khoi_hanh = '$ngayKhoiHanh'"
+                . " WHERE ma_tin =$maTin"
+        ;
+        Yii::app()->db->createCommand($sql)->execute();
     }
 
 }

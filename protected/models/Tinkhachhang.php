@@ -22,6 +22,7 @@
  */
 class Tinkhachhang extends CActiveRecord {
 
+//    public $trang_thai;
     /**
      * @return string the associated database table name
      */
@@ -36,7 +37,7 @@ class Tinkhachhang extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('nguoi_lien_lac, so_dien_thoai, tieu_de_tin,noi_dung_tin,tinh_thanh', 'required',
+            array('trang_thai,nguoi_lien_lac, so_dien_thoai, tieu_de_tin,noi_dung_tin,tinh_thanh', 'required',
                 'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
             ),
             array('ma_khach_hang, ma_loai_tin,so_dien_thoai', 'numerical', 'integerOnly' => true,
@@ -82,6 +83,7 @@ class Tinkhachhang extends CActiveRecord {
             'tinh_thanh' => 'Tỉnh/Thành phố',
             'ngay_dang' => 'Ngày đăng tin',
             'ma_loai_tin' => 'Mã loại tin',
+            'trang_thai'=>'Trạng thái tin đăng'
         );
     }
 
@@ -127,8 +129,9 @@ class Tinkhachhang extends CActiveRecord {
         return parent::model($className);
     }
 
+    
     /**
-     * trừ tiền khi đăng tin
+     * trừ tiền dựa theo mã loại tin
      */
     public function trutien($maLoaiTin) {
         //lấy giá tiền cần có để đăng tin rao vặt
@@ -146,4 +149,48 @@ class Tinkhachhang extends CActiveRecord {
         }
     }
 
+    /**
+     * Làm mới tin đăng băng cách cập nhập ngày đăng thành ngày hiện tại và trừ
+     * tiền như khi đăn mới
+     * @param integer $maTin Mã của tin muốn làm mới
+     */
+    public function lamMoi($maTin) {
+        $maLoaiTin = $this->getMaLoaiTinById($maTin);
+        if ($this->trutien($maLoaiTin['ma_loai_tin'])) {
+            if($this->updateByPk($maTin, array('ngay_dang' => new CDbExpression('NOW()')))){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Lấy mã loại tin dựa vào mã tin đăng
+     * @param integer $maTin
+     * @return ?????
+     */
+    public function getMaLoaiTinById($maTin) {
+        return Yii::app()->db->createCommand()
+                        ->select('ma_loai_tin')
+                        ->from('tinkhachhang')
+                        ->where('ma_tin = :id', array(':id' => $maTin))
+                        ->queryRow();
+    }
+
+    /**
+     * Delete tin đăng
+     * @param type $maTin
+     */
+    public function deleteTin($maTin, $maLoaiTin) {
+        Tinraovat::model()->deleteByPk($maTin);
+        if($maLoaiTin == Tinraovat::CODE_RV){
+            Tinraovat::model()->deleteByPk($maTin);
+        }else{
+            Tinkhachhang::model()->deleteByPk($maTin);
+        }
+        
+        $this->deleteByPk($maTin);
+    }
+
+   
 }
