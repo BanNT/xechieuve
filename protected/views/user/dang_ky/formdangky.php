@@ -2,7 +2,6 @@
 return array(
     'enctype' => 'multipart/form-data',
     'class'=>'formdangkytaikhoan',
-    //'id'=>'login-form',
     'elements' => array(
           '<div class="row">',
          '<div class="col-xs-12">',
@@ -73,6 +72,7 @@ return array(
         '<div class="col-xs-12">',
          'dieukhoan' => array(
             'type' => 'checkbox',
+             'class'=>'checkb',
             
         ),
         '</div>',

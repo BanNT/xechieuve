@@ -5,11 +5,11 @@
         </div>
     <div id="dang">
         <?php if(Yii::app()->user->isGuest){?>
-        <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang_nhap" style="border-right:1px solid #fff;padding-right: 2px;">Đăng nhập</a>
+        <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-nhap" style="border-right:1px solid #fff;padding-right: 2px;">Đăng nhập</a>
         <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-ky">Đăng Ký</a>
             <?php } else{ ?>
             <a href="" style="border-right:1px solid #fff;padding-right: 2px;"><?php echo"hi,". CHtml::encode(Yii::app()->user->name);?></a>
-        <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dangxuat">Đăng xuất</a>
+        <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-xuat">Đăng xuất</a>
         <?php } ?>
     </div>
     <div>

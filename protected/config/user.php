@@ -34,6 +34,7 @@ return CMap::mergeArray(
                         'dang-ky' => 'dang_ky',
                         //url quản lý của khách hàng
                         'dang-nhap'=>'khach_hang/dang_nhap',
+                         'dang-xuat'=>'khach_hang/dang_xuat',
                         'tin-da-dang/<title>/<id:\d+>'=>'khach_hang/tin_da_dang',
                         'lam-moi-tin-dang/<title>/<id:\d+>'=>'khach_hang/lam_moi_tin',
                         'xoa-tin/<title>/<id:\d+>'=>'khach_hang/xoa_tin_da_dang',

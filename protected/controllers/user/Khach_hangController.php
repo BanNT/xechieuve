@@ -169,5 +169,10 @@ class Khach_hangController extends Controller {
         }
         $this->render('dang_nhap', array('model' => $model));
     }
-
+    public function actionDang_xuat() 
+    {
+        Yii::app()->user->logout();
+        Yii::app()->session->clear();
+        $this->redirect(Yii::app()->homeUrl);
+    }
 }

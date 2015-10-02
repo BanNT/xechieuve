@@ -18,12 +18,12 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$connection=yii::app()->db;
-                $com="SELECT  `ten_dang_nhap`, `password`FROM `khachhang`";
+                $com="SELECT  `ma_khach_hang`,`ten_dang_nhap`, `password`FROM `khachhang`";
                 $com.="where `ten_dang_nhap` = '".$this->username."' and ";
                 $com.="`password` = '".$this->password."'";
                 $comand=$connection->createCommand($com)->query();
-                $comand->bindColumn(1, $this->username);
-                $comand->bindColumn(2, $this->password);
+                $comand->bindColumn(2, $this->username);
+                $comand->bindColumn(3, $this->password);
                 while ($comand->read()!==false)
                 {
                 $this->errorCode=  self::ERROR_NONE;
