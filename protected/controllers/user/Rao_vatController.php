@@ -123,5 +123,17 @@ class Rao_vatController extends Controller {
             $this->actionIndex(null, self::LIMITED_RECORD_RVI, $condition, false);
         }
     }
+    
+    public function actionXem_chi_tiet() {
+         $matin = Yii::app()->request->getParam('id');
+        $modeltrv = new Tinraovat();
+        if (!$tinraovat = $modeltrv->getTinraovat($matin)) {
+            $this->redirect(['site/index']);
+        }
+
+        $this->render('xem_chi_tiet', [
+            'tinraovat' => $tinraovat
+        ]);
+    }
 
 }
