@@ -22531,3 +22531,72 @@ REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://localhost:8888/xechieuve/tin-tuc
 >>>>>>> f725ad65546d222e9cbb552309e7104403a2fe14
 ---
+2015/10/02 09:39:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trang_thai' in 'field list'. The SQL statement executed was: SELECT tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai,CASE WHEN trang_thai=0 THEN "Đang chờ" WHEN trang_thai=1 THEN "Đã tìm được" END AS trang_thai_tin
+FROM `tinghepxe`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+WHERE ma_loai_tin = 2
+ORDER BY `trang_thai`, `ngay_dang` DESC LIMIT 3.
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (144)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (31)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/02 09:39:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trang_thai' in 'field list'. The SQL statement executed was: SELECT tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai,CASE WHEN trang_thai=0 THEN "Đang chờ" WHEN trang_thai=1 THEN "Đã tìm được" END AS trang_thai_tin
+FROM `tinghepxe`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+WHERE ma_loai_tin = 2
+ORDER BY `trang_thai`, `ngay_dang` DESC LIMIT 3' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(144): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(31): Tinghepxe->listTinGhepXeByType(Object(Paginate), 2)
+#3 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController(false)
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#13 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#17 {main}
+REQUEST_URI=/xechieuve/index.php
+---
+2015/10/02 09:41:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trang_thai' in 'field list'. The SQL statement executed was: SELECT tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai,CASE WHEN trang_thai=0 THEN "Đang chờ" WHEN trang_thai=1 THEN "Đã tìm được" END AS trang_thai_tin
+FROM `tinghepxe`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+WHERE ma_loai_tin = 2
+ORDER BY `trang_thai`, `ngay_dang` DESC LIMIT 3.
+in C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php (144)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php (31)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/02 09:41:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'trang_thai' in 'field list'. The SQL statement executed was: SELECT tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai,CASE WHEN trang_thai=0 THEN "Đang chờ" WHEN trang_thai=1 THEN "Đã tìm được" END AS trang_thai_tin
+FROM `tinghepxe`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinghepxe.ma_tin
+WHERE ma_loai_tin = 2
+ORDER BY `trang_thai`, `ngay_dang` DESC LIMIT 3' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinghepxe.php(144): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\SiteController.php(31): Tinghepxe->listTinGhepXeByType(Object(Paginate), 2)
+#3 [internal function]: SiteController->actionIndex(NULL, NULL, false)
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(SiteController), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SiteController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('')
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#13 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#17 {main}
+REQUEST_URI=/xechieuve/
+HTTP_REFERER=http://localhost/xechieuve/dang_nhap
+---
