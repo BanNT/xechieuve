@@ -23,12 +23,12 @@ class Rao_vatController extends Controller {
         if ($callDirectly) {
             Yii::app()->session['condition'] = null;
         }
-
+        
         $tinraovat = new Tinraovat();
         $paginatorRV = new Paginate($currentPage, new Tinkhachhang(), $limit, ' ma_loai_tin = ' . Tinraovat::CODE_RV . $condition);
         $listTinRV = $tinraovat->listTinRV($paginatorRV, $condition);
-
-
+        
+        
 
         //render view
         $data = array(
