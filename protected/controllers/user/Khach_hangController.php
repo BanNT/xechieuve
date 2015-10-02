@@ -10,14 +10,21 @@ class Khach_hangController extends Controller {
      * Số bản ghi tối đa hiển thị tại mục tin đã đăng của khách hàng
      */
     const LIMIT_RECORD = 20;
+    
+    private function _authenticated(){
+        die(Yii::app()->user->id);
+        if (Yii::app()->user->name == 'Guest') {
+            
+            $this->redirect(Yii::app()->homeUrl.'dang-nhap');
+        }
+    }
 
     /**
      * Hiển thị những tin đã đăng của khách hàng dựa theo mã loại tin
      */
     public function actionTin_da_dang($maLoaiTin = null, $currentPage = 1, $message = '') {
-        if (Yii::app()->user->name == 'Guest') {
-            $this->redirect(Yii::app()->homeUrl.'dang-nhap');
-        }
+        $this->_authenticated();
+        
         if (!$maLoaiTin) {
             $maLoaiTin = Yii::app()->session['maLoaiTin'] = Yii::app()->request->getParam('id');
         }

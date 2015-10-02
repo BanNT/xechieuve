@@ -1,4 +1,2 @@
-<?php ?>
-
-<h1>HELLO</h1>
-
+hello
+Ca Cao
