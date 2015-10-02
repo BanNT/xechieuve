@@ -1,0 +1,382 @@
+body,ul,h4{
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 1170px) {
+    .wrapper{
+        margin: 0 105px;
+    }
+}
+/*----------------------------------------------------------------------------*/
+/*--------------------------------begin header--------------------------------*/
+#header{
+    margin-bottom: 9px;
+}
+
+#logo{
+    background: #0063a1;
+    height: 135px;
+}
+
+/*-----------begin menu------------*/
+#menu {
+    background-image: url(../images/nav.png);
+    height: 40px;
+    border-top: 1px solid #fff;
+}
+#menu ul {
+    float: left;
+}
+
+#menu ul li {
+    float: left;
+    width: auto;
+    height: auto;
+    line-height: 40px;
+}
+#menu ul li a {
+    position: relative;
+    padding: 12px 0;
+    margin-left: 40px;
+    color: #0063a1;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight:600;
+}
+#menu ul li:hover>a, #menu ul li.selected a
+{
+    background: #0063a1;
+    color: #fff;
+    top: 0;
+    text-decoration: none;
+}
+#menu ul li:hover>a:after, #menu ul li.selected a:after {
+    content: "";
+    position: absolute;
+    right: auto;
+    top: 0;
+    border-bottom: 38px solid transparent;
+    border-left: 30px solid #0063a1;
+}
+#menu ul li:hover>a:before,  #menu ul li.selected a:before {
+    content: "";
+    border-top: 38px solid transparent;
+    border-right: 30px solid #0063a1;
+    position: absolute;
+    bottom: 0;
+    left: -30px
+}
+/*-------------end menu--------------*/
+
+/*-------------------------------end header-----------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*------------------------------begin coll-left-------------------------------*/
+#coll-left .headbox {
+    height: 40px;
+    background: #6d6d6d;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#coll-left .box{
+    border: 1px #ccc solid;
+    text-indent: 28px;
+    line-height: 40px;
+}
+
+#coll-left .boxfilter li{
+    border-bottom: 1px #ccc solid;
+    height: 45px;
+    font-weight:590;
+}
+
+#coll-left #support,#coll-left #partner{
+    margin-top: 22px;
+}
+
+
+#coll-left #partner img{
+    margin-top: 34px;
+}
+/*-------------------------------end coll-left--------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*--------------------------------begin search--------------------------------*/
+#search{
+    margin-bottom: 45px;
+}
+
+#search h6 {
+    font-weight: bolder;
+    float: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: red;
+}
+#search form{
+    float: right;
+    margin-right: -15px;
+}
+
+#search form select {
+    width: 167px;
+    border: 1px #b4b3b3 solid;
+    color: #0163a2;
+    height: 30px;
+    background: url(../images/select.png)no-repeat right #dad8d9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-bottom: 11px;
+}
+#search form input[type="submit"] {
+    width: 90px;
+    padding: 5px;
+    background: #0063a1;
+    color: #fff;
+    border:none;
+    margin-bottom: 11px; 
+
+}
+#search form input[type=date] 
+{
+    width: 124px;
+    background: url(../images/n.png)no-repeat right #dad8d9;
+    height: 30px;
+    color: #0163a2;
+    border: 1px #b4b3b3 solid;
+}
+/*---------------------------------end search---------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*---------------------------begin slide/ table-------------------------------*/
+#slide{
+    margin-bottom: 10px;
+}
+
+#table-car,#table-customer{
+    border: 1px solid #ccc;
+}
+
+@media (min-width: 1170px) {
+    #main-content{
+        width: 710px !important;
+        margin-left: 10px;
+    }
+
+
+}
+#table-customer{
+    margin-top: 8px;
+}
+.pribox {
+    background: #0063a1;
+    height: 40px;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 20px;
+}
+/*----------------------------end slide/table---------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*-------------------------------begin footer---------------------------------*/
+#footer .row{
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 5px solid #6d6d6d;
+    background: #f0f0f0;
+}
+
+#footer .box {
+    width: 320px;
+}
+#footer .box h5 {
+    color: #0063A1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#footer .box h6 {
+    color: #D9201E;
+    font-weight: bold;
+}
+#footer .box p a {
+    color: #333;
+}
+/*-------------------------------end footer-----------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*-------------------------------begin paginator------------------------------*/
+.paginator{
+    padding-bottom: 30px;
+}
+
+.paginator li a{
+    height:20px;
+    width:20px;
+    text-decoration:none;
+    color:#333;
+    display:block;
+    text-align:center;
+    background:#DAD9D9;
+}
+
+.paginator  li a:hover,.paginator  li.selected a
+{
+    background:#0063A1;
+    color:#fff;
+
+}
+
+.paginator span
+{
+    font-size:14px;
+    padding-right:20px;
+}
+/*------------------------------end paginator----------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*-----css dang ki----*/
+#dangki
+{
+    border:1px solid #0099cc;
+    margin-top: 10px;
+}
+.tieude
+{
+    color:#ffffff;
+    background-color: #369;
+    text-align: left;
+    -webkit-border-radius: 1px 1px 1px 1px;
+    border-radius: 1px 1px 1px 1px;
+    font-size: 17px;
+    padding-left: 20px;
+}
+.tbdangki
+{
+    margin-left: 10px;    
+
+}
+#dangki .errorMessage{
+    color: red;
+    margin-top: 15px;
+    margin-left: 280px;
+}
+.errorMessage{
+    color: red;
+    margin-top: 15px;
+    margin-left: 140px;
+}
+
+#dangtinrv{
+    margin-bottom: 20px;
+}
+.formdangkytaikhoan
+{
+    margin-right: 100px;
+    padding-top: 20px;
+    margin-left: 60px;
+}
+#dangki .checkb + .errorMessage
+{
+    margin-left: 20px;
+    margin-top: 0px;
+    display: inline;
+}
+
+.form-input
+{
+    float:right;
+    width: 300px;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 34px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.anh
+{
+    margin-left: 270px;
+    margin-top: 5px;
+}
+.btndangki
+{
+    color: #ffffff;
+    background: #369 none repeat scroll 0% 0%;
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+/*--------END DANG KI-----------*/
+#detail-ktx section{
+    margin: 10px 0 0 20px;
+}
+
+.blue-text{
+    color: blue;
+}
+
+.red-text{
+    color: red;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*------------------------------begin dang-tin----------------------------------*/
+#dang-tin{
+    line-height: 20px;
+}
+/*------------------------------end dang-tin----------------------------------*/
+/*----------------------------------------------------------------------------*/
+#chi-tiet-ktx{
+    line-height: 30px;
+}
+
+/*----------------------------------BEGIN DANG-NHAP------------------------------------------*/
+
+#dangnhap
+{
+    // width: 500px;
+    border:1px solid #ccccff;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+#dang
+{
+    margin-left: 750px;
+    width: 150px;
+    padding-top: 5px;
+}
+#dang a
+{
+    color:#fff;
+}
+
+.ckb
+{
+    color: #369;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+/*----------------------------------------------------------------------------*/
+
+.modal-content
+{
+    margin: 10px;
+}

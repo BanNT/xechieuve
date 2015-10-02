@@ -1,0 +1,7 @@
+Options SymlinksIfOwnerMatch
+RewriteEngine on
+RewriteBase /xechieuve
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+RewriteRule ^(.*)/administrator$ admin.php/$1 [L,QSA]
