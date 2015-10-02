@@ -26,6 +26,7 @@ class Tinraovat extends CActiveRecord {
     const CODE_RV = 3;
 
     /**
+
      * @return string the associated database table name
      */
     public function tableName() {
@@ -127,7 +128,8 @@ class Tinraovat extends CActiveRecord {
      */
     public function listTinRV(Paginate $paginator, $condition = NULL) {
         return Yii::app()->db->createCommand()
-                        ->select('date(ngay_dang) as ngay_dang,tieu_de_tin,tinh_thanh,gia_rao_vat,nguoi_lien_lac,so_dien_thoai,anh')
+
+                        ->select('tinraovat.ma_tin,date(ngay_dang) as ngay_dang,tieu_de_tin,tinh_thanh,gia_rao_vat,nguoi_lien_lac,so_dien_thoai,anh')
                         ->from('tinraovat')
                         ->where('ma_loai_tin = ' . self::CODE_RV . $condition)
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
@@ -156,6 +158,18 @@ class Tinraovat extends CActiveRecord {
         }
         $string .= '0';
         return $string;
+    }
+
+
+    public function getTinraovat($matin) {
+        return Yii::app()->db->createCommand()
+                        ->select('tinraovat.ma_tin ,date(ngay_dang) as ngay_dang,email,tieu_de_tin ,nguoi_lien_lac , tinkhachhang.so_dien_thoai ,tinh_thanh,noi_dung_tin,anh')
+                        ->from('tinraovat')
+                        ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
+                        ->join('khachhang', 'tinkhachhang.ma_khach_hang = khachhang.ma_khach_hang')
+                        ->where("tinraovat.ma_tin=$matin")
+                        ->queryRow()
+        ;
     }
 
 }
