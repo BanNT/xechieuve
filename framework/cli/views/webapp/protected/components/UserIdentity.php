@@ -15,7 +15,7 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
-	public function authenticate()
+	/*public function authenticate()
 	{
 		$users=array(
 			// username => password
@@ -29,5 +29,20 @@ class UserIdentity extends CUserIdentity
 		else
 			$this->errorCode=self::ERROR_NONE;
 		return !$this->errorCode;
+	}*/
+    public function authenticate()
+	{
+		$connection=yii::app()->db;
+                $com="SELECT  `ten_dang_nhap`, `password`FROM `khachhang`";
+                $com.="where `ten_dang_nhap` = '".$this->username."' and ";
+                $com.="`password` = '".$this->password."'";
+                $comand=$connection->createCommand($com)->query();
+                $comand->bindColumn(1, $this->username);
+                $comand->bindColumn(2, $this->password);
+                while ($comand->read()!==false)
+                {
+                $this->errorCode=  self::ERROR_NONE;
+                return!$this->errorCode;
+                }
 	}
 }

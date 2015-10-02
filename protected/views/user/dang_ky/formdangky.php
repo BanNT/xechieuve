@@ -1,9 +1,8 @@
 <?php
-
 return array(
     'enctype' => 'multipart/form-data',
-    'id'=>'formdangky',
-    'class'=>'form-inline',
+    'class'=>'formdangkytaikhoan',
+    //'id'=>'login-form',
     'elements' => array(
           '<div class="row">',
          '<div class="col-xs-12">',
@@ -14,7 +13,7 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-         '<div class="col-xs-12 ">',
+         '<div class="col-xs-12">',
         'ten_dang_nhap' => array(
             'type' => 'text',
             'class' => 'form-input'
@@ -22,7 +21,7 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-        '<div class="col-xs-12  ">',
+        '<div class="col-xs-12">',
         'password' => array(
             'type' => "password",
             'class' => 'form-input'
@@ -30,7 +29,7 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-         '<div class="col-xs-12 ">',
+         '<div class="col-xs-12">',
             'confirmPassword' => array(
                 'type' => "password",
             'class' => 'form-input'
@@ -38,7 +37,7 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-        '<div class="col-xs-12  ">',
+        '<div class="col-xs-12">',
             'so_dien_thoai' => array(
                 'type' => 'text',
             'class' => 'form-input',
@@ -46,7 +45,7 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-        '<div class="col-xs-12  ">',
+        '<div class="col-xs-12">',
         'email' => array(
             'type' => 'text',
             'class' => 'form-input',
@@ -54,7 +53,7 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-        '<div class="col-xs-12  ">',
+        '<div class="col-xs-12">',
         'diachi' => array(
                     'type' => 'dropdownlist',
                     'items' => Province::listProvinces(),
@@ -63,7 +62,7 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-        '<div class="col-xs-12  ">',
+        '<div class="col-xs-12">',
         'anh_dai_dien' => array(
             'type' => 'file',
             'class' => 'anh',
@@ -71,22 +70,22 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
-        '<div class="col-xs-12  ">',
+        '<div class="col-xs-12">',
          'dieukhoan' => array(
             'type' => 'checkbox',
+            
         ),
         '</div>',
         '</div>',
     ),
     'buttons' => array(
-        'dangki' => array(
+        'dangky' => array(
             'type' => 'submit',
             'label' => 'Đăng ký',
-            'class'=>'btndangki',
+            'class'=>'btndangki btn',
             'action'=>'dangkitk',
+
         ),
     ),
     
 );
-
-

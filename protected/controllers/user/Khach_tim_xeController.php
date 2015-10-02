@@ -126,6 +126,8 @@ class Khach_tim_xeController extends Controller {
      * Đăng tin khách tìm xe
      */
     public function actionDang_tin() {
+         if(Yii::app()->user->name!=='Guest')
+    {
         $form = new CForm('application.views.user.khach_tim_xe.dang_tinForm');
         $form['tinkhachhang']->model = new Tinkhachhang();
         $form['tinghepxe']->model = $tinghepxe = new Tinghepxe();
@@ -157,6 +159,12 @@ class Khach_tim_xeController extends Controller {
         } else {
             $this->render('dang_tin', $data);
         }
+    }
+    else
+        {
+          echo"Bạn cần <a href='".CHtml::encode(Yii::app()->request->baseUrl)."/dang_nhap'>đăng nhập</a> mới có thể đăng tin";
+        }
+    
     }
 
     /**

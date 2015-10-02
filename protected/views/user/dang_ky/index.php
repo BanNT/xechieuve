@@ -2,4 +2,5 @@
 <section id="dangki">
     <div class="tieude">ĐĂNG KÍ TÀI KHOẢN</div>
     <?php echo $form; ?>
+    
 </section>

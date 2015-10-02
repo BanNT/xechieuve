@@ -43,6 +43,10 @@ return CMap::mergeArray(
                         '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                     ),
                 ),
+                'user'=>array(
+			// enable cookie-based authentication
+			'allowAutoLogin'=>true,
+		),
                 // database settings are configured in database.php
                 'db' => require(dirname(__FILE__) . '/database.php'),
                 'errorHandler' => array(

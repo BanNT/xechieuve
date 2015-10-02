@@ -17,17 +17,17 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate()
 	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+		$connection=yii::app()->db;
+                $com="SELECT  `ten_dang_nhap`, `password`FROM `khachhang`";
+                $com.="where `ten_dang_nhap` = '".$this->username."' and ";
+                $com.="`password` = '".$this->password."'";
+                $comand=$connection->createCommand($com)->query();
+                $comand->bindColumn(1, $this->username);
+                $comand->bindColumn(2, $this->password);
+                while ($comand->read()!==false)
+                {
+                $this->errorCode=  self::ERROR_NONE;
+                return!$this->errorCode;
+                }
 	}
 }

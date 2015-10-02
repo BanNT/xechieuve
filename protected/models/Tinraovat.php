@@ -26,6 +26,7 @@ class Tinraovat extends CActiveRecord {
     const CODE_RV = 3;
 
     /**
+
      * @return string the associated database table name
      */
     public function tableName() {
@@ -174,20 +175,7 @@ class Tinraovat extends CActiveRecord {
             '1'=>'Đã xong'
         ];
     }
-//
-//    /**
-//     * @param integer $maTin
-//     * @return ?????
-//     */
-//    public function getTinRaoVat($maTin) {
-//        return Yii::app()->db->createCommand()
-//                        ->select()
-//                        ->from('tinraovat')
-//                        ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
-//                        ->where("tinraovat.ma_tin=:matin", array(':matin' => $maTin))
-//                        ->queryRow()
-//        ;
-//    }
+
     public static function updateTinRV($maLoaiTinRV, $giaRaoVat, $anh='null', $maTin) {
         $sql = "UPDATE ".Tinraovat::model()->tableName()
                 . " SET ma_loai_tin_rv = $maLoaiTinRV,gia_rao_vat= '$giaRaoVat', anh = '$anh'"
