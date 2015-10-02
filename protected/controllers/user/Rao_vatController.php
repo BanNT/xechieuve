@@ -57,6 +57,8 @@ class Rao_vatController extends Controller {
      * Đăng tin rao vặt
      */
     public function actionDang_tin($currentPage = 1) {
+        if(Yii::app()->user->name!=='Guest')
+    {
         $form = new CForm('application.views.user.rao_vat.dang_tinForm');
         $form['tinkhachhang']->model = new Tinkhachhang();
         $form['tinraovat']->model = $tinraovat = new Tinraovat();
@@ -103,6 +105,11 @@ class Rao_vatController extends Controller {
         } else {
             $this->render('dang_tin', $data);
         }
+    }
+    else
+    {
+        echo"Bạn cần <a href='".CHtml::encode(Yii::app()->request->baseUrl)."/dang_nhap'>đăng nhập</a> mới có thể đăng tin";
+    }
     }
 
     public function actionPagedtrv() {

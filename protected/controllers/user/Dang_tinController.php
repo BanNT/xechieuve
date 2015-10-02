@@ -11,7 +11,7 @@ class Dang_tinController extends Controller {
         }
         else
         {
-            $a=Yii::app()->request->baseUrl;
+            
         echo"Bạn cần <a href='".CHtml::encode(Yii::app()->request->baseUrl)."/dang_nhap'>đăng nhập</a> mới có thể đăng tin";
         }
     }
