@@ -1,4 +1,4 @@
-<?php $this->pageTitle=Yii::app()->name . ' - xe tìm khách';?>
+<?php $this->pageTitle=Yii::app()->name . ' - Xe tìm khách';?>
 <section id="xetimkhach">
     <?php
     /* @var $this Controller */

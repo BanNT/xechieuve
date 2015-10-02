@@ -3,7 +3,7 @@ return array(
     'elements' => array(
         'tinkhachhang' => array(
             'type' => 'form',
-            'title' => 'Đăng tin khách tìm xe:',
+            'title'=>'Sửa tin đăng:',
             'elements' => array(
                 'ma_khach_hang' => array(
                     'type' => 'hidden',
@@ -32,6 +32,13 @@ return array(
                 'tinh_thanh' => array(
                     'type' => 'dropdownlist',
                     'items' => Province::listProvinces(),
+                    'class' => 'form-control'
+                ),'</div>'
+                . '<div class="clearfix"></div>'
+                . '<div class="col-xs-12 col-sm-6 col-md-6">',
+                'trang_thai' => array(
+                    'type' => 'dropdownlist',
+                    'items' => Tinghepxe::getStatusTinDang(),
                     'class' => 'form-control'
                 ),
                 '</div>'

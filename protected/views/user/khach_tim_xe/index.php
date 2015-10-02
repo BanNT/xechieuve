@@ -1,4 +1,4 @@
-<?php $this->pageTitle=Yii::app()->name . ' - khách tìm xe';?>
+<?php $this->pageTitle=Yii::app()->name . ' - Khách tìm xe';?>
 <section id="khachtimxe">
     <?php
     if(!$khachtimxe){

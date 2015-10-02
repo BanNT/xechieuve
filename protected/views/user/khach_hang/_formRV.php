@@ -1,9 +1,11 @@
 <?php
+
 return array(
+    'enctype' => 'multipart/form-data',
     'elements' => array(
         'tinkhachhang' => array(
             'type' => 'form',
-            'title' => 'Đăng tin khách tìm xe:',
+            'title'=>'Sửa tin rao vặt',
             'elements' => array(
                 'ma_khach_hang' => array(
                     'type' => 'hidden',
@@ -21,7 +23,7 @@ return array(
                     'class' => 'form-control'
                 ),
                 '</div>'
-                .'<div class="clearfix"></div>'
+                . '<div class="clearfix"></div>'
                 . '<div class="col-xs-12 col-sm-6 col-md-6">',
                 'tieu_de_tin' => array(
                     'type' => 'text',
@@ -35,6 +37,14 @@ return array(
                     'class' => 'form-control'
                 ),
                 '</div>'
+                . '<div class="clearfix"></div>'
+                . '<div class="col-xs-12 col-sm-6 col-md-6">',
+                'trang_thai' => array(
+                    'type' => 'dropdownlist',
+                    'items' => Tinraovat::getStatusTinDang(),
+                    'class' => 'form-control'
+                ),
+                '</div>'
                 . '<div class="col-md-12">',
                 'noi_dung_tin' => array(
                     'type' => 'textarea',
@@ -45,42 +55,26 @@ return array(
                 '</div>'
             ),
         ),
-        'tinghepxe' => array(
+        'tinraovat' => array(
             'type' => 'form',
             'elements' => array(
-                '<div class ="col-md-6">',
-                'dia_chi_di' => [
+                '<div class="col-xs-12 col-sm-6 col-md-6">',
+                'ma_loai_tin_rv' => array(
+                    'type' => 'dropdownlist',
+                    'items' => Loaitinraovat::optionLoaiTinRV(),
+                    'class' => 'form-control'
+                ),
+                '</div>'
+                . '<div class="col-xs-12 col-sm-5 col-md-5 pull-right">',
+                'gia_rao_vat' => array(
                     'type' => 'text',
                     'class' => 'form-control'
-                ],
+                ),
                 '</div>'
-                . '<div class ="col-md-5 pull-right">',
-                'dia_chi_den' => [
-                    'type' => 'text',
-                    'class' => 'form-control'
-                ],
-                '</div>'
-                .'<div class="clearfix"></div>'
-                . '<div class ="col-md-6">',
-                'noi_den_tinh' => [
-                    'type' => 'dropdownlist',
-                    'items' => Province::listProvinces(),
-                    'class' => 'form-control'
-                ],
-                '</div>'
-                . '<div class ="col-md-5 pull-right">',
-                'ma_loai_xe_ghep' => [
-                    'type' => 'dropdownlist',
-                    'items' => Loaixeghep::optionLoaiXeGhep(),
-                    'class' => 'form-control'
-                ],
-                '</div>'
-                .'<div class="clearfix"></div>'
-                . '<div class ="col-md-3">',
-                'ngay_khoi_hanh' => [
-                    'type' => 'date',
-                    'class' => 'form-control'
-                ],
+                . '<div class="col-xs-12 col-md-5">',
+                'anh' => array(
+                    'type' => 'file'
+                ),
                 '</div>'
             ),
         ),

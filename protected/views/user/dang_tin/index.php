@@ -1,4 +1,4 @@
-<?php $this->pageTitle = Yii::app()->name . ' - đăng tin'; ?>
+<?php $this->pageTitle = Yii::app()->name . ' - Đăng tin'; ?>
 <section id="dang-tin">
     <div class="col-md-12">
         <div class="row">

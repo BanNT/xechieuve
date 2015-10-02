@@ -2,6 +2,7 @@
 
 /**
  * Tạo URL đẹp bằng cách chuyển dổi chúng thành dạng non unicode và chữ thường
+ * @author Tran Van Hoang <phatradang@gmail.com>
  */
 class ConvertURL extends CComponent {
 
@@ -23,9 +24,10 @@ class ConvertURL extends CComponent {
         // lọc một số kí tự đặc biệt thành dấu '-':
         $str = trim($str);
         $str = preg_replace("/\./", '', $str);
-        $str = preg_replace("/(\!|\@|\#|\%|\^|\&|\*|\(|\)|\+|\~)/", ' ', $str);
+        $str = preg_replace("/(\!|\@|\#|\%|\^|\&|\*|\(|\)|\+|\~|\,|\\|\/|\=|\`)/", ' ', $str);
         $str = str_replace(" ", "-", str_replace("&*#39;","",$str));
-        $str = preg_replace("/-{2,}/", '-', $str);//từ 2 kí tự nối trở lên thì cho thành 1
+        $str = preg_replace("/-{2,}/", '-', $str);
+        $str = trim($str,'-');
         return $str;
     }
 

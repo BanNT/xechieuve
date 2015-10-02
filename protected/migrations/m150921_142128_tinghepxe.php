@@ -12,7 +12,8 @@ class m150921_142128_tinghepxe extends CDbMigration {
             'ma_loai_xe_ghep'=>'INT(11) NOT NULL'
         ));
         
-        $this->addForeignKey('PK_tinghepxe_tinkhachhang', 'tinghepxe', 'ma_tin', 'tinkhachhang', 'ma_tin');
+        $this->addForeignKey('PK_tinghepxe_tinkhachhang', 'tinghepxe', 'ma_tin', 'tinkhachhang', 'ma_tin','CASCADE','CASCADE');
         $this->addForeignKey('PK_tinghepxe_loaixeghep', 'tinghepxe', 'ma_loai_xe_ghep', 'loaixeghep', 'ma_loai_xe_ghep');
+        
     }
 }

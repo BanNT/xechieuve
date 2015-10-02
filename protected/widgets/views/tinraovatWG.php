@@ -21,7 +21,7 @@ $provinces = Province::listProvinces();
                 foreach ($this->tinraovat as $data):
                     ?>
                     <tr>
-                        <td><?php echo CHtml::encode($data['ngay_dang']) ?></td>
+                        <td><?php echo CHtml::encode($data['ngay_dang_tin']) ?></td>
                         <td><?php echo CHtml::encode($data['tieu_de_tin']); ?></td>
                         <td><?php echo CHtml::encode($provinces[$data['tinh_thanh']]); ?></td>
                         <td>
@@ -31,7 +31,7 @@ $provinces = Province::listProvinces();
                         <td>
                             <?php echo CHtml::encode($data['gia_rao_vat']); ?>
                         </td>
-                        <td>Đang chờ</td>
+                        <td><?php echo CHtml::encode($data['trang_thai_tin']); ?></td>
                     </tr>
                     <?php
                 endforeach;

@@ -95,7 +95,7 @@ class Loaitinraovat extends CActiveRecord {
      * ma_loai_tin_rv là key loai_tin_rv là value
      * @return array
      */
-    public static function optionLoaiTinRV() {
+    public static function optionLoaiTinRV($maLoaiTinRv = null) {
         return CHtml::listData(Loaitinraovat::model()->findAll(), 'ma_loai_tin_rv', 'loai_tin_rv');
     }
 

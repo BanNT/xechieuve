@@ -1,6 +1,6 @@
 <?php
 /* @var $this Rao_vatController */
-$this->pageTitle=Yii::app()->name . ' - rao vặt';
+$this->pageTitle=Yii::app()->name . ' - Rao vặt';
 ?>
 <section id="tinraovat">
     <?php
