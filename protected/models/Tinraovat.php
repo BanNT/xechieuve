@@ -168,7 +168,7 @@ class Tinraovat extends CActiveRecord {
 
     public function getTinraovat($matin) {
         return Yii::app()->db->createCommand()
-                        ->select('tinraovat.ma_tin ,tieu_de_tin ,nguoi_lien_lac , so_dien_thoai ,tinh_thanh,noi_dung_tin,anh')
+                        ->select('tinraovat.ma_tin ,date(ngay_dang) as ngay_dang, tieu_de_tin ,nguoi_lien_lac , so_dien_thoai,noi_dung_tin,anh')
                         ->from('tinraovat')
                         ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinraovat.ma_tin')
                         ->where("tinraovat.ma_tin=$matin")
