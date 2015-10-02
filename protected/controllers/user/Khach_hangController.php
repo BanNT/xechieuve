@@ -160,4 +160,22 @@ class Khach_hangController extends Controller {
         ]);
     }
 
+    /**
+     * Đăng nhập người dùng
+     */
+    public function actionDang_nhap() {
+        $login = new LoginForm();
+        $model = new CForm('application.views.user.khach_hang._formDangNhap', $login);
+        if ($model->submitted('Login') && $model->validate()) {
+            $login->login();
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        $this->render('dang_nhap', array('model' => $model));
+    }
+    public function actionDang_xuat() 
+    {
+        Yii::app()->user->logout();
+        Yii::app()->session->clear();
+        $this->redirect(Yii::app()->homeUrl);
+    }
 }

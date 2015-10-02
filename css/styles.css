@@ -254,6 +254,7 @@ body,ul,h4{
 #dangki
 {
     border:1px solid #0099cc;
+    margin-top: 10px;
 }
 .tieude
 {
@@ -270,9 +271,15 @@ body,ul,h4{
     margin-left: 10px;    
 
 }
+#dangki .errorMessage{
+    color: red;
+    margin-top: 15px;
+    margin-left: 280px;
+}
 .errorMessage{
     color: red;
-    margin-top: 15px
+    margin-top: 15px;
+    margin-left: 140px;
 }
 
 #dangtinrv{
@@ -280,10 +287,17 @@ body,ul,h4{
 }
 .formdangkytaikhoan
 {
-   margin-right: 100px;
-padding-top: 20px;
-margin-left: 60px;
+    margin-right: 100px;
+    padding-top: 20px;
+    margin-left: 60px;
 }
+#dangki .checkb + .errorMessage
+{
+    margin-left: 20px;
+    margin-top: 0px;
+    display: inline;
+}
+
 .form-input
 {
     float:right;
@@ -338,15 +352,15 @@ margin-left: 60px;
 
 #dangnhap
 {
-   // width: 500px;
-     border:1px solid #ccccff;
-     margin-top: 30px;
-     margin-left: 70px;
-     margin-right: 70px;
+    // width: 500px;
+    border:1px solid #ccccff;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 #dang
 {
-   margin-left: 750px;
+    margin-left: 750px;
     width: 150px;
     padding-top: 5px;
 }

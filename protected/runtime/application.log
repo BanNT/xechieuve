@@ -22600,6 +22600,9 @@ Stack trace:
 REQUEST_URI=/xechieuve/
 HTTP_REFERER=http://localhost/xechieuve/dang_nhap
 ---
+<<<<<<< HEAD
+2015/10/02 09:50:18 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 2015/10/02 10:02:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
@@ -22614,6 +22617,7 @@ REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://localhost:8888/xechieuve/khach-tim-xe/dang-tin
 ---
 2015/10/02 10:02:20 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
@@ -22642,18 +22646,70 @@ REQUEST_URI=/xechieuve/rao-vat
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
+<<<<<<< HEAD
+2015/10/02 09:50:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/dang_nh...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/rao-vat/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/dang-tin
+---
+2015/10/02 09:51:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/dang_nh...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/rao-vat/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/dang-tin
+---
+2015/10/02 09:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/dang_nh...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/rao-vat/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/dang-tin
+---
+2015/10/02 09:51:41 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 2015/10/02 10:02:22 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
 #2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): tinraovatWG->run()
+<<<<<<< HEAD
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php(16): Rao_vatController->widget()
+=======
 #3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php(16): Rao_vatController->widget()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
 #5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Rao_vatController->renderInternal()
 #6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Rao_vatController->renderFile()
 #7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Rao_vatController->renderPartial()
+<<<<<<< HEAD
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(110): Rao_vatController->render()
+#9 unknown(0): Rao_vatController->actionDang_tin()
+=======
 #8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(44): Rao_vatController->render()
 #9 unknown(0): Rao_vatController->actionIndex()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
 #11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
 #12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
@@ -22667,11 +22723,19 @@ Stack trace:
 #20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
 #21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
 #22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/rao-vat/dang-tin
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
+in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
+in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php (16)
+2015/10/02 09:51:47 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 REQUEST_URI=/xechieuve/rao-vat
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
 2015/10/02 10:02:24 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
@@ -22700,18 +22764,31 @@ REQUEST_URI=/xechieuve/rao-vat
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
+<<<<<<< HEAD
+2015/10/02 09:51:49 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 2015/10/02 10:02:36 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
 #2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): tinraovatWG->run()
+<<<<<<< HEAD
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php(16): Rao_vatController->widget()
+=======
 #3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php(16): Rao_vatController->widget()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
 #5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Rao_vatController->renderInternal()
 #6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Rao_vatController->renderFile()
 #7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Rao_vatController->renderPartial()
+<<<<<<< HEAD
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(44): Rao_vatController->render()
+#9 unknown(0): Rao_vatController->actionIndex()
+=======
 #8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(107): Rao_vatController->render()
 #9 unknown(0): Rao_vatController->actionDang_tin()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
 #11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
 #12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
@@ -22725,22 +22802,52 @@ Stack trace:
 #20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
 #21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
 #22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/rao-vat
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
+in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
+in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
+2015/10/02 09:51:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---
+2015/10/02 09:52:11 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 REQUEST_URI=/xechieuve/rao-vat/dang-tin
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php (16)
 2015/10/02 10:04:25 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
 #2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): tinraovatWG->run()
+<<<<<<< HEAD
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php(16): Rao_vatController->widget()
+=======
 #3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php(16): Rao_vatController->widget()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
 #5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Rao_vatController->renderInternal()
 #6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Rao_vatController->renderFile()
 #7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Rao_vatController->renderPartial()
+<<<<<<< HEAD
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(44): Rao_vatController->render()
+#9 unknown(0): Rao_vatController->actionIndex()
+=======
 #8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(107): Rao_vatController->render()
 #9 unknown(0): Rao_vatController->actionDang_tin()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
 #11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
 #12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
@@ -22754,22 +22861,92 @@ Stack trace:
 #20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
 #21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
 #22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/rao-vat
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
+in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
+in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
+2015/10/02 09:52:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dang-tin".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(270): CController->missingAction('dang-tin')
+#1 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dang-tin')
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/dang-ti...')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#5 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#6 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#9 {main}
+REQUEST_URI=/xechieuve/rao_vat/dang-tin
+---
+2015/10/02 09:56:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe/dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe/da...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/khach-tim-xe
+---
+2015/10/02 09:57:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe/dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe/da...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/khach-tim-xe
+---
+2015/10/02 09:57:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe/dang_nhap/index".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe/da...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe/dang_nhap/index
+HTTP_REFERER=http://localhost/xechieuve/khach-tim-xe
+---
+2015/10/02 10:01:12 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 REQUEST_URI=/xechieuve/rao-vat/dang-tin
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php (16)
 2015/10/02 10:04:36 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
 #2 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): tinraovatWG->run()
+<<<<<<< HEAD
+#3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php(16): Rao_vatController->widget()
+=======
 #3 C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php(16): Rao_vatController->widget()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
 #5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Rao_vatController->renderInternal()
 #6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Rao_vatController->renderFile()
 #7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Rao_vatController->renderPartial()
+<<<<<<< HEAD
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(44): Rao_vatController->render()
+#9 unknown(0): Rao_vatController->actionIndex()
+=======
 #8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(107): Rao_vatController->render()
 #9 unknown(0): Rao_vatController->actionDang_tin()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
 #11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
 #12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
@@ -22783,11 +22960,19 @@ Stack trace:
 #20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
 #21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
 #22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/rao-vat
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
+in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
+in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
+2015/10/02 10:01:25 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 REQUEST_URI=/xechieuve/rao-vat/dang-tin
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php (16)
 2015/10/02 10:04:44 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
@@ -22797,7 +22982,11 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Rao_vatController->renderInternal()
 #6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Rao_vatController->renderFile()
 #7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Rao_vatController->renderPartial()
+<<<<<<< HEAD
+#8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(111): Rao_vatController->render()
+=======
 #8 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(107): Rao_vatController->render()
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #9 unknown(0): Rao_vatController->actionDang_tin()
 #10 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
 #11 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
@@ -22816,7 +23005,11 @@ REQUEST_URI=/xechieuve/rao-vat/dang-tin
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\dang_tin.php (16)
+<<<<<<< HEAD
+2015/10/02 10:02:55 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 2015/10/02 10:04:54 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
@@ -22845,7 +23038,88 @@ REQUEST_URI=/xechieuve/rao-vat
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
 in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
+<<<<<<< HEAD
+2015/10/02 10:08:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "khach-tim-xe/dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach-tim-xe/da...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/khach-tim-xe
+---
+2015/10/02 10:12:15 [error] [exception.CException] exception 'CException' with message 'Khach_tim_xeController cannot find the requested view "dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_tim_xeController.php(168): CController->renderPartial('dang_nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_tim_xeController->actionDang_tin()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dang_tin')
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_tim_xe/da...')
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#9 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#13 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe/dang-tin
+HTTP_REFERER=http://localhost/xechieuve/khach-tim-xe
+---
+2015/10/02 10:12:49 [error] [exception.CException] exception 'CException' with message 'Khach_tim_xeController cannot find the requested view "dang-nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_tim_xeController.php(168): CController->renderPartial('dang-nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_tim_xeController->actionDang_tin()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dang_tin')
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_tim_xe/da...')
+#7 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#9 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#10 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#13 {main}
+REQUEST_URI=/xechieuve/khach-tim-xe/dang-tin
+HTTP_REFERER=http://localhost/xechieuve/khach-tim-xe
+---
+2015/10/02 10:13:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang-nhap
+HTTP_REFERER=http://localhost/xechieuve/khach-tim-xe
+---
+2015/10/02 10:15:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang-nhap
+HTTP_REFERER=http://localhost/xechieuve/dang-tin
+---
+2015/10/02 10:15:36 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+=======
 2015/10/02 10:07:04 [error] [php] Undefined index: ngay_dang (C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php:25)
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): tinraovatWG->renderFile()
 #1 C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php(17): tinraovatWG->render()
@@ -22870,6 +23144,15 @@ Stack trace:
 #20 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
 #21 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
 #22 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/rao_vat
+in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
+in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
+in C:\xampp\htdocs\xechieuve\protected\views\user\rao_vat\index.php (16)
+2015/10/02 10:26:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_nhap')
+=======
 REQUEST_URI=/xechieuve/rao-vat
 in C:\xampp\htdocs\xechieuve\protected\widgets\views\tinraovatWG.php (25)
 in C:\xampp\htdocs\xechieuve\protected\widgets\tinraovatWG.php (17)
@@ -22890,6 +23173,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/tin-da-dang/tin-rao-vat/3
 2015/10/02 10:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/rao-vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('/rao-vat')
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -22897,8 +23181,145 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/dang-ky
+=======
 REQUEST_URI=/xechieuve//rao-vat
 HTTP_REFERER=http://localhost:8888/xechieuve/tin-da-dang/tin-rao-vat/3
+>>>>>>> 7a22008b044b5ac6ae8b36c6c8a4e62bd112a8a1
+---
+2015/10/02 10:27:46 [error] [exception.CException] exception 'CException' with message 'Tinraovat and its behaviors do not have a method or closure named "getTinraovat".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getTinraovat', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(140): CActiveRecord->__call('getTinraovat', Array)
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(140): Tinraovat->getTinraovat('1')
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Rao_vatController->actionXem_chi_tiet()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('xem_chi_tiet')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/xem_chi...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/rao-vat/xem-chi-tiet/dang-tin-rao-vat-cho-thue-xe/1
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---
+2015/10/02 10:28:03 [error] [exception.CException] exception 'CException' with message 'Tinraovat and its behaviors do not have a method or closure named "getTinraovat".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getTinraovat', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(140): CActiveRecord->__call('getTinraovat', Array)
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(140): Tinraovat->getTinraovat('1')
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Rao_vatController->actionXem_chi_tiet()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('xem_chi_tiet')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/xem_chi...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/rao-vat/xem-chi-tiet/dang-tin-rao-vat-cho-thue-xe/1
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---
+2015/10/02 10:28:24 [error] [exception.CException] exception 'CException' with message 'Tinraovat and its behaviors do not have a method or closure named "getTinraovat".' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getTinraovat', Array)
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(140): CActiveRecord->__call('getTinraovat', Array)
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(140): Tinraovat->getTinraovat('1')
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Rao_vatController->actionXem_chi_tiet()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('xem_chi_tiet')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/xem_chi...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/rao-vat/xem-chi-tiet/dang-tin-rao-vat-cho-thue-xe/1
+HTTP_REFERER=http://localhost/xechieuve/rao-vat
+---
+2015/10/02 10:29:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/rao-vat/dang-tin
+---
+2015/10/02 10:33:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/xe-tim-khach
+---
+2015/10/02 10:33:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang_nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang_nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang_nhap
+HTTP_REFERER=http://localhost/xechieuve/xe-tim-khach
+---
+2015/10/02 10:44:29 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list'. The SQL statement executed was: SELECT  `id`,`ten_dang_nhap`, `password`FROM `khachhang`where `ten_dang_nhap` = 'abc' and `password` = '14f9518c8b937874621f29425161acec'.
+in C:\xampp\htdocs\xechieuve\protected\components\UserIdentity.php (24)
+in C:\xampp\htdocs\xechieuve\protected\models\LoginForm.php (54)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (166)
+2015/10/02 10:44:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'field list'. The SQL statement executed was: SELECT  `id`,`ten_dang_nhap`, `password`FROM `khachhang`where `ten_dang_nhap` = 'abc' and `password` = '14f9518c8b937874621f29425161acec'' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(377): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\components\UserIdentity.php(24): CDbCommand->query()
+#2 C:\xampp\htdocs\xechieuve\protected\models\LoginForm.php(54): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\xechieuve\framework\validators\CInlineValidator.php(42): LoginForm->authenticate('password', Array)
+#4 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(LoginForm), NULL)
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): CModel->validate()
+#7 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(166): CForm->validate()
+#8 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionDang_nhap()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('dang_nhap')
+#13 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/dang...')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#19 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#20 {main}
+REQUEST_URI=/xechieuve/dang-nhap
+HTTP_REFERER=http://localhost/xechieuve/dang-nhap
 ---
 2015/10/02 10:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:

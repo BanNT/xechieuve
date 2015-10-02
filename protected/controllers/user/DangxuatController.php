@@ -2,7 +2,7 @@
 class DangxuatController extends Controller
 {
 
- public function actionindex() 
+ public function actionDangxuat() 
     {
        /* Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);*/
