@@ -22900,3 +22900,62 @@ Stack trace:
 REQUEST_URI=/xechieuve//rao-vat
 HTTP_REFERER=http://localhost:8888/xechieuve/tin-da-dang/tin-rao-vat/3
 ---
+2015/10/02 10:44:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/tin-tuc
+---
+2015/10/02 11:00:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang-nhap
+---
+2015/10/02 11:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "dang-nhap".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('dang-nhap')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/dang-nhap
+---
+2015/10/02 11:22:24 [error] [php] Undefined variable: data (C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\tin_da_dang.php:27)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Khach_hangController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Khach_hangController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(45): Khach_hangController->render()
+#3 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(69): Khach_hangController->actionTin_da_dang()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionLam_moi_tin()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#12 unknown(0): WebApplicationEndBehavior->runEnd()
+#13 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/lam-moi-tin-dang/dang-tin-rao-vat/2
+in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\tin_da_dang.php (27)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (45)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (69)

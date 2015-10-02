@@ -157,8 +157,9 @@ class Tinkhachhang extends CActiveRecord {
     public function lamMoi($maTin) {
         $maLoaiTin = $this->getMaLoaiTinById($maTin);
         if ($this->trutien($maLoaiTin['ma_loai_tin'])) {
-            $this->updateByPk($maTin, array('ngay_dang' => new CDbExpression('NOW()')));
-            return true;
+            if($this->updateByPk($maTin, array('ngay_dang' => new CDbExpression('NOW()')))){
+                return true;
+            }
         }
         return false;
     }

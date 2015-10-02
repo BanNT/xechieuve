@@ -15,6 +15,9 @@ class Khach_hangController extends Controller {
      * Hiển thị những tin đã đăng của khách hàng dựa theo mã loại tin
      */
     public function actionTin_da_dang($maLoaiTin = null, $currentPage = 1, $message = '') {
+        if (Yii::app()->user->name == 'Guest') {
+            $this->redirect(Yii::app()->homeUrl.'dang-nhap');
+        }
         if (!$maLoaiTin) {
             $maLoaiTin = Yii::app()->session['maLoaiTin'] = Yii::app()->request->getParam('id');
         }

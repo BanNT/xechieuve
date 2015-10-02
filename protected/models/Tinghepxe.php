@@ -132,8 +132,8 @@ class Tinghepxe extends CActiveRecord {
         return Yii::app()->db->createCommand()
                         ->select('tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai,'
                                 . 'CASE '
-                                . 'WHEN trang_thai=0 THEN "Đang chờ" '
-                                . 'WHEN trang_thai=1 THEN "Đã tìm được" '
+                                    . 'WHEN trang_thai=0 THEN "Đang chờ" '
+                                    . 'WHEN trang_thai=1 THEN "Đã tìm được" '
                                 . 'END AS trang_thai_tin'
                         )
                         ->from('tinghepxe')
