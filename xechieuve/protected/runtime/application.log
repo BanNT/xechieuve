@@ -16594,3 +16594,39 @@ Stack trace:
 REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://127.0.0.1:8080/xechieuve/khach-tim-xe
 ---
+2015/10/02 10:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 D:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 D:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://127.0.0.1:8080/xechieuve/khach-tim-xe/xem-chi-tiet/dang-tin-khach-tim-xe-test-lan-1/3
+---
+2015/10/02 10:42:10 [error] [php] Undefined variable: xetimkhach (D:\xampp\htdocs\xechieuve\protected\views\user\xe_tim_khach\xem_chi_tiet.php:37)
+Stack trace:
+#0 D:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Xe_tim_khachController->renderFile()
+#1 D:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Xe_tim_khachController->renderPartial()
+#2 D:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php(165): Xe_tim_khachController->render()
+#3 unknown(0): Xe_tim_khachController->actionXem_chi_tiet()
+#4 D:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Xe_tim_khachController->runAction()
+#8 D:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Xe_tim_khachController->runActionWithFilters()
+#9 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Xe_tim_khachController->run()
+#10 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 D:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 D:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 D:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/xe-tim-khach/xem-chi-tiet/test-01/4
+in D:\xampp\htdocs\xechieuve\protected\views\user\xe_tim_khach\xem_chi_tiet.php (37)
+in D:\xampp\htdocs\xechieuve\protected\controllers\user\Xe_tim_khachController.php (165)
+in D:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)

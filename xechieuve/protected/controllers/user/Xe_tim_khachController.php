@@ -43,7 +43,7 @@ class Xe_tim_khachController extends Controller {
         $this->actionIndex(Yii::app()->request->getParam('page'), $condition, false);
     }
 
-    /**
+    /*
      * Tìm kiếm khách dựa theo các tiêu chí nơi đi, nơi đến, ngày khởi hành
      */
     public function actionTim_kiem_xe() {
