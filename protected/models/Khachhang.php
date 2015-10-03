@@ -18,17 +18,16 @@
  */
 class Khachhang extends CActiveRecord {
 
-    const AVARTAR_DIR = 'images/avartars';
+    const AVARTAR_DIR = 'images/avatar/';
 
     /**
      * Xác nhận password
      * @var string
      */
     public $confirmPassword;
-    public $diachi;
     public $dieukhoan;
-     
-
+    public $newPassword;
+    public $confirmnewPassword;
     /**
      * @return string the associated database table name
      */
@@ -43,12 +42,15 @@ class Khachhang extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,diachi,dieukhoan', 'required',
+            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,dia_chi,dieukhoan', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"'// đây required là bắt buộc, cái này là tên hàm của yii viết sẵn
             ),
             array('dieukhoan', 'checkb'),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
                 'message' => 'password không khớp'
+            ),
+            array('newPassword', 'compare', 'confirmnewPassword' => 'confirmPassword',
+                'message' => 'password mới không khớp'
             ),
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
@@ -100,13 +102,14 @@ class Khachhang extends CActiveRecord {
             'ten_khach_hang' => 'Tên khách hàng:',
             'ten_dang_nhap' => 'Tên đăng nhập:',
             'password' => 'Mật khẩu:',
+            //'newPassword'=>'Nhập mật khẩu mới:',
+           // 'confirmnewPassword'=>'Nhập lại mật khẩu mới:',
             'email' => 'Email:',
             'so_dien_thoai' => 'Số điện thoại:',
             'so_du_tai_khoan' => 'Số dư tài khoản:',
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
-
-            'diachi' => 'Địa chỉ:',
+            'dia_chi' => 'Địa chỉ:',
             'dieukhoan' => '
                 <a type="button" data-toggle="modal" data-target=".bs-example-modal-lg">Điều khoản sử dụng.</a>
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -132,10 +135,9 @@ class Khachhang extends CActiveRecord {
                     </div>
                   </div>
                 </div>'
-
         );
     }
-   
+
     /**
      * Retrieves a list of models based on the current search/filter conditions.
      *
@@ -165,8 +167,8 @@ class Khachhang extends CActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
-        
     }
+    
 
     /**
      * Returns the static model of the specified AR class.

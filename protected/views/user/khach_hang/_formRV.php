@@ -73,7 +73,7 @@ return array(
                 '</div>'
                 . '<div class="col-xs-12 col-md-5">',
                 'anh' => array(
-                    'type' => 'file'
+                    'type' => 'file',
                 ),
                 '</div>'
             ),

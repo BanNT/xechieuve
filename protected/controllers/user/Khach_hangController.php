@@ -155,14 +155,14 @@ class Khach_hangController extends Controller {
                 );
             }
         }
-
         //render view
         $this->render('sua_tin', [
             'form' => $form
         ]);
     }
 
-    /*  Đăng kí người dùng*/
+    /*  Đăng kí người dùng */
+
     public function actionDang_ky() {
         $khachHang = new Khachhang();
         $form = new CForm('application.views.user.khach_hang._formdangky', $khachHang);
@@ -173,21 +173,16 @@ class Khach_hangController extends Controller {
                 $khachHang->anh_dai_dien = $newName;
                 $image->saveAs(Khachhang::AVARTAR_DIR . $newName);
             }
-
             $khachHang->password = md5($khachHang->password);
-
-            
             $khachHang->save(false);
-
             return;
-            
-            
         }
-     
-       // $listkhachHang=$khachHang->listKhachhang();
-           // echo"abc".$listkhachHang;
+
+        // $listkhachHang=$khachHang->listKhachhang();
+        // echo"abc".$listkhachHang;
         $this->render('dang_ky', array('form' => $form));
     }
+
     /**
      * Đăng nhập người dùng
      */
@@ -205,6 +200,24 @@ class Khach_hangController extends Controller {
         Yii::app()->user->logout();
         Yii::app()->session->clear();
         $this->redirect(Yii::app()->homeUrl);
+    }
+
+    /* Sửa thông tin người dùng */
+
+    public function actionChinh_sua_thong_tin() {
+        $khachHang = new Khachhang();
+        $form = new CForm('application.views.user.khach_hang._formChinhsuathongtin', $khachHang);
+        //$form2=new CForm('application.views.user.khach_hang._formcapnhatpass', $khachHang);
+        $form->model = $Kh = Khachhang::model()->findByPk($id);
+        $anh = Khachhang::AVARTAR_DIR . $Kh->anh_dai_dien;
+        if ($form->submitted('chinhsua') && $form->validate()) {
+            
+        }
+        
+        $this->render('chinh_sua_thong_tin', array(
+            'form' => $form,
+            'anh' => $anh
+        ));
     }
 
 }

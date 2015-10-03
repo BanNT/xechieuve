@@ -360,7 +360,7 @@ body,ul,h4{
 #dang
 {
     margin-left: 750px;
-    width: 150px;
+    width: 500px;
     padding-top: 5px;
 }
 #dang a
@@ -379,4 +379,26 @@ body,ul,h4{
 .modal-content
 {
     margin: 10px;
+}
+
+#chinhsua
+{
+    border:1px solid captiontext;
+}
+.chinhsuaTT
+{
+    margin-left: 100px;
+    margin-right: 200px;
+}
+#anhdaidien
+{
+    width: 300px;
+    margin-top: 5px;
+    margin-left: 200px;
+    border: 1px solid #cccccc;
+}
+#chinhsua .anh
+{
+    margin-left: 120px;
+    margin-top: 5px;
 }

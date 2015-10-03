@@ -33,6 +33,8 @@ return CMap::mergeArray(
                         'xe-tim-khach/loc-theo-xe/<title>/<id:\d+>' => 'xe_tim_khach/loc_theo_xe',
                         //url đăng ký tài khoản
                         'dang-ky' => 'khach_hang/dang_ky',
+                        //url chỉnh sửa thông tin khách
+                        'sua-thong-tin-khach'=>'khach_hang/chinh_sua_thong_tin',
                         //url quản lý của khách hàng
                         'dang-nhap'=>'khach_hang/dang_nhap',
                          'dang-xuat'=>'khach_hang/dang_xuat',
