@@ -83,7 +83,7 @@ class Tinkhachhang extends CActiveRecord {
             'tinh_thanh' => 'Tỉnh/Thành phố',
             'ngay_dang' => 'Ngày đăng tin',
             'ma_loai_tin' => 'Mã loại tin',
-            'trang_thai'=>'Trạng thái tin đăng'
+            'trang_thai' => 'Trạng thái tin đăng'
         );
     }
 
@@ -129,7 +129,6 @@ class Tinkhachhang extends CActiveRecord {
         return parent::model($className);
     }
 
-    
     /**
      * trừ tiền dựa theo mã loại tin
      */
@@ -157,7 +156,7 @@ class Tinkhachhang extends CActiveRecord {
     public function lamMoi($maTin) {
         $maLoaiTin = $this->getMaLoaiTinById($maTin);
         if ($this->trutien($maLoaiTin['ma_loai_tin'])) {
-            if($this->updateByPk($maTin, array('ngay_dang' => new CDbExpression('NOW()')))){
+            if ($this->updateByPk($maTin, array('ngay_dang' => new CDbExpression('NOW()')))) {
                 return true;
             }
         }
@@ -178,19 +177,27 @@ class Tinkhachhang extends CActiveRecord {
     }
 
     /**
-     * Delete tin đăng
+     * Delete tin đăng của khách hàng
      * @param type $maTin
      */
     public function deleteTin($maTin, $maLoaiTin) {
-        Tinraovat::model()->deleteByPk($maTin);
-        if($maLoaiTin == Tinraovat::CODE_RV){
-            Tinraovat::model()->deleteByPk($maTin);
-        }else{
-            Tinkhachhang::model()->deleteByPk($maTin);
+        if ($maLoaiTin == Tinraovat::CODE_RV) {
+            $sql = "DELETE FROM tinraovat ";
+            Yii::app()->db->createCommand($sql)
+                    ->where('ma_tin = :id', array(':id' => $maTin));
+
+            //Kiểm tra nếu có tồn tại ảnh thì xóa luôn cùng
+            $tinRV = Tinraovat::model()->find("ma_tin = $maTin");
+            if ($anh = $tinRV['anh']) {
+                unlink(Yii::app()->basePath . "/../" . Tinraovat::IMAGE_DIR_RV . $anh);
+            }
+        } else {
+            $sql = "DELETE FROM tinghepxe ";
+            Yii::app()->db->createCommand($sql)
+                    ->where('ma_tin = :id', array(':id' => $maTin));
         }
-        
+
         $this->deleteByPk($maTin);
     }
 
-   
 }

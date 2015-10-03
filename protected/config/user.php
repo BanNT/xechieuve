@@ -32,23 +32,23 @@ return CMap::mergeArray(
                         'xe-tim-khach/loc-theo-xe/<title>/<id:\d+>' => 'xe_tim_khach/loc_theo_xe',
                         //url đăng ký tài khoản
                         'dang-ky' => 'dang_ky',
-                        //url quản lý của khách hàng
-                        'dang-nhap'=>'khach_hang/dang_nhap',
-                         'dang-xuat'=>'khach_hang/dang_xuat',
-                        'tin-da-dang/<title>/<id:\d+>'=>'khach_hang/tin_da_dang',
-                        'lam-moi-tin-dang/<title>/<id:\d+>'=>'khach_hang/lam_moi_tin',
-                        'xoa-tin/<title>/<id:\d+>'=>'khach_hang/xoa_tin_da_dang',
-                        'sua-tin/<title>/<id:\d+>'=>'khach_hang/sua_tin_dang',
+                        //url controller khách hàng
+                        'dang-nhap' => 'khach_hang/dang_nhap',
+                        'dang-xuat' => 'khach_hang/dang_xuat',
+                        'tin-da-dang/<title>/<id:\d+>' => 'khach_hang/tin_da_dang',
+                        'lam-moi-tin-dang/<title>/<id:\d+>' => 'khach_hang/lam_moi_tin',
+                        'xoa-tin/<title>/<id:\d+>' => 'khach_hang/xoa_tin_da_dang',
+                        'sua-tin/<title>/<id:\d+>' => 'khach_hang/sua_tin_dang',
                         //url mặc định của yii
                         '<controller:\w+>/<id:\d+>' => '<controller>/view',
                         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                         '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
                     ),
                 ),
-                'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
+                'user' => array(
+                    // enable cookie-based authentication
+                    'allowAutoLogin' => true,
+                ),
                 // database settings are configured in database.php
                 'db' => require(dirname(__FILE__) . '/database.php'),
                 'errorHandler' => array(
@@ -69,13 +69,7 @@ return CMap::mergeArray(
                       ),
                      */
                     ),
-                ),
-//                'cache' => array(
-//                    'class' => 'system.caching.CMemCache',
-//                    'servers' => array(
-//                        array('host' => 'localhost', 'port' => 11211, 'weight' => 60),
-//                    ),
-//                ),
+                )
             ),
                 )
 );
