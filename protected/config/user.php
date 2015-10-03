@@ -27,6 +27,7 @@ return CMap::mergeArray(
                         'khach-tim-xe/xem-chi-tiet/<title>/<id:\d+>' => 'khach_tim_xe/xem_chi_tiet',
                         'xe-tim-khach/xem-chi-tiet/<title>/<id:\d+>' => 'xe_tim_khach/xem_chi_tiet',
                         'rao-vat/xem-chi-tiet/<title>/<id:\d+>' => 'rao_vat/xem_chi_tiet',
+                        'tin-tuc/xem-chi-tiet/<title>/<id:\d+>' => 'tin_tuc/xem_chi_tiet',
                         //url lọc theo loại xe
                         'khach-tim-xe/loc-theo-xe/<title>/<id:\d+>' => 'khach_tim_xe/loc_theo_xe',
                         'xe-tim-khach/loc-theo-xe/<title>/<id:\d+>' => 'xe_tim_khach/loc_theo_xe',

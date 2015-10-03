@@ -15,9 +15,11 @@ class Khach_hangController extends Controller {
      * Hiển thị những tin đã đăng của khách hàng dựa theo mã loại tin
      */
     public function actionTin_da_dang($maLoaiTin = null, $currentPage = 1, $message = '') {
+
         if (Yii::app()->user->name == 'Guest') {
-            $this->redirect(Yii::app()->homeUrl.'dang-nhap');
+            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
+
         if (!$maLoaiTin) {
             $maLoaiTin = Yii::app()->session['maLoaiTin'] = Yii::app()->request->getParam('id');
         }
@@ -65,7 +67,7 @@ class Khach_hangController extends Controller {
             $message = '<span style="color:yellow">Tài khoản của bạn không đủ để làm mới tin này</span>';
         }
 
-        //Chuyển đến trang danh sách tin đã đăng
+//Chuyển đến trang danh sách tin đã đăng
         $this->actionTin_da_dang(Yii::app()->session['maLoaiTin'], 1, $message);
     }
 
@@ -75,7 +77,7 @@ class Khach_hangController extends Controller {
     public function actionXoa_tin_da_dang() {
         $maTin = Yii::app()->request->getParam('id');
         Tinkhachhang::model()->deleteTin($maTin, Yii::app()->session['maLoaiTin']);
-        
+
         //Chuyển đến trang danh sách tin đã đăng
         $this->actionTin_da_dang(Yii::app()->session['maLoaiTin']);
     }
@@ -172,10 +174,11 @@ class Khach_hangController extends Controller {
         }
         $this->render('dang_nhap', array('model' => $model));
     }
-    public function actionDang_xuat() 
-    {
+
+    public function actionDang_xuat() {
         Yii::app()->user->logout();
         Yii::app()->session->clear();
         $this->redirect(Yii::app()->homeUrl);
     }
+
 }
