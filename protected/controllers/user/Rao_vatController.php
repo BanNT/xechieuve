@@ -23,12 +23,12 @@ class Rao_vatController extends Controller {
         if ($callDirectly) {
             Yii::app()->session['condition'] = null;
         }
-        
+
         $tinraovat = new Tinraovat();
         $paginatorRV = new Paginate($currentPage, new Tinkhachhang(), $limit, ' ma_loai_tin = ' . Tinraovat::CODE_RV . $condition);
         $listTinRV = $tinraovat->listTinRV($paginatorRV, $condition);
-        
-        
+
+
 
         //render view
         $data = array(
@@ -58,9 +58,9 @@ class Rao_vatController extends Controller {
      */
     public function actionDang_tin($currentPage = 1) {
         if (Yii::app()->user->name == 'Guest') {
-           $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
+            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
-        
+
         $form = new CForm('application.views.user.rao_vat._form');
         $form['tinkhachhang']->model = new Tinkhachhang();
         $form['tinraovat']->model = $tinraovat = new Tinraovat();
@@ -144,5 +144,4 @@ class Rao_vatController extends Controller {
             'tinraovat' => $tinraovat
         ]);
     }
-
 }

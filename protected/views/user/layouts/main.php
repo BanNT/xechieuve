@@ -8,6 +8,7 @@
         <meta property="og:locale" content="vi_VN" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <!-- Bootstrap -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
