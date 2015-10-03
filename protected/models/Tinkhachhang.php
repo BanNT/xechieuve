@@ -136,14 +136,16 @@ class Tinkhachhang extends CActiveRecord {
         //lấy giá tiền cần có để đăng tin rao vặt
         $giaTien = Loaitin::model()->findByPk($maLoaiTin)->gia_dang;
         //lấy tổng số tiền trong tài khoản của khách hàng
-        $tongTien = Khachhang::model()->findByPk(1)->so_du_tai_khoan;
+        $tongTien = Khachhang::model()->findByPk(Yii::app()->user->userId)->so_du_tai_khoan;
 
         //Nếu không đủ tiền sẽ không cho đăng tin
         if ($tongTien < $giaTien) {
             return false;
         }
 
-        if (Khachhang::model()->updateByPk(1, array('so_du_tai_khoan' => ($tongTien - $giaTien)))) {
+        if (Khachhang::model()->updateByPk(Yii::app()->user->userId, array(
+            'so_du_tai_khoan' => ($tongTien - $giaTien)
+            ))) {
             return true;
         }
     }
@@ -182,22 +184,35 @@ class Tinkhachhang extends CActiveRecord {
      */
     public function deleteTin($maTin, $maLoaiTin) {
         if ($maLoaiTin == Tinraovat::CODE_RV) {
-            $sql = "DELETE FROM tinraovat ";
-            Yii::app()->db->createCommand($sql)
-                    ->where('ma_tin = :id', array(':id' => $maTin));
-
             //Kiểm tra nếu có tồn tại ảnh thì xóa luôn cùng
             $tinRV = Tinraovat::model()->find("ma_tin = $maTin");
             if ($anh = $tinRV['anh']) {
                 unlink(Yii::app()->basePath . "/../" . Tinraovat::IMAGE_DIR_RV . $anh);
             }
+            
+            $sql = "DELETE FROM tinraovat ";
+            Yii::app()->db->createCommand($sql)
+                    ->where('ma_tin = :id', array(':id' => $maTin));
         } else {
             $sql = "DELETE FROM tinghepxe ";
             Yii::app()->db->createCommand($sql)
                     ->where('ma_tin = :id', array(':id' => $maTin));
         }
 
+        //xóa tin ở bảng cha(bảng tin khách hàng)
         $this->deleteByPk($maTin);
+    }
+    
+    /**
+     * Kiểm tra xem có đúng tin có mã tin là $maTin có phải là của khách hàng này
+     * @param integer $maTin
+     * @return boolean
+     */
+    public static function checkBelongToUser($maTin){
+        if(Tinkhachhang::model()->findByAttributes(array('ma_tin'=>$maTin), 'ma_khach_hang = '.Yii::app()->user->userId)){
+            return true;
+        }
+        return false;
     }
 
 }

@@ -24410,3 +24410,194 @@ Stack trace:
 #7 {main}
 REQUEST_URI=/xechieuve/admin.php/nhaptien
 ---
+2015/10/03 11:19:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sua-tin/dsdasdasd".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('sua-tin/dsdasda...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/sua-tin/dsdasdasd/
+---
+2015/10/03 11:22:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-da-dang".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin-da-dang')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tin-da-dang
+---
+2015/10/03 11:22:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin_da_dang".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin_da_dang')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tin_da_dang
+---
+2015/10/03 11:22:32 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = .
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (83)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (68)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (49)
+2015/10/03 11:22:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = ' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1654): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(83): CActiveRecord->countBySql('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(68): Paginate->__getTotalPage()
+#4 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(49): Paginate->__setCurrentPage(1)
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(29): Paginate->__construct(1, Object(Tinkhachhang), 20, ' ma_loai_tin = ')
+#6 [internal function]: Khach_hangController->actionTin_da_dang(NULL, 1, '')
+#7 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Khach_hangController), Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Khach_hangController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('tin_da_dang')
+#13 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/tin_...')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#19 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#20 {main}
+REQUEST_URI=/xechieuve/khach_hang/tin_da_dang
+---
+2015/10/03 11:23:01 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = .
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (83)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (68)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (49)
+2015/10/03 11:23:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = ' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1654): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(83): CActiveRecord->countBySql('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(68): Paginate->__getTotalPage()
+#4 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(49): Paginate->__setCurrentPage(1)
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(29): Paginate->__construct(1, Object(Tinkhachhang), 20, ' ma_loai_tin = ')
+#6 [internal function]: Khach_hangController->actionTin_da_dang(NULL, 1, '')
+#7 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Khach_hangController), Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Khach_hangController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('tin_da_dang')
+#13 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/tin_...')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#19 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#20 {main}
+REQUEST_URI=/xechieuve/khach_hang/tin_da_dang
+---
+2015/10/03 11:23:04 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = .
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (83)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (68)
+in C:\xampp\htdocs\xechieuve\protected\models\Paginate.php (49)
+2015/10/03 11:23:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM tinkhachhang WHERE  ma_loai_tin = ' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1654): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(83): CActiveRecord->countBySql('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(68): Paginate->__getTotalPage()
+#4 C:\xampp\htdocs\xechieuve\protected\models\Paginate.php(49): Paginate->__setCurrentPage(1)
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(29): Paginate->__construct(1, Object(Tinkhachhang), 20, ' ma_loai_tin = ')
+#6 [internal function]: Khach_hangController->actionTin_da_dang(NULL, 1, '')
+#7 C:\xampp\htdocs\xechieuve\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(Khach_hangController), Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(Khach_hangController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('tin_da_dang')
+#13 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/tin_...')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#16 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#17 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#19 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#20 {main}
+REQUEST_URI=/xechieuve/khach_hang/tin_da_dang
+---
+2015/10/03 12:07:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/tin-tuc
+---
+2015/10/03 12:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/tin-tuc
+---
+2015/10/03 12:15:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-da-dang/tin-rao-vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin-da-dang/tin...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tin-da-dang/tin-rao-vat/
+---
+2015/10/03 12:17:04 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4. The SQL statement executed was: SELECT tinraovat.ma_tin ,date(ngay_dang) as ngay_dang, tieu_de_tin ,nguoi_lien_lac , so_dien_thoai,noi_dung_tin,anh
+FROM `tinraovat`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinraovat.ma_tin
+WHERE tinraovat.ma_tin=.
+in C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php (175)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php (139)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 12:17:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4. The SQL statement executed was: SELECT tinraovat.ma_tin ,date(ngay_dang) as ngay_dang, tieu_de_tin ,nguoi_lien_lac , so_dien_thoai,noi_dung_tin,anh
+FROM `tinraovat`
+JOIN `tinkhachhang` ON tinkhachhang.ma_tin = tinraovat.ma_tin
+WHERE tinraovat.ma_tin=' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Tinraovat.php(175): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Rao_vatController.php(139): Tinraovat->getTinraovat(NULL)
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Rao_vatController->actionXem_chi_tiet()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('xem_chi_tiet')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao_vat/xem_chi...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/rao_vat/xem_chi_tiet
+---
