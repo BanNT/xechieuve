@@ -1,4 +1,10 @@
-<?php $this->pageTitle = Yii::app()->name . ' - Tin đã đăng'; ?>
+<?php
+$this->pageTitle = Yii::app()->name . ' - Tin đã đăng';
+if (!$listTin) {
+    echo '<h3>' . CHtml::encode('Dữ liệu không tồn tại!') . '</h3>';
+    return;
+}
+?>
 <section id="tin-da-dang">
     <div class="pribox">Tin đã đăng: <?php echo $message ?></div>
     <div class="table-responsive">

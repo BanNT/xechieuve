@@ -24374,3 +24374,39 @@ Stack trace:
 REQUEST_URI=/xechieuve/tin-tuc/xem-chi-tiet/dell-vostro-5480-co-may-manh-me-thiet-ke-vuot-troi/1
 >>>>>>> f7b052b552144a05fc49986390cdff9175e72015
 ---
+2015/10/03 06:25:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhaptien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhaptien')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhaptien
+---
+2015/10/03 06:26:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhaptien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhaptien')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhaptien
+---
+2015/10/03 06:27:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhaptien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhaptien')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhaptien
+---
