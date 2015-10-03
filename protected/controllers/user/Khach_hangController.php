@@ -160,6 +160,32 @@ class Khach_hangController extends Controller {
         ]);
     }
 
+    /*  Đăng kí người dùng*/
+    public function actionDang_ky() {
+        $khachHang = new Khachhang();
+        $form = new CForm('application.views.user.khach_hang._formdangky', $khachHang);
+        if ($form->submitted('dangky') && $form->validate()) {
+            $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
+            if ($image) {
+                $newName = md5(microtime(true) . 'xechieuve') . $image->name;
+                $khachHang->anh_dai_dien = $newName;
+                $image->saveAs(Khachhang::AVARTAR_DIR . $newName);
+            }
+
+            $khachHang->password = md5($khachHang->password);
+
+            
+            $khachHang->save(false);
+
+            return;
+            
+            
+        }
+     
+       // $listkhachHang=$khachHang->listKhachhang();
+           // echo"abc".$listkhachHang;
+        $this->render('dang_ky', array('form' => $form));
+    }
     /**
      * Đăng nhập người dùng
      */

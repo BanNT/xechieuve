@@ -23380,3 +23380,87 @@ REQUEST_URI=/xechieuve/lam-moi-tin-dang/dang-tin-rao-vat/2
 in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\tin_da_dang.php (27)
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (45)
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (69)
+2015/10/02 11:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/administrator/nhaptien
+---
+2015/10/02 11:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien/index".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/administrator/nhaptien/index
+---
+2015/10/02 11:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien/index.php".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/administrator/nhaptien/index.php
+---
+2015/10/02 11:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien/index.php".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/administrator/nhaptien/index.php
+---
+2015/10/02 12:17:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhap_tien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhap_tien')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhap_tien
+---
+2015/10/02 12:18:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhap_tien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhap_tien')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhap_tien
+---
+2015/10/02 12:19:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhap_tiencsdsadas".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhap_tiencsdsad...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhap_tiencsdsadas
+---

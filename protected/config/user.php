@@ -31,7 +31,7 @@ return CMap::mergeArray(
                         'khach-tim-xe/loc-theo-xe/<title>/<id:\d+>' => 'khach_tim_xe/loc_theo_xe',
                         'xe-tim-khach/loc-theo-xe/<title>/<id:\d+>' => 'xe_tim_khach/loc_theo_xe',
                         //url đăng ký tài khoản
-                        'dang-ky' => 'dang_ky',
+                        'dang-ky' => 'khach_hang/dang_ky',
                         //url quản lý của khách hàng
                         'dang-nhap'=>'khach_hang/dang_nhap',
                          'dang-xuat'=>'khach_hang/dang_xuat',
