@@ -142,7 +142,10 @@ class Khach_hangController extends Controller {
                 }
 
                 Tinraovat::updateTinRV(
-                        $tinraovat->ma_loai_tin_rv, $tinraovat->gia_rao_vat, ($tinraovat->anh != null) ? $tinraovat->anh : $anh, $tinraovat->ma_tin
+                        $tinraovat->ma_loai_tin_rv,
+                        $tinraovat->gia_rao_vat,
+                        ($tinraovat->anh != null) ? $tinraovat->anh : $anh,
+                        $tinraovat->ma_tin
                 );
             }
         }
@@ -169,7 +172,12 @@ class Khach_hangController extends Controller {
             //update tin khách hàng sau đó là tin ghép xe
             if ($tinkhachhang->save(false)) {
                 Tinghepxe::updateTinGhepXe(
-                        $tinghepxe->dia_chi_di, $tinghepxe->dia_chi_den, $tinghepxe->noi_den_tinh, $tinghepxe->ma_loai_xe_ghep, $tinghepxe->ngay_khoi_hanh, $tinghepxe->ma_tin
+                        $tinghepxe->dia_chi_di,
+                        $tinghepxe->dia_chi_den,
+                        $tinghepxe->noi_den_tinh,
+                        $tinghepxe->ma_loai_xe_ghep,
+                        $tinghepxe->ngay_khoi_hanh,
+                        $tinghepxe->ma_tin
                 );
             }
         }
