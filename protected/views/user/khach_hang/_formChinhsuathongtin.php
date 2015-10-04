@@ -56,10 +56,8 @@ return array(
     'buttons' => array(
         'chinhsua' => array(
             'type' => 'submit',
-            'label' => 'Luu thay đổi',
+            'label' => 'Lưu thay đổi',
             'class'=>'btndangki btn',
-            'action'=>'dangkitk',
-
         ),
     ),
 );

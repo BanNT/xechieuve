@@ -27,7 +27,9 @@ class Khachhang extends CActiveRecord {
     public $confirmPassword;
     public $dieukhoan;
     public $newPassword;
-    public $confirmnewPassword;
+    public $oldPassword;
+    public $newconfirmPassword;
+
     /**
      * @return string the associated database table name
      */
@@ -41,20 +43,21 @@ class Khachhang extends CActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
-        return array(
+        return array( 
             array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,dia_chi,dieukhoan', 'required',
-                'message' => 'Bạn không được bỏ trống "{attribute}"'// đây required là bắt buộc, cái này là tên hàm của yii viết sẵn
-            ),
+              'message' => 'Bạn không được bỏ trống "{attribute}"',//'on'=>'insert'
+          ),
+           // array('oldPassword,newPassword,newconfirmPassword', 'required','message' => 'Bạn không được bỏ trống "{attribute}"'),
             array('dieukhoan', 'checkb'),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
-                'message' => 'password không khớp'
+                'message' => 'Mật khẩu không khớp'
             ),
-            array('newPassword', 'compare', 'confirmnewPassword' => 'confirmPassword',
-                'message' => 'password mới không khớp'
-            ),
+            //array('newPassword', 'compare', 'compareAttribute' => 'newconfirmPassword',
+              //  'message' => 'Mật khẩu không khớp'
+            //),
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
-                'message' => '{attribute} phải dưới 80 kí tự'
+                'message' => '{attribute} phải dưới 80 kí tự','on'=>'save'
             ),
             array('email', 'email', 'message' => 'Email không hợp lệ'),
             array('password', 'length', 'max' => 40),
@@ -73,6 +76,7 @@ class Khachhang extends CActiveRecord {
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password, email, so_dien_thoai, so_du_tai_khoan, anh_dai_dien', 'safe', 'on' => 'search'),
+             
         );
     }
 
@@ -81,6 +85,8 @@ class Khachhang extends CActiveRecord {
             $this->addError('dieukhoan', 'Vui lòng đồng ý điều khoản.');
         }
     }
+
+    
 
     /**
      * @return array relational rules.
@@ -102,8 +108,9 @@ class Khachhang extends CActiveRecord {
             'ten_khach_hang' => 'Tên khách hàng:',
             'ten_dang_nhap' => 'Tên đăng nhập:',
             'password' => 'Mật khẩu:',
-            //'newPassword'=>'Nhập mật khẩu mới:',
-           // 'confirmnewPassword'=>'Nhập lại mật khẩu mới:',
+            //'oldPassword' => 'Mật khẩu cũ:',
+            //'newPassword' => 'Nhập mật khẩu mới:',
+            //'newconfirmPassword' => 'Nhập lại mật khẩu mới:',
             'email' => 'Email:',
             'so_dien_thoai' => 'Số điện thoại:',
             'so_du_tai_khoan' => 'Số dư tài khoản:',
@@ -138,18 +145,6 @@ class Khachhang extends CActiveRecord {
         );
     }
 
-    /**
-     * Retrieves a list of models based on the current search/filter conditions.
-     *
-     * Typical usecase:
-     * - Initialize the model fields with values from filter form.
-     * - Execute this method to get CActiveDataProvider instance which will filter
-     * models according to data in model fields.
-     * - Pass data provider to CGridView, CListView or any similar widget.
-     *
-     * @return CActiveDataProvider the data provider that can return the models
-     * based on the search/filter conditions.
-     */
     public function search() {
         // @todo Please modify the following code to remove attributes that should not be searched.
 
@@ -168,7 +163,14 @@ class Khachhang extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
-    
+    public function updatepassword($pass) {
+        $makhach=Yii::app()->user->userId;
+        $sql = "UPDATE " . Khachhang::model()->tableName()
+                . " SET password = '$pass'"
+                . " WHERE ma_khach_hang =$makhach";
+       
+        Yii::app()->db->createCommand($sql)->execute();
+    }
 
     /**
      * Returns the static model of the specified AR class.
