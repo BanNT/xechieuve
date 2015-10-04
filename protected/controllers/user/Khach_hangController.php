@@ -15,22 +15,24 @@ class Khach_hangController extends Controller {
      * Hiển thị những tin đã đăng của khách hàng dựa theo mã loại tin
      */
     public function actionTin_da_dang($maLoaiTin = null, $currentPage = 1, $message = '') {
-
         if (Yii::app()->user->name == 'Guest') {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
 
         if (!$maLoaiTin) {
             $maLoaiTin = Yii::app()->session['maLoaiTin'] = Yii::app()->request->getParam('id');
+            if (!$maLoaiTin) {
+                $this->redirect(Yii::app()->homeUrl);
+            }
         }
 
-        $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMIT_RECORD, ' ma_loai_tin = ' . $maLoaiTin);
+        $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMIT_RECORD, ' ma_loai_tin = ' . $maLoaiTin . ' AND ma_khach_hang =' . Yii::app()->user->userId);
         if ($maLoaiTin == Tinraovat::CODE_RV) {
             $tinraovat = new Tinraovat();
-            $listTin = $tinraovat->listTinRV($paginator);
+            $listTin = $tinraovat->listTinRV($paginator, ' AND ma_khach_hang =' . Yii::app()->user->userId);
         } else {
             $tinghepxe = new Tinghepxe();
-            $listTin = $tinghepxe->listTinGhepXeByType($paginator, $maLoaiTin);
+            $listTin = $tinghepxe->listTinGhepXeByType($paginator, $maLoaiTin, ' AND ma_khach_hang =' . Yii::app()->user->userId);
         }
 
         $data = array(
@@ -63,11 +65,17 @@ class Khach_hangController extends Controller {
     public function actionLam_moi_tin() {
         $maTin = Yii::app()->request->getParam('id');
         $message = '';
+
+        //Kiểm tra xem tin này có phải do khách hàng này đăng không
+        if (!Tinkhachhang::model()->checkBelongToUser($maTin)) {
+            $this->redirect(Yii::app()->homeUrl);
+        }
+
         if (!Tinkhachhang::model()->lamMoi($maTin)) {
             $message = '<span style="color:yellow">Tài khoản của bạn không đủ để làm mới tin này</span>';
         }
 
-//Chuyển đến trang danh sách tin đã đăng
+        //Chuyển đến trang danh sách tin đã đăng
         $this->actionTin_da_dang(Yii::app()->session['maLoaiTin'], 1, $message);
     }
 
@@ -76,9 +84,14 @@ class Khach_hangController extends Controller {
      */
     public function actionXoa_tin_da_dang() {
         $maTin = Yii::app()->request->getParam('id');
-        Tinkhachhang::model()->deleteTin($maTin, Yii::app()->session['maLoaiTin']);
-//Chuyển đến trang danh sách tin đã đăng
+        //Kiểm tra xem tin này có phải do khách hàng này đăng không
+        if (!Tinkhachhang::model()->checkBelongToUser($maTin)) {
+            $this->redirect(Yii::app()->homeUrl);
+        }
 
+        Tinkhachhang::model()->deleteTin($maTin, Yii::app()->session['maLoaiTin']);
+
+        //Chuyển đến trang danh sách tin đã đăng
         $this->actionTin_da_dang(Yii::app()->session['maLoaiTin']);
     }
 
@@ -88,6 +101,11 @@ class Khach_hangController extends Controller {
      */
     public function actionSua_tin_dang() {
         $maTin = Yii::app()->request->getParam('id');
+        //Kiểm tra xem tin này có phải do khách hàng này đăng không
+        if (!Tinkhachhang::model()->checkBelongToUser($maTin)) {
+            $this->redirect(Yii::app()->homeUrl);
+        }
+
         if (Yii::app()->session['maLoaiTin'] == 3) {
             $this->__suaTinRaoVat($maTin);
             return;
@@ -113,7 +131,7 @@ class Khach_hangController extends Controller {
             if ($tinkhachhang->save(false)) {
                 $image = CUploadedFile::getInstance($tinraovat, 'anh');
                 if ($image) {
-//Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
+                    //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
                     if ($anh) {
                         unlink(Yii::app()->basePath . "/../" . Tinraovat::IMAGE_DIR_RV . $anh);
                     }
@@ -129,7 +147,7 @@ class Khach_hangController extends Controller {
             }
         }
 
-//render view
+        //render view
         $this->render('sua_tin', [
             'form' => $form
         ]);
@@ -148,7 +166,7 @@ class Khach_hangController extends Controller {
             $tinkhachhang = $form['tinkhachhang']->model;
             $tinghepxe = $form['tinghepxe']->model;
 
-//update tin khách hàng sau đó là tin ghép xe
+            //update tin khách hàng sau đó là tin ghép xe
             if ($tinkhachhang->save(false)) {
                 Tinghepxe::updateTinGhepXe(
                         $tinghepxe->dia_chi_di, $tinghepxe->dia_chi_den, $tinghepxe->noi_den_tinh, $tinghepxe->ma_loai_xe_ghep, $tinghepxe->ngay_khoi_hanh, $tinghepxe->ma_tin
@@ -156,7 +174,7 @@ class Khach_hangController extends Controller {
             }
         }
 
-//render view
+        //render view
         $this->render('sua_tin', [
             'form' => $form
         ]);

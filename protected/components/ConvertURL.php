@@ -24,7 +24,7 @@ class ConvertURL extends CComponent {
         // lọc một số kí tự đặc biệt thành dấu '-':
         $str = trim($str);
         $str = preg_replace("/\./", '', $str);
-        $str = preg_replace("/(\!|\@|\#|\%|\^|\&|\*|\(|\)|\+|\~|\,|\\|\/|\=|\`)/", ' ', $str);
+        $str = preg_replace("/(\!|\@|\#|\%|\^|\&|\*|\(|\)|\+|\~|\,|\\|\/|\=|\`|;|,|\'|\")/", ' ', $str);
         $str = str_replace(" ", "-", str_replace("&*#39;","",$str));
         $str = preg_replace("/-{2,}/", '-', $str);
         $str = trim($str,'-');
