@@ -7,10 +7,6 @@ return array(
             'type' => 'form',
             'title'=>'Sửa tin rao vặt',
             'elements' => array(
-                'ma_khach_hang' => array(
-                    'type' => 'hidden',
-                    'value' => 1//Chú ý:"giá trị này sau này phải sửa bằng id của khách hàng đăng nhập"
-                ),
                 '<div class="col-xs-12 col-sm-6 col-md-6">',
                 'nguoi_lien_lac' => array(
                     'type' => 'text',

@@ -135,6 +135,11 @@ class Rao_vatController extends Controller {
 
     public function actionXem_chi_tiet() {
         $matin = Yii::app()->request->getParam('id');
+        //Nếu không tồn tại mã loại xe thì sẽ redirect về trang chủ
+        if($matin == ''){
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        
         $modeltrv = new Tinraovat();
         if (!$tinraovat = $modeltrv->getTinraovat($matin)) {
             $this->redirect(['site/index']);

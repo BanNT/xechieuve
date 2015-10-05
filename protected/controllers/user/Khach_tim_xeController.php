@@ -110,6 +110,11 @@ class Khach_tim_xeController extends Controller {
      */
     public function actionLoc_theo_xe() {
         $maLoaiXe = Yii::app()->request->getParam('id');
+        //Nếu không tồn tại mã loại xe thì sẽ redirect về trang chủ
+        if($maLoaiXe == ''){
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        
         $matins = Tinghepxe::listMaTin(Tinghepxe::CODE_KTX, ' AND ma_loai_xe_ghep= ' . $maLoaiXe);
 
         $ma = '(';
@@ -168,6 +173,10 @@ class Khach_tim_xeController extends Controller {
      */
     public function actionXem_chi_tiet() {
         $maTin = Yii::app()->request->getParam('id');
+        if($maTin == ''){
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        
         $modelKTX = new Tinghepxe();
         if (!$tinKTX = $modelKTX->getTinGhepXe($maTin)) {
             $this->redirect(['site/index']);

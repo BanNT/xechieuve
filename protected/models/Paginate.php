@@ -32,7 +32,7 @@ class Paginate {
     private $__condition;
 
     /**
-     * @var integer The quantity of page
+     * @var integer The total of page
      */
     public $totalPage;
 
