@@ -34,7 +34,8 @@ return array(
             'label' => 'Đổi mật khẩu',
             'class'=>'btndangki btn',
             'action'=>'dangkitk',
-
+            'data-toggle'=>'modal',
+            'data-target'=>'.bs-example-modal-lg',
         ),
     )
      );

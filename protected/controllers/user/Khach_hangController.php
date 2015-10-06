@@ -182,7 +182,9 @@ class Khach_hangController extends Controller {
     /*  Đăng kí người dùng */
 
     public function actionDang_ky() {
+        $khachHang = new Khachhang();
         $form = new CForm('application.views.user.khach_hang._formdangky', $khachHang);
+        $khachHang->setScenario('Dang_ky');
         if ($form->submitted('dangky') && $form->validate()) {
             $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
             if ($image) {
@@ -193,10 +195,8 @@ class Khach_hangController extends Controller {
             $khachHang->password = md5($khachHang->password);
             $khachHang->save(false);
             return;
+            $this->redirect(Yii::app()->homeUrl);
         }
-
-        // $listkhachHang=$khachHang->listKhachhang();
-        // echo"abc".$listkhachHang;
         $this->render('dang_ky', array('form' => $form));
     }
 
@@ -222,15 +222,14 @@ class Khach_hangController extends Controller {
     /* Sửa thông tin người dùng */
 
     public function actionChinh_sua_thong_tin() {
-        $khachHang = new Khachhang();
+        if (Yii::app()->user->name == 'Guest') {
+            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
+        }
         $form = new CForm('application.views.user.khach_hang._formChinhsuathongtin');
-        $form->model = $Kh = Khachhang::model()->findByPk(Yii::app()->user->userId);
-        //$form->scenario='update';
+        $khachHang = $form->model = $Kh = Khachhang::model()->findByPk(Yii::app()->user->userId);
+        $khachHang->setScenario('update');
         $anh = $Kh->anh_dai_dien;
-        if ($form->submitted('chinhsua')&& $form->validate()) {
-            $khachHang = $form->model;
-            echo"ten khach hang:" . $khachHang->ten_khach_hang;
-            
+        if ($form->submitted('chinhsua') && $form->validate()) {
             $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
             if ($image) {
                 //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
@@ -242,23 +241,22 @@ class Khach_hangController extends Controller {
                 $khachHang->anh_dai_dien = $newName;
                 $image->saveAs(Khachhang::AVARTAR_DIR . $newName);
             } else {
-                $khachHang->anh_dai_dien=$anh;
+                $khachHang->anh_dai_dien = $anh;
             }
             $khachHang->save(false);
         }
-         /*  $khachHang2=new Khachhang();
-           $form2 = new CForm('application.views.user.khach_hang._formcapnhatpass', $khachHang2);
-          $form2 ->model= $khachHang2=Khachhang::model()->findByPk(Yii::app()->user->userId);
-        if ($form2->submitted('doimatkhau')) {
-            echo"password:" . $khachHang2["password"]."<br/>";
-            echo"oldpassword:" ;$khachHang2->password;
-            $khachHang2->save(false);
-        }*/
+        $form2 = new CForm('application.views.user.khach_hang._formcapnhatpass');
+        $khachHang2 = $form2->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
+        $khachHang2->setScenario('updatepass');
+        if ($form2->submitted('doimatkhau') && $form2->validate()) {
+            Khachhang::updatepassword(md5($khachHang2["newPassword"]));
+            
+        }
 
         $this->render('chinh_sua_thong_tin', array(
             'form' => $form,
             'anh' => $anh,
-            //'form2' => $form2
+            'form2' => $form2
         ));
     }
 

@@ -22,6 +22,14 @@ return array(
         '</div>',
         '</div>',
         '<div class="row">',
+        '<div class="col-xs-12">',
+        'email2' => array(
+            'type' => "text",
+            'class' => 'form-input'
+        ),
+        '</div>',
+        '</div>',
+        '<div class="row">',
         '<div class="col-xs-12 ckb">',
         'rememberMe' => array(
             'type' => "checkbox",   

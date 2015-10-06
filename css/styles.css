@@ -411,3 +411,10 @@ body,ul,h4{
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.ok
+{
+    color: #F00;
+    text-align: center;
+    margin-left: 200px;
+    font-size: 20px;
+}
