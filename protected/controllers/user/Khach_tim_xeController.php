@@ -111,7 +111,7 @@ class Khach_tim_xeController extends Controller {
     public function actionLoc_theo_xe() {
         $maLoaiXe = Yii::app()->request->getParam('id');
         //Nếu không tồn tại mã loại xe thì sẽ redirect về trang chủ
-        if($maLoaiXe == ''){
+        if(!$maLoaiXe){
             $this->redirect(Yii::app()->homeUrl);
         }
         
