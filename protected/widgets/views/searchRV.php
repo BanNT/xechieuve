@@ -14,7 +14,19 @@
         <option value="-1">Chọn địa điểm</option>
         <?php $this->widget('application.widgets.provinces'); ?>
     </select>
-    <input name="ngay-dang" type="date"/>
+    <?php
+    $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+        'name' => 'ngay-dang',
+        'options' => array(
+            'showAnim' => 'slideDown', //'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
+            'changeMonth' => true,
+            'changeYear' => true,
+            'minDate' => '2000-01-01', // minimum date
+            'maxDate' => '2015-09-31',
+            'dateFormat' => 'yy-mm-dd'
+        ),
+    ));
+    ?>
 
     <?php
     echo CHtml::ajaxSubmitButton('Tìm kiếm',Yii::app()->request->baseUrl . '/rao_vat/tim_kiem', array(

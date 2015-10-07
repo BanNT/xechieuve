@@ -146,9 +146,9 @@ body,ul,h4{
     margin-bottom: 11px; 
 
 }
-#search form input[type=date] 
+#search form input[name='ngay-khoi-hanh'],#search form input[name='ngay-dang'] 
 {
-    width: 124px;
+    width: 130px;
     background: url(../images/n.png)no-repeat right #dad8d9;
     height: 30px;
     color: #0163a2;
