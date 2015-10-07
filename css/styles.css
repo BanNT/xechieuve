@@ -118,7 +118,7 @@ body,ul,h4{
 #search h6 {
     font-weight: bolder;
     float: left;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     color: red;
 }
@@ -147,7 +147,7 @@ body,ul,h4{
     margin-bottom: 11px; 
 
 }
-#search form input[type=date] 
+#search #ngay-khoi-hanh
 {
     width: 124px;
     background: url(../images/n.png)no-repeat right #dad8d9;
