@@ -20,10 +20,10 @@ body,ul,h4{
 }
 
 /*-----------begin menu------------*/
+/*-----------begin menu------------*/
 #menu {
     background-image: url(../images/nav.png);
     height: 40px;
-    border-top: 1px solid #fff;
 }
 #menu ul {
     float: left;
@@ -37,7 +37,7 @@ body,ul,h4{
 }
 #menu ul li a {
     position: relative;
-    padding: 12px 0;
+    padding: 12px 1px;
     margin-left: 40px;
     color: #0063a1;
     text-transform: uppercase;
@@ -58,6 +58,7 @@ body,ul,h4{
     top: 0;
     border-bottom: 38px solid transparent;
     border-left: 30px solid #0063a1;
+    right:-30px;
 }
 #menu ul li:hover>a:before,  #menu ul li.selected a:before {
     content: "";
@@ -187,6 +188,11 @@ body,ul,h4{
     line-height: 40px;
     padding: 0 20px;
 }
+.ct{width: 710px; height: auto; margin: -10px 0 0 -20px; border: 1px solid #ccc;}
+.ct td{border: 1px solid #ccc;}
+    .ct1{width: 30%;}
+    .ct2{width: 70%;}
+td{width: 100px}
 /*----------------------------end slide/table---------------------------------*/
 /*----------------------------------------------------------------------------*/
 
@@ -360,7 +366,7 @@ body,ul,h4{
 #dang
 {
     margin-left: 750px;
-    width: 150px;
+    width: 200px;
     padding-top: 5px;
 }
 #dang a
