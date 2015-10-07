@@ -113,4 +113,21 @@ class Tintuc extends CActiveRecord {
         return parent::model($className);
     }
 
+    public function getTintuc($id)
+    {
+        return Yii::app()->db->createCommand()
+                        ->select('ma_tin,tieu_de,noi_dung,anh,ngay_dang, tom_tat')
+                        ->from('tintuc')
+                        ->order('ngay_dang DESC')
+                        ->queryAll();
+    }
+    public function getChitietTT($matin)
+    {
+        return  Yii::app()->db->createCommand()
+                        ->select('ma_tin ,ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
+                        ->from('tintuc')
+                        ->where("ma_tin=$matin")
+                        ->queryRow();
+    }
+
 }
