@@ -9,6 +9,7 @@
         <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-ky">Đăng Ký</a>
             <?php } else{ ?>
         <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/sua-thong-tin-khach" style="border-right:1px solid #fff;padding-right: 2px;"><?php echo ucfirst(CHtml::encode(Yii::app()->user->name));?></a>
+        
         <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-xuat">Đăng xuất</a>
         <?php } ?>
     </div>
