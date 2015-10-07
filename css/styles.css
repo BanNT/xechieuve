@@ -20,6 +20,7 @@ body,ul,h4{
 }
 
 /*-----------begin menu------------*/
+/*-----------begin menu------------*/
 #menu {
     background-image: url(../images/nav.png);
     height: 40px;
@@ -146,9 +147,9 @@ body,ul,h4{
     margin-bottom: 11px; 
 
 }
-#search form input[name='ngay-khoi-hanh'],#search form input[name='ngay-dang'] 
+#search form input[type=date] 
 {
-    width: 130px;
+    width: 124px;
     background: url(../images/n.png)no-repeat right #dad8d9;
     height: 30px;
     color: #0163a2;
@@ -364,8 +365,7 @@ td{width: 100px}
 }
 #dang
 {
-    /*margin-left: 750px;*/
-    /*width: 500px;*/
+    width: 200px;
     padding-top: 5px;
 }
 #dang a
