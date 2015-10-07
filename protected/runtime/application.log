@@ -42540,6 +42540,7 @@ Stack trace:
 REQUEST_URI=/xechieuve/fonts/glyphicons-halflings-regular.woff
 HTTP_REFERER=http://localhost:8888/xechieuve/css/bootstrap.min.css
 ---
+<<<<<<< 210e3de3824ed3581397b8b68a4b51db24a586da
 2015/10/07 10:19:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.ttf".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
@@ -47585,6 +47586,44 @@ REQUEST_URI=/xechieuve/images/slide/3.jpg
 HTTP_REFERER=http://127.0.0.1:8080/xechieuve/xe-tim-khach
 ---
 2015/10/07 09:46:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+=======
+>>>>>>> 10a61e9acd9bc66186f927d1fddea1acc8fcc28a
+2015/10/07 16:22:38 [error] [php] Undefined variable: controller (D:\xampp\htdocs\xechieuve\protected\widgets\views\menu.php:7)
+Stack trace:
+#0 D:\xampp\htdocs\xechieuve\framework\web\widgets\CWidget.php(244): menu->renderFile()
+#1 D:\xampp\htdocs\xechieuve\protected\widgets\menu.php(44): menu->render()
+#2 D:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(181): menu->run()
+#3 D:\xampp\htdocs\xechieuve\protected\views\user\layouts\main.php(32): Tin_tucController->widget()
+#4 D:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#5 D:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Tin_tucController->renderInternal()
+#6 D:\xampp\htdocs\xechieuve\framework\web\widgets\CContentDecorator.php(76): Tin_tucController->renderFile()
+#7 D:\xampp\htdocs\xechieuve\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#8 D:\xampp\htdocs\xechieuve\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#9 D:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(214): CContentDecorator->run()
+#10 D:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(308): Tin_tucController->endWidget()
+#11 D:\xampp\htdocs\xechieuve\protected\views\user\layouts\column1.php(6): Tin_tucController->endContent()
+#12 D:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#13 D:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Tin_tucController->renderInternal()
+#14 D:\xampp\htdocs\xechieuve\framework\web\CController.php(784): Tin_tucController->renderFile()
+#15 D:\xampp\htdocs\xechieuve\protected\controllers\user\Tin_tucController.php(18): Tin_tucController->render()
+#16 D:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Tin_tucController->actionIndex()
+#17 D:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 D:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Tin_tucController->runAction()
+#19 D:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Tin_tucController->runActionWithFilters()
+#20 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Tin_tucController->run()
+#21 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 D:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#23 D:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#24 unknown(0): WebApplicationEndBehavior->runEnd()
+#25 D:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#26 D:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#27 D:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/tin-tuc
+in D:\xampp\htdocs\xechieuve\protected\widgets\views\menu.php (7)
+in D:\xampp\htdocs\xechieuve\protected\widgets\menu.php (44)
+in D:\xampp\htdocs\xechieuve\protected\views\user\layouts\main.php (32)
+2015/10/07 16:23:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+>>>>>>> fix css
 Stack trace:
 #0 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
 #1 D:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
@@ -47597,6 +47636,7 @@ Stack trace:
 REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://127.0.0.1:8080/xechieuve/tin-tuc
 ---
+<<<<<<< 210e3de3824ed3581397b8b68a4b51db24a586da
 2015/10/07 09:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
@@ -47611,6 +47651,9 @@ REQUEST_URI=/xechieuve/lien-he
 HTTP_REFERER=http://127.0.0.1:8080/xechieuve/rao-vat
 ---
 2015/10/07 09:46:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+=======
+2015/10/07 16:23:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+>>>>>>> fix css
 Stack trace:
 #0 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/avatar/5...')
 #1 D:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
@@ -47623,7 +47666,11 @@ Stack trace:
 REQUEST_URI=/xechieuve/images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg
 HTTP_REFERER=http://127.0.0.1:8080/xechieuve/sua-thong-tin-khach
 ---
+<<<<<<< 210e3de3824ed3581397b8b68a4b51db24a586da
 2015/10/07 09:46:52 [error] [php] unlink(D:\xampp\htdocs\xechieuve\protected/../images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg): No such file or directory (D:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:253)
+=======
+2015/10/07 16:23:49 [error] [php] unlink(D:\xampp\htdocs\xechieuve\protected/../images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg): No such file or directory (D:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:253)
+>>>>>>> fix css
 Stack trace:
 #0 D:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
 #1 D:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
@@ -47640,4 +47687,20 @@ REQUEST_URI=/xechieuve/sua-thong-tin-khach
 in D:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (253)
 in D:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
 in D:\xampp\htdocs\xechieuve\index.php (11)
+<<<<<<< 210e3de3824ed3581397b8b68a4b51db24a586da
 >>>>>>> up chi tiet
+=======
+2015/10/07 16:23:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/avatar/5...')
+#1 D:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 D:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 D:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg
+HTTP_REFERER=http://127.0.0.1:8080/xechieuve/sua-thong-tin-khach
+---
+>>>>>>> fix css
