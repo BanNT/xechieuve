@@ -23495,9 +23495,15 @@ in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\tin_da_dang.php (27
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (45)
 in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (69)
 <<<<<<< HEAD
+2015/10/02 11:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+=======
+<<<<<<< HEAD
 2015/10/02 11:50:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> e77f5fdc5eecc76df3be85d2bfd200a915e330ce
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -23505,6 +23511,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/administrator/nhaptien
+---
+2015/10/02 11:54:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien/index".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+=======
 REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://localhost:8888/xechieuve/tin-tuc
 ---
@@ -23926,6 +23939,7 @@ in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php 
 2015/10/02 12:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/xem-chi-tiet/dang-tin-rao-vat-cho-thue-xe/d12b52bdcb59f8375349e8a841e03f68doitac3.png".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/xem-chi...')
+>>>>>>> e77f5fdc5eecc76df3be85d2bfd200a915e330ce
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -23933,6 +23947,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/administrator/nhaptien/index
+---
+2015/10/02 11:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien/index.php".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+=======
 REQUEST_URI=/xechieuve/rao-vat/xem-chi-tiet/dang-tin-rao-vat-cho-thue-xe/d12b52bdcb59f8375349e8a841e03f68doitac3.png
 HTTP_REFERER=http://localhost/xechieuve/rao-vat/xem-chi-tiet/dang-tin-rao-vat-cho-thue-xe/1
 ---
@@ -23940,6 +23961,7 @@ HTTP_REFERER=http://localhost/xechieuve/rao-vat/xem-chi-tiet/dang-tin-rao-vat-ch
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/d12b52bd...')
 >>>>>>> f7b052b552144a05fc49986390cdff9175e72015
+>>>>>>> e77f5fdc5eecc76df3be85d2bfd200a915e330ce
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -23947,6 +23969,13 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/administrator/nhaptien/index.php
+---
+2015/10/02 11:55:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator/nhaptien/index.php".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator/n...')
+=======
 <<<<<<< HEAD
 REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://localhost:8888/xechieuve/
@@ -24041,6 +24070,7 @@ REQUEST_URI=/xechieuve/tin-da-dang/tin-rao-vat/3
 2015/10/02 17:32:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator')
+>>>>>>> e77f5fdc5eecc76df3be85d2bfd200a915e330ce
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -24048,6 +24078,45 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/administrator/nhaptien/index.php
+---
+2015/10/02 12:17:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhap_tien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhap_tien')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhap_tien
+---
+2015/10/02 12:18:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhap_tien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhap_tien')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhap_tien
+---
+2015/10/02 12:19:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhap_tiencsdsadas".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('nhap_tiencsdsad...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('admin')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\admin.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\admin.php(11): CWebApplication->runEnd('admin')
+#7 {main}
+REQUEST_URI=/xechieuve/admin.php/nhap_tiencsdsadas
+=======
 REQUEST_URI=/xechieuve/administrator
 ---
 2015/10/02 17:33:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
@@ -24373,7 +24442,367 @@ Stack trace:
 #14 {main}
 REQUEST_URI=/xechieuve/tin-tuc/xem-chi-tiet/dell-vostro-5480-co-may-manh-me-thiet-ke-vuot-troi/1
 >>>>>>> f7b052b552144a05fc49986390cdff9175e72015
+>>>>>>> e77f5fdc5eecc76df3be85d2bfd200a915e330ce
 ---
+<<<<<<< HEAD
+2015/10/03 04:48:21 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tinghepxe` `t` WHERE ma_tin =  LIMIT 1.
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (145)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (96)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 04:48:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tinghepxe` `t` WHERE ma_tin =  LIMIT 1' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(145): CActiveRecord->find('ma_tin = ')
+#4 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(96): Khach_hangController->__suaTinGhepXe(NULL)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionSua_tin_dang()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('sua_tin_dang')
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/sua_...')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#13 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#17 {main}
+REQUEST_URI=/xechieuve/khach_hang/sua_tin_dang
+---
+2015/10/03 05:31:56 [error] [php] Missing argument 2 for CDbDataReader::bindColumn(), called in C:\xampp\htdocs\xechieuve\protected\components\UserIdentity.php on line 25 and defined (C:\xampp\htdocs\xechieuve\framework\db\CDbDataReader.php:65)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#2 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CInlineValidator->validate()
+#3 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): LoginForm->validate()
+#4 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(197): CForm->validate()
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionDang_nhap()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#13 unknown(0): WebApplicationEndBehavior->runEnd()
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang-nhap
+in C:\xampp\htdocs\xechieuve\protected\components\UserIdentity.php (25)
+in C:\xampp\htdocs\xechieuve\protected\models\LoginForm.php (54)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (197)
+2015/10/03 05:38:28 [error] [php] Missing argument 3 for CUserIdentity::__construct(), called in C:\xampp\htdocs\xechieuve\protected\models\LoginForm.php on line 53 and defined (C:\xampp\htdocs\xechieuve\framework\web\auth\CUserIdentity.php:44)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CInlineValidator->validateAttribute()
+#1 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CInlineValidator->validate()
+#2 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): LoginForm->validate()
+#3 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(197): CForm->validate()
+#4 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionDang_nhap()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#12 unknown(0): WebApplicationEndBehavior->runEnd()
+#13 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang-nhap
+in C:\xampp\htdocs\xechieuve\protected\models\LoginForm.php (53)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (197)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 05:44:14 [error] [php] include(img.php): failed to open stream: No such file or directory (C:\xampp\htdocs\xechieuve\framework\YiiBase.php:432)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\xampp\htdocs\xechieuve\framework\YiiBase.php(303): class_exists()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWidgetFactory.php(146): import()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(180): Khach_hangController->createWidget()
+#5 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(240): Khach_hangController->widget()
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(194): CFormInputElement->renderInput()
+#7 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(543): CFormInputElement->render()
+#8 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(505): CForm->renderElement()
+#9 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(489): CForm->renderElements()
+#10 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(405): CForm->renderBody()
+#11 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(61): CForm->render()
+#12 C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php(4): CForm->__toString()
+#13 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require()
+#14 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): Khach_hangController->renderInternal()
+#15 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Khach_hangController->renderFile()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Khach_hangController->renderPartial()
+#17 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(218): Khach_hangController->render()
+#18 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#19 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#21 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#22 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#23 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#26 unknown(0): WebApplicationEndBehavior->runEnd()
+#27 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#28 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#29 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php (4)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (218)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 06:22:48 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '``
+FROM `khachhang`
+WHERE ten_dang_nhap=ngocphan' at line 1. The SQL statement executed was: SELECT ``ma_khach_hang``
+FROM `khachhang`
+WHERE ten_dang_nhap=ngocphan.
+in C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php (174)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (211)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 06:22:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '``
+FROM `khachhang`
+WHERE ten_dang_nhap=ngocphan' at line 1. The SQL statement executed was: SELECT ``ma_khach_hang``
+FROM `khachhang`
+WHERE ten_dang_nhap=ngocphan' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php(174): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(211): Khachhang->getidkhach()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 06:25:00 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE ten_dang_nhap=ngocphan.
+in C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php (174)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (211)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 06:25:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE ten_dang_nhap=ngocphan' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php(174): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(211): Khachhang->getidkhach()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 06:25:26 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `ten_dang_nhap`=ngocphan.
+in C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php (174)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (211)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 06:25:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `ten_dang_nhap`=ngocphan' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php(174): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(211): Khachhang->getidkhach()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 06:25:54 [error] [php] Array to string conversion (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:212)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (212)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/03 06:26:47 [error] [php] Array to string conversion (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:212)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (212)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/03 06:29:37 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''ngocphan''' at line 3. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `password` = 'ngocphan''.
+in C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php (174)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (211)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 06:29:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''ngocphan''' at line 3. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `password` = 'ngocphan''' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php(174): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(211): Khachhang->getidkhach()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 06:30:49 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `password` = ngocphan.
+in C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php (174)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (211)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 06:30:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `password` = ngocphan' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php(174): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(211): Khachhang->getidkhach()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 06:31:13 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `password` = ngocphan.
+in C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php (174)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (211)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 06:31:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ngocphan' in 'where clause'. The SQL statement executed was: SELECT `ma_khach_hang`
+FROM `khachhang`
+WHERE `password` = ngocphan' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php(174): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(211): Khachhang->getidkhach()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#11 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#15 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 06:38:15 [error] [php] Array to string conversion (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:212)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (212)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/03 10:27:56 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tinghepxe` `t` WHERE ma_tin =  LIMIT 1.
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (145)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (96)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 10:27:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `tinghepxe` `t` WHERE ma_tin =  LIMIT 1' in C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(145): CActiveRecord->find('ma_tin = ')
+#4 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(96): Khach_hangController->__suaTinGhepXe(NULL)
+#5 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionSua_tin_dang()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('sua_tin_dang')
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/sua_...')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#13 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#14 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#17 {main}
+REQUEST_URI=/xechieuve/khach_hang/sua_tin_dang
+---
+<<<<<<< HEAD
+2015/10/03 10:47:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avatar8b9b0e0a1b9d3d2690f2c365f8309170album-hinh-nen-1.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/avatar8b...')
+=======
 <<<<<<< HEAD
 2015/10/03 05:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff2".' in D:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
@@ -27805,6 +28234,7 @@ Stack trace:
 #7 {main}
 REQUEST_URI=/xechieuve/lien-he
 HTTP_REFERER=http://127.0.0.1:8080/xechieuve/rao-vat
+>>>>>>> d3d57b73680f1340f367159aefb9d28d57b150ca
 =======
 2015/10/03 06:25:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "nhaptien".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
@@ -27968,6 +28398,7 @@ REQUEST_URI=/xechieuve/khach_hang/tin_da_dang
 2015/10/03 12:07:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> e83a917414abb3f85320dc8604a263f553b0370d
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -27975,12 +28406,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/images/avatar8b9b0e0a1b9d3d2690f2c365f8309170album-hinh-nen-1.jpg
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 10:48:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avatar8b9b0e0a1b9d3d2690f2c365f8309170album-hinh-nen-1.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/avatar8b...')
+=======
 REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://localhost:8888/xechieuve/tin-tuc
 ---
 2015/10/03 12:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> e83a917414abb3f85320dc8604a263f553b0370d
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -27988,12 +28428,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/images/avatar8b9b0e0a1b9d3d2690f2c365f8309170album-hinh-nen-1.jpg
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 10:49:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avatar8b9b0e0a1b9d3d2690f2c365f8309170album-hinh-nen-1.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/avatar8b...')
+=======
 REQUEST_URI=/xechieuve/tro-giup
 HTTP_REFERER=http://localhost:8888/xechieuve/tin-tuc
 ---
 2015/10/03 12:15:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tin-da-dang/tin-rao-vat".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tin-da-dang/tin...')
+>>>>>>> e83a917414abb3f85320dc8604a263f553b0370d
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28001,6 +28450,63 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/images/avatar8b9b0e0a1b9d3d2690f2c365f8309170album-hinh-nen-1.jpg
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 10:53:35 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:212)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (212)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/03 11:42:25 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:212)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (212)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/03 12:52:31 [error] [php] require(C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\__formcapnhatpass.php): failed to open stream: No such file or directory (C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php:141)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(178): CForm->__construct()
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(211): CForm->__construct()
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#10 unknown(0): WebApplicationEndBehavior->runEnd()
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (211)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+=======
 REQUEST_URI=/xechieuve/tin-da-dang/tin-rao-vat/
 ---
 2015/10/03 12:17:04 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4. The SQL statement executed was: SELECT tinraovat.ma_tin ,date(ngay_dang) as ngay_dang, tieu_de_tin ,nguoi_lien_lac , so_dien_thoai,noi_dung_tin,anh
@@ -28033,6 +28539,66 @@ Stack trace:
 #15 {main}
 REQUEST_URI=/xechieuve/rao_vat/xem_chi_tiet
 ---
+<<<<<<< HEAD
+>>>>>>> e83a917414abb3f85320dc8604a263f553b0370d
+2015/10/03 13:23:35 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(229): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 13:25:04 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(229): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 13:29:47 [error] [php] Undefined variable: Kh (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:230)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (230)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/03 13:31:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "$anh".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('$anh')
+=======
 2015/10/03 16:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff2".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
@@ -28049,6 +28615,7 @@ HTTP_REFERER=http://localhost:8888/xechieuve/css/bootstrap.min.css
 2015/10/03 16:20:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/glyphicons-halflings-regular.woff2".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/glyphicon...')
+>>>>>>> 03b78d1f9038b8f480d2ebb0dfa3dc36012dbafb
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28056,6 +28623,382 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
+REQUEST_URI=/xechieuve/$anh
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 13:33:33 [error] [php] Undefined variable: anh (C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Khach_hangController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Khach_hangController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(237): Khach_hangController->render()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php (5)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (237)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/03 13:34:07 [error] [exception.CException] exception 'CException' with message 'Property "CCompareValidator.confirmnewPassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(177): CComponent->__set('confirmnewPassw...', 'confirmPassword')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(287): CValidator::createValidator('compare', Object(Khachhang), 'newPassword', Array)
+#2 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(547): CModel->getValidators()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(320): CModel->getSafeAttributeNames()
+#5 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(274): CModel->isAttributeSafe('anh_dai_dien')
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(157): CFormInputElement->evaluateVisible()
+#7 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(536): CFormElement->getVisible()
+#8 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(505): CForm->renderElement(Object(CFormInputElement))
+#9 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(489): CForm->renderElements()
+#10 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(405): CForm->renderBody()
+#11 C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php(7): CForm->render()
+#12 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#15 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('chinh_sua_thong...', Array, true)
+#16 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(237): CController->render('chinh_sua_thong...', Array)
+#17 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#18 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#22 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#23 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#25 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#26 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#27 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#28 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#29 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 15:57:14 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(226): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/03 19:27:57 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(230): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 04:51:52 [error] [php] Undefined variable: form2 (C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Khach_hangController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Khach_hangController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(256): Khach_hangController->render()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php (9)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (256)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/04 10:25:51 [error] [php] Undefined variable: khachHang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:227)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (227)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/04 11:04:59 [error] [exception.CException] exception 'CException' with message 'Khachhang has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\xampp\htdocs\xechieuve\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(547): CModel->getValidators()
+#2 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(320): CModel->getSafeAttributeNames()
+#3 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(274): CModel->isAttributeSafe('anh_dai_dien')
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CFormElement.php(157): CFormInputElement->evaluateVisible()
+#5 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(536): CFormElement->getVisible()
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(505): CForm->renderElement(Object(CFormInputElement))
+#7 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(489): CForm->renderElements()
+#8 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(405): CForm->renderBody()
+#9 C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php(7): CForm->render()
+#10 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('chinh_sua_thong...', Array, true)
+#14 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(256): CController->render('chinh_sua_thong...', Array)
+#15 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#16 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#20 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#21 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#23 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#24 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#25 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#26 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#27 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 11:13:02 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.anh" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(161): CComponent->__set('anh', '3d89ef69c5cb369...')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(241): CActiveRecord->__set('anh', '3d89ef69c5cb369...')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 11:14:44 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.anh" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(161): CComponent->__set('anh', '68b7ee3690a5c38...')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(241): CActiveRecord->__set('anh', '68b7ee3690a5c38...')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 11:17:31 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.anh" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(161): CComponent->__set('anh', '43705d33a5ac319...')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(241): CActiveRecord->__set('anh', '43705d33a5ac319...')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 11:23:40 [error] [php] Undefined variable: form2 (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:248)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (248)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/04 11:36:04 [error] [exception.CException] exception 'CException' with message 'Property "Khach_hangController.oldPassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\protected\models\Khachhang.php(89): CComponent->__get('oldPassword')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(250): Khachhang->checkpass('e10adc3949ba59a...')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 12:07:06 [error] [php] Undefined index: oldPassword (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:251)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (251)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/04 12:07:33 [error] [php] Undefined index: password (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:251)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (251)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/04 12:50:08 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(227): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 12:52:27 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(227): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/04 12:53:41 [error] [php] Undefined index: Khachhang_oldPassword (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:253)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (253)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/04 13:04:21 [warning] [application] Failed to set unsafe attribute "oldPassword" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (251)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/04 13:04:21 [warning] [application] Failed to set unsafe attribute "newconfirmPassword" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (251)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/04 16:49:33 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.abc" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('abc')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(255): CActiveRecord->__get('abc')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+=======
 REQUEST_URI=/xechieuve/fonts/glyphicons-halflings-regular.woff2
 HTTP_REFERER=http://localhost:8888/xechieuve/css/bootstrap.min.css
 ---
@@ -28082,6 +29025,7 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/fonts/glyphicons-halflings-regular.ttf
 HTTP_REFERER=http://localhost:8888/xechieuve/css/bootstrap.min.css
 ---
@@ -28124,85 +29068,15 @@ Stack trace:
 REQUEST_URI=/xechieuve/fonts/glyphicons-halflings-regular.ttf
 HTTP_REFERER=http://localhost:8888/xechieuve/css/bootstrap.min.css
 ---
-2015/10/04 03:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hinh-nen-phong-canh-full-hd-dep.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
-Stack trace:
-#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('hinh-nen-phong-...')
-#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
-#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
-#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
-#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
-#7 {main}
-REQUEST_URI=/xechieuve/hinh-nen-phong-canh-full-hd-dep.jpg
-HTTP_REFERER=http://localhost:8888/xechieuve/admin.php
----
-2015/10/04 03:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hinh-nen-phong-canh-full-hd-dep.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
-Stack trace:
-#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('hinh-nen-phong-...')
-#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
-#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
-#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
-#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
-#7 {main}
-REQUEST_URI=/xechieuve/hinh-nen-phong-canh-full-hd-dep.jpg
-HTTP_REFERER=http://localhost:8888/xechieuve/admin.php?
----
-2015/10/04 04:02:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
-Stack trace:
-#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/tin_tuc')
-#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
-#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
-#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
-#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
-#7 {main}
-REQUEST_URI=/xechieuve/admin/tin_tuc
----
-2015/10/04 04:03:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin$".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
-Stack trace:
-#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('admin$')
-#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
-#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
-#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
-#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
-#7 {main}
-REQUEST_URI=/xechieuve/admin$
----
-2015/10/04 04:03:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator$".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
-Stack trace:
-#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator$')
-#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
-#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
-#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
-#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
-#7 {main}
-REQUEST_URI=/xechieuve/administrator$
----
-2015/10/04 11:20:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
-Stack trace:
-#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
-#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
-#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
-#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
-#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
-#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
-#7 {main}
-REQUEST_URI=/xechieuve/tro-giup
-HTTP_REFERER=http://localhost:8888/xechieuve/sua-tin/tran-van-hoang-dang-tin-rao-vat/4
->>>>>>> 03b78d1f9038b8f480d2ebb0dfa3dc36012dbafb
----
+<<<<<<< HEAD
 2015/10/05 15:56:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slide/2.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/slide/2....')
+=======
+2015/10/04 03:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hinh-nen-phong-canh-full-hd-dep.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('hinh-nen-phong-...')
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28210,12 +29084,21 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/images/slide/2.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
 2015/10/05 15:56:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slide/4.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/slide/4....')
+=======
+REQUEST_URI=/xechieuve/hinh-nen-phong-canh-full-hd-dep.jpg
+HTTP_REFERER=http://localhost:8888/xechieuve/admin.php
+---
+2015/10/04 03:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "hinh-nen-phong-canh-full-hd-dep.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('hinh-nen-phong-...')
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28223,12 +29106,26 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/images/slide/4.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
 2015/10/05 15:56:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slide/3.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/slide/3....')
+=======
+REQUEST_URI=/xechieuve/hinh-nen-phong-canh-full-hd-dep.jpg
+HTTP_REFERER=http://localhost:8888/xechieuve/admin.php?
+=======
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/sua-tin/tran-van-hoang-dang-tin-rao-vat/4
+>>>>>>> 03b78d1f9038b8f480d2ebb0dfa3dc36012dbafb
+>>>>>>> d3d57b73680f1340f367159aefb9d28d57b150ca
+---
+2015/10/04 04:02:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/tin_tuc".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/tin_tuc')
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28236,12 +29133,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/images/slide/3.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
 2015/10/05 15:56:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slide/1.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/slide/1....')
+=======
+REQUEST_URI=/xechieuve/admin/tin_tuc
+---
+2015/10/04 04:03:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin$".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('admin$')
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28249,12 +29154,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/images/slide/1.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
 2015/10/05 15:58:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slide/3.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/slide/3....')
+=======
+REQUEST_URI=/xechieuve/admin$
+---
+2015/10/04 04:03:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "administrator$".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('administrator$')
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28262,12 +29175,20 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/images/slide/3.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/dang-nhap
 ---
 2015/10/05 15:58:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slide/4.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/slide/4....')
+=======
+REQUEST_URI=/xechieuve/administrator$
+---
+2015/10/04 11:20:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28275,12 +29196,22 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/images/slide/4.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/dang-nhap
 ---
 2015/10/05 15:58:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/slide/1.jpg".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/slide/1....')
+=======
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/sua-tin/tran-van-hoang-dang-tin-rao-vat/4
+>>>>>>> 03b78d1f9038b8f480d2ebb0dfa3dc36012dbafb
+---
+2015/10/04 17:02:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f
 #1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
 #3 [internal function]: WebApplicationEndBehavior->runEnd('user')
@@ -28288,6 +29219,7 @@ Stack trace:
 #5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
 #6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
 #7 {main}
+<<<<<<< HEAD
 REQUEST_URI=/xechieuve/images/slide/1.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/dang-nhap
 ---
@@ -33244,3 +34176,436 @@ Stack trace:
 REQUEST_URI=/xechieuve/images/slide/1.jpg
 HTTP_REFERER=http://localhost:8888/xechieuve/
 ---
+=======
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost/xechieuve/tin-tuc
+---
+2015/10/06 04:11:12 [error] [php] Undefined variable: khachHang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:193)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang-ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (193)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:11:51 [error] [php] Undefined variable: khachHang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:193)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang-ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (193)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:11:54 [error] [php] Undefined variable: khachHang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:193)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang-ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (193)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:12:09 [error] [php] Undefined variable: khachHang (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:193)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/dang-ky
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (193)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:55:56 [warning] [application] Failed to set unsafe attribute "anh_dai_dien" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (241)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:55:56 [warning] [application] Failed to set unsafe attribute "ten_khach_hang" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (241)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:55:56 [warning] [application] Failed to set unsafe attribute "ten_dang_nhap" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (241)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:55:56 [warning] [application] Failed to set unsafe attribute "email" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (241)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 04:55:56 [warning] [application] Failed to set unsafe attribute "so_dien_thoai" of "Khachhang".
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (241)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 05:19:46 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(237): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 05:19:53 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(237): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 05:27:58 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.oldPassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('oldPassword')
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('oldPassword')
+#2 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CRequiredValidator->validateAttribute(Object(Khachhang), 'oldPassword')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(Khachhang), NULL)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): CModel->validate()
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(240): CForm->validate()
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 05:31:48 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.oldPassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('oldPassword')
+#1 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('oldPassword')
+#2 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Khachhang), 'oldPassword')
+#3 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(1807): CHtml::activeInputField('password', Object(Khachhang), 'oldPassword', Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(232): CHtml::activePasswordField(Object(Khachhang), 'oldPassword', Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(194): CFormInputElement->renderInput()
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(543): CFormInputElement->render()
+#7 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(505): CForm->renderElement(Object(CFormInputElement))
+#8 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(489): CForm->renderElements()
+#9 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(405): CForm->renderBody()
+#10 C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php(9): CForm->render()
+#11 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('chinh_sua_thong...', Array, true)
+#15 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(269): CController->render('chinh_sua_thong...', Array)
+#16 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#17 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#21 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#22 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#24 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#25 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#26 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#27 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#28 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 05:46:08 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.oldpassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('oldpassword')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(262): CActiveRecord->__get('oldpassword')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 05:47:36 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.oldpassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('oldpassword')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(262): CActiveRecord->__get('oldpassword')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 05:48:58 [error] [php] Undefined index: oldpassword (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:262)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (262)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 10:12:29 [error] [php] Undefined index: oldpassword (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:262)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (262)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 10:13:14 [error] [php] Undefined index: oldPassword (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:262)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (262)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 10:14:57 [error] [php] Undefined index: oldPassword (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:263)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (263)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 10:16:20 [error] [php] Undefined index: password (C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php:263)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#2 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#6 unknown(0): WebApplicationEndBehavior->runEnd()
+#7 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#8 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#9 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (263)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+in C:\xampp\htdocs\xechieuve\index.php (11)
+2015/10/06 10:18:21 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.md5(oldPassword)" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('md5(oldPassword...')
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CCompareValidator.php(84): CActiveRecord->__get('md5(oldPassword...')
+#2 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CCompareValidator->validateAttribute(Object(Khachhang), 'md5(oldPassword...')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(Khachhang), NULL)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): CModel->validate()
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(260): CForm->validate()
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 10:18:41 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.md5("oldPassword")" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('md5("oldPasswor...')
+#1 C:\xampp\htdocs\xechieuve\framework\validators\CCompareValidator.php(84): CActiveRecord->__get('md5("oldPasswor...')
+#2 C:\xampp\htdocs\xechieuve\framework\validators\CValidator.php(201): CCompareValidator->validateAttribute(Object(Khachhang), 'md5("oldPasswor...')
+#3 C:\xampp\htdocs\xechieuve\framework\base\CModel.php(159): CValidator->validate(Object(Khachhang), NULL)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(234): CModel->validate()
+#5 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(260): CForm->validate()
+#6 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#11 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#12 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#14 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#15 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#16 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#17 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#18 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 11:04:58 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(226): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 11:20:09 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.userId" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\auth\CWebUser.php(146): CComponent->__get('userId')
+#1 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(226): CWebUser->__get('userId')
+#2 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#3 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#8 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#10 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#11 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#12 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#14 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+---
+2015/10/06 11:46:06 [error] [php] Use of undefined constant ok - assumed 'ok' (C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php:7)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Khach_hangController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Khach_hangController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(262): Khach_hangController->render()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php (7)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (262)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+2015/10/06 12:01:37 [error] [php] Undefined variable: form1 (C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): Khach_hangController->renderFile()
+#1 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): Khach_hangController->renderPartial()
+#2 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(260): Khach_hangController->render()
+#3 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#4 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): Khach_hangController->runAction()
+#6 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): Khach_hangController->runActionWithFilters()
+#7 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): Khach_hangController->run()
+#8 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CWebApplication->run()
+#11 unknown(0): WebApplicationEndBehavior->runEnd()
+#12 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array()
+#13 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->__call()
+#14 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd()
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+in C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php (9)
+in C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php (260)
+in C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php (24)
+>>>>>>> 182268a6b087a45388ce43e6d5402f6c3bbf626f

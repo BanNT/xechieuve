@@ -19,7 +19,7 @@ class UserIdentity extends CUserIdentity {
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
         } else {
             $this->setState('userId', $record->ma_khach_hang);
-            $this->setState('name', $record->ten_khach_hang);
+            $this->setState('name', $record->ten_dang_nhap);
             $this->errorCode = self::ERROR_NONE;
         }
         

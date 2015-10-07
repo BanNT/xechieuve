@@ -53,7 +53,7 @@ return array(
         '</div>',
         '<div class="row">',
         '<div class="col-xs-12">',
-        'diachi' => array(
+        'dia_chi' => array(
                     'type' => 'dropdownlist',
                     'items' => Province::listProvinces(),
                     'class' => 'form-input',

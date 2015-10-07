@@ -153,10 +153,7 @@ class Khach_hangController extends Controller {
                 }
 
                 Tinraovat::updateTinRV(
-                        $tinraovat->ma_loai_tin_rv,
-                        $tinraovat->gia_rao_vat,
-                        ($tinraovat->anh != null) ? $tinraovat->anh : $anh,
-                        $tinraovat->ma_tin
+                        $tinraovat->ma_loai_tin_rv, $tinraovat->gia_rao_vat, ($tinraovat->anh != null) ? $tinraovat->anh : $anh, $tinraovat->ma_tin
                 );
             }
         }
@@ -192,11 +189,31 @@ class Khach_hangController extends Controller {
                 );
             }
         }
-
         //render view
         $this->render('sua_tin', [
             'form' => $form
         ]);
+    }
+
+    /*  Đăng kí người dùng */
+
+    public function actionDang_ky() {
+        $khachHang = new Khachhang();
+        $form = new CForm('application.views.user.khach_hang._formdangky', $khachHang);
+        $khachHang->setScenario('Dang_ky');
+        if ($form->submitted('dangky') && $form->validate()) {
+            $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
+            if ($image) {
+                $newName = md5(microtime(true) . 'xechieuve') . $image->name;
+                $khachHang->anh_dai_dien = $newName;
+                $image->saveAs(Khachhang::AVARTAR_DIR . $newName);
+            }
+            $khachHang->password = md5($khachHang->password);
+            $khachHang->save(false);
+            return;
+            $this->redirect(Yii::app()->homeUrl);
+        }
+        $this->render('dang_ky', array('form' => $form));
     }
 
     /**
@@ -216,6 +233,47 @@ class Khach_hangController extends Controller {
         Yii::app()->user->logout();
         Yii::app()->session->clear();
         $this->redirect(Yii::app()->homeUrl);
+    }
+
+    /* Sửa thông tin người dùng */
+
+    public function actionChinh_sua_thong_tin() {
+        if (Yii::app()->user->name == 'Guest') {
+            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
+        }
+        $form = new CForm('application.views.user.khach_hang._formChinhsuathongtin');
+        $khachHang = $form->model = $Kh = Khachhang::model()->findByPk(Yii::app()->user->userId);
+        $khachHang->setScenario('update');
+        $anh = $Kh->anh_dai_dien;
+        if ($form->submitted('chinhsua') && $form->validate()) {
+            $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
+            if ($image) {
+                //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
+                if ($anh) {
+                    unlink(Yii::app()->basePath . "/../" . Khachhang::AVARTAR_DIR . $anh);
+                }
+
+                $newName = md5(microtime(true) . 'xechieuve') . $image->name;
+                $khachHang->anh_dai_dien = $newName;
+                $image->saveAs(Khachhang::AVARTAR_DIR . $newName);
+            } else {
+                $khachHang->anh_dai_dien = $anh;
+            }
+            $khachHang->save(false);
+        }
+        $form2 = new CForm('application.views.user.khach_hang._formcapnhatpass');
+        $khachHang2 = $form2->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
+        $khachHang2->setScenario('updatepass');
+        if ($form2->submitted('doimatkhau') && $form2->validate()) {
+            Khachhang::updatepassword(md5($khachHang2["newPassword"]));
+            
+        }
+
+        $this->render('chinh_sua_thong_tin', array(
+            'form' => $form,
+            'anh' => $anh,
+            'form2' => $form2
+        ));
     }
 
 }

@@ -32,14 +32,16 @@ return CMap::mergeArray(
                         'khach-tim-xe/loc-theo-xe/<title>/<id:\d+>' => 'khach_tim_xe/loc_theo_xe',
                         'xe-tim-khach/loc-theo-xe/<title>/<id:\d+>' => 'xe_tim_khach/loc_theo_xe',
                         //url đăng ký tài khoản
-                        'dang-ky' => 'dang_ky',
-                        //url controller khách hàng
-                        'dang-nhap' => 'khach_hang/dang_nhap',
-                        'dang-xuat' => 'khach_hang/dang_xuat',
-                        'tin-da-dang/<title>/<id:\d+>' => 'khach_hang/tin_da_dang',
-                        'lam-moi-tin-dang/<title>/<id:\d+>' => 'khach_hang/lam_moi_tin',
-                        'xoa-tin/<title>/<id:\d+>' => 'khach_hang/xoa_tin_da_dang',
-                        'sua-tin/<title>/<id:\d+>' => 'khach_hang/sua_tin_dang',
+                        'dang-ky' => 'khach_hang/dang_ky',
+                        //url chỉnh sửa thông tin khách
+                        'sua-thong-tin-khach'=>'khach_hang/chinh_sua_thong_tin',
+                        //url quản lý của khách hàng
+                        'dang-nhap'=>'khach_hang/dang_nhap',
+                         'dang-xuat'=>'khach_hang/dang_xuat',
+                        'tin-da-dang/<title>/<id:\d+>'=>'khach_hang/tin_da_dang',
+                        'lam-moi-tin-dang/<title>/<id:\d+>'=>'khach_hang/lam_moi_tin',
+                        'xoa-tin/<title>/<id:\d+>'=>'khach_hang/xoa_tin_da_dang',
+                        'sua-tin/<title>/<id:\d+>'=>'khach_hang/sua_tin_dang',
                         //url mặc định của yii
                         '<controller:\w+>/<id:\d+>' => '<controller>/view',
                         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
