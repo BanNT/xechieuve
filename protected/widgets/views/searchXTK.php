@@ -14,7 +14,18 @@
         <option value="-1">Chọn nơi đến</option>
         <?php $this->widget('application.widgets.provinces'); ?>
     </select>
-    <input name="ngay-khoi-hanh" type="date"/>
+    <?php
+    $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+        'name' => 'ngay-khoi-hanh',
+        'options' => array(
+            'showAnim' => 'slideDown', //'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
+            'changeMonth' => true,
+            'changeYear' => true,
+            'minDate' => '2015-01-01', // minimum date
+            'dateFormat' => 'yy-mm-dd'
+        ),
+    ));
+    ?>
 
     <?php
     echo CHtml::ajaxSubmitButton('Tìm kiếm', Yii::app()->request->baseUrl . '/xe_tim_khach/tim_kiem_xe', array(

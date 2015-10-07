@@ -8,7 +8,7 @@
         <meta property="og:locale" content="vi_VN" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <!-- Bootstrap -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,7 @@
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5shiv.min.js"></script>
           <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/respond.min.js"></script>
         <![endif]-->
-        
+
     </head>
     <body>
         <div class="container">
@@ -54,7 +54,7 @@
                             <div class="col-md-9">
                                 <div class="row">
                                     <section id="search">
-                                         <?php $this->widget('application.widgets.searchSelect'); ?>
+                                        <?php $this->widget('application.widgets.searchSelect'); ?>
                                     </section><!--end search-->
                                     <section id="main-content">
                                         <section id="slide">
@@ -97,8 +97,8 @@
             </div><!--end wrapper-->
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </body>
 </html>

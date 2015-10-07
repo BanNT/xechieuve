@@ -5,7 +5,7 @@ class Tin_tucController extends Controller {
     public function actionIndex() {
 
         $tintuc = Yii::app()->db->createCommand()
-                ->select('ma_tin,tieu_de,noi_dung,anh,date(ngay_dang) as ngay_dang, tom_tat')
+                ->select('ma_tin,tieu_de,noi_dung,anh,ngay_dang, tom_tat')
                 ->from('tintuc')
                 ->order('ngay_dang DESC')
                 ->queryAll();
@@ -22,7 +22,7 @@ class Tin_tucController extends Controller {
     public function actionXem_chi_tiet() {
         $matin = Yii::app()->request->getParam('id');
         $tintuc =Yii::app()->db->createCommand()
-                        ->select('ma_tin ,date(ngay_dang) as ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
+                        ->select('ma_tin ,ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
                         ->from('tintuc')
                         ->where("ma_tin=$matin")
                         ->queryRow();
