@@ -21,8 +21,7 @@
             'showAnim' => 'slideDown', //'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
             'changeMonth' => true,
             'changeYear' => true,
-            'minDate' => '2000-01-01', // minimum date
-            'maxDate' => '2015-09-31',
+            'minDate' => '2015-01-01', // minimum date
             'dateFormat' => 'yy-mm-dd'
         ),
     ));
