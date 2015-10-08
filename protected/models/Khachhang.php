@@ -85,7 +85,7 @@ class Khachhang extends CActiveRecord {
             array('email', 'unique', 'message' => '{attribute} đã tồn tại '), 
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password, email, so_dien_thoai, so_du_tai_khoan, anh_dai_dien', 'safe', 'on' => 'search'),
+            array('ma_khach_hang, ten_khach_hang, email, so_dien_thoai, so_du_tai_khoan', 'safe', 'on' => 'search'),
             
         );
     }
@@ -167,17 +167,15 @@ class Khachhang extends CActiveRecord {
 
         $criteria->compare('ma_khach_hang', $this->ma_khach_hang);
         $criteria->compare('ten_khach_hang', $this->ten_khach_hang, true);
-        $criteria->compare('ten_dang_nhap', $this->ten_dang_nhap, true);
-        $criteria->compare('password', $this->password, true);
         $criteria->compare('email', $this->email, true);
         $criteria->compare('so_dien_thoai', $this->so_dien_thoai, true);
         $criteria->compare('so_du_tai_khoan', $this->so_du_tai_khoan);
-        $criteria->compare('anh_dai_dien', $this->anh_dai_dien, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
     }
+    
     public function updatepassword($pass) {
         $makhach=Yii::app()->user->userId;
         $sql = "UPDATE " . Khachhang::model()->tableName()

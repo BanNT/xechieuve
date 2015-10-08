@@ -4,9 +4,7 @@ $provinces = Province::listProvinces();
 ?>
 <article>
     <header>
-        <h3 style="border-bottom: 1px solid #ccc; padding: 10px 0;">
-            <?php echo CHtml::encode($tintuc['tieu_de']); ?>
-        </h3>
+        <h3><?php echo CHtml::encode($tintuc['tieu_de']); ?></h3>
     </header>
     <section>
         <p><i>Ngày đăng: <?php echo Chtml::encode($tintuc['ngay_dang']); ?></i></p>

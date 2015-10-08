@@ -270,16 +270,11 @@ body,ul,h4{
     margin-left: 10px;    
 
 }
+
 #dangki .errorMessage{
-    color: red;
-    margin-top: 15px;
     margin-left: 280px;
 }
-.errorMessage{
-    color: red;
-    margin-top: 15px;
-    margin-left: 140px;
-}
+
 
 #dangtinrv{
     margin-bottom: 20px;
@@ -375,6 +370,11 @@ body,ul,h4{
     margin-top: 5px;
 }
 /*----------------------------------------------------------------------------*/
+
+.errorMessage{
+    margin-top: 15px;
+    color: red;
+}
 
 .modal-content
 {
