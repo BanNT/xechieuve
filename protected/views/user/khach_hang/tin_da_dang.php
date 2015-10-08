@@ -4,9 +4,15 @@ if (!$listTin) {
     echo '<h3>' . CHtml::encode('Dữ liệu không tồn tại!') . '</h3>';
     return;
 }
+
+if ($message) {
+    $this->widget('application.widgets.modalShowMessage', array(
+        'message' => $message
+    ));
+}
 ?>
 <section id="tin-da-dang">
-    <div class="pribox">Tin đã đăng: <?php echo $message ?></div>
+    <div class="pribox">Tin đã đăng:</div>
     <div class="table-responsive">
         <table class="table table-bordered table-hover text-center">
             <thead>

@@ -418,3 +418,8 @@ body,ul,h4{
     margin-left: 200px;
     font-size: 20px;
 }
+
+///style admin
+#adminlistTT {
+    text-align: center;
+}

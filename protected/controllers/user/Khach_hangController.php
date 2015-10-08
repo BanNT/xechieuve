@@ -10,22 +10,29 @@ class Khach_hangController extends Controller {
      * Số bản ghi tối đa hiển thị tại mục tin đã đăng của khách hàng
      */
     const LIMIT_RECORD = 20;
-
+    
+    /**
+     * @var string
+     */
+    private $__message;
     /**
      * Hiển thị những tin đã đăng của khách hàng dựa theo mã loại tin
      */
-    public function actionTin_da_dang($maLoaiTin = null, $currentPage = 1, $message = '') {
+    public function actionTin_da_dang($maLoaiTin = null, $currentPage = 1) {
         if (Yii::app()->user->name == 'Guest') {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
 
+        /**
+         * Nếu không tồn tại mã loại tin trong $_GET và cả session thì sẽ redirect
+         */
         if (!$maLoaiTin) {
             $maLoaiTin = Yii::app()->session['maLoaiTin'] = Yii::app()->request->getParam('id');
             if (!$maLoaiTin) {
                 $this->redirect(Yii::app()->homeUrl);
             }
         }
-
+        
         $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMIT_RECORD, ' ma_loai_tin = ' . $maLoaiTin . ' AND ma_khach_hang =' . Yii::app()->user->userId);
         if ($maLoaiTin == Tinraovat::CODE_RV) {
             $tinraovat = new Tinraovat();
@@ -38,7 +45,7 @@ class Khach_hangController extends Controller {
         $data = array(
             'listTin' => $listTin,
             'paginator' => $paginator,
-            'message' => $message,
+            'message' => $this->__message,
             'urlPaginator' => 'khach_hang/pageTDD?page=',
             'ajaxElementId' => '#tin-da-dang'
         );
@@ -63,8 +70,12 @@ class Khach_hangController extends Controller {
      * tại để tin hiển thị lên trên và cũng bị trừ tiền như khi đăng tin mới
      */
     public function actionLam_moi_tin() {
+        if (Yii::app()->user->name == 'Guest') {
+            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
+        }
+        
         $maTin = Yii::app()->request->getParam('id');
-        $message = '';
+        $__message = '';
 
         //Kiểm tra xem tin này có phải do khách hàng này đăng không
         if (!Tinkhachhang::model()->checkBelongToUser($maTin)) {
@@ -72,11 +83,11 @@ class Khach_hangController extends Controller {
         }
 
         if (!Tinkhachhang::model()->lamMoi($maTin)) {
-            $message = '<span style="color:yellow">Tài khoản của bạn không đủ để làm mới tin này</span>';
+            $this->__message = 'Tài khoản của bạn không đủ để làm mới tin này';
         }
 
         //Chuyển đến trang danh sách tin đã đăng
-        $this->actionTin_da_dang(Yii::app()->session['maLoaiTin'], 1, $message);
+        $this->actionTin_da_dang(Yii::app()->session['maLoaiTin'], 1);
     }
 
     /**
@@ -169,7 +180,12 @@ class Khach_hangController extends Controller {
             //update tin khách hàng sau đó là tin ghép xe
             if ($tinkhachhang->save(false)) {
                 Tinghepxe::updateTinGhepXe(
-                        $tinghepxe->dia_chi_di, $tinghepxe->dia_chi_den, $tinghepxe->noi_den_tinh, $tinghepxe->ma_loai_xe_ghep, $tinghepxe->ngay_khoi_hanh, $tinghepxe->ma_tin
+                    $tinghepxe->dia_chi_di,
+                    $tinghepxe->dia_chi_den,
+                    $tinghepxe->noi_den_tinh,
+                    $tinghepxe->ma_loai_xe_ghep,
+                    $tinghepxe->ngay_khoi_hanh,
+                    $tinghepxe->ma_tin
                 );
             }
         }

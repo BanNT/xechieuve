@@ -11,6 +11,7 @@ return CMap::mergeArray(
                     'urlFormat' => 'path',
                     'showScriptName' => FALSE,
                     'rules' => array(
+                        
                         //url mặc định của yii
                         '<controller:\w+>/<id:\d+>' => '<controller>/view',
                         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',

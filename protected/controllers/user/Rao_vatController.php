@@ -9,7 +9,11 @@ class Rao_vatController extends Controller {
      * Số bản ghi rao vặt tối đa được hiển thị ở trang index
      */
     const LIMITED_RECORD_RVI = 10;
-
+    
+    /**
+     * @var string
+     */
+    private $__message;
     /**
      * Số bản ghi rao vặt tối đa được hiên thị ở trang đăng tin rao vặt
      */
@@ -27,8 +31,6 @@ class Rao_vatController extends Controller {
         $tinraovat = new Tinraovat();
         $paginatorRV = new Paginate($currentPage, new Tinkhachhang(), $limit, ' ma_loai_tin = ' . Tinraovat::CODE_RV . $condition);
         $listTinRV = $tinraovat->listTinRV($paginatorRV, $condition);
-
-
 
         //render view
         $data = array(
@@ -84,10 +86,10 @@ class Rao_vatController extends Controller {
 
                     $tinraovat->ma_tin = $tinkhachhang->ma_tin;
                     $tinraovat->save(false);
-                    $noticeMessage = "<h4 style='color:green'>Tin đăng của bạn đã được hiển thị tại trang rao vặt<h4>";
+                    $this->__message = "Tin bạn đăng đã được hiển thị tại trang rao vặt";
                 }
             } else {
-                $noticeMessage = "<h4 style='color:red'>Tài khoản của bạn không đủ để đăng tin</h4>";
+                $this->__message = "Tài khoản của bạn không đủ để đăng tin";
             }
         }
 
@@ -101,7 +103,7 @@ class Rao_vatController extends Controller {
             'paginatorRV' => $paginatorRV,
             'urlPaginatorRV' => 'rao_vat/pagedtrv?page=',
             'ajaxElementId' => '#table-rv',
-            'noticeMessage' => $noticeMessage
+            'message' => $this->__message
         );
 
         if (Yii::app()->request->isAjaxRequest) {
