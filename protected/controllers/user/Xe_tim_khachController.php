@@ -154,8 +154,19 @@ class Xe_tim_khachController extends Controller {
         } else {
             $this->render('dang_tin', $data);
         }
-    
+    }
+    /**
+     * Xem chi tiết tin Xe tìm khách
+     */
+    public function actionXem_chi_tiet($condition = null) {
+        $maTin = Yii::app()->request->getParam('id');
+        $modelXTK = new Tinghepxe();
+        if (!$tinXTK = $modelXTK->getTinGhepXe($maTin)) {
+            $this->redirect(['site/index']);
+        }
 
-
-}
+        $this->render('xem_chi_tiet', [
+            'tinXTK' => $tinXTK
+        ]);
+    }
 }

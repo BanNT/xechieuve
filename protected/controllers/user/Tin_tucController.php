@@ -4,11 +4,8 @@ class Tin_tucController extends Controller {
 
     public function actionIndex() {
 
-        $tintuc = Yii::app()->db->createCommand()
-                ->select('ma_tin,tieu_de,noi_dung,anh,date(ngay_dang) as ngay_dang, tom_tat')
-                ->from('tintuc')
-                ->order('ngay_dang DESC')
-                ->queryAll();
+        $modelTT = new Tintuc();
+        $tintuc=$modelTT->getTintuc($id=null);
         $data = array(
             'tintuc' => $tintuc,
         );
@@ -21,11 +18,11 @@ class Tin_tucController extends Controller {
 
     public function actionXem_chi_tiet() {
         $matin = Yii::app()->request->getParam('id');
-        $tintuc =Yii::app()->db->createCommand()
-                        ->select('ma_tin ,date(ngay_dang) as ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
-                        ->from('tintuc')
-                        ->where("ma_tin=$matin")
-                        ->queryRow();
+        $modelTT= new Tintuc();
+        $tintuc = $modelTT->getChitietTT($matin);
+        if($matin == ''){
+            $this->redirect(Yii::app()->homeUrl);
+        }
         if (!$tintuc) {
             $this->redirect(['site/index']);
         }
