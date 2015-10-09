@@ -5,12 +5,13 @@
  * hoặc làm mới tin đăng
  */
 class Khach_hangController extends Controller {
-    
+
     /**
      * Avartar mặc định
      * @var string
      */
     private $__defaultAvatar = "default-avatar.png";
+
     /**
      * Số bản ghi tối đa hiển thị tại mục tin đã đăng của khách hàng
      */
@@ -213,9 +214,12 @@ class Khach_hangController extends Controller {
             }
             $khachHang->password = md5($khachHang->password);
             $khachHang->save(false);
-            return;
+            
             $this->redirect(Yii::app()->homeUrl);
+            return;
         }
+        else
+            $this->__message = "<span>Đăng ký thất bại</span>";
         $this->render('dang_ky', array('form' => $form));
     }
 
@@ -263,6 +267,7 @@ class Khach_hangController extends Controller {
                 $khachHang->anh_dai_dien = $anh;
             }
             $khachHang->save(false);
+            $this->__message = "Sửa thành công!";
         }
         $form2 = new CForm('application.views.user.khach_hang._formcapnhatpass');
         $khachHang2 = $form2->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
@@ -274,7 +279,8 @@ class Khach_hangController extends Controller {
         $this->render('chinh_sua_thong_tin', array(
             'form' => $form,
             'anh' => $anh,
-            'form2' => $form2
+            'form2' => $form2,
+            'message' => $this->__message
         ));
     }
 

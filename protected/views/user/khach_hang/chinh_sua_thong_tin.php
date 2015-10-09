@@ -1,4 +1,11 @@
 <?php $this->pageTitle = Yii::app()->name . ' - Chỉnh sửa thông tin người dùng'; ?>
+<?php
+if ($message) {
+    $this->widget('application.widgets.modalShowMessage', array(
+        'message' => $message
+    ));
+}
+?>
 <section id="chinhsua" >
     <div class="tieude">THÔNG TIN  TÀI KHOẢN</div>
     <div id="anhdaidien" >

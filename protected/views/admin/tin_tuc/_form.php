@@ -65,7 +65,7 @@
         <div class="col-md-4">
             <?php echo $form->labelEx($model, 'ngay_dang'); ?>
             <?php
-            echo $form->textField($model, 'ngay_dang', array(
+            echo $form->dateField($model, 'ngay_dang', array(
                 'size' => 60,
                 'maxlength' => 255,
                 'class' => ' form-control',));
