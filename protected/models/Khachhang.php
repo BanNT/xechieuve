@@ -43,28 +43,26 @@ class Khachhang extends CActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
-        return array( 
+        return array(
             //dang ki
             array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, dia_chi,', 'required',
-             'message' => 'Bạn không được bỏ trống "{attribute}"','on'=>'Dang_ky'
-          ),
-           array('password', 'compare', 'compareAttribute' => 'confirmPassword',
-               'message' => 'Mật khẩu không khớp','on'=>'Dang_ky'
+                'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'Dang_ky'
             ),
-            array('password,confirmPassword,dieukhoan','required','on'=>'Dang_ky'),
-             array('dieukhoan', 'checkb','on'=>'Dang_ky'),
-            
+            array('password', 'compare', 'compareAttribute' => 'confirmPassword',
+                'message' => 'Mật khẩu không khớp', 'on' => 'Dang_ky'
+            ),
+            array('password,confirmPassword,dieukhoan', 'required', 'on' => 'Dang_ky'),
+            array('dieukhoan', 'checkb', 'on' => 'Dang_ky'),
             //update thong tin
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
-              'message' => 'Bạn không được bỏ trống "{attribute}"','on'=>'update'
-          ),
-            //update pass
-            array('oldPassword,newPassword,newconfirmPassword', 'required','message' => 'Bạn không được bỏ trống "{attribute}"','on'=>'updatepass'),
-            array('newPassword', 'compare', 'compareAttribute' => 'newconfirmPassword',
-                'message' => 'Mật khẩu không khớp','on'=>'updatepass'
+                'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'update'
             ),
-            array('oldPassword', 'checkpass','on'=>'updatepass'),
-            
+            //update pass
+            array('oldPassword,newPassword,newconfirmPassword', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'updatepass'),
+            array('newPassword', 'compare', 'compareAttribute' => 'newconfirmPassword',
+                'message' => 'Mật khẩu không khớp', 'on' => 'updatepass'
+            ),
+            array('oldPassword', 'checkpass', 'on' => 'updatepass'),
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
                 'message' => '{attribute} phải dưới 80 kí tự'
@@ -82,11 +80,10 @@ class Khachhang extends CActiveRecord {
                 'tooMany' => 'Bạn chỉ được upload 1 file ảnh duy nhất'
             ),
             array('ten_dang_nhap', 'unique', 'message' => '{attribute} đã tồn tại '),
-            array('email', 'unique', 'message' => '{attribute} đã tồn tại '), 
+            array('email', 'unique', 'message' => '{attribute} đã tồn tại '),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_khach_hang, ten_khach_hang, email, so_dien_thoai, so_du_tai_khoan', 'safe', 'on' => 'search'),
-            
         );
     }
 
@@ -95,14 +92,12 @@ class Khachhang extends CActiveRecord {
             $this->addError('dieukhoan', 'Vui lòng đồng ý điều khoản.');
         }
     }
-    public function checkpass($attribute, $params)
-    {
-        if(md5($this->oldPassword)!=$this->password)
-        {
+
+    public function checkpass($attribute, $params) {
+        if (md5($this->oldPassword) != $this->password) {
             $this->addError('oldPassword', 'Bạn nhập sai mật khẩu.');
         }
     }
-    
 
     /**
      * @return array relational rules.
@@ -175,13 +170,13 @@ class Khachhang extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
-    
+
     public function updatepassword($pass) {
-        $makhach=Yii::app()->user->userId;
+        $makhach = Yii::app()->user->userId;
         $sql = "UPDATE " . Khachhang::model()->tableName()
                 . " SET password = '$pass'"
                 . " WHERE ma_khach_hang =$makhach";
-       
+
         Yii::app()->db->createCommand($sql)->execute();
     }
 
