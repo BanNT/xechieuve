@@ -9,9 +9,13 @@ return CMap::mergeArray(
                 // uncomment the following to enable URLs in path-format
                 'urlManager' => array(
                     'urlFormat' => 'path',
-                    'showScriptName' => FALSE,
                     'rules' => array(
-                        
+                        //url quản lý khách hàng
+                        'quan-ly-khach-hang' => 'manage_customer/admin',
+                        'them-khach-hang' => 'manage_customer/create',
+                        //url tin tuc
+                        'them-tin-tuc'=>'tin_tuc/create',
+                        'quan-ly-khach-hang/thong-tin-khach-hang/id/<id:\d+>' => 'manage_customer/view',
                         //url mặc định của yii
                         '<controller:\w+>/<id:\d+>' => '<controller>/view',
                         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
@@ -25,8 +29,8 @@ return CMap::mergeArray(
                     'errorAction' => 'site/error',
                 ),
                 'user' => array(
-                    // enable cookie-based authentication
-                    'allowAutoLogin' => true,
+                // enable cookie-based authentication
+//                    'allowAutoLogin' => true,
                 ),
             ),
                 )

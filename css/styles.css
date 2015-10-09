@@ -276,16 +276,11 @@ td{width: 100px}
     margin-left: 10px;    
 
 }
+
 #dangki .errorMessage{
-    color: red;
-    margin-top: 15px;
     margin-left: 280px;
 }
-.errorMessage{
-    color: red;
-    margin-top: 15px;
-    margin-left: 140px;
-}
+
 
 #dangtinrv{
     margin-bottom: 20px;
@@ -381,6 +376,11 @@ td{width: 100px}
 }
 /*----------------------------------------------------------------------------*/
 
+.errorMessage{
+    margin-top: 15px;
+    color: red;
+}
+
 .modal-content
 {
     margin: 10px;
@@ -426,5 +426,9 @@ td{width: 100px}
 
 ///style admin
 #adminlistTT {
+    text-align: center;
+}
+.glyphicon
+{
     text-align: center;
 }

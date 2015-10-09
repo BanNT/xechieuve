@@ -59,13 +59,13 @@ class Tintuc extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'ma_tin' => 'Ma Tin',
-            'tieu_de' => 'Tieu De',
-            'tom_tat' => 'Tom Tat',
-            'noi_dung' => 'Noi Dung',
-            'anh' => 'Anh',
-            'ngay_dang' => 'Ngay Dang',
-            'trang_thai' => 'Trang Thai',
+            'ma_tin' => 'Mã Tin',
+            'tieu_de' => 'Tiêu Dề',
+            'tom_tat' => 'Tóm Tắt',
+            'noi_dung' => 'Nội Dung',
+            'anh' => 'Ảnh',
+            'ngay_dang' => 'Ngày Đăng',
+            'trang_thai' => 'Trạng Thái',
             'meta_keyword' => 'Meta Keyword',
             'meta_Description' => 'Meta Description',
         );

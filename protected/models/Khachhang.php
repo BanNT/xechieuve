@@ -18,16 +18,17 @@
  */
 class Khachhang extends CActiveRecord {
 
-    const AVARTAR_DIR = 'images/avartars';
+    const AVARTAR_DIR = 'images/avatar/';
 
     /**
      * Xác nhận password
      * @var string
      */
     public $confirmPassword;
-    public $diachi;
     public $dieukhoan;
-     
+    public $newPassword;
+    public $oldPassword;
+    public $newconfirmPassword;
 
     /**
      * @return string the associated database table name
@@ -42,14 +43,31 @@ class Khachhang extends CActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
-        return array(
-            array('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, confirmPassword,diachi,dieukhoan, so_du_tai_khoan', 'required',
-                'message' => 'Bạn không được bỏ trống "{attribute}"'// đây required là bắt buộc, cái này là tên hàm của yii viết sẵn
+        return array( 
+            //dang ki
+            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, dia_chi,', 'required',
+             'message' => 'Bạn không được bỏ trống "{attribute}"','on'=>'Dang_ky'
+          ),
+           array('password', 'compare', 'compareAttribute' => 'confirmPassword',
+               'message' => 'Mật khẩu không khớp','on'=>'Dang_ky'
             ),
-            array('dieukhoan', 'checkb'),
-            array('password', 'compare', 'compareAttribute' => 'confirmPassword',
-                'message' => 'password không khớp'
+            array('password,confirmPassword,dieukhoan','required','on'=>'Dang_ky'),
+             array('dieukhoan', 'checkb','on'=>'Dang_ky'),
+            
+            //update thong tin
+            array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
+              'message' => 'Bạn không được bỏ trống "{attribute}"','on'=>'update'
+          ),
+            //update pass
+            array('oldPassword,newPassword,newconfirmPassword', 'required','message' => 'Bạn không được bỏ trống "{attribute}"','on'=>'updatepass'),
+            array('newPassword', 'compare', 'compareAttribute' => 'newconfirmPassword',
+                'message' => 'Mật khẩu không khớp','on'=>'updatepass'
             ),
+           //array('oldPassword', 'compare', 'compareAttribute' => 'password',
+             //  'message' => 'Mật khẩu không khớp','on'=>'updatepass'
+            //),
+            array('oldPassword', 'checkpass','on'=>'updatepass'),
+            
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
                 'message' => '{attribute} phải dưới 80 kí tự'
@@ -67,10 +85,11 @@ class Khachhang extends CActiveRecord {
                 'tooMany' => 'Bạn chỉ được upload 1 file ảnh duy nhất'
             ),
             array('ten_dang_nhap', 'unique', 'message' => '{attribute} đã tồn tại '),
-            array('email', 'unique', 'message' => '{attribute} đã tồn tại '),
+            array('email', 'unique', 'message' => '{attribute} đã tồn tại '), 
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password, email, so_dien_thoai, so_du_tai_khoan, anh_dai_dien', 'safe', 'on' => 'search'),
+            
         );
     }
 
@@ -79,6 +98,14 @@ class Khachhang extends CActiveRecord {
             $this->addError('dieukhoan', 'Vui lòng đồng ý điều khoản.');
         }
     }
+    public function checkpass($attribute, $params)
+    {
+        if(md5($this->oldPassword)!=$this->password)
+        {
+            $this->addError('oldPassword', 'Bạn nhập sai mật khẩu.');
+        }
+    }
+    
 
     /**
      * @return array relational rules.
@@ -100,13 +127,15 @@ class Khachhang extends CActiveRecord {
             'ten_khach_hang' => 'Tên khách hàng:',
             'ten_dang_nhap' => 'Tên đăng nhập:',
             'password' => 'Mật khẩu:',
+            'oldPassword' => 'Mật khẩu cũ:',
+            'newPassword' => 'Nhập mật khẩu mới:',
+            'newconfirmPassword' => 'Nhập lại mật khẩu mới:',
             'email' => 'Email:',
             'so_dien_thoai' => 'Số điện thoại:',
             'so_du_tai_khoan' => 'Số dư tài khoản:',
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
-
-            'diachi' => 'Địa chỉ:',
+            'dia_chi' => 'Địa chỉ:',
             'dieukhoan' => '
                 <a type="button" data-toggle="modal" data-target=".bs-example-modal-lg">Điều khoản sử dụng.</a>
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -132,22 +161,9 @@ class Khachhang extends CActiveRecord {
                     </div>
                   </div>
                 </div>'
-
         );
     }
-   
-    /**
-     * Retrieves a list of models based on the current search/filter conditions.
-     *
-     * Typical usecase:
-     * - Initialize the model fields with values from filter form.
-     * - Execute this method to get CActiveDataProvider instance which will filter
-     * models according to data in model fields.
-     * - Pass data provider to CGridView, CListView or any similar widget.
-     *
-     * @return CActiveDataProvider the data provider that can return the models
-     * based on the search/filter conditions.
-     */
+
     public function search() {
         // @todo Please modify the following code to remove attributes that should not be searched.
 
@@ -165,7 +181,14 @@ class Khachhang extends CActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
-        
+    }
+    public function updatepassword($pass) {
+        $makhach=Yii::app()->user->userId;
+        $sql = "UPDATE " . Khachhang::model()->tableName()
+                . " SET password = '$pass'"
+                . " WHERE ma_khach_hang =$makhach";
+       
+        Yii::app()->db->createCommand($sql)->execute();
     }
 
     /**
@@ -178,14 +201,4 @@ class Khachhang extends CActiveRecord {
         return parent::model($className);
     }
 
-    
-    /**
-     * Nạp tiền cho khách
-     */
-    public function NapTien($so_du_tai_khoan_new,$ma_khach_hang) {
-       $sql = "UPDATE " . Khachhang::model()->tableName()
-                ." SET so_du_tai_khoan = so_du_tai_khoan + $so_du_tai_khoan_new"
-                ." WHERE ma_khach_hang = $ma_khach_hang";
-       Yii::app()->db->createCommand($sql)->execute();
-    }
 }
