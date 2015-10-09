@@ -14,7 +14,8 @@ $this->menu=array(
 ?>
 
 <h1 style="text-align: center">Thêm Tin Tức</h1>
- <script src="<?php echo Yii::app()->baseUrl . '/admin.php/js/ckeditor/ckeditor.js'; ?>"></script>
+ <script src="<?php echo Yii::app()->baseUrl . '/js/ckeditor_full/ckeditor.js'; ?>"></script>
 <?php $this->renderPartial('_form', array('model'=>$model)); ?> 
  <script type="text/javascript">
         CKEDITOR.replace('noi_dung');
+ </script>

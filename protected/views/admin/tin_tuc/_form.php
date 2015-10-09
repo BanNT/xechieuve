@@ -29,7 +29,7 @@
             echo $form->textField($model, 'tieu_de', array(
                 'size' => 60,
                 'maxlength' => 80,
-                'class' => 'form-control',));
+                'class' => ' form-control',));
             ?>
             <?php echo $form->error($model, 'tieu_de'); ?>
         </div>
@@ -47,22 +47,7 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-11">
-            <?php echo $form->labelEx($model, 'noi_dung'); ?>
-            <?php
-            echo $form->textArea($model, 'noi_dung', array(
-                'rows' => 6,
-                'cols' => 50,
-                'id' => 'noi_dung',
-                'class' => ' form-control',
-            ))
-            ;
-            ?>
-            <?php echo $form->error($model, 'noi_dung'); ?>
-        </div>
-    </div>
+
 
     <div class="row">
         <div class="col-md-1"></div>
@@ -103,7 +88,24 @@
 
     <div class="row">
         <div class="col-md-1"></div>
-        <div class="col-md-4">
+        <div class="col-md-10">
+            <?php echo $form->labelEx($model, 'noi_dung'); ?>
+            <?php
+            echo $form->textArea($model, 'noi_dung', array(
+                'rows' => 6,
+                'cols' => 50,
+                'id' => 'noi_dung',
+                'class' => ' form-control',
+            ))
+            ;
+            ?>
+            <?php echo $form->error($model, 'noi_dung'); ?>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
             <?php echo $form->labelEx($model, 'meta_keyword'); ?>
             <?php
             echo $form->textField($model, 'meta_keyword', array(
@@ -111,10 +113,12 @@
                 'maxlength' => 90,
                 'class' => ' form-control'));
             ?>
-<?php echo $form->error($model, 'meta_keyword'); ?>
+            <?php echo $form->error($model, 'meta_keyword'); ?>
         </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
             <?php echo $form->labelEx($model, 'meta_Description'); ?>
             <?php
             echo $form->textField($model, 'meta_Description', array(
@@ -122,14 +126,13 @@
                 'maxlength' => 110,
                 'class' => ' form-control'));
             ?>
-        <?php echo $form->error($model, 'meta_Description'); ?>
+            <?php echo $form->error($model, 'meta_Description'); ?>
         </div>
     </div>
-
     <div class="col-md-12 text-center">
-<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
     </div>
 
-<?php $this->endWidget(); ?>
+    <?php $this->endWidget(); ?>
 
 </div><!-- form -->

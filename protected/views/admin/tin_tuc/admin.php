@@ -36,16 +36,6 @@ $('.search-form form').submit(function(){
         </tr>
     </thead>
 </table>
-
-<?php echo CHtml::link(' Search tin tức', '#', array('class' => 'search-button')); ?>
-<div class="search-form" style="display:none">
-    <?php
-    $this->renderPartial('_search', array(
-        'model' => $model,
-    ));
-    ?>
-</div><!-- search-form -->
-
 <?php
 /* $this->widget('zii.widgets.grid.CGridView', array(
   'id'=>'tintuc-grid',
@@ -98,16 +88,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => '$data->tieu_de',
             'header' => '<span class="glyphicon glyphicon-user"></span> Tiêu Đề',
         ),
-        array(
-            'name' => 'tom_tat',
-            'value' => '$data->tom_tat',
-            'header' => '<span class="glyphicon "></span> Tóm Tắt'
-        ),
-        array(
-            'name' => 'noi_dung',
-            'value' => '$data->noi_dung',
-            'header' => '<span class="glyphicon"style="width:200px"></span> Nội Dung'
-        ),
+        
         array(
             'name' => 'ngay_dang',
             'value' => '$data->ngay_dang',

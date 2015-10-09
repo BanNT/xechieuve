@@ -5,16 +5,22 @@
  * hoặc làm mới tin đăng
  */
 class Khach_hangController extends Controller {
-
+    
+    /**
+     * Avartar mặc định
+     * @var string
+     */
+    private $__defaultAvatar = "default-avatar.png";
     /**
      * Số bản ghi tối đa hiển thị tại mục tin đã đăng của khách hàng
      */
     const LIMIT_RECORD = 20;
-    
+
     /**
      * @var string
      */
     private $__message;
+
     /**
      * Hiển thị những tin đã đăng của khách hàng dựa theo mã loại tin
      */
@@ -32,7 +38,7 @@ class Khach_hangController extends Controller {
                 $this->redirect(Yii::app()->homeUrl);
             }
         }
-        
+
         $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMIT_RECORD, ' ma_loai_tin = ' . $maLoaiTin . ' AND ma_khach_hang =' . Yii::app()->user->userId);
         if ($maLoaiTin == Tinraovat::CODE_RV) {
             $tinraovat = new Tinraovat();
@@ -73,7 +79,7 @@ class Khach_hangController extends Controller {
         if (Yii::app()->user->name == 'Guest') {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
-        
+
         $maTin = Yii::app()->request->getParam('id');
         $__message = '';
 
@@ -180,12 +186,7 @@ class Khach_hangController extends Controller {
             //update tin khách hàng sau đó là tin ghép xe
             if ($tinkhachhang->save(false)) {
                 Tinghepxe::updateTinGhepXe(
-                    $tinghepxe->dia_chi_di,
-                    $tinghepxe->dia_chi_den,
-                    $tinghepxe->noi_den_tinh,
-                    $tinghepxe->ma_loai_xe_ghep,
-                    $tinghepxe->ngay_khoi_hanh,
-                    $tinghepxe->ma_tin
+                        $tinghepxe->dia_chi_di, $tinghepxe->dia_chi_den, $tinghepxe->noi_den_tinh, $tinghepxe->ma_loai_xe_ghep, $tinghepxe->ngay_khoi_hanh, $tinghepxe->ma_tin
                 );
             }
         }
@@ -207,6 +208,8 @@ class Khach_hangController extends Controller {
                 $newName = md5(microtime(true) . 'xechieuve') . $image->name;
                 $khachHang->anh_dai_dien = $newName;
                 $image->saveAs(Khachhang::AVARTAR_DIR . $newName);
+            } else {
+                $khachHang->anh_dai_dien = $this->__defaultAvatar;
             }
             $khachHang->password = md5($khachHang->password);
             $khachHang->save(false);
@@ -266,7 +269,6 @@ class Khach_hangController extends Controller {
         $khachHang2->setScenario('updatepass');
         if ($form2->submitted('doimatkhau') && $form2->validate()) {
             Khachhang::updatepassword(md5($khachHang2["newPassword"]));
-            
         }
 
         $this->render('chinh_sua_thong_tin', array(
