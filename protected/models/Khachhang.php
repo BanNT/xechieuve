@@ -25,7 +25,6 @@ class Khachhang extends CActiveRecord {
      * @var string
      */
     public $confirmPassword;
-    public $diachi;
     public $dieukhoan;
     public $oldPassword;
     public $newPassword;
@@ -46,13 +45,12 @@ class Khachhang extends CActiveRecord {
         // will receive user inputs.
         return array(
             //dang ki
-            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, dia_chi,', 'required',
+            array('ten_khach_hang, ten_dang_nhap, password,email,confirmPassword,dieukhoan, so_dien_thoai, dia_chi,', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'Dang_ky'
             ),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
                 'message' => 'Mật khẩu không khớp', 'on' => 'Dang_ky'
             ),
-            array('password,confirmPassword,dieukhoan', 'required', 'on' => 'Dang_ky'),
             array('dieukhoan', 'checkb', 'on' => 'Dang_ky'),
             //update thong tin
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
@@ -128,7 +126,10 @@ class Khachhang extends CActiveRecord {
             'so_du_tai_khoan' => 'Số dư tài khoản:',
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
-            'diachi' => 'Địa chỉ:',
+            'dia_chi' => 'Địa chỉ:',
+            'oldPassword'=>'Mật khẩu cũ:',
+            'newPassword'=>'Mật khẩu mới',
+            'newconfirmPassword'=>'Nhập lại mật khẩu mới',
             'dieukhoan' => '
                 <a type="button" data-toggle="modal" data-target=".bs-example-modal-lg">Điều khoản sử dụng.</a>
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
