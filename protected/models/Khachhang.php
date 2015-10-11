@@ -64,6 +64,9 @@ class Khachhang extends CActiveRecord {
             array('newPassword', 'compare', 'compareAttribute' => 'newconfirmPassword',
                 'message' => 'Mật khẩu không khớp', 'on' => 'updatepass'
             ),
+            //array('oldPassword', 'compare', 'compareAttribute' => 'password',
+            //  'message' => 'Mật khẩu không khớp','on'=>'updatepass'
+            //),
             array('oldPassword', 'checkpass', 'on' => 'updatepass'),
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
@@ -86,6 +89,7 @@ class Khachhang extends CActiveRecord {
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_khach_hang, ten_khach_hang, email, so_dien_thoai, so_du_tai_khoan', 'safe', 'on' => 'search'),
+
         );
     }
 
@@ -174,9 +178,12 @@ class Khachhang extends CActiveRecord {
 
         $criteria->compare('ma_khach_hang', $this->ma_khach_hang);
         $criteria->compare('ten_khach_hang', $this->ten_khach_hang, true);
+        $criteria->compare('ten_dang_nhap', $this->ten_dang_nhap, true);
+        $criteria->compare('password', $this->password, true);
         $criteria->compare('email', $this->email, true);
         $criteria->compare('so_dien_thoai', $this->so_dien_thoai, true);
         $criteria->compare('so_du_tai_khoan', $this->so_du_tai_khoan);
+        $criteria->compare('anh_dai_dien', $this->anh_dai_dien, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

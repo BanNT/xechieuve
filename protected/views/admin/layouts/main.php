@@ -90,7 +90,7 @@
                         <li><a href="<?php echo Yii::app()->baseUrl;?>/admin.php/quan-ly-khach-hang">Quản lý khách hàng</a></li>
                         <li><a>Quản lý quản trị viên</a></li>
                         <li><a>Quản lý tin đăng khách hàng</a></li>
-                        <li><a>Quản lý tin tức</a></li>
+                        <li><a href="<?php echo Yii::app()->baseUrl;?>/admin.php/quan-ly-tin-tuc">Quản lý tin tức</a></li>
                         <li><a>Quản lý loại xe ghép</a></li>
                         <li><a>Quản lý liên hệ</a></li>
                         <li><a>Tác vụ khách hàng</a></li>
