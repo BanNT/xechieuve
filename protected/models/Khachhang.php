@@ -19,15 +19,16 @@
 class Khachhang extends CActiveRecord {
 
     const AVARTAR_DIR = 'images/avartars';
-
+    const DEFAULT_AVARTAR='default-avatar.png';
     /**
      * Xác nhận password
      * @var string
      */
     public $confirmPassword;
-    public $diachi;
     public $dieukhoan;
-     
+    public $oldPassword;
+    public $newPassword;
+    public $newconfirmPassword;
 
     /**
      * @return string the associated database table name
@@ -44,13 +45,15 @@ class Khachhang extends CActiveRecord {
         // will receive user inputs.
         return array(
             //dang ki
-            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, dia_chi,', 'required',
+            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, dia_chi,confirmPassword,dieukhoan', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'Dang_ky'
             ),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
                 'message' => 'Mật khẩu không khớp', 'on' => 'Dang_ky'
             ),
-            array('password,confirmPassword,dieukhoan', 'required', 'on' => 'Dang_ky'),
+            array('password', 'compare', 'compareAttribute' => 'confirmPassword',
+                'message' => 'Mật khẩu không khớp', 'on' => 'update'
+            ),
             array('dieukhoan', 'checkb', 'on' => 'Dang_ky'),
             //update thong tin
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
@@ -62,7 +65,6 @@ class Khachhang extends CActiveRecord {
                 'message' => 'Mật khẩu không khớp', 'on' => 'updatepass'
             ),
             array('oldPassword', 'checkpass', 'on' => 'updatepass'),
-
             array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
                 'message' => '{attribute} phải dưới 80 kí tự'
@@ -84,7 +86,6 @@ class Khachhang extends CActiveRecord {
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_khach_hang, ten_khach_hang, email, so_dien_thoai, so_du_tai_khoan', 'safe', 'on' => 'search'),
-
         );
     }
 
@@ -125,8 +126,7 @@ class Khachhang extends CActiveRecord {
             'so_du_tai_khoan' => 'Số dư tài khoản:',
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
-
-            'diachi' => 'Địa chỉ:',
+            'dia_chi' => 'Địa chỉ:',
             'dieukhoan' => '
                 <a type="button" data-toggle="modal" data-target=".bs-example-modal-lg">Điều khoản sử dụng.</a>
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -152,10 +152,9 @@ class Khachhang extends CActiveRecord {
                     </div>
                   </div>
                 </div>'
-
         );
     }
-   
+
     /**
      * Retrieves a list of models based on the current search/filter conditions.
      *
@@ -203,14 +202,14 @@ class Khachhang extends CActiveRecord {
         return parent::model($className);
     }
 
-    
     /**
      * Nạp tiền cho khách
      */
-    public function NapTien($so_du_tai_khoan_new,$ma_khach_hang) {
-       $sql = "UPDATE " . Khachhang::model()->tableName()
-                ." SET so_du_tai_khoan = so_du_tai_khoan + $so_du_tai_khoan_new"
-                ." WHERE ma_khach_hang = $ma_khach_hang";
-       Yii::app()->db->createCommand($sql)->execute();
+    public function NapTien($so_du_tai_khoan_new, $ma_khach_hang) {
+        $sql = "UPDATE " . Khachhang::model()->tableName()
+                . " SET so_du_tai_khoan = so_du_tai_khoan + $so_du_tai_khoan_new"
+                . " WHERE ma_khach_hang = $ma_khach_hang";
+        Yii::app()->db->createCommand($sql)->execute();
     }
+
 }

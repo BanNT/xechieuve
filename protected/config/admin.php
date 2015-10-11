@@ -12,6 +12,8 @@ return CMap::mergeArray(
                     'rules' => array(
                         //url quản lý khách hàng
                         'quan-ly-khach-hang'=>'manage_customer/admin',
+                        'quan-ly-khach-hang/xoa-khach-hang/id/<id:\d+>'=>'manage_customer/delete_user',
+                        'quan-ly-khach-hang/sua-thong-tin-khach-hang/id/<id:\d+>'=>'manage_customer/update',
                         'them-khach-hang'=>'manage_customer/create',
                         'quan-ly-khach-hang/thong-tin-khach-hang/id/<id:\d+>'=>'manage_customer/view',
                         //url mặc định của yii

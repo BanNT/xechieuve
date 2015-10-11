@@ -1,9 +1,6 @@
 <?php
 
-/**
- * Quản lý khách hàng
- */
-class Manage_customerController extends Controller {
+class Manage_user_newsController extends Controller {
 
     /**
      * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -29,7 +26,7 @@ class Manage_customerController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view', 'delete'),
+                'actions' => array('index', 'view'),
                 'users' => array('*'),
             ),
 //            array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -57,27 +54,19 @@ class Manage_customerController extends Controller {
     }
 
     /**
-     * Thêm mới khách hàng
+     * Creates a new model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Khachhang('Dang_ky');
+        $model = new Tinkhachhang;
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
-        if (isset($_POST['Khachhang'])) {
-            $model->attributes = $_POST['Khachhang'];
-            if ($model->validate()) {
-                $model->anh_dai_dien = Khachhang::DEFAULT_AVARTAR;
-                $model->password = md5($model->password);
-
-                //Lưu thông tin khách hàng và redirect trang
-                if ($model->save(false)) {
-                    $this->redirect(array(
-                        'admin',
-                    ));
-                }
-            }
+        if (isset($_POST['Tinkhachhang'])) {
+            $model->attributes = $_POST['Tinkhachhang'];
+            if ($model->save())
+                $this->redirect(array('view', 'id' => $model->ma_tin));
         }
 
         $this->render('create', array(
@@ -92,27 +81,18 @@ class Manage_customerController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-        $model->setScenario('update');
-        $model->password = '';
-        if (isset($_POST['Khachhang'])) {
-            $model->attributes = $_POST['Khachhang'];
-            if ($model->validate()) {
-//                if ($model->password != '') {
-//                    $model->password = md5($model->password);
-//                } else {
-//                    unset($model->password);
-//                }
 
-                //Lưu dữ liệu vào CSDL và redirect trang
-                if ($model->save(false)) {
-                    $message = 'Cập nhật dữ liệu thành công';
-                }
-            }
+        // Uncomment the following line if AJAX validation is needed
+        // $this->performAjaxValidation($model);
+
+        if (isset($_POST['Tinkhachhang'])) {
+            $model->attributes = $_POST['Tinkhachhang'];
+            if ($model->save())
+                $this->redirect(array('view', 'id' => $model->ma_tin));
         }
 
         $this->render('update', array(
             'model' => $model,
-            'message' => '$message'
         ));
     }
 
@@ -121,26 +101,32 @@ class Manage_customerController extends Controller {
      * If deletion is successful, the browser will be redirected to the 'admin' page.
      * @param integer $id the ID of the model to be deleted
      */
-    public function actionDelete_user($id) {
-        //Kiểm tra khách hàng này đã đăng tin chưa nếu chưa thì mới xóa
-        if (Tinkhachhang::model()->findByAttributes(array('ma_khach_hang' => $id))) {
-            $this->redirect(array('admin'));
-        }
-
-        //xóa dữ liệu khách hàng và redirect trang
+    public function actionDelete($id) {
         $this->loadModel($id)->delete();
-        $this->redirect(array('admin'));
+
+        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+        if (!isset($_GET['ajax']))
+            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+    }
+
+    /**
+     * Lists all models.
+     */
+    public function actionIndex() {
+        $dataProvider = new CActiveDataProvider('Tinkhachhang');
+        $this->render('index', array(
+            'dataProvider' => $dataProvider,
+        ));
     }
 
     /**
      * Manages all models.
      */
     public function actionAdmin() {
-        $model = new Khachhang('search');
+        $model = new Tinkhachhang('search');
         $model->unsetAttributes();  // clear any default values
-        if ((Yii::app()->request->getParam('Khachhang'))) {
-            $model->attributes = Yii::app()->request->getParam('Khachhang');
-        }
+        if (isset($_GET['Tinkhachhang']))
+            $model->attributes = $_GET['Tinkhachhang'];
 
         $this->render('admin', array(
             'model' => $model,
@@ -151,11 +137,11 @@ class Manage_customerController extends Controller {
      * Returns the data model based on the primary key given in the GET variable.
      * If the data model is not found, an HTTP exception will be raised.
      * @param integer $id the ID of the model to be loaded
-     * @return Khachhang the loaded model
+     * @return Tinkhachhang the loaded model
      * @throws CHttpException
      */
     public function loadModel($id) {
-        $model = Khachhang::model()->findByPk($id);
+        $model = Tinkhachhang::model()->findByPk($id);
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;
@@ -163,10 +149,10 @@ class Manage_customerController extends Controller {
 
     /**
      * Performs the AJAX validation.
-     * @param Khachhang $model the model to be validated
+     * @param Tinkhachhang $model the model to be validated
      */
     protected function performAjaxValidation($model) {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'khachhang-form') {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'tinkhachhang-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }

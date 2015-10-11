@@ -47704,3 +47704,214 @@ REQUEST_URI=/xechieuve/images/avatar/591aac8c25cd015309ad3fdf63f6d2ca2015.jpg
 HTTP_REFERER=http://127.0.0.1:8080/xechieuve/sua-thong-tin-khach
 ---
 >>>>>>> fix css
+2015/10/09 10:03:19 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.oldPassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('oldPassword')
+#1 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('oldPassword')
+#2 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Khachhang), 'oldPassword')
+#3 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(1807): CHtml::activeInputField('password', Object(Khachhang), 'oldPassword', Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(232): CHtml::activePasswordField(Object(Khachhang), 'oldPassword', Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(194): CFormInputElement->renderInput()
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(543): CFormInputElement->render()
+#7 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(505): CForm->renderElement(Object(CFormInputElement))
+#8 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(489): CForm->renderElements()
+#9 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(405): CForm->renderBody()
+#10 C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php(13): CForm->render()
+#11 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('chinh_sua_thong...', Array, true)
+#15 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(276): CController->render('chinh_sua_thong...', Array)
+#16 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#17 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#21 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#22 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#24 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#25 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#26 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#27 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#28 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/10/09 10:04:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/rao-vat/dang-tin
+---
+2015/10/09 10:05:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "lien_he".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('lien_he')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/lien-he
+HTTP_REFERER=http://localhost:8888/xechieuve/rao-vat
+---
+2015/10/09 10:05:52 [error] [exception.CException] exception 'CException' with message 'Property "Khachhang.newPassword" is not defined.' in C:\xampp\htdocs\xechieuve\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\db\ar\CActiveRecord.php(145): CComponent->__get('newPassword')
+#1 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(2728): CActiveRecord->__get('newPassword')
+#2 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(2451): CHtml::resolveValue(Object(Khachhang), 'newPassword')
+#3 C:\xampp\htdocs\xechieuve\framework\web\helpers\CHtml.php(1807): CHtml::activeInputField('password', Object(Khachhang), 'newPassword', Array)
+#4 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(232): CHtml::activePasswordField(Object(Khachhang), 'newPassword', Array)
+#5 C:\xampp\htdocs\xechieuve\framework\web\form\CFormInputElement.php(194): CFormInputElement->renderInput()
+#6 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(543): CFormInputElement->render()
+#7 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(505): CForm->renderElement(Object(CFormInputElement))
+#8 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(489): CForm->renderElements()
+#9 C:\xampp\htdocs\xechieuve\framework\web\form\CForm.php(405): CForm->renderBody()
+#10 C:\xampp\htdocs\xechieuve\protected\views\user\khach_hang\chinh_sua_thong_tin.php(13): CForm->render()
+#11 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\xechieuve\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\xechieuve\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\xechieuve\framework\web\CController.php(782): CController->renderPartial('chinh_sua_thong...', Array, true)
+#15 C:\xampp\htdocs\xechieuve\protected\controllers\user\Khach_hangController.php(276): CController->render('chinh_sua_thong...', Array)
+#16 C:\xampp\htdocs\xechieuve\framework\web\actions\CInlineAction.php(49): Khach_hangController->actionChinh_sua_thong_tin()
+#17 C:\xampp\htdocs\xechieuve\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\xechieuve\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\xechieuve\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(282): CController->run('chinh_sua_thong...')
+#21 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('khach_hang/chin...')
+#22 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#24 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#25 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#26 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#27 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#28 {main}
+REQUEST_URI=/xechieuve/sua-thong-tin-khach
+HTTP_REFERER=http://localhost:8888/xechieuve/rao-vat
+---
+2015/10/09 10:06:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avartars".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/avartars')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/images/avartars
+HTTP_REFERER=http://localhost:8888/xechieuve/sua-thong-tin-khach
+---
+2015/10/09 10:26:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/pagerv".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/pagerv')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/rao-vat/pagerv?page=3&_=1444379166431
+HTTP_REFERER=http://localhost:8888/xechieuve/rao-vat
+---
+2015/10/09 10:26:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/pagerv".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/pagerv')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/rao-vat/pagerv?page=2&_=1444379166432
+HTTP_REFERER=http://localhost:8888/xechieuve/rao-vat
+---
+2015/10/09 10:26:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rao-vat/pagerv".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('rao-vat/pagerv')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/rao-vat/pagerv?page=3&_=1444379166433
+HTTP_REFERER=http://localhost:8888/xechieuve/rao-vat
+---
+2015/10/09 16:48:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/avartars".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('images/avartars')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/images/avartars
+HTTP_REFERER=http://localhost:8888/xechieuve/sua-thong-tin-khach
+---
+2015/10/11 02:19:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "bootstrap.min.css".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('bootstrap.min.c...')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/bootstrap.min.css
+HTTP_REFERER=http://localhost:8888/xechieuve/admin.php
+---
+2015/10/11 16:05:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/10/11 16:05:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/
+---
+2015/10/11 16:19:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tro_giup".' in C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\xechieuve\framework\web\CWebApplication.php(141): CWebApplication->runController('tro_giup')
+#1 C:\xampp\htdocs\xechieuve\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\xechieuve\protected\components\WebApplicationEndBehavior.php(24): CApplication->run()
+#3 [internal function]: WebApplicationEndBehavior->runEnd('user')
+#4 C:\xampp\htdocs\xechieuve\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\xechieuve\index.php(11): CComponent->__call('runEnd', Array)
+#6 C:\xampp\htdocs\xechieuve\index.php(11): CWebApplication->runEnd('user')
+#7 {main}
+REQUEST_URI=/xechieuve/tro-giup
+HTTP_REFERER=http://localhost:8888/xechieuve/rao-vat/xem-chi-tiet/333ddd/25
+---

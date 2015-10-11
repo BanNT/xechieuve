@@ -18,7 +18,7 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->labelEx($model, 'ten_khach_hang'); ?>
         <?php
         echo $form->textField($model, 'ten_khach_hang', array(
-            'class' => 'btn form-control',
+            'class' => 'form-control',
             'size' => 60,
             'maxlength' => 80
         ));
@@ -31,20 +31,22 @@ $form = $this->beginWidget('CActiveForm', array(
         echo $form->textField($model, 'ten_dang_nhap', array(
             'size' => 60,
             'maxlength' => 80,
-            'class' => 'btn form-control'
+            'class' => 'form-control'
         ));
         ?>
         <?php echo $form->error($model, 'ten_dang_nhap'); ?>
     </div>
+    <div class="clearfix"></div>
     <div class="col-md-6">    
         <?php echo $form->labelEx($model, 'password'); ?>
         <?php
         echo $form->passwordField($model, 'password', array(
             'size' => 40,
             'maxlength' => 40,
-            'class' => 'btn form-control'
+            'class' => 'form-control'
         ));
         ?>
+        <?php echo $form->error($model, 'password'); ?>
     </div>
     <div class="col-md-6">    
         <?php echo $form->labelEx($model, 'confirmPassword'); ?>
@@ -52,18 +54,19 @@ $form = $this->beginWidget('CActiveForm', array(
         echo $form->passwordField($model, 'confirmPassword', array(
             'size' => 40,
             'maxlength' => 40,
-            'class' => 'btn form-control'
+            'class' => 'form-control'
         ));
         ?>
-        <?php echo $form->error($model, 'password'); ?>
+        <?php echo $form->error($model, 'confirmPassword'); ?>
     </div>
+    <div class="clearfix"></div>
     <div class="col-md-6">   
         <?php echo $form->labelEx($model, 'email'); ?>
         <?php
         echo $form->textField($model, 'email', array(
             'size' => 60,
             'maxlength' => 80,
-            'class' => 'btn form-control'
+            'class' => 'form-control'
         ));
         ?>
         <?php echo $form->error($model, 'email'); ?>
@@ -72,18 +75,19 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->labelEx($model, 'dia_chi'); ?>
         <?php
         echo $form->dropDownList($model, 'dia_chi', Province::listProvinces(), array(
-            'class' => 'btn form-control'
+            'class' => 'form-control'
         ));
         ?>
         <?php echo $form->error($model, 'dia_chi'); ?>
     </div>
+    <div class="clearfix"></div>
     <div class="col-md-6">   
         <?php echo $form->labelEx($model, 'so_dien_thoai'); ?>
         <?php
         echo $form->textField($model, 'so_dien_thoai', array(
             'size' => 11,
             'maxlength' => 11,
-            'class' => 'btn form-control'
+            'class' => 'form-control'
         ));
         ?>
         <?php echo $form->error($model, 'so_dien_thoai'); ?>
@@ -92,21 +96,20 @@ $form = $this->beginWidget('CActiveForm', array(
         <?php echo $form->labelEx($model, 'so_du_tai_khoan'); ?>
         <?php
         echo $form->textField($model, 'so_du_tai_khoan', array(
-            'class' => 'btn form-control'));
+            'class' => 'form-control'));
         ?>
         <?php echo $form->error($model, 'so_du_tai_khoan'); ?>
     </div>
-    <div class="col-md-6">   
-        <?php echo $form->labelEx($model, 'anh_dai_dien'); ?>
-        <?php
-        echo $form->textField($model, 'anh_dai_dien', array(
+    <div class="clearfix"></div>
+    <?php
+        echo $form->checkBox($model, 'dieukhoan', array(
             'size' => 60,
             'maxlength' => 255,
-            'class' => 'btn form-control'
+            'class'=>'hidden',
+            'checked'=>'checked'
         ));
         ?>
-        <?php echo $form->error($model, 'anh_dai_dien'); ?>
-    </div>
+   
     <div class="col-md-12 text-center">
         <?php
         echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array(
