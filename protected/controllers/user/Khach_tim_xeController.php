@@ -9,7 +9,7 @@ class Khach_tim_xeController extends Controller {
     /**
      * Số bản ghi khách tìm xe tối đa được hiển thị
      */
-    const LIMITED_RECORD_KTX = 7;
+    const LIMITED_RECORD_KTX = 1;
 
     /**
      * Hiển thị trang index khách tìm xe

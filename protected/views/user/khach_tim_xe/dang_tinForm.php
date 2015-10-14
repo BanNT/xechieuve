@@ -1,4 +1,5 @@
 <?php
+
 return array(
     'elements' => array(
         'tinkhachhang' => array(
@@ -21,7 +22,7 @@ return array(
                     'class' => 'form-control'
                 ),
                 '</div>'
-                .'<div class="clearfix"></div>'
+                . '<div class="clearfix"></div>'
                 . '<div class="col-xs-12 col-sm-6 col-md-6">',
                 'tieu_de_tin' => array(
                     'type' => 'text',
@@ -60,7 +61,7 @@ return array(
                     'class' => 'form-control'
                 ],
                 '</div>'
-                .'<div class="clearfix"></div>'
+                . '<div class="clearfix"></div>'
                 . '<div class ="col-md-6">',
                 'noi_den_tinh' => [
                     'type' => 'dropdownlist',
@@ -75,11 +76,20 @@ return array(
                     'class' => 'form-control'
                 ],
                 '</div>'
-                .'<div class="clearfix"></div>'
+                . '<div class="clearfix"></div>'
                 . '<div class ="col-md-3">',
                 'ngay_khoi_hanh' => [
-                    'type' => 'date',
-                    'class' => 'form-control'
+                    'type' => 'zii.widgets.jui.CJuiDatePicker',
+                    'options' => array(
+                        'showAnim' => 'slideDown', //'slide','fold','slideDown','fadeIn','blind','bounce','clip','drop'
+                        'changeMonth' => true,
+                        'changeYear' => true,
+                        'minDate' => '2015-01-01', // minimum date
+                        'dateFormat' => 'yy-mm-dd'
+                    ),
+                    'htmlOptions'=>array(
+                        'class' => 'form-control',
+                    )
                 ],
                 '</div>'
             ),

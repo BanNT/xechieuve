@@ -20,11 +20,11 @@ class menu extends CWidget {
      * Danh sách những loại tin khách hàng có thể đăng
      * @var array
      */
-    private $__tinDang = [
+    private $__tinDang = array(
         'xe-tim-khach',
         'khach-tim-xe',
         'rao-vat'
-    ];
+    );
 
     public function init() {
         

@@ -11,9 +11,9 @@ class kindRV extends CWidget {
 
     public function run() {
         $loaiTinRV = Loaitinraovat::model()->findAll();
-        $this->render('kindRV', [
+        $this->render('kindRV', array(
             'loaiTinRV' => $loaiTinRV
-        ]);
+        ));
     }
 
 }
