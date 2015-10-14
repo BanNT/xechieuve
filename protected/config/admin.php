@@ -16,6 +16,7 @@ return CMap::mergeArray(
                         //url tin tuc
                         'quan-ly-tin-tuc'=>'tin_tuc/admin',
                         'them-tin-tuc'=>'tin_tuc/create',
+                        'quan-ly-tin-tuc/thong-tin-tin-tuc/id/<id:\d+>' => 'tin_tuc/view',
                         'quan-ly-khach-hang/thong-tin-khach-hang/id/<id:\d+>' => 'manage_customer/view',
                         //url mặc định của yii
                         '<controller:\w+>/<id:\d+>' => '<controller>/view',

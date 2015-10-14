@@ -37,29 +37,6 @@ $('.search-form form').submit(function(){
     </thead>
 </table>
 <?php
-/* $this->widget('zii.widgets.grid.CGridView', array(
-  'id'=>'tintuc-grid',
-  'dataProvider'=>$model->search(),
-  'filter'=>$model,
-  'columns'=>array(
-  'ma_tin',
-  'tieu_de',
-  'tom_tat',
-  'noi_dung',
-  'anh',
-  'ngay_dang',
-  /*
-  'trang_thai',
-  'meta_keyword',
-  'meta_Description',
- */
-//array(
-//   'class'=>'CButtonColumn',
-//),
-// ),
-//)); 
-?> 
-<?php
 $form = $this->beginWidget('CActiveForm', array(
     'action' => Yii::app()->createUrl($this->route),
     'method' => 'post',
@@ -86,7 +63,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name' => 'tieu_de',
             'value' => '$data->tieu_de',
-            'header' => '<span class="glyphicon glyphicon-user"></span> Tiêu Đề',
+            'header' => '<span class="glyphicon "></span> Tiêu Đề',
         ),
         
         array(
@@ -121,7 +98,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 ),
                 'view' => array(
                     'label' => '<span class="glyphicon glyphicon-search"></span>',
-                    'url' => '$this->grid->controller->createUrl("quan-ly-khach-hang/thong-tin-khach-hang", array("id"=>$data->primaryKey,))',
+                    'url' => '$this->grid->controller->createUrl("quan-ly-tin-tuc/thong-tin-tin-tuc", array("id"=>$data->primaryKey,))',
                     'imageUrl' => false,
                 ),
             ),

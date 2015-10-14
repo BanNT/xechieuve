@@ -214,13 +214,14 @@ class Khach_hangController extends Controller {
             }
             $khachHang->password = md5($khachHang->password);
             $khachHang->save(false);
-            
-            $this->redirect(Yii::app()->homeUrl);
-            return;
+            $this->__message = "Đăng ký thành công!";
+            //$this->redirect(Yii::app()->homeUrl);
+            //return;
         }
-        else
-            $this->__message = "<span>Đăng ký thất bại</span>";
-        $this->render('dang_ky', array('form' => $form));
+        $this->render('dang_ky', array(
+            'form' => $form,
+            'message' => $this->__message
+        ));
     }
 
     /**
@@ -267,13 +268,14 @@ class Khach_hangController extends Controller {
                 $khachHang->anh_dai_dien = $anh;
             }
             $khachHang->save(false);
-            $this->__message = "Sửa thành công!";
+            $this->__message = "Sửa thông tin thành công!";
         }
         $form2 = new CForm('application.views.user.khach_hang._formcapnhatpass');
         $khachHang2 = $form2->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
         $khachHang2->setScenario('updatepass');
         if ($form2->submitted('doimatkhau') && $form2->validate()) {
             Khachhang::updatepassword(md5($khachHang2["newPassword"]));
+            $this->__message = "Sửa thông tin thành công!";
         }
 
         $this->render('chinh_sua_thong_tin', array(

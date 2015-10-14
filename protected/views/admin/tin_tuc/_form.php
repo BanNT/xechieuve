@@ -46,9 +46,6 @@
             <?php echo $form->error($model, 'tom_tat'); ?>
         </div>
     </div>
-
-
-
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4">
@@ -79,8 +76,9 @@
         <div class="col-md-2">
             <?php echo $form->labelEx($model, 'trang_thai'); ?>
             <?php
-            echo $form->textField($model, 'trang_thai', array(
-                'class' => ' form-control',));
+            echo $form->dropDownList($model, 'trang_thai', Tintuc::trangthai(), array(
+                'class' => ' form-control',
+            ));
             ?>
             <?php echo $form->error($model, 'trang_thai'); ?>
         </div>

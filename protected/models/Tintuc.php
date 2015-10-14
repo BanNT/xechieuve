@@ -113,21 +113,35 @@ class Tintuc extends CActiveRecord {
         return parent::model($className);
     }
 
-    public function getTintuc($id)
-    {
+    public function getTintuc($id) {
         return Yii::app()->db->createCommand()
                         ->select('ma_tin,tieu_de,noi_dung,anh,ngay_dang, tom_tat')
                         ->from('tintuc')
                         ->order('ngay_dang DESC')
                         ->queryAll();
     }
-    public function getChitietTT($matin)
-    {
-        return  Yii::app()->db->createCommand()
+
+    public function sql($id) {
+        return Yii::app()->db->createCommand()
+                        ->select('tieu_de, tom_tat, noi_dung, anh, ngay_dang,trang_thai,
+                                meta_keyword, meta_Description ')
+                        ->from('tintuc')
+                        ->where("ma_tin=$id")
+                        ->queryRow();
+    }
+
+    public function getChitietTT($matin) {
+        return Yii::app()->db->createCommand()
                         ->select('ma_tin ,ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
                         ->from('tintuc')
                         ->where("ma_tin=$matin")
                         ->queryRow();
     }
+   public static function trangthai()
+   {
+       return array(
+            '0' => 'Chưa đăng',
+            '1' =>'Đã đăng',);
+   }
 
 }
