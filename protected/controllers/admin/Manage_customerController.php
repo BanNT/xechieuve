@@ -93,26 +93,28 @@ class Manage_customerController extends Controller {
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
         $model->setScenario('update');
-        $model->password = '';
+        $model->password = $message ='';
         if (isset($_POST['Khachhang'])) {
             $model->attributes = $_POST['Khachhang'];
+            $model->confirmPassword = $_POST['Khachhang']['confirmPassword'];
             if ($model->validate()) {
-//                if ($model->password != '') {
-//                    $model->password = md5($model->password);
-//                } else {
-//                    unset($model->password);
-//                }
+//                die('hello world');
+                if ($model->password != '') {
+                    $model->password = md5($model->password);
+                } else {
+                    unset($model->password);
+                }
 
                 //Lưu dữ liệu vào CSDL và redirect trang
                 if ($model->save(false)) {
-                    $message = 'Cập nhật dữ liệu thành công';
+                    $this->redirect(array('admin'));
                 }
             }
         }
 
         $this->render('update', array(
             'model' => $model,
-            'message' => '$message'
+            'message' => $message
         ));
     }
 

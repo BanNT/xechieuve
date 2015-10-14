@@ -57,13 +57,13 @@ $('.search-form form').submit(function(){
                 'buttons' => array(
                     'delete' => array(
                         'label' => '<span class="glyphicon glyphicon-trash"></span>',
-                        'url' => '$this->grid->controller->createUrl("quan-ly-khach-hang/xoa-khach-hang", array("id"=>$data->primaryKey, ))',
+                        'url' => '$this->grid->controller->createUrl("manage_user_news/delete_user_news", array("id"=>$data->primaryKey,"type"=>$data->ma_loai_tin ))',
                         'imageUrl' => false
                     ),
                     'update' => array(
                         'label' => "<span class='glyphicon glyphicon-pencil'></span>",
                         'header' => "<span class='glyphicon glyphicon-pencil'></span>",
-                        'url' => '$this->grid->controller->createUrl("manage_user_news/update", array("id"=>$data->primaryKey,))',
+                        'url' => '$this->grid->controller->createUrl("manage_user_news/update", array("id"=>$data->primaryKey,"type"=>$data->ma_loai_tin))',
                         'imageUrl' => false
                     ),
                 ),

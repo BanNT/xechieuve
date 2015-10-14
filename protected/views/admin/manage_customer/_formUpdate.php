@@ -36,14 +36,14 @@ $form = $this->beginWidget('CActiveForm', array(
         ?>
         <?php echo $form->error($model, 'ten_dang_nhap'); ?>
     </div>
+    <div class="clearfix"></div>
     <div class="col-md-6">    
         <?php echo $form->labelEx($model, 'password'); ?>
         <?php
         echo $form->passwordField($model, 'password', array(
             'size' => 40,
             'maxlength' => 40,
-            'class' => 'form-control',
-            'placeholder'=>'Để rỗng nếu không sửa password'
+            'class' => 'form-control'
         ));
         ?>
         <?php echo $form->error($model, 'password'); ?>
@@ -54,12 +54,12 @@ $form = $this->beginWidget('CActiveForm', array(
         echo $form->passwordField($model, 'confirmPassword', array(
             'size' => 40,
             'maxlength' => 40,
-            'class' => 'form-control',
-            'placeholder'=>'Để rỗng nếu không sửa password'
+            'class' => 'form-control'
         ));
         ?>
         <?php echo $form->error($model, 'confirmPassword'); ?>
     </div>
+    <div class="clearfix"></div>
     <div class="col-md-6">   
         <?php echo $form->labelEx($model, 'email'); ?>
         <?php
@@ -80,6 +80,7 @@ $form = $this->beginWidget('CActiveForm', array(
         ?>
         <?php echo $form->error($model, 'dia_chi'); ?>
     </div>
+    <div class="clearfix"></div>
     <div class="col-md-6">   
         <?php echo $form->labelEx($model, 'so_dien_thoai'); ?>
         <?php
@@ -99,6 +100,16 @@ $form = $this->beginWidget('CActiveForm', array(
         ?>
         <?php echo $form->error($model, 'so_du_tai_khoan'); ?>
     </div>
+    <div class="clearfix"></div>
+    <?php
+        echo $form->checkBox($model, 'dieukhoan', array(
+            'size' => 60,
+            'maxlength' => 255,
+            'class'=>'hidden',
+            'checked'=>'checked'
+        ));
+        ?>
+   
     <div class="col-md-12 text-center">
         <?php
         echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array(
