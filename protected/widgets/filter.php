@@ -22,9 +22,9 @@ class filter extends CWidget {
 
 
         $loaiXeGhep = Loaixeghep::model()->findAll();
-        $this->render('filter', [
+        $this->render('filter', array(
             'loaiXeGhep' => $loaiXeGhep
-        ]);
+        ));
     }
 
 }

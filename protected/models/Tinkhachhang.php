@@ -103,9 +103,9 @@ class Tinkhachhang extends CActiveRecord {
         // @todo Please modify the following code to remove attributes that should not be searched.
 
         $criteria = new CDbCriteria;
-
+        
         $criteria->compare('ma_tin', $this->ma_tin);
-        $criteria->compare('ma_khach_hang', $this->ma_khach_hang);
+        $criteria->compare('ma_khach_hang', $this->ma_khach_hang, true);
         $criteria->compare('nguoi_lien_lac', $this->nguoi_lien_lac, true);
         $criteria->compare('so_dien_thoai', $this->so_dien_thoai, true);
         $criteria->compare('tieu_de_tin', $this->tieu_de_tin, true);
@@ -113,7 +113,6 @@ class Tinkhachhang extends CActiveRecord {
         $criteria->compare('tinh_thanh', $this->tinh_thanh, true);
         $criteria->compare('ngay_dang', $this->ngay_dang, true);
         $criteria->compare('ma_loai_tin', $this->ma_loai_tin);
-
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
@@ -144,8 +143,8 @@ class Tinkhachhang extends CActiveRecord {
         }
 
         if (Khachhang::model()->updateByPk(Yii::app()->user->userId, array(
-            'so_du_tai_khoan' => ($tongTien - $giaTien)
-            ))) {
+                    'so_du_tai_khoan' => ($tongTien - $giaTien)
+                ))) {
             return true;
         }
     }
@@ -189,7 +188,7 @@ class Tinkhachhang extends CActiveRecord {
             if ($anh = $tinRV['anh']) {
                 unlink(Yii::app()->basePath . "/../" . Tinraovat::IMAGE_DIR_RV . $anh);
             }
-            
+
             $sql = "DELETE FROM tinraovat ";
             Yii::app()->db->createCommand($sql)
                     ->where('ma_tin = :id', array(':id' => $maTin));
@@ -202,17 +201,35 @@ class Tinkhachhang extends CActiveRecord {
         //xóa tin ở bảng cha(bảng tin khách hàng)
         $this->deleteByPk($maTin);
     }
-    
+
     /**
      * Kiểm tra xem có đúng tin có mã tin là $maTin có phải là của khách hàng này
      * @param integer $maTin
      * @return boolean
      */
-    public static function checkBelongToUser($maTin){
-        if(Tinkhachhang::model()->findByAttributes(array('ma_tin'=>$maTin), 'ma_khach_hang = '.Yii::app()->user->userId)){
+    public static function checkBelongToUser($maTin) {
+        if (Tinkhachhang::model()->findByAttributes(array('ma_tin' => $maTin), 'ma_khach_hang = ' . Yii::app()->user->userId)) {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Trả về tên loại tin phụ thuộc vào mã loại tin
+     * @param mixed $data
+     * @param string $row
+     * @return string
+     */
+    public function renderTenLoaiTin($data, $row) {
+        if ($data['ma_loai_tin'] == Tinghepxe::CODE_KTX) {
+            $loaiTin = "Khách tìm xe";
+        } elseif ($data['ma_loai_tin'] == Tinghepxe::CODE_XTK) {
+            $loaiTin = "Xe tìm khách";
+        } elseif ($data['ma_loai_tin'] == Tinraovat::CODE_RV) {
+            $loaiTin = "Rao vặt";
+        }
+
+        return $loaiTin;
     }
 
 }
