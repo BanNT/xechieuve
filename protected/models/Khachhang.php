@@ -46,22 +46,13 @@ class Khachhang extends CActiveRecord {
         return array(
             //dang ki
             array('ten_khach_hang, ten_dang_nhap, password,email,confirmPassword,dieukhoan, so_dien_thoai, dia_chi,', 'required',
-<<<<<<< HEAD
-             'message' => 'Bạn không được bỏ trống "{attribute}"','on'=>'Dang_ky'
-          ),
-           array('password', 'compare', 'compareAttribute' => 'confirmPassword',
-               'message' => 'Mật khẩu không khớp','on'=>'Dang_ky'
-            ),
-             array('dieukhoan', 'checkb','on'=>'Dang_ky'),
-            
-=======
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'Dang_ky'
             ),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
                 'message' => 'Mật khẩu không khớp', 'on' => 'Dang_ky'
             ),
             array('dieukhoan', 'checkb', 'on' => 'Dang_ky'),
->>>>>>> master
+
             //update thong tin
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'update'

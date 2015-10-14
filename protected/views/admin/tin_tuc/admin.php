@@ -55,21 +55,21 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name' => 'ma_tin',
             'value' => '$data->ma_tin',
-            'header' => '<span class="glyphicon"style="width:10px"></span>Mã Tin',
+            'header' => '<span class="glyphicon"></span>Mã Tin',
             'htmlOptions' => array(
-                'style' => 'width: 20px !important',
+                'style' => 'width: 10px !important',
             ),
         ),
         array(
             'name' => 'tieu_de',
             'value' => '$data->tieu_de',
-            'header' => '<span class="glyphicon "></span> Tiêu Đề',
+            'header' => '<span class="glyphicon" style="width:10px"></span> Tiêu Đề',
         ),
         
         array(
             'name' => 'ngay_dang',
             'value' => '$data->ngay_dang',
-            'header' => '<span class="glyphicon style="width:100px""></span> Ngày Đăng',
+            'header' => '<span ></span> Ngày Đăng',
         ),
         array(
             'name' => 'trang_thai',
