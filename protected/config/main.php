@@ -32,5 +32,24 @@ return array(
         // this is used in contact page
         'email' => 'webmaster@example.com',
     ),
+    'components'=>array(
+    'ajaxUpdate'=>false,
+        'widgetFactory' => array(
+            'widgets' => array(
+                'CLinkPager' => array(
+                    'header' => '',
+                    'firstPageLabel'=>'<<',
+                    'prevPageLabel'=>'<',
+                    'nextPageLabel'=>'>',
+                    'lastPageLabel'=>'>>',
+                    'selectedPageCssClass' => 'active',
+                    'hiddenPageCssClass' => 'disabled',
+                    'htmlOptions' => array(
+                        'class' => 'pagination',
+                    ),
+                ),
+            ),
+        ),
+),
     
 );
