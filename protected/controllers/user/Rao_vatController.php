@@ -37,7 +37,7 @@ class Rao_vatController extends Controller {
             'listTinRV' => $listTinRV,
             'paginatorRV' => $paginatorRV,
             'urlPaginatorRV' => 'rao_vat/pagerv?page=',
-            'ajaxElementId' => '#table-rv'
+            'ajaxElementId' => '#tableRV'
         );
 
         if (Yii::app()->request->isAjaxRequest) {
@@ -102,7 +102,7 @@ class Rao_vatController extends Controller {
             'listTinRV' => $listTinRV,
             'paginatorRV' => $paginatorRV,
             'urlPaginatorRV' => 'rao_vat/pagedtrv?page=',
-            'ajaxElementId' => '#table-rv',
+            'ajaxElementId' => '#tableRV',
             'message' => $this->__message
         );
 

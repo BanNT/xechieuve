@@ -8,10 +8,10 @@ class searchSelect extends CWidget {
      * Danh sách những views search tương ứng với controllers
      * @var array
      */
-    private $__searchViews = [
+    private $__searchViews = array(
         'khach_tim_xe' => 'searchKTX',
         'rao_vat' => 'searchRV'
-    ];
+    );
     
     public function init() {
         
