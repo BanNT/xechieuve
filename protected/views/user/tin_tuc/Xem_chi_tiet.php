@@ -13,6 +13,6 @@ $this->pageTitle = Yii::app()->name . ' - ' . CHtml::encode($model->tieu_de);
     <section>
         <p><i>Ngày đăng: <?php echo Chtml::encode($model->ngay_dang); ?></i></p>
         <p><strong><?php echo Chtml::encode($model->tom_tat); ?></strong></p>
-        <p><?php echo Chtml::encode($model->noi_dung); ?></p>
+        <p><?php echo $model->noi_dung; ?></p>
     </section>
 </article>

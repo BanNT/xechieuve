@@ -37,16 +37,8 @@ return array(
         'widgetFactory' => array(
             'widgets' => array(
                 'CLinkPager' => array(
-                    'header' => '',
-                    'firstPageLabel'=>'<<',
-                    'prevPageLabel'=>'<',
-                    'nextPageLabel'=>'>',
-                    'lastPageLabel'=>'>>',
-                    'selectedPageCssClass' => 'active',
-                    'hiddenPageCssClass' => 'disabled',
-                    'htmlOptions' => array(
-                        'class' => 'pagination',
-                    ),
+                    'header' => 'Trang',
+                    'maxButtonCount'=>4,
                 ),
             ),
         ),

@@ -9,6 +9,7 @@
     <?php
     $form = $this->beginWidget('CActiveForm', array(
         'id' => 'tintuc-form',
+        'htmlOptions' => array('enctype' => 'multipart/form-data'),
         // Please note: When you enable ajax validation, make sure the corresponding
         // controller action is handling ajax validation correctly.
         // There is a call to performAjaxValidation() commented in generated controller code.

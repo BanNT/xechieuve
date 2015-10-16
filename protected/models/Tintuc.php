@@ -15,8 +15,10 @@
  * @property string $meta_Description
  */
 class Tintuc extends CActiveRecord {
-//thu muc chu avatar tin tưc
-    const AVARTAR_TINTUC = 'images/tintuc/avatar';
+
+//thu muc chu avatar tin t?c
+    const AVARTAR_TINTUC = 'images/tintuc/avatar/';
+
     /**
      * @return string the associated database table name
      */
@@ -31,7 +33,7 @@ class Tintuc extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('tieu_de, tom_tat, noi_dung', 'required','message' => 'Bạn không được bỏ trống "{attribute}"',),
+            array('tieu_de, tom_tat, noi_dung', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"',),
             array('trang_thai', 'numerical', 'integerOnly' => true),
             array('tieu_de', 'length', 'max' => 80),
             array('tom_tat', 'length', 'max' => 250),
@@ -61,8 +63,8 @@ class Tintuc extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'ma_tin' => 'Mã Tin',
-            'tieu_de' => 'Tiêu Dề',
-            'tom_tat' => 'Tóm Tắt',
+            'tieu_de' => 'Tiêu Đề',
+            'tom_tat' => 'Tóm Tăt',
             'noi_dung' => 'Nội Dung',
             'anh' => 'Ảnh',
             'ngay_dang' => 'Ngày Đăng',
@@ -95,7 +97,7 @@ class Tintuc extends CActiveRecord {
         $criteria->compare('noi_dung', $this->noi_dung, true);
         $criteria->compare('anh', $this->anh, true);
         $criteria->compare('ngay_dang', $this->ngay_dang, true);
-        $criteria->compare('trang_thai', $this->trang_thai);
+        $criteria->compare('trang_thai', $this->trang_thai, true);
         $criteria->compare('meta_keyword', $this->meta_keyword, true);
         $criteria->compare('meta_Description', $this->meta_Description, true);
 
@@ -114,35 +116,19 @@ class Tintuc extends CActiveRecord {
         return parent::model($className);
     }
 
-
-    public function getTintuc($id) {
-        return Yii::app()->db->createCommand()
-                        ->select('ma_tin,tieu_de,noi_dung,anh,ngay_dang, tom_tat')
-                        ->from('tintuc')
-                        ->order('ngay_dang DESC')
-                        ->queryAll();
-    }
-
-    public function getChitietTT($matin) {
-        return Yii::app()->db->createCommand()
-                        ->select('ma_tin ,ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
-                        ->from('tintuc')
-                        ->where("ma_tin=$matin")
-                        ->queryRow();
-    }
    public static function trangthai()
    {
-       return array(
+        return array(
             '0' => 'Chưa đăng',
-            '1' =>'Đã đăng',);
-   }
-   public function rendertrangthai($data)
-   {
-   if($data["trang_thai"]==0)
-       return "Chưa đăng";
-   else {
-       return "Đã đăng";
-   }
-   }
+            '1' => 'Đã đăng',);
+    }
 
+    public function rendertrangthai($data) {
+        if ($data["trang_thai"] == 0){
+            return "Chưa đăng";
+        }
+        else {
+            return "Đã đăng";
+        }
+    }  
 }
