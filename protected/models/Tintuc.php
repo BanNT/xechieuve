@@ -16,6 +16,9 @@
  */
 class Tintuc extends CActiveRecord {
 
+//thu muc chu avatar tin tưc
+    const AVARTAR_TINTUC = 'images/tintuc/avatar/';
+
     /**
      * @return string the associated database table name
      */
@@ -30,7 +33,7 @@ class Tintuc extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('tieu_de, tom_tat, noi_dung', 'required'),
+            array('tieu_de, tom_tat, noi_dung', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"',),
             array('trang_thai', 'numerical', 'integerOnly' => true),
             array('tieu_de', 'length', 'max' => 80),
             array('tom_tat', 'length', 'max' => 250),
@@ -97,7 +100,7 @@ class Tintuc extends CActiveRecord {
         $criteria->compare('trang_thai', $this->trang_thai, true);
         $criteria->compare('meta_keyword', $this->meta_keyword, true);
         $criteria->compare('meta_Description', $this->meta_Description, true);
-        
+
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
@@ -111,5 +114,27 @@ class Tintuc extends CActiveRecord {
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
+    }
+    
+   public static function trangthai()
+   {
+        return array(
+            '0' => 'Chưa đăng',
+            '1' => 'Đã đăng',);
+    }
+
+    public function rendertrangthai($data) {
+        if ($data["trang_thai"] == 0){
+            return "Chưa đăng";
+        }
+        else {
+            return "Đã đăng";
+        }
+    }  
+    public function sapxep()
+    {
+        return array(
+            'ngay_dang'=>array('order'=>'ngay_dang DESC'),
+        );
     }
 }

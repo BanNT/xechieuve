@@ -9,6 +9,7 @@ $this->pageTitle = Yii::app()->name . ' - Tin tức';
 
 <?php
 $this->widget('zii.widgets.CListView', array(
+    'id' => 'tintuc',
     'dataProvider' => $dataProvider,
     'summaryText' => '',
     'itemView' => '_view',

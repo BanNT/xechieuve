@@ -42,7 +42,17 @@ class Tin_tucController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Tintuc');
+        $dataProvider = new CActiveDataProvider('Tintuc', array(
+            'criteria' => array(
+                'condition' => 'trang_thai=1',
+                'order' => 'ngay_dang DESC',
+            ),
+            'countCriteria' => array(
+                'condition' => 'trang_thai=1',
+            ),
+            'pagination' => [
+                'pageSize' => 5,
+            ],));
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));

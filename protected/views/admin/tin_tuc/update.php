@@ -7,15 +7,11 @@ $this->breadcrumbs=array(
     $model->ma_tin=>array('view','id'=>$model->ma_tin),
     'Update',
 );
-
-$this->menu=array(
-    array('label'=>'List Tintuc', 'url'=>array('index')),
-    array('label'=>'Create Tintuc', 'url'=>array('create')),
-    array('label'=>'View Tintuc', 'url'=>array('view', 'id'=>$model->ma_tin)),
-    array('label'=>'Manage Tintuc', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Update Tintuc <?php echo $model->ma_tin; ?></h1>
+<h1>Sửa tin  <?php echo $model->tieu_de; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?> 
+<a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-tuc">
+    <span class="glyphicon glyphicon-arrow-left"></span> Quay lại trang quản lý tin tức
+</a>

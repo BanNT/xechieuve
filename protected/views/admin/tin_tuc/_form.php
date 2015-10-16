@@ -9,6 +9,7 @@
     <?php
     $form = $this->beginWidget('CActiveForm', array(
         'id' => 'tintuc-form',
+        'htmlOptions' => array('enctype' => 'multipart/form-data'),
         // Please note: When you enable ajax validation, make sure the corresponding
         // controller action is handling ajax validation correctly.
         // There is a call to performAjaxValidation() commented in generated controller code.
@@ -17,10 +18,9 @@
     ));
     ?>
 
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">Không được để trống ô có dấu <span class="required">*</span></p>
 
-    <?php echo $form->errorSummary($model); ?>
-
+   
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4">
@@ -46,18 +46,15 @@
             <?php echo $form->error($model, 'tom_tat'); ?>
         </div>
     </div>
-
-
-
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4">
             <?php echo $form->labelEx($model, 'anh'); ?>
             <?php
-            echo $form->textField($model, 'anh', array(
+            echo $form->fileField($model, 'anh', array(
                 'size' => 60,
                 'maxlength' => 255,
-                'class' => ' form-control',));
+                ));
             ?>
             <?php echo $form->error($model, 'anh'); ?>
         </div>
@@ -79,8 +76,9 @@
         <div class="col-md-2">
             <?php echo $form->labelEx($model, 'trang_thai'); ?>
             <?php
-            echo $form->textField($model, 'trang_thai', array(
-                'class' => ' form-control',));
+            echo $form->dropDownList($model, 'trang_thai', Tintuc::trangthai(), array(
+                'class' => ' form-control',
+            ));
             ?>
             <?php echo $form->error($model, 'trang_thai'); ?>
         </div>
@@ -130,7 +128,10 @@
         </div>
     </div>
     <div class="col-md-12 text-center">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array(
+            'class' => 'btn btn-success',
+            'style'=>'margin-top:20px;'
+        )); ?>
     </div>
 
     <?php $this->endWidget(); ?>

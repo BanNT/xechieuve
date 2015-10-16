@@ -1,18 +1,16 @@
 <?php
-/* @var $this TintucController */
-/* @var $data Tintuc */
+$this->pageTitle = Yii::app()->name . ' - Tin tức';
 ?>
 
 <?php
-$this->pageTitle = Yii::app()->name . ' - Tin tức';
-$urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . ConvertURL::refine(CHtml::encode($data->tieu_de)) . '/' . CHtml::encode($data->ma_tin);
+$urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . ConvertURL::refine(CHtml::encode($data['tieu_de'])) . '/' . CHtml::encode($data['ma_tin']);
 ?>
 <section id="tintuc">
 
     <div class="row">
         <div class="col-md-4">
             <figure>
-                <a href="<?php echo $urlChiTietTin; ?>"><img src="<?php echo CHtml::encode($data->anh); ?>" width="220" height="170" /></a>
+                <a href="<?php echo $urlChiTietTin; ?>"><img src="<?php echo Yii::app()->request->baseUrl.'/images/tintuc/avatar/'.CHtml::encode($data->anh); ?>" width="220" height="170" /></a>
             </figure>
         </div>
         <div class="col-md-8">
@@ -28,5 +26,3 @@ $urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . Conve
     </div>
     <hr>
 </section>
-<?php
-?>
