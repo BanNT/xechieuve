@@ -10,11 +10,14 @@ return CMap::mergeArray(
                 'urlManager' => array(
                     'urlFormat' => 'path',
                     'rules' => array(
+                        
                         //url quản lý khách hàng
                         'quan-ly-khach-hang' => 'manage_customer/admin',
                         'them-khach-hang' => 'manage_customer/create',
                         //url tin tuc
                         'quan-ly-tin-tuc'=>'tin_tuc/admin',
+                        'loai-tin' => 'loai_tin/admin',
+                        
                         'them-tin-tuc'=>'tin_tuc/create',
                         'quan-ly-khach-hang/thong-tin-khach-hang/id/<id:\d+>' => 'manage_customer/view',
                         //url mặc định của yii
