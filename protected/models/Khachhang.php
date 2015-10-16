@@ -21,7 +21,7 @@ class Khachhang extends CActiveRecord {
     /**
      * Đường dẫn đến thư mục ảnh đại diện của khách hàng
      */
-    const AVARTAR_DIR = 'images/avartars';
+    const AVARTAR_DIR = 'images/avatar/';
 
     /**
      * Ảnh đại diện mặc định cho khách hàng
@@ -33,13 +33,13 @@ class Khachhang extends CActiveRecord {
      * @var string
      */
     public $confirmPassword;
+
     
     /**
      * Điều khoản khi người dùng đăng ký tài khoản
      * @var boolean
      */
     public $dieukhoan;
-    
     public $oldPassword;
     public $newPassword;
     public $newconfirmPassword;
@@ -146,6 +146,9 @@ class Khachhang extends CActiveRecord {
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
             'dia_chi' => 'Địa chỉ:',
+            'oldPassword'=>'Mật khẩu cũ:',
+            'newPassword'=>'Mật khẩu mới',
+            'newconfirmPassword'=>'Nhập lại mật khẩu mới',
             'dieukhoan' => '
                 <a type="button" data-toggle="modal" data-target=".bs-example-modal-lg">Điều khoản sử dụng.</a>
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">

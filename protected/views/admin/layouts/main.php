@@ -81,7 +81,6 @@
                 <div class="col-md-12">
                     <header>
                         <nav class="navbar navbar-inverse navbar-fixed-top">
-                            <span class="h3" style="color:#fff"><?php echo CHtml::encode($this->pageTitle); ?></span>
                             <span class="pull-right" style="display: block;line-height: 50px;margin-right:10px;"><a>Xin chào Trần Văn Hoàng |</a><a>Log out</a></span>
                         </nav>
                     </header>
@@ -99,6 +98,7 @@
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-loai-xe-ghep">Quản lý loại xe ghép</a></li>
                         <li><a>Quản lý liên hệ</a></li>
                         <li><a>Tác vụ khách hàng</a></li>
+                        <li><a href="<?php echo Yii::app()->baseUrl;?>/admin.php/quan-ly-loai-tin">Quản lý loại tin</a></li>
                     </ul>
                 </div>
                 <div class="col-md-9">

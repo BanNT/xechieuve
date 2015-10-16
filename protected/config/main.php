@@ -32,5 +32,16 @@ return array(
         // this is used in contact page
         'email' => 'webmaster@example.com',
     ),
+    'components'=>array(
+    'ajaxUpdate'=>false,
+        'widgetFactory' => array(
+            'widgets' => array(
+                'CLinkPager' => array(
+                    'header' => 'Trang',
+                    'maxButtonCount'=>4,
+                ),
+            ),
+        ),
+),
     
 );
