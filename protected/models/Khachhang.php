@@ -21,7 +21,7 @@ class Khachhang extends CActiveRecord {
     /**
      * Đường dẫn đến thư mục ảnh đại diện của khách hàng
      */
-    const AVARTAR_DIR = 'images/avartars';
+    const AVARTAR_DIR = 'images/avatar/';
 
     /**
      * Ảnh đại diện mặc định cho khách hàng
@@ -66,11 +66,6 @@ class Khachhang extends CActiveRecord {
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
                 'message' => 'Mật khẩu không khớp', 'on' => 'Dang_ky'
             ),
-<<<<<<< HEAD
-            array('dieukhoan', 'checkb', 'on' => 'Dang_ky'),
-
-=======
->>>>>>> master
             //update thong tin
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'update'

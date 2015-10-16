@@ -65,18 +65,26 @@ class Tin_tucController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
-        $model = new Tintuc;
-
+        $model = new Tintuc();
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
         if (isset($_POST['Tintuc'])) {
-            $_SESSION['KCFINDER']['disabled'] = false; // enables the file browser in the admin
-            $_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl . "/uploads/"; // URL for the uploads folder
-            $_SESSION['KCFINDER']['uploadDir'] = Yii::app()->basePath . "/../uploads/"; // path to the uploads folder
+
             $model->attributes = $_POST['Tintuc'];
-            if ($model->save())
+            /* $image = CUploadedFile::getInstance($model, 'anh');
+              $newName = md5(microtime(true) . 'xechieuve') . $image->name;
+              $model->anh = $newName;
+              if ($image) {
+              $image->saveAs(Tintuc::AVARTAR_TINTUC . $newName);
+              } */
+            $_SESSION['KCFINDER']['disabled'] = false; // enables the file browser in the admin
+            $_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl . "/images/tintuc/uploads/"; // URL for the uploads folder
+            $_SESSION['KCFINDER']['uploadDir'] = Yii::app()->basePath . "/../images/tintuc/uploads/"; // path to the uploads folder
+            if ($model->save(false)) {
+
                 $this->redirect(array('view', 'id' => $model->ma_tin));
+            }
         }
 
         $this->render('create', array(
@@ -111,7 +119,7 @@ class Tin_tucController extends Controller {
      * If deletion is successful, the browser will be redirected to the 'admin' page.
      * @param integer $id the ID of the model to be deleted
      */
-    public function actionDelete($id) {
+    public function actionDelete_tintuc($id) {
         $this->loadModel($id)->delete();
 
         // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser

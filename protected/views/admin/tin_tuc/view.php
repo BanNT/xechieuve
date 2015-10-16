@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 
 ?>
 
-<h1>View Tintuc #<?php echo $model->ma_tin; ?></h1>
+<h1>Tin <?php echo $model->tieu_de;?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
     'data'=>$model,

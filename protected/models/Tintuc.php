@@ -15,7 +15,8 @@
  * @property string $meta_Description
  */
 class Tintuc extends CActiveRecord {
-
+//thu muc chu avatar tin tưc
+    const AVARTAR_TINTUC = 'images/tintuc/avatar';
     /**
      * @return string the associated database table name
      */
@@ -30,7 +31,7 @@ class Tintuc extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('tieu_de, tom_tat, noi_dung', 'required'),
+            array('tieu_de, tom_tat, noi_dung', 'required','message' => 'Bạn không được bỏ trống "{attribute}"',),
             array('trang_thai', 'numerical', 'integerOnly' => true),
             array('tieu_de', 'length', 'max' => 80),
             array('tom_tat', 'length', 'max' => 250),
@@ -121,15 +122,6 @@ class Tintuc extends CActiveRecord {
                         ->queryAll();
     }
 
-    public function sql($id) {
-        return Yii::app()->db->createCommand()
-                        ->select('tieu_de, tom_tat, noi_dung, anh, ngay_dang,trang_thai,
-                                meta_keyword, meta_Description ')
-                        ->from('tintuc')
-                        ->where("ma_tin=$id")
-                        ->queryRow();
-    }
-
     public function getChitietTT($matin) {
         return Yii::app()->db->createCommand()
                         ->select('ma_tin ,ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
@@ -142,6 +134,14 @@ class Tintuc extends CActiveRecord {
        return array(
             '0' => 'Chưa đăng',
             '1' =>'Đã đăng',);
+   }
+   public function rendertrangthai($data)
+   {
+   if($data["trang_thai"]==0)
+       return "Chưa đăng";
+   else {
+       return "Đã đăng";
+   }
    }
 
 }

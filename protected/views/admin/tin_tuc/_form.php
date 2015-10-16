@@ -17,10 +17,9 @@
     ));
     ?>
 
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note">Không được để trống ô có dấu <span class="required">*</span></p>
 
-    <?php echo $form->errorSummary($model); ?>
-
+   
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-4">
@@ -51,10 +50,10 @@
         <div class="col-md-4">
             <?php echo $form->labelEx($model, 'anh'); ?>
             <?php
-            echo $form->textField($model, 'anh', array(
+            echo $form->fileField($model, 'anh', array(
                 'size' => 60,
                 'maxlength' => 255,
-                'class' => ' form-control',));
+                ));
             ?>
             <?php echo $form->error($model, 'anh'); ?>
         </div>
@@ -128,7 +127,10 @@
         </div>
     </div>
     <div class="col-md-12 text-center">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array(
+            'class' => 'btn btn-success',
+            'style'=>'margin-top:20px;'
+        )); ?>
     </div>
 
     <?php $this->endWidget(); ?>

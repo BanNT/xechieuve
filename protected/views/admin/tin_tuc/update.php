@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Update Tintuc <?php echo $model->ma_tin; ?></h1>
+<h1>Sửa tin  <?php echo $model->tieu_de; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?> 
 <a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-tuc">

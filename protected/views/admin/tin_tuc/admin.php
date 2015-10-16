@@ -47,6 +47,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'tintuc-grid',
     'dataProvider' => $model->search(),
     'filter' => $model,
+    'summaryText' => '',
     'template' => '{items}{pager}{summary}',
     'loadingCssClass' => '',
     'itemsCssClass' => 'table table-striped table-hover',
@@ -55,17 +56,15 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name' => 'ma_tin',
             'value' => '$data->ma_tin',
-            'header' => '<span class="glyphicon"></span>Mã Tin',
+            'header' => 'Mã Tin',
             'htmlOptions' => array(
-                'style' => 'width: 10px !important',
-            ),
+                'style' => 'width: 8px; text-align: center;',)
         ),
         array(
             'name' => 'tieu_de',
             'value' => '$data->tieu_de',
-            'header' => '<span class="glyphicon" style="width:10px"></span> Tiêu Đề',
+            'header' => '<span ></span> Tiêu Đề',
         ),
-        
         array(
             'name' => 'ngay_dang',
             'value' => '$data->ngay_dang',
@@ -73,8 +72,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'name' => 'trang_thai',
-            'value' => '$data->trang_thai',
-            'header' => '<span class="glyphicon "></span> Trạng thái',
+            'value' => array($model, 'rendertrangthai'),
+            'header' => '<span></span> Trạng thái',
         ),
         array(
             'header' => '<span class="glyphicon glyphicon-cog" ></span> Tác vụ',
@@ -87,13 +86,13 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'buttons' => array(
                 'delete' => array(
                     'label' => '<span class="glyphicon glyphicon-trash"></span>',
-                    'url' => '$this->grid->controller->createUrl("delete", array("id"=>$data->primaryKey, ))',
+                    'url' => '$this->grid->controller->createUrl("quan-ly-tin-tuc/xoa-tin", array("id"=>$data->primaryKey, ))',
                     'imageUrl' => false
                 ),
                 'update' => array(
                     'label' => "<span class='glyphicon glyphicon-pencil'></span>",
                     'header' => "<span class='glyphicon glyphicon-pencil'></span>",
-                    'url' => '$this->grid->controller->createUrl("update", array("id"=>$data->primaryKey,))',
+                    'url' => '$this->grid->controller->createUrl("quan-ly-tin-tuc/sua-tin", array("id"=>$data->primaryKey,))',
                     'imageUrl' => false
                 ),
                 'view' => array(

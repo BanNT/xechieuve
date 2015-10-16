@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-4">
                 <figure>
-                    <img src="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/images/tintuc/<?php echo CHtml::encode($tin['anh']); ?>" alt="skype" width="220" height="170" /></a>
+                    <img src="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/images/tintuc/avatar/<?php echo CHtml::encode($tin['anh']); ?>" alt="skype" width="220" height="170" /></a>
                 </figure> 
             </div>
             <div class="col-md-8">
