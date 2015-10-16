@@ -29,7 +29,7 @@ class Loaitin extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('loai_tin, gia_dang', 'required'),
+			array('loai_tin, gia_dang', 'required' ,'message' => 'Bạn không được bỏ trống "{attribute}"'),
 			array('gia_dang', 'numerical', 'integerOnly'=>true),
 			array('loai_tin', 'length', 'max'=>80),
 			// The following rule is used by search().
@@ -57,8 +57,8 @@ class Loaitin extends CActiveRecord
 	{
 		return array(
 			'ma_loai_tin' => 'Ma Loai Tin',
-			'loai_tin' => 'Loai Tin',
-			'gia_dang' => 'Gia Dang',
+			'loai_tin' => 'Loại tin',
+			'gia_dang' => 'Giá đăng',
 		);
 	}
 

@@ -428,6 +428,12 @@ td{width: 100px}
     margin-left: 200px;
     font-size: 20px;
 }
+#lienhe{
+    border:1px solid #0099cc;
+}
+#trogiup{
+    border:1px solid #0099cc;
+}
 
 ///style admin
 #adminlistTT {
@@ -437,4 +443,3 @@ td{width: 100px}
 {
     text-align: center;
 }
-//message
