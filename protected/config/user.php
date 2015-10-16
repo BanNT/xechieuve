@@ -19,6 +19,7 @@ return CMap::mergeArray(
                         'rao-vat' => 'rao_vat',
                         'lien-he' => 'lien_he',
                         'dang-tin' => 'dang_tin',
+                        
                         //url đăng itn rao vặt, khach tìm xe, xe tìm khách
                         'khach-tim-xe/dang-tin' => 'khach_tim_xe/dang_tin',
                         'xe-tim-khach/dang-tin' => 'xe_tim_khach/dang_tin',
