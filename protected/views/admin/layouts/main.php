@@ -94,6 +94,7 @@
                         <li><a>Quản lý loại xe ghép</a></li>
                         <li><a>Quản lý liên hệ</a></li>
                         <li><a>Tác vụ khách hàng</a></li>
+                        <li><a href="<?php echo Yii::app()->baseUrl;?>/admin.php/quan-ly-loai-tin">Qu?n l? lo?i tin</a></li>
                     </ul>
                 </div>
 

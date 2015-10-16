@@ -117,17 +117,17 @@ class Tintuc extends CActiveRecord {
    public static function trangthai()
    {
        return array(
-            '0' => 'Chı ğãng',
-            '1' =>'Ä?Ã£ Ä‘Äƒng',);
+            '0' => 'Chıa ğãng',
+            '1' =>'Ğ? ğãng',);
    }
    public function rendertrangthai($data)
    {
    if($data["trang_thai"]==0)
    {
-       return "ChÆ°a Ä‘Äƒng";
+       return "Chıa ğãng";
    }
    else {
-       return "Ä?Ã£ Ä‘Äƒng";
+       return "Ğ? ğãng";
    }
    }
 }

@@ -16,7 +16,7 @@ return CMap::mergeArray(
 
                         //url tin tuc
                         'quan-ly-tin-tuc'=>'tin_tuc/admin',
-                        'loai-tin' => 'loai_tin/admin',
+                        'quan-ly-loai-tin' => 'loai_tin/admin',
                         
                         'them-tin-tuc'=>'tin_tuc/create',
                         'quan-ly-tin-tuc/thong-tin-tin-tuc/id/<id:\d+>' => 'tin_tuc/view',
