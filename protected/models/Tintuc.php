@@ -16,9 +16,8 @@
  */
 class Tintuc extends CActiveRecord {
 
-//thu muc chu avatar tin t?c
+//thu muc chu avatar tin tưc
     const AVARTAR_TINTUC = 'images/tintuc/avatar/';
-
     /**
      * @return string the associated database table name
      */
@@ -122,7 +121,6 @@ class Tintuc extends CActiveRecord {
             '0' => 'Chưa đăng',
             '1' => 'Đã đăng',);
     }
-
     public function rendertrangthai($data) {
         if ($data["trang_thai"] == 0){
             return "Chưa đăng";

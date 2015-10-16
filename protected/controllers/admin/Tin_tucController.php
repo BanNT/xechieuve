@@ -72,18 +72,20 @@ class Tin_tucController extends Controller {
         if (isset($_POST['Tintuc'])) {
 
             $model->attributes = $_POST['Tintuc'];
-            /* $image = CUploadedFile::getInstance($model, 'anh');
-              $newName = md5(microtime(true) . 'xechieuve') . $image->name;
-              $model->anh = $newName;
-              if ($image) {
-              $image->saveAs(Tintuc::AVARTAR_TINTUC . $newName);
-              } */
+            $image = CUploadedFile::getInstance($model, 'anh');
+            $newName = md5(microtime(true) . 'xechieuve') . $image->name;
+            $model->anh = $newName;
+            if ($image) {
+                $image->saveAs(Tintuc::AVARTAR_TINTUC . $newName);
+            }
             $_SESSION['KCFINDER']['disabled'] = false; // enables the file browser in the admin
             $_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl . "/images/tintuc/uploads/"; // URL for the uploads folder
             $_SESSION['KCFINDER']['uploadDir'] = Yii::app()->basePath . "/../images/tintuc/uploads/"; // path to the uploads folder
-            if ($model->save(false)) {
+            if ($model->validate()) {
+                if ($model->save(false)) {
 
-                $this->redirect(array('view', 'id' => $model->ma_tin));
+                    $this->redirect(array('view', 'id' => $model->ma_tin));
+                }
             }
         }
 
@@ -105,10 +107,30 @@ class Tin_tucController extends Controller {
 
         if (isset($_POST['Tintuc'])) {
             $model->attributes = $_POST['Tintuc'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->ma_tin));
-        }
+            $_SESSION['KCFINDER']['disabled'] = false; // enables the file browser in the admin
+            $_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl . "/images/tintuc/uploads/"; // URL for the uploads folder
+            $_SESSION['KCFINDER']['uploadDir'] = Yii::app()->basePath . "/../images/tintuc/uploads/"; // path to the uploads folder
+            $anh = $model->anh;
+            if ($model->validate()) {
+                //lay ngay dang hien tai
+                $model->ngay_dang= new CDbExpression('NOW()');
+                $image = CUploadedFile::getInstance($model, 'anh');
+                if ($image) {
+                    //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
+                    if ($anh) {
+                        unlink(Yii::app()->basePath . "/../" . Tintuc::AVARTAR_TINTUC . $anh);
+                    }
 
+                    $newName = md5(microtime(true) . 'xechieuve') . $image->name;
+                    $model->anh = $newName;
+                    $image->saveAs(Tintuc::AVARTAR_TINTUC . $newName);
+                } else {
+                    $model->anh = $anh;
+                }
+                if ($model->save(FALSE))
+                    $this->redirect(array('view', 'id' => $model->ma_tin));
+            }
+        }
         $this->render('update', array(
             'model' => $model,
         ));

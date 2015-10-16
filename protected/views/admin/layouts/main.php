@@ -95,6 +95,7 @@
                         <li><a>Quản lý liên hệ</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl;?>/admin.php/loai-tin">Quản lý loại tin</a></li>
                         <li><a>Tác vụ khách hàng</a></li>
+                        <li><a href="<?php echo Yii::app()->baseUrl;?>/admin.php/quan-ly-loai-tin">Quản lý loại tin</a></li>
                     </ul>
                 </div>
 
