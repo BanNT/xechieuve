@@ -28,3 +28,5 @@ $urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . Conve
     </div>
     <hr>
 </section>
+<?php
+?>

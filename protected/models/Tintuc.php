@@ -94,10 +94,10 @@ class Tintuc extends CActiveRecord {
         $criteria->compare('noi_dung', $this->noi_dung, true);
         $criteria->compare('anh', $this->anh, true);
         $criteria->compare('ngay_dang', $this->ngay_dang, true);
-        $criteria->compare('trang_thai', $this->trang_thai);
+        $criteria->compare('trang_thai', $this->trang_thai, true);
         $criteria->compare('meta_keyword', $this->meta_keyword, true);
         $criteria->compare('meta_Description', $this->meta_Description, true);
-
+        
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
