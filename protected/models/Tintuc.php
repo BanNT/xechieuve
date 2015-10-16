@@ -16,7 +16,7 @@
  */
 class Tintuc extends CActiveRecord {
 //thu muc chu avatar tin tưc
-    const AVARTAR_TINTUC = 'images/tintuc/avatar';
+    const AVARTAR_TINTUC = 'images/tintuc/avatar/';
     /**
      * @return string the associated database table name
      */
@@ -113,23 +113,6 @@ class Tintuc extends CActiveRecord {
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
-<<<<<<< HEAD
-
-    public function getTintuc($id) {
-        return Yii::app()->db->createCommand()
-                        ->select('ma_tin,tieu_de,noi_dung,anh,ngay_dang, tom_tat')
-                        ->from('tintuc')
-                        ->order('ngay_dang DESC')
-                        ->queryAll();
-    }
-
-    public function getChitietTT($matin) {
-        return Yii::app()->db->createCommand()
-                        ->select('ma_tin ,ngay_dang, tieu_de ,noi_dung,anh,tom_tat')
-                        ->from('tintuc')
-                        ->where("ma_tin=$matin")
-                        ->queryRow();
-    }
    public static function trangthai()
    {
        return array(
@@ -139,12 +122,13 @@ class Tintuc extends CActiveRecord {
    public function rendertrangthai($data)
    {
    if($data["trang_thai"]==0)
+   {
        return "Chưa đăng";
+   }
    else {
        return "Đã đăng";
    }
    }
 
-=======
->>>>>>> fa39863de4086e8d1782e6c22ad7a4b403fd933e
+
 }

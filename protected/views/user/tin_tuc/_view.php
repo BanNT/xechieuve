@@ -12,7 +12,7 @@ $urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . Conve
     <div class="row">
         <div class="col-md-4">
             <figure>
-                <a href="<?php echo $urlChiTietTin; ?>"><img src="<?php echo CHtml::encode($data->anh); ?>" width="220" height="170" /></a>
+                <a href="<?php echo $urlChiTietTin; ?>"><img src="<?php echo Yii::app()->request->baseUrl.'/images/tintuc/avatar/'. CHtml::encode($data->anh); ?>" width="220" height="170" /></a>
             </figure>
         </div>
         <div class="col-md-8">
