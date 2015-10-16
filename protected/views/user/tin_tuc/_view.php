@@ -1,5 +1,5 @@
 <?php
-$this->pageTitle = Yii::app()->name . ' - Tin t?c';
+$this->pageTitle = Yii::app()->name . ' - Tin tức';
 ?>
 
 <?php
@@ -17,7 +17,7 @@ $urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . Conve
             <header>
                 <h4> <a href="<?php echo $urlChiTietTin; ?>"><?php echo CHtml::encode($data->tom_tat); ?></a></h4>
             </header>
-            Ng�y ??ng:
+            Ngày đăng:
             <time datetime="+07:00" itemprop="datePublished" style="font-style: italic"><?php echo CHtml::encode($data->ngay_dang); ?></time>
             <article>
                 <br/><?php echo CHtml::encode($data->tom_tat); ?>

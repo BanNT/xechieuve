@@ -16,7 +16,7 @@
  */
 class Tintuc extends CActiveRecord {
 
-//thu muc chu avatar tin tưc
+//thu muc chu avatar tin t?c
     const AVARTAR_TINTUC = 'images/tintuc/avatar/';
 
     /**
@@ -33,7 +33,7 @@ class Tintuc extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('tieu_de, tom_tat, noi_dung', 'required', 'message' => 'Bạn không được b�? trống "{attribute}"',),
+            array('tieu_de, tom_tat, noi_dung', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"',),
             array('trang_thai', 'numerical', 'integerOnly' => true),
             array('tieu_de', 'length', 'max' => 80),
             array('tom_tat', 'length', 'max' => 250),
@@ -63,11 +63,11 @@ class Tintuc extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'ma_tin' => 'Mã Tin',
-            'tieu_de' => 'Tiêu D�?',
-            'tom_tat' => 'Tóm Tắt',
+            'tieu_de' => 'Tiêu Đề',
+            'tom_tat' => 'Tóm Tăt',
             'noi_dung' => 'Nội Dung',
             'anh' => 'Ảnh',
-            'ngay_dang' => 'Ngày �?ăng',
+            'ngay_dang' => 'Ngày Đăng',
             'trang_thai' => 'Trạng Thái',
             'meta_keyword' => 'Meta Keyword',
             'meta_Description' => 'Meta Description',
@@ -119,16 +119,16 @@ class Tintuc extends CActiveRecord {
    public static function trangthai()
    {
         return array(
-            '0' => 'Ch?a ??ng',
-            '1' => '?� ??ng',);
+            '0' => 'Chưa đăng',
+            '1' => 'Đã đăng',);
     }
 
     public function rendertrangthai($data) {
         if ($data["trang_thai"] == 0){
-            return "Ch?a ??ng";
+            return "Chưa đăng";
         }
         else {
-            return "?� ??ng";
+            return "Đã đăng";
         }
     }  
 }
