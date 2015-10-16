@@ -7,16 +7,10 @@ $this->breadcrumbs=array(
     $model->ma_tin,
 );
 
-$this->menu=array(
-    array('label'=>'List Tintuc', 'url'=>array('index')),
-    array('label'=>'Create Tintuc', 'url'=>array('create')),
-    array('label'=>'Update Tintuc', 'url'=>array('update', 'id'=>$model->ma_tin)),
-    array('label'=>'Delete Tintuc', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ma_tin),'confirm'=>'Are you sure you want to delete this item?')),
-    array('label'=>'Manage Tintuc', 'url'=>array('admin')),
-);
+
 ?>
 
-<h1>View Tintuc #<?php echo $model->ma_tin; ?></h1>
+<h1>Tin <?php echo $model->tieu_de;?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
     'data'=>$model,
@@ -32,3 +26,6 @@ $this->menu=array(
         'meta_Description',
     ),
 )); ?> 
+<a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-tuc">
+    <span class="glyphicon glyphicon-arrow-left"></span> Quay lại trang quản lý tin tức
+</a>

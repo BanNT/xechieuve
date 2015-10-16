@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Quản lý khách hàng
  */
@@ -28,20 +29,20 @@ class Manage_customerController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view','delete'),
+                'actions' => array('index', 'view', 'delete'),
                 'users' => array('*'),
             ),
-//			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-//				'actions'=>array('create','update'),
-//				'users'=>array('@'),
-//			),
-//			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-//				'actions'=>array('admin','delete'),
-//				'users'=>array('admin'),
-//			),
-//			array('deny',  // deny all users
-//				'users'=>array('*'),
-//			),
+//            array('allow', // allow authenticated user to perform 'create' and 'update' actions
+//                'actions' => array('create', 'update'),
+//                'users' => array('@'),
+//            ),
+//            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+//                'actions' => array('admin', 'delete'),
+//                'users' => array('admin'),
+//            ),
+//            array('deny', // deny all users
+//                'users' => array('*'),
+//            ),
         );
     }
 
@@ -56,8 +57,7 @@ class Manage_customerController extends Controller {
     }
 
     /**
-     * Creates a new model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Thêm mới khách hàng
      */
     public function actionCreate() {
         $model = new Khachhang('Dang_ky');
@@ -67,8 +67,17 @@ class Manage_customerController extends Controller {
 
         if (isset($_POST['Khachhang'])) {
             $model->attributes = $_POST['Khachhang'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->ma_khach_hang));
+            if ($model->validate()) {
+                $model->anh_dai_dien = Khachhang::DEFAULT_AVARTAR;
+                $model->password = md5($model->password);
+
+                //Lưu thông tin khách hàng và redirect trang
+                if ($model->save(false)) {
+                    $this->redirect(array(
+                        'admin',
+                    ));
+                }
+            }
         }
 
         $this->render('create', array(
@@ -83,18 +92,29 @@ class Manage_customerController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
+        $model->setScenario('update');
+        $model->password = $message ='';
         if (isset($_POST['Khachhang'])) {
             $model->attributes = $_POST['Khachhang'];
-            if ($model->save())
-                $this->redirect(array('view', 'id' => $model->ma_khach_hang));
+            $model->confirmPassword = $_POST['Khachhang']['confirmPassword'];
+            if ($model->validate()) {
+//                die('hello world');
+                if ($model->password != '') {
+                    $model->password = md5($model->password);
+                } else {
+                    unset($model->password);
+                }
+
+                //Lưu dữ liệu vào CSDL và redirect trang
+                if ($model->save(false)) {
+                    $this->redirect(array('admin'));
+                }
+            }
         }
 
         $this->render('update', array(
             'model' => $model,
+            'message' => $message
         ));
     }
 
@@ -103,22 +123,15 @@ class Manage_customerController extends Controller {
      * If deletion is successful, the browser will be redirected to the 'admin' page.
      * @param integer $id the ID of the model to be deleted
      */
-    public function actionDelete($id) {
+    public function actionDelete_user($id) {
+        //Kiểm tra khách hàng này đã đăng tin chưa nếu chưa thì mới xóa
+        if (Tinkhachhang::model()->findByAttributes(array('ma_khach_hang' => $id))) {
+            $this->redirect(array('admin'));
+        }
+
+        //xóa dữ liệu khách hàng và redirect trang
         $this->loadModel($id)->delete();
-
-        // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-        if (!isset($_GET['ajax']))
-            $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-    }
-
-    /**
-     * Lists all models.
-     */
-    public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Khachhang');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
+        $this->redirect(array('admin'));
     }
 
     /**
@@ -127,8 +140,9 @@ class Manage_customerController extends Controller {
     public function actionAdmin() {
         $model = new Khachhang('search');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_POST['Khachhang']))
-            $model->attributes = $_POST['Khachhang'];
+        if ((Yii::app()->request->getParam('Khachhang'))) {
+            $model->attributes = Yii::app()->request->getParam('Khachhang');
+        }
 
         $this->render('admin', array(
             'model' => $model,

@@ -5,6 +5,10 @@
  */
 class Province {
 
+    /**
+     * Lấy ra danh sách các tỉnh tại Việt Nam dạng mảng
+     * @return type
+     */
     public static function listProvinces() {
         return array(
             '0' => 'Toàn quốc',

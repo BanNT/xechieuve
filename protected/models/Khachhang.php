@@ -18,14 +18,27 @@
  */
 class Khachhang extends CActiveRecord {
 
-    const AVARTAR_DIR = 'images/avartars';
+    /**
+     * Đường dẫn đến thư mục ảnh đại diện của khách hàng
+     */
+    const AVARTAR_DIR = 'images/avatar/';
+
+    /**
+     * Ảnh đại diện mặc định cho khách hàng
+     */
+    const DEFAULT_AVARTAR = 'default-avatar.png';
 
     /**
      * Xác nhận password
      * @var string
      */
     public $confirmPassword;
-    public $diachi;
+
+    
+    /**
+     * Điều khoản khi người dùng đăng ký tài khoản
+     * @var boolean
+     */
     public $dieukhoan;
     public $oldPassword;
     public $newPassword;
@@ -46,17 +59,19 @@ class Khachhang extends CActiveRecord {
         // will receive user inputs.
         return array(
             //dang ki
-            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, dia_chi,', 'required',
+            array('ten_khach_hang, ten_dang_nhap, password,email, so_dien_thoai, dia_chi,confirmPassword,dieukhoan', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'Dang_ky'
             ),
+            array('dieukhoan', 'checkb', 'on' => 'Dang_ky'),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword',
                 'message' => 'Mật khẩu không khớp', 'on' => 'Dang_ky'
             ),
-            array('password,confirmPassword,dieukhoan', 'required', 'on' => 'Dang_ky'),
-            array('dieukhoan', 'checkb', 'on' => 'Dang_ky'),
             //update thong tin
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'update'
+            ),
+            array('password', 'compare', 'compareAttribute' => 'confirmPassword',
+                'message' => 'Mật khẩu không khớp', 'on' => 'update'
             ),
             //update pass
             array('oldPassword,newPassword,newconfirmPassword', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'updatepass'),
@@ -67,7 +82,9 @@ class Khachhang extends CActiveRecord {
             //  'message' => 'Mật khẩu không khớp','on'=>'updatepass'
             //),
             array('oldPassword', 'checkpass', 'on' => 'updatepass'),
-            array('so_du_tai_khoan', 'numerical', 'integerOnly' => true),
+            array('so_du_tai_khoan,so_dien_thoai', 'numerical', 'integerOnly' => true,
+                'message'=>'{attribute} chỉ chứa số'
+                ),
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
                 'message' => '{attribute} phải dưới 80 kí tự'
             ),
@@ -87,7 +104,7 @@ class Khachhang extends CActiveRecord {
             array('email', 'unique', 'message' => '{attribute} đã tồn tại '),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password, email, so_dien_thoai, so_du_tai_khoan, anh_dai_dien', 'safe', 'on' => 'search'),
+            array('ma_khach_hang, ten_khach_hang, email, so_dien_thoai, so_du_tai_khoan', 'safe', 'on' => 'search'),
         );
     }
 
@@ -128,7 +145,10 @@ class Khachhang extends CActiveRecord {
             'so_du_tai_khoan' => 'Số dư tài khoản:',
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
-            'diachi' => 'Địa chỉ:',
+            'dia_chi' => 'Địa chỉ:',
+            'oldPassword'=>'Mật khẩu cũ:',
+            'newPassword'=>'Mật khẩu mới',
+            'newconfirmPassword'=>'Nhập lại mật khẩu mới',
             'dieukhoan' => '
                 <a type="button" data-toggle="modal" data-target=".bs-example-modal-lg">Điều khoản sử dụng.</a>
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">

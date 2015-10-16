@@ -147,7 +147,7 @@ body,ul,h4{
     margin-bottom: 11px; 
 
 }
-#search #ngay-khoi-hanh
+#search #ngay-khoi-hanh,#search #ngay-dang
 {
     width: 124px;
     background: url(../images/n.png)no-repeat right #dad8d9;
@@ -390,6 +390,11 @@ td{width: 100px}
 {
     border:1px solid captiontext;
 }
+#chinhsua .errorMessage{
+    margin-top: 15px;
+    color: red;
+    margin-left: 175px;
+}
 .chinhsuaTT
 {
     margin-left: 100px;
@@ -398,7 +403,7 @@ td{width: 100px}
 }
 #anhdaidien
 {
-    width: 300px;
+   width: 160px;
     margin-top: 5px;
     margin-left: 200px;
     border: 1px solid #cccccc;
