@@ -113,6 +113,7 @@ class Tintuc extends CActiveRecord {
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
+<<<<<<< HEAD
 
     public function getTintuc($id) {
         return Yii::app()->db->createCommand()
@@ -144,4 +145,6 @@ class Tintuc extends CActiveRecord {
    }
    }
 
+=======
+>>>>>>> fa39863de4086e8d1782e6c22ad7a4b403fd933e
 }

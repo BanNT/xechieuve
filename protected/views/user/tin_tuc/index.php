@@ -1,6 +1,13 @@
-<?php $this->pageTitle = Yii::app()->name . ' - Tin tức'; ?>
-<section id="tintuc">
+<?php
+/* @var $this Tin_tucController */
+/* @var $dataProvider CActiveDataProvider */
+
+$this->pageTitle = Yii::app()->name . ' - Tin tức';
+
+?>
+
     <div><h3 style="border-bottom: 1px solid #ccc; padding: 10px 0;">Tin tức</h3></div>
+<<<<<<< HEAD
     <?php
     foreach ($tintuc as $tin):
         $urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . ConvertURL::refine($tin['tieu_de']) . '/' . $tin['ma_tin'];
@@ -24,3 +31,10 @@
     endforeach;
     ?>
 </section>
+=======
+
+<?php $this->widget('zii.widgets.CListView', array(
+	'dataProvider'=>$dataProvider,
+	'itemView'=>'_view',
+)); ?>
+>>>>>>> fa39863de4086e8d1782e6c22ad7a4b403fd933e
