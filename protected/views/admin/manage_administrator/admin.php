@@ -1,6 +1,6 @@
 <?php
-/* @var $this Manage_user_newsController */
-/* @var $model Tinkhachhang */
+/* @var $this Manage_administratorController */
+/* @var $model Quantrivien */
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -8,13 +8,22 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#tinkhachhang-grid').yiiGridView('update', {
+	$('#quantrivien-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
 });
 ");
 ?>
+
+<div class="text-center">
+    <h3>
+        <a href="<?php echo CHtml::encode(Yii::app()->baseUrl); ?>/admin.php/quan-ly-quan-tri-vien/them">
+            <span class="glyphicon glyphicon-hand-right"></span> Thêm quản trị viên
+        </a>
+    </h3>
+</div>
+<hr/>
 <div class="table-responsive">
     <?php
     $form = $this->beginWidget('CActiveForm', array(
@@ -24,29 +33,17 @@ $('.search-form form').submit(function(){
     ?>
     <?php
     $this->widget('zii.widgets.grid.CGridView', array(
-        'id' => 'tinkhachhang-grid',
+        'id' => 'quantrivien-grid',
         'dataProvider' => $model->search(),
-        'itemsCssClass' => 'table table-striped table-hover',
         'filter' => $model,
         'template' => '{items}{pager}{summary}',
+        'loadingCssClass' => '',
+        'itemsCssClass' => 'table table-striped table-hover',
         'columns' => array(
-            'ma_tin',
-            array(
-                'name' => 'ma_loai_tin',
-                'value' => array($model, 'renderTenLoaiTin'),
-                'header' => 'Loại tin',
-                'filter'=>false
-            ),
-            'ma_khach_hang',
-            'tieu_de_tin',
-            'nguoi_lien_lac',
-            'so_dien_thoai',
-            'ngay_dang',
-            array(
-                'name' => 'trang_thai',
-                'header' => 'Trạng thái',
-                'filter'=>false
-            ),
+            'ma_qtv',
+            'ten_qtv',
+            'email',
+            'trang_thai',
             array(
                 'header' => '<span class="glyphicon glyphicon-cog" ></span> Tác vụ',
                 'htmlOptions' => array(
@@ -57,13 +54,13 @@ $('.search-form form').submit(function(){
                 'buttons' => array(
                     'delete' => array(
                         'label' => '<span class="glyphicon glyphicon-trash"></span>',
-                        'url' => '$this->grid->controller->createUrl("quan-ly-tin-dang-khach-hang/xoa", array("id"=>$data->primaryKey,"type"=>$data->ma_loai_tin ))',
+                        'url' => '$this->grid->controller->createUrl("quan-ly-quan-tri-vien/xoa", array("id"=>$data->primaryKey, ))',
                         'imageUrl' => false
                     ),
                     'update' => array(
                         'label' => "<span class='glyphicon glyphicon-pencil'></span>",
                         'header' => "<span class='glyphicon glyphicon-pencil'></span>",
-                        'url' => '$this->grid->controller->createUrl("quan-ly-tin-dang-khach-hang/sua", array("id"=>$data->primaryKey,"type"=>$data->ma_loai_tin))',
+                        'url' => '$this->grid->controller->createUrl("quan-ly-quan-tri-vien/sua", array("id"=>$data->primaryKey,))',
                         'imageUrl' => false
                     ),
                 ),
@@ -74,3 +71,4 @@ $('.search-form form').submit(function(){
     <input type="submit" class="hidden"/>
     <?php $this->endWidget(); ?>
 </div>
+

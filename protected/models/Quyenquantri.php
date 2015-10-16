@@ -1,22 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "loaixeghep".
+ * This is the model class for table "quyenquantri".
  *
- * The followings are the available columns in table 'loaixeghep':
- * @property integer $ma_loai_xe_ghep
- * @property string $loai_xe_ghep
+ * The followings are the available columns in table 'quyenquantri':
+ * @property integer $ma_quyen
+ * @property string $loai_quyen
  *
  * The followings are the available model relations:
- * @property Tinghepxe[] $tinghepxes
+ * @property Phanquyenquantri[] $phanquyenquantris
  */
-class Loaixeghep extends CActiveRecord {
+class Quyenquantri extends CActiveRecord {
 
     /**
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'loaixeghep';
+        return 'quyenquantri';
     }
 
     /**
@@ -26,11 +26,11 @@ class Loaixeghep extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('loai_xe_ghep', 'required','message'=>'Không được bỏ trống {attribute}'),
-            array('loai_xe_ghep', 'length', 'max' => 50),
+            array('loai_quyen', 'required'),
+            array('loai_quyen', 'length', 'max' => 80),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('ma_loai_xe_ghep, loai_xe_ghep', 'safe', 'on' => 'search'),
+            array('ma_quyen, loai_quyen', 'safe', 'on' => 'search'),
         );
     }
 
@@ -41,7 +41,7 @@ class Loaixeghep extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'tinghepxes' => array(self::HAS_MANY, 'Tinghepxe', 'ma_loai_xe_ghep'),
+            'phanquyenquantris' => array(self::HAS_MANY, 'Phanquyenquantri', 'ma_quyen'),
         );
     }
 
@@ -50,8 +50,8 @@ class Loaixeghep extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'ma_loai_xe_ghep' => 'Mã loại xe ghép',
-            'loai_xe_ghep' => 'Loại xe ghép',
+            'ma_quyen' => 'Ma Quyen',
+            'loai_quyen' => 'Loai Quyen',
         );
     }
 
@@ -72,8 +72,8 @@ class Loaixeghep extends CActiveRecord {
 
         $criteria = new CDbCriteria;
 
-        $criteria->compare('ma_loai_xe_ghep', $this->ma_loai_xe_ghep);
-        $criteria->compare('loai_xe_ghep', $this->loai_xe_ghep, true);
+        $criteria->compare('ma_quyen', $this->ma_quyen);
+        $criteria->compare('loai_quyen', $this->loai_quyen, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
@@ -81,22 +81,20 @@ class Loaixeghep extends CActiveRecord {
     }
 
     /**
-     * Returns the static model of the specified AR class.
-     * Please note that you should have this exact method in all your CActiveRecord descendants!
-     * @param string $className active record class name.
-     * @return Loaixeghep the static model class
+     * @return CActiveRecord
      */
-    public static function model($className = __CLASS__) {
-        return parent::model($className);
+    public static function getAllRole() {
+        return Quyenquantri::model()->findAll();
     }
 
     /**
-     * Lấy ra danh sách loại xe ghép theo kiểu mảng với ma_loai_xe_ghep là key,
-     * loai_xe_ghep là value
-     * @return array
+     * Returns the static model of the specified AR class.
+     * Please note that you should have this exact method in all your CActiveRecord descendants!
+     * @param string $className active record class name.
+     * @return Quyenquantri the static model class
      */
-    public static function optionLoaiXeGhep() {
-        return CHtml::listData(Loaixeghep::model()->findAll(), 'ma_loai_xe_ghep', 'loai_xe_ghep');
+    public static function model($className = __CLASS__) {
+        return parent::model($className);
     }
 
 }

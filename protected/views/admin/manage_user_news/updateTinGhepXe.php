@@ -129,12 +129,14 @@ $form = $this->beginWidget('CActiveForm', array(
     <?php
     echo CHtml::submitButton($tinKhachHang->isNewRecord ? 'Create' : 'Save', array(
         'class' => 'btn btn-success',
-        'style'=>'margin-top:20px;'
+        'style' => 'margin-bottom:20px;'
     ));
     ?>
 </div>
 <?php $this->endWidget(); ?>
-
+<a  style="margin-bottom: 20px;" href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-dang-khach-hang">
+    <span class="glyphicon glyphicon-arrow-left"></span> Quay lại trang quản lý tin đăng khách hàng
+</a>
 <script src="<?php echo Yii::app()->baseUrl . '/js/ckeditor/ckeditor.js'; ?>"></script>
 <script type="text/javascript">
     CKEDITOR.replace('noi-dung-tin');

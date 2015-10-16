@@ -1,22 +1,23 @@
 <?php
 
 /**
- * This is the model class for table "loaixeghep".
+ * This is the model class for table "phanquyenquantri".
  *
- * The followings are the available columns in table 'loaixeghep':
- * @property integer $ma_loai_xe_ghep
- * @property string $loai_xe_ghep
+ * The followings are the available columns in table 'phanquyenquantri':
+ * @property integer $ma_quyen
+ * @property integer $ma_qtv
  *
  * The followings are the available model relations:
- * @property Tinghepxe[] $tinghepxes
+ * @property Quantrivien $maQtv
+ * @property Quyenquantri $maQuyen
  */
-class Loaixeghep extends CActiveRecord {
+class Phanquyenquantri extends CActiveRecord {
 
     /**
      * @return string the associated database table name
      */
     public function tableName() {
-        return 'loaixeghep';
+        return 'phanquyenquantri';
     }
 
     /**
@@ -26,11 +27,11 @@ class Loaixeghep extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('loai_xe_ghep', 'required','message'=>'Không được bỏ trống {attribute}'),
-            array('loai_xe_ghep', 'length', 'max' => 50),
+            array('ma_quyen, ma_qtv', 'required'),
+            array('ma_quyen, ma_qtv', 'numerical', 'integerOnly' => true),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('ma_loai_xe_ghep, loai_xe_ghep', 'safe', 'on' => 'search'),
+            array('ma_quyen, ma_qtv', 'safe', 'on' => 'search'),
         );
     }
 
@@ -41,7 +42,8 @@ class Loaixeghep extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'tinghepxes' => array(self::HAS_MANY, 'Tinghepxe', 'ma_loai_xe_ghep'),
+            'maQtv' => array(self::BELONGS_TO, 'Quantrivien', 'ma_qtv'),
+            'maQuyen' => array(self::BELONGS_TO, 'Quyenquantri', 'ma_quyen'),
         );
     }
 
@@ -50,9 +52,13 @@ class Loaixeghep extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'ma_loai_xe_ghep' => 'Mã loại xe ghép',
-            'loai_xe_ghep' => 'Loại xe ghép',
+            'ma_quyen' => 'Ma Quyen',
+            'ma_qtv' => 'Ma Qtv',
         );
+    }
+
+    public function getAllAuthorizationById($maQTV) {
+        return $this->findAllByAttributes(array('ma_qtv'=>$maQTV));
     }
 
     /**
@@ -72,8 +78,8 @@ class Loaixeghep extends CActiveRecord {
 
         $criteria = new CDbCriteria;
 
-        $criteria->compare('ma_loai_xe_ghep', $this->ma_loai_xe_ghep);
-        $criteria->compare('loai_xe_ghep', $this->loai_xe_ghep, true);
+        $criteria->compare('ma_quyen', $this->ma_quyen);
+        $criteria->compare('ma_qtv', $this->ma_qtv);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
@@ -84,19 +90,10 @@ class Loaixeghep extends CActiveRecord {
      * Returns the static model of the specified AR class.
      * Please note that you should have this exact method in all your CActiveRecord descendants!
      * @param string $className active record class name.
-     * @return Loaixeghep the static model class
+     * @return Phanquyenquantri the static model class
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
-    }
-
-    /**
-     * Lấy ra danh sách loại xe ghép theo kiểu mảng với ma_loai_xe_ghep là key,
-     * loai_xe_ghep là value
-     * @return array
-     */
-    public static function optionLoaiXeGhep() {
-        return CHtml::listData(Loaixeghep::model()->findAll(), 'ma_loai_xe_ghep', 'loai_xe_ghep');
     }
 
 }

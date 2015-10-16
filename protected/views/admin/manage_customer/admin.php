@@ -23,6 +23,7 @@ $('.search-form form').submit(function(){
         </a>
     </h3>
 </div>
+<hr/>
 <div class="table-responsive">
     <?php
     $form = $this->beginWidget('CActiveForm', array(
@@ -70,7 +71,6 @@ $('.search-form form').submit(function(){
                     'style' => 'width: 100px; text-align: center;',
                 ),
                 'class' => 'CButtonColumn',
-//            'filter'=>'dsds',
                 'template' => '{update} {delete}',
                 'buttons' => array(
                     'delete' => array(
@@ -84,11 +84,6 @@ $('.search-form form').submit(function(){
                         'url' => '$this->grid->controller->createUrl("quan-ly-khach-hang/sua-thong-tin-khach-hang", array("id"=>$data->primaryKey,))',
                         'imageUrl' => false
                     ),
-//                'view' => array(
-//                    'label' => '<span class="glyphicon glyphicon-search"></span>',
-//                    'url' => '$this->grid->controller->createUrl("quan-ly-khach-hang/thong-tin-khach-hang", array("id"=>$data->primaryKey,))',
-//                    'imageUrl' => false,
-//                ),
                 ),
             ),
         ),
