@@ -267,7 +267,23 @@ td{width: 100px}
 /*-----css dang ki----*/
 #dangki
 {
-    border:1px solid #0099cc;
+    border:solid 1px #369;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright:1px;
+    -moz-border-radius-bottomleft:9px;
+    -moz-border-radius-bottomright:14px;
+    -webkit-border-top-left-radius:0px;
+    -webkit-border-top-right-radius:1px;
+    -webkit-border-bottom-left-radius:9px;
+    -webkit-border-bottom-right-radius:14px;
+    border-top-left-radius:0px;
+    border-top-right-radius:1px;
+    border-bottom-left-radius:9px;
+    border-bottom-right-radius:14px;
+
+    -moz-box-shadow: 4px 6px 11px #a39ea3;
+    -webkit-box-shadow: 4px 6px 11px #a39ea3;
+    box-shadow: 4px 6px 11px #a39ea3;
     margin-top: 10px;
 }
 .tieude
@@ -363,9 +379,24 @@ td{width: 100px}
 {
     // width: 500px;
     border:1px solid #ccccff;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright:1px;
+    -moz-border-radius-bottomleft:9px;
+    -moz-border-radius-bottomright:14px;
+    -webkit-border-top-left-radius:0px;
+    -webkit-border-top-right-radius:1px;
+    -webkit-border-bottom-left-radius:9px;
+    -webkit-border-bottom-right-radius:14px;
+    border-top-left-radius:0px;
+    border-top-right-radius:1px;
+    border-bottom-left-radius:9px;
+    border-bottom-right-radius:14px;
     margin-top: 30px;
     margin-left: 70px;
     margin-right: 70px;
+    -moz-box-shadow: 4px 6px 11px #a39ea3;
+    -webkit-box-shadow: 4px 6px 11px #a39ea3;
+    box-shadow: 4px 6px 11px #a39ea3;
 }
 #dang
 {
@@ -397,7 +428,23 @@ td{width: 100px}
 
 #chinhsua
 {
-    border:1px solid captiontext;
+    border:solid 1px #369;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-topright:1px;
+    -moz-border-radius-bottomleft:9px;
+    -moz-border-radius-bottomright:14px;
+    -webkit-border-top-left-radius:0px;
+    -webkit-border-top-right-radius:1px;
+    -webkit-border-bottom-left-radius:9px;
+    -webkit-border-bottom-right-radius:14px;
+    border-top-left-radius:0px;
+    border-top-right-radius:1px;
+    border-bottom-left-radius:9px;
+    border-bottom-right-radius:14px;
+
+    -moz-box-shadow: 4px 6px 11px #a39ea3;
+    -webkit-box-shadow: 4px 6px 11px #a39ea3;
+    box-shadow: 4px 6px 11px #a39ea3;
 }
 #chinhsua .errorMessage{
     margin-top: 15px;
@@ -416,6 +463,9 @@ td{width: 100px}
     margin-top: 5px;
     margin-left: 200px;
     border: 1px solid #cccccc;
+    -moz-box-shadow: 4px 6px 11px #a39ea3;
+    -webkit-box-shadow: 4px 6px 11px #a39ea3;
+    box-shadow: 4px 6px 11px #a39ea3;
 }
 #chinhsua .anh
 {
@@ -453,13 +503,35 @@ td{width: 100px}
     text-align: center;
 }
 //style dang tin khach
-#dangtinkhach
+
+#dangtinkhach .form-inline label
 {
-   // width: 300px;
+    margin-left: 100px;
 }
-#dangtinkhach .form-input
+#dangtinkhach .form-inline 
 {
-    width: 150px;
-    margin-right: 720px;
-    margin-bottom: 10px;
+    // border: 1px solid #0063A1;
+    padding-left: 50px;
+    padding-top: 10px;
+    width: 400px;
+    margin-left: 300px;
+    border:solid 1px #0063A1;
+    -moz-border-radius-topleft: 12px;
+    -moz-border-radius-topright:12px;
+    -moz-border-radius-bottomleft:13px;
+    -moz-border-radius-bottomright:14px;
+    -webkit-border-top-left-radius:12px;
+    -webkit-border-top-right-radius:12px;
+    -webkit-border-bottom-left-radius:13px;
+    -webkit-border-bottom-right-radius:14px;
+    border-top-left-radius:12px;
+    border-top-right-radius:12px;
+    border-bottom-left-radius:13px;
+    border-bottom-right-radius:14px;   
+    -moz-box-shadow: 4px 6px 11px #a39ea3;
+    -webkit-box-shadow: 4px 6px 11px #a39ea3;
+    box-shadow: 4px 6px 11px #a39ea3;
+}
+#dangtinkhach .btndangki
+{margin-top: 5px;
 }

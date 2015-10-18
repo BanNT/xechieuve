@@ -11,6 +11,15 @@ return array(
         ),
         '</div>',
         '</div>',
+        '<div class="row">',
+        '<div class="col-xs-12">',
+        'id' => array(
+            'type' => 'text',
+            'class' => 'form-input',
+            'disabled'=>TRUE
+        ),
+        '</div>',
+        '</div>',
           '<div class="row">',
          '<div class="col-xs-12">',
         'ten_khach_hang' => array(
@@ -40,6 +49,7 @@ return array(
         'email' => array(
             'type' => 'text',
             'class' => 'form-input',
+            'disabled'=>TRUE
         ),
         '</div>',
         '</div>',
