@@ -27,15 +27,13 @@ return array(
         ),
         '</div>',
         '</div>',
-    ) ,
+    ),
     'buttons' => array(
         'doimatkhau' => array(
             'type' => 'submit',
             'label' => 'Đổi mật khẩu',
-            'class'=>'btndangki btn',
-            'action'=>'dangkitk',
-            'data-toggle'=>'modal',
-            'data-target'=>'.bs-example-modal-lg',
+            'class' => 'btndangki btn',
+            'action' => 'dangkitk',
         ),
     )
-     );
+);

@@ -101,7 +101,7 @@ class Tin_tucController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-
+        $anh = $model->anh;
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
 
@@ -110,17 +110,14 @@ class Tin_tucController extends Controller {
             $_SESSION['KCFINDER']['disabled'] = false; // enables the file browser in the admin
             $_SESSION['KCFINDER']['uploadURL'] = Yii::app()->baseUrl . "/images/tintuc/uploads/"; // URL for the uploads folder
             $_SESSION['KCFINDER']['uploadDir'] = Yii::app()->basePath . "/../images/tintuc/uploads/"; // path to the uploads folder
-            $anh = $model->anh;
             if ($model->validate()) {
                 //lay ngay dang hien tai
                 $model->ngay_dang= new CDbExpression('NOW()');
                 $image = CUploadedFile::getInstance($model, 'anh');
                 if ($image) {
-                    //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
                     if ($anh) {
-                        unlink(Yii::app()->basePath . "/../" . Tintuc::AVARTAR_TINTUC . $anh);
-                    }
-
+                    unlink(Yii::app()->basePath .'/../'. Tintuc::AVARTAR_TINTUC . $anh);
+                }
                     $newName = md5(microtime(true) . 'xechieuve') . $image->name;
                     $model->anh = $newName;
                     $image->saveAs(Tintuc::AVARTAR_TINTUC . $newName);
