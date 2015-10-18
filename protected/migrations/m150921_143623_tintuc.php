@@ -9,7 +9,7 @@ class m150921_143623_tintuc extends CDbMigration {
             'tom_tat' => 'VARCHAR(250) NOT NULL',
             'noi_dung' => 'TEXT NOT NULL',
             'anh' => 'VARCHAR(255)',
-            'ngay_dang' => 'DATETIME',
+            'ngay_dang' => 'TIMESTAMP DEFAULT CURRENT_TIMESTAMP',
             'trang_thai' => 'TINYINT(1) DEFAULT 0',
             'meta_keyword' => 'VARCHAR(90)',
             'meta_Description' => 'VARCHAR(110)'
