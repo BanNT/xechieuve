@@ -190,8 +190,8 @@ body,ul,h4{
 }
 .ct{width: 710px; height: auto; margin: -10px 0 0 -20px; border: 1px solid #ccc;}
 .ct td{border: 1px solid #ccc;}
-    .ct1{width: 30%;}
-    .ct2{width: 70%;}
+.ct1{width: 30%;}
+.ct2{width: 70%;}
 td{width: 100px}
 /*----------------------------end slide/table---------------------------------*/
 /*----------------------------------------------------------------------------*/
@@ -412,7 +412,7 @@ td{width: 100px}
 }
 #anhdaidien
 {
-   width: 150px;
+    width: 150px;
     margin-top: 5px;
     margin-left: 200px;
     border: 1px solid #cccccc;
@@ -451,4 +451,15 @@ td{width: 100px}
 .glyphicon
 {
     text-align: center;
+}
+//style dang tin khach
+#dangtinkhach
+{
+   // width: 300px;
+}
+#dangtinkhach .form-input
+{
+    width: 150px;
+    margin-right: 720px;
+    margin-bottom: 10px;
 }

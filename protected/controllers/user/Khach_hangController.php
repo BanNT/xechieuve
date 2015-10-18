@@ -251,6 +251,8 @@ class Khach_hangController extends Controller {
         }
         $form = new CForm('application.views.user.khach_hang._formChinhsuathongtin');
         $khachHang = $form->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
+        $pass=$khachHang->password;
+        $khachHang->password="";
         $khachHang->setScenario('update');
         $anh = $khachHang->anh_dai_dien;
         if ($form->submitted('chinhsua') && $form->validate()) {
@@ -258,7 +260,7 @@ class Khach_hangController extends Controller {
             if ($image) {
                 //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
                 if ($anh) {
-                    unlink(Yii::app()->basePath .'/../'. Khachhang::AVARTAR_DIR . $anh);
+                    unlink(Yii::app()->basePath . '/../' . Khachhang::AVARTAR_DIR . $anh);
                 }
                 $newName = md5(microtime(true) . 'xechieuve') . $image->name;
                 $khachHang->anh_dai_dien = $newName;
@@ -266,8 +268,16 @@ class Khach_hangController extends Controller {
             } else {
                 $khachHang->anh_dai_dien = $anh;
             }
+            if($khachHang->password==$pass)
+            {
+                $khachHang->password=md5($khachHang->password);
             $khachHang->save(FALSE);
             $this->__message = "Sửa thông tin thành công!";
+            }
+            else
+            {
+                $this->__message = "Thất bại,bạn nhập sai mật khẩu bạn cần nhập chính xác mật khẩu hiện tại của bạn!";
+            }
         }
         $form2 = new CForm('application.views.user.khach_hang._formcapnhatpass');
         $khachHang2 = $form2->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
