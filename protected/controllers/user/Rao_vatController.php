@@ -9,11 +9,12 @@ class Rao_vatController extends Controller {
      * Số bản ghi rao vặt tối đa được hiển thị ở trang index
      */
     const LIMITED_RECORD_RVI = 10;
-    
+
     /**
      * @var string
      */
     private $__message;
+
     /**
      * Số bản ghi rao vặt tối đa được hiên thị ở trang đăng tin rao vặt
      */
@@ -59,58 +60,59 @@ class Rao_vatController extends Controller {
      * Đăng tin rao vặt
      */
     public function actionDang_tin($currentPage = 1) {
-        if (Yii::app()->user->name == 'Guest') {
-            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
-        }
+         if (Yii::app()->user->name == 'Guest') {
+          $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
+          } 
+        
+            $form = new CForm('application.views.user.rao_vat._form');
+            $form['tinkhachhang']->model = new Tinkhachhang();
+            $form['tinraovat']->model = $tinraovat = new Tinraovat();
+            $form->title = 'Đăng tin rao vặt:';
+            $noticeMessage = '';
 
-        $form = new CForm('application.views.user.rao_vat._form');
-        $form['tinkhachhang']->model = new Tinkhachhang();
-        $form['tinraovat']->model = $tinraovat = new Tinraovat();
-        $form->title = 'Đăng tin rao vặt:';
-        $noticeMessage = '';
+            if ($form->submitted('dangtin') && $form->validate()) {
+                $tinkhachhang = $form['tinkhachhang']->model;
+                $tinraovat = $form['tinraovat']->model;
 
-        if ($form->submitted('dangtin') && $form->validate()) {
-            $tinkhachhang = $form['tinkhachhang']->model;
-            $tinraovat = $form['tinraovat']->model;
+                //Nếu không đủ tiền để đăng tin sẽ không đăng
+                if ($tinkhachhang->trutien(Tinraovat::CODE_RV)) {
+                    $tinkhachhang->ma_loai_tin = Tinraovat::CODE_RV;
+                    if ($tinkhachhang->save(false)) {
+                        $image = CUploadedFile::getInstance($tinraovat, 'anh');
+                        if ($image) {
+                            $newName = md5(microtime(true) . 'xechieuve') . $image->name;
+                            $tinraovat->anh = $newName;
+                            $image->saveAs(Tinraovat::IMAGE_DIR_RV . $newName);
+                        }
 
-            //Nếu không đủ tiền để đăng tin sẽ không đăng
-            if ($tinkhachhang->trutien(Tinraovat::CODE_RV)) {
-                $tinkhachhang->ma_loai_tin = Tinraovat::CODE_RV;
-                if ($tinkhachhang->save(false)) {
-                    $image = CUploadedFile::getInstance($tinraovat, 'anh');
-                    if ($image) {
-                        $newName = md5(microtime(true) . 'xechieuve') . $image->name;
-                        $tinraovat->anh = $newName;
-                        $image->saveAs(Tinraovat::IMAGE_DIR_RV . $newName);
+                        $tinraovat->ma_tin = $tinkhachhang->ma_tin;
+                        $tinraovat->save(false);
+                        $this->__message = "Tin bạn đăng đã được hiển thị tại trang rao vặt";
                     }
-
-                    $tinraovat->ma_tin = $tinkhachhang->ma_tin;
-                    $tinraovat->save(false);
-                    $this->__message = "Tin bạn đăng đã được hiển thị tại trang rao vặt";
+                } else {
+                    $this->__message = "Tài khoản của bạn không đủ để đăng tin";
                 }
-            } else {
-                $this->__message = "Tài khoản của bạn không đủ để đăng tin";
             }
-        }
 
-        $tinraovat = new Tinraovat();
-        $paginatorRV = new Paginate($currentPage, new Tinkhachhang(), self::LIMITED_REDCORD_RV, ' ma_loai_tin = ' . Tinraovat::CODE_RV);
-        $listTinRV = $tinraovat->listTinRV($paginatorRV);
-        //render view
-        $data = array(
-            'form' => $form,
-            'listTinRV' => $listTinRV,
-            'paginatorRV' => $paginatorRV,
-            'urlPaginatorRV' => 'rao_vat/pagedtrv?page=',
-            'ajaxElementId' => '#tableRV',
-            'message' => $this->__message
-        );
+            $tinraovat = new Tinraovat();
+            $paginatorRV = new Paginate($currentPage, new Tinkhachhang(), self::LIMITED_REDCORD_RV, ' ma_loai_tin = ' . Tinraovat::CODE_RV);
+            $listTinRV = $tinraovat->listTinRV($paginatorRV);
+            //render view
+            $data = array(
+                'form' => $form,
+                'listTinRV' => $listTinRV,
+                'paginatorRV' => $paginatorRV,
+                'urlPaginatorRV' => 'rao_vat/pagedtrv?page=',
+                'ajaxElementId' => '#tableRV',
+                'message' => $this->__message
+            );
 
-        if (Yii::app()->request->isAjaxRequest) {
-            $this->renderPartial('dang_tin', $data);
-        } else {
-            $this->render('dang_tin', $data);
-        }
+            if (Yii::app()->request->isAjaxRequest) {
+                $this->renderPartial('dang_tin', $data);
+            } else {
+                $this->render('dang_tin', $data);
+            }
+       
     }
 
     public function actionPagedtrv() {
@@ -138,10 +140,10 @@ class Rao_vatController extends Controller {
     public function actionXem_chi_tiet() {
         $matin = Yii::app()->request->getParam('id');
         //Nếu không tồn tại mã loại xe thì sẽ redirect về trang chủ
-        if($matin == ''){
+        if ($matin == '') {
             $this->redirect(Yii::app()->homeUrl);
         }
-        
+
         $modeltrv = new Tinraovat();
         if (!$tinraovat = $modeltrv->getTinraovat($matin)) {
             $this->redirect(['site/index']);
@@ -151,4 +153,5 @@ class Rao_vatController extends Controller {
             'tinraovat' => $tinraovat
         ]);
     }
+
 }
