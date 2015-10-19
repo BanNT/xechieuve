@@ -366,6 +366,7 @@ td{width: 100px}
     margin-top: 30px;
     margin-left: 70px;
     margin-right: 70px;
+    padding-bottom: 10px;
 }
 #dang
 {
@@ -444,6 +445,12 @@ td{width: 100px}
     border:1px solid #0099cc;
 }
 
+
+
+
+
+
+
 ///style admin
 #adminlistTT {
     text-align: center;
@@ -452,3 +459,8 @@ td{width: 100px}
 {
     text-align: center;
 }
+
+
+
+
+

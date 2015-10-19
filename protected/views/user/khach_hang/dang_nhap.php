@@ -2,6 +2,6 @@
 <section id="dangnhap">
     <div class="tieude">ĐĂNG NHẬP HỆ THỐNG</div>
     <?php echo $model; ?> 
-    <span style="text-align: center;margin-left: 100px;margin-bottom: 5px;">Bạn chưa có tài khoản bấm <a href="http://localhost/xechieuve/dang-ky"> vào đây</a> để đăng ký ngay</span>
+    <span style="text-align: center;margin-left: 100px;margin-bottom: 5px;font-weight: bold">Bạn chưa có tài khoản bấm <a href="http://localhost/xechieuve/dang-ky"> vào đây</a> để đăng ký ngay</span>
    
 </section>
