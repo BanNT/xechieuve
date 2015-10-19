@@ -22,7 +22,8 @@ class UserIdentity extends CUserIdentity {
             $this->setState('name', $record->ten_dang_nhap);
             $this->errorCode = self::ERROR_NONE;
         }
-        
+
+
         return !$this->errorCode;
     }
 

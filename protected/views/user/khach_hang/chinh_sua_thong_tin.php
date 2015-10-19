@@ -7,7 +7,7 @@ if ($message) {
 }
 ?>
 <section id="chinhsua" >
-    <div class="tieude">THÔNG TIN  TÀI KHOẢN(khách hàng có ID:<?php echo CHtml::encode(Yii::app()->user->userId); ?>)</div>
+    <div class="tieude">THÔNG TIN  TÀI KHOẢN</div>
     <div id="anhdaidien" >
         <img src="<?php echo Khachhang::AVARTAR_DIR . $anh ?>" alt="" width="150"/>
     </div>

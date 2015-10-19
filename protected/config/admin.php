@@ -13,7 +13,9 @@ return CMap::mergeArray(
                         //url quản lý khách hàng
                         'quan-ly-khach-hang' => 'manage_customer/admin',
                         'them-khach-hang' => 'manage_customer/create',
-
+                        //tac vu khach hàng
+                        'tac-vu-khach'=>'tac_vu_khach/tac_vu_khach',
+                        
                         //url tin tuc
                         'quan-ly-tin-tuc'=>'tin_tuc/admin',
                         'quan-ly-loai-tin' => 'loai_tin/admin',
