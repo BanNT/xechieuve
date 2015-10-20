@@ -116,4 +116,12 @@ class Quantrivien extends CActiveRecord {
         return parent::model($className);
     }
 
+    /**
+     * Return a salt password
+     * @param string $password
+     * @return string
+     */
+    final static public function saltPassword($password){
+        return md5($password . md5($password . 'xeghephang').sha1('administrator'));
+    }
 }

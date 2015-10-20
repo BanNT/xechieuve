@@ -103,7 +103,7 @@ class Tinkhachhang extends CActiveRecord {
         // @todo Please modify the following code to remove attributes that should not be searched.
 
         $criteria = new CDbCriteria;
-        
+
         $criteria->compare('ma_tin', $this->ma_tin);
         $criteria->compare('ma_khach_hang', $this->ma_khach_hang, true);
         $criteria->compare('nguoi_lien_lac', $this->nguoi_lien_lac, true);
@@ -191,11 +191,13 @@ class Tinkhachhang extends CActiveRecord {
 
             $sql = "DELETE FROM tinraovat ";
             Yii::app()->db->createCommand($sql)
-                    ->where('ma_tin = :id', array(':id' => $maTin));
+                    ->where('ma_tin = :id', array(':id' => $maTin))
+                    ->andWhere('ma_khach_hang = :mkh', array(':mkh' => Yii::app()->user->userId));
         } else {
             $sql = "DELETE FROM tinghepxe ";
             Yii::app()->db->createCommand($sql)
-                    ->where('ma_tin = :id', array(':id' => $maTin));
+                    ->where('ma_tin = :id', array(':id' => $maTin))
+                    ->andWhere('ma_khach_hang = :mkh', array(':mkh' => Yii::app()->user->userId));
         }
 
         //xóa tin ở bảng cha(bảng tin khách hàng)

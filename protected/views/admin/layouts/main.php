@@ -2,13 +2,17 @@
     <head>
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="/xechieuve/assets/2ae33caf/jquery.js"></script>
-        <link href="/xechieuve/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="/xechieuve/css/styles.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
-
-        <script src="/xechieuve/js/bootstrap.min.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/assets/2ae33caf/jquery.js"></script>
+        <!-- Bootstrap -->
+        <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" rel="stylesheet">
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+        <!--[if lt IE 9]>
+          <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5shiv.min.js"></script>
+          <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/respond.min.js"></script>
+        <![endif]-->
         <style>
             body{
                 margin-top: 54px;
@@ -96,7 +100,6 @@
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-dang-khach-hang">Quản lý tin đăng khách hàng</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-tuc">Quản lý tin tức</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-loai-xe-ghep">Quản lý loại xe ghép</a></li>
-                        <li><a>Quản lý liên hệ</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/dang-tin-khach">Tác vụ khách hàng</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-loai-tin">Quản lý loại tin</a></li>
                     </ul>

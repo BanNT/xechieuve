@@ -64,7 +64,7 @@ class Manage_administratorController extends Controller {
             $quanTriVien->attributes = $_POST['Quantrivien'];
 
             if ($quanTriVien->validate()) {
-                $quanTriVien->password = md5($quanTriVien->password . md5($quanTriVien->password . 'xeghephang'));
+                $quanTriVien->password = Quantrivien::saltPassword($quanTriVien->password);
 
                 if ($quanTriVien->save(false)) {
                     $id = $quanTriVien->ma_qtv;
@@ -107,7 +107,7 @@ class Manage_administratorController extends Controller {
 
             if ($quanTriVien->validate()) {
                 if ($quanTriVien->password != '') {
-                    $quanTriVien->password = md5($quanTriVien->password . md5($quanTriVien->password . 'xeghephang'));
+                    $quanTriVien->password = Quantrivien::saltPassword($quanTriVien->password);
                 } else {
                     unset($quanTriVien->password);
                 }

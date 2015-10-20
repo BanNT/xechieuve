@@ -17,15 +17,32 @@ class SiteController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow',
-                'users' => array('@'),
+            array('allow', // allow admin user to perform 'admin' and 'delete' actions
+                'actions' => array('index','admin', 'delete','create', 'update'),
+                'users' => array('admin'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
             ),
+            
         );
     }
 
+    public function actionLoginAdmin(){
+        $model = new AdminLoginForm();
+        
+        if(isset($_POST['AdminLoginForm'])){
+            $model->attributes = $_POST['AdminLoginForm'];
+            if($model->validate()){
+                if($model->login()){
+                    
+                }
+            }
+        }
+        $this->renderPartial('loginAdministrator',array(
+            'model'=>$model
+        ));
+    }
     /**
      * This is the action to handle external exceptions.
      */
