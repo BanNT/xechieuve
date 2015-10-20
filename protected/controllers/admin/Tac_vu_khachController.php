@@ -24,7 +24,7 @@ class Tac_vu_khachController extends Controller {
                $dangtin->_identity=new UserIdentity($dangtin->username,$dangtin->password);
                $dangtin->_identity->authenticate();
                 $dangtin->login();
-               
+               $this->redirect(Yii::app()->request->baseUrl.'/dang-tin');
             }
         }
         $this->render('tac_vu_khach', array(

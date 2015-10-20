@@ -100,7 +100,7 @@
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-dang-khach-hang">Quản lý tin đăng khách hàng</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-tuc">Quản lý tin tức</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-loai-xe-ghep">Quản lý loại xe ghép</a></li>
-                        <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/dang-tin-khach">Tác vụ khách hàng</a></li>
+                        <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/tac-vu-khach">Tác vụ khách hàng</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-loai-tin">Quản lý loại tin</a></li>
                     </ul>
                 </div>

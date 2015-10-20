@@ -507,17 +507,12 @@ td{width: 100px}
 {
     text-align: center;
 }
-
-#dangtinkhach .form-inline label
-{
-    margin-left: 100px;
-}
 #dangtinkhach .form-inline 
 {
     padding-left: 50px;
     padding-top: 10px;
     width: 400px;
-    margin-left: 300px;
+    margin-left: 290px;
     border:solid 1px #0063A1;
     -moz-border-radius-topleft: 12px;
     -moz-border-radius-topright:12px;
