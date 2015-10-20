@@ -9,7 +9,7 @@
                 <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-ky">Đăng Ký</a>
             <?php else: ?>
                 <div class="dropdown" style="position:relative">
-                    <a href="#" class="btn btn-block dropdown-toggle" data-toggle="dropdown"><?php echo ucfirst(CHtml::encode(Yii::app()->user->name)); echo "(ID:".CHtml::encode(Yii::app()->user->userId).")";  ?>&nbsp;<span class="glyphicon glyphicon-cog"></span></a>
+                    <a href="#" class="btn btn-block dropdown-toggle" data-toggle="dropdown"><?php echo ucfirst(CHtml::encode(Yii::app()->user->name)); echo "_".CHtml::encode(Yii::app()->user->userId);  ?>&nbsp;<span class="glyphicon glyphicon-cog"></span></a>
                     <ul class="dropdown-menu" style="padding: 0">
                             <li><a style="color: #000" href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/sua-thong-tin-khach">Thông tin cá nhân</a></li>
                                 <li>
