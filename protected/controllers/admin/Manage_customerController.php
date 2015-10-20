@@ -62,9 +62,6 @@ class Manage_customerController extends Controller {
     public function actionCreate() {
         $model = new Khachhang('Dang_ky');
 
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
-
         if (isset($_POST['Khachhang'])) {
             $model->attributes = $_POST['Khachhang'];
             if ($model->validate()) {
@@ -73,9 +70,7 @@ class Manage_customerController extends Controller {
 
                 //Lưu thông tin khách hàng và redirect trang
                 if ($model->save(false)) {
-                    $this->redirect(array(
-                        'admin',
-                    ));
+                    $this->redirect(array('admin'));
                 }
             }
         }
@@ -97,8 +92,8 @@ class Manage_customerController extends Controller {
         if (isset($_POST['Khachhang'])) {
             $model->attributes = $_POST['Khachhang'];
             $model->confirmPassword = $_POST['Khachhang']['confirmPassword'];
+            
             if ($model->validate()) {
-//                die('hello world');
                 if ($model->password != '') {
                     $model->password = md5($model->password);
                 } else {

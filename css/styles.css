@@ -377,7 +377,6 @@ td{width: 100px}
 
 #dangnhap
 {
-    // width: 500px;
     border:1px solid #ccccff;
     -moz-border-radius-topleft: 0px;
     -moz-border-radius-topright:1px;
@@ -394,6 +393,7 @@ td{width: 100px}
     margin-top: 30px;
     margin-left: 70px;
     margin-right: 70px;
+    padding-bottom: 10px;
     -moz-box-shadow: 4px 6px 11px #a39ea3;
     -webkit-box-shadow: 4px 6px 11px #a39ea3;
     box-shadow: 4px 6px 11px #a39ea3;
@@ -494,7 +494,12 @@ td{width: 100px}
     border:1px solid #0099cc;
 }
 
-///style admin
+
+
+
+
+
+
 #adminlistTT {
     text-align: center;
 }
@@ -502,7 +507,6 @@ td{width: 100px}
 {
     text-align: center;
 }
-//style dang tin khach
 
 #dangtinkhach .form-inline label
 {
@@ -510,7 +514,6 @@ td{width: 100px}
 }
 #dangtinkhach .form-inline 
 {
-    // border: 1px solid #0063A1;
     padding-left: 50px;
     padding-top: 10px;
     width: 400px;

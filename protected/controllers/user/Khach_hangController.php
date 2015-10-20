@@ -102,11 +102,6 @@ class Khach_hangController extends Controller {
      */
     public function actionXoa_tin_da_dang() {
         $maTin = Yii::app()->request->getParam('id');
-        //Kiểm tra xem tin này có phải do khách hàng này đăng không
-        if (!Tinkhachhang::model()->checkBelongToUser($maTin)) {
-            $this->redirect(Yii::app()->homeUrl);
-        }
-
         Tinkhachhang::model()->deleteTin($maTin, Yii::app()->session['maLoaiTin']);
 
         //Chuyển đến trang danh sách tin đã đăng

@@ -26,7 +26,7 @@ class Loaixeghep extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('loai_xe_ghep', 'required'),
+            array('loai_xe_ghep', 'required','message'=>'Không được bỏ trống {attribute}'),
             array('loai_xe_ghep', 'length', 'max' => 50),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -50,8 +50,8 @@ class Loaixeghep extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'ma_loai_xe_ghep' => 'Ma Loai Xe Ghep',
-            'loai_xe_ghep' => 'Loai Xe Ghep',
+            'ma_loai_xe_ghep' => 'Mã loại xe ghép',
+            'loai_xe_ghep' => 'Loại xe ghép',
         );
     }
 
