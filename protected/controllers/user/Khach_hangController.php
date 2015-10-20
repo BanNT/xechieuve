@@ -246,9 +246,12 @@ class Khach_hangController extends Controller {
         }
         $form = new CForm('application.views.user.khach_hang._formChinhsuathongtin');
         $khachHang = $form->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
-        $pass=$khachHang->password;
-        $khachHang->password="";
+        $pass = $khachHang->password;
+        $khachHang->password = "";
         $khachHang->setScenario('update');
+        $array = array(Yii::app()->user->name, Yii::app()->user->userId);
+        $id = implode("_", $array);
+        $khachHang->id =$id;
         $anh = $khachHang->anh_dai_dien;
         if ($form->submitted('chinhsua') && $form->validate()) {
             $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
@@ -263,14 +266,11 @@ class Khach_hangController extends Controller {
             } else {
                 $khachHang->anh_dai_dien = $anh;
             }
-            if($khachHang->password==$pass)
-            {
-                $khachHang->password=md5($khachHang->password);
-            $khachHang->save(FALSE);
-            $this->__message = "Sửa thông tin thành công!";
-            }
-            else
-            {
+            if (md5($khachHang->password) == $pass) {
+                $khachHang->password = md5($khachHang->password);
+                $khachHang->save(FALSE);
+                $this->__message = "Sửa thông tin thành công!";
+            } else {
                 $this->__message = "Thất bại,bạn nhập sai mật khẩu bạn cần nhập chính xác mật khẩu hiện tại của bạn!";
             }
         }

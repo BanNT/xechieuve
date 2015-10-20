@@ -15,6 +15,7 @@ return CMap::mergeArray(
                         'them-khach-hang' => 'manage_customer/create',
                         //tac vu khach hàng
                         'dang-tin-khach' => 'dang_tin_khach/dang_nhap',
+                        'tac-vu-khach'=>'tac_vu_khach/tac_vu_khach',
                         //url tin tuc
                         'quan-ly-tin-tuc' => 'tin_tuc/admin',
                         'them-tin-tuc' => 'tin_tuc/create',

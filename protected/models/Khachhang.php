@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 /**
  * This is the model class for table "khachhang".
@@ -43,7 +43,7 @@ class Khachhang extends CActiveRecord {
     public $newPassword;
     public $newconfirmPassword;
    public $idkhach;
-
+   public $id;
     /**
      * @return string the associated database table name
      */
@@ -67,10 +67,10 @@ class Khachhang extends CActiveRecord {
                 'message' => 'Mật khẩu không khớp', 'on' => 'Dang_ky'
             ),
             //update thong tin
-            array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
+            array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi,id', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'update'
             ),
-            array('password', 'required','message' => 'Bạn không được bỏ trống "{attribute}" và nhập đúng"{attribute}" ', 'on' => 'update'),
+            array('password', 'required','message' => 'Bạn không được bỏ trống "{attribute}" ', 'on' => 'update'),
             //update pass
             array('oldPassword,newPassword,newconfirmPassword', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'updatepass'),
             array('newPassword', 'compare', 'compareAttribute' => 'newconfirmPassword',
@@ -148,6 +148,7 @@ class Khachhang extends CActiveRecord {
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
             'dia_chi' => 'Địa chỉ:',
+            'id'=>'ID:',
             'oldPassword' => 'Mật khẩu cũ:',
             'newPassword' => 'Mật khẩu mới',
             'newconfirmPassword' => 'Nhập lại mật khẩu mới',
