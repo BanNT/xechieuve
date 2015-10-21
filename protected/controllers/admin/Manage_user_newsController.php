@@ -25,9 +25,8 @@ class Manage_user_newsController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete','create', 'update'),
-                'users' => array('admin'),
+            array('allow', // allow all admin have permission
+                'users' => Phanquyenquantri::getALlAdminByRole(Phanquyenquantri::CUSTOMER_NEWS),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -41,9 +40,6 @@ class Manage_user_newsController extends Controller {
      */
     public function actionCreate() {
         $model = new Tinkhachhang;
-
-        // Uncomment the following line if AJAX validation is needed
-        // $this->performAjaxValidation($model);
 
         if (isset($_POST['Tinkhachhang'])) {
             $model->attributes = $_POST['Tinkhachhang'];
@@ -63,11 +59,12 @@ class Manage_user_newsController extends Controller {
      */
     public function actionUpdate($id, $type) {
         $tinKhachHang = $this->loadModel($id);
+        
         if ($tinKhachHang->ma_loai_tin == Tinraovat::CODE_RV) {
             $this->_updateTinRaoVat($tinKhachHang);
             return;
         }
-        
+
         $this->_updateTinGhepXe($tinKhachHang);
     }
 
@@ -79,7 +76,7 @@ class Manage_user_newsController extends Controller {
         $tinRaoVat = Tinraovat::model()->findByAttributes(array(
             'ma_tin' => $tinKhachHang->ma_tin
         ));
-        
+
         if (isset($_POST['Tinkhachhang'])) {
             $anh = $tinRaoVat->anh;
             $tinKhachHang->attributes = $_POST['Tinkhachhang'];
@@ -110,7 +107,7 @@ class Manage_user_newsController extends Controller {
         $tinGhepXe = Tinghepxe::model()->findByAttributes(array(
             'ma_tin' => $tinKhachHang->ma_tin
         ));
-        
+
         if (isset($_POST['Tinkhachhang'])) {
             $tinKhachHang->attributes = $_POST['Tinkhachhang'];
             $tinGhepXe->attributes = $_POST['Tinghepxe'];
@@ -119,17 +116,12 @@ class Manage_user_newsController extends Controller {
                 //Lưu dữ liệu vào CSDL và redirect trang
                 $tinKhachHang->save(false);
                 Tinghepxe::updateTinGhepXe(
-                        $tinGhepXe->dia_chi_di,
-                        $tinGhepXe->dia_chi_den,
-                        $tinGhepXe->noi_den_tinh,
-                        $tinGhepXe->ma_loai_xe_ghep,
-                        $tinGhepXe->ngay_khoi_hanh,
-                        $tinGhepXe->ma_tin
+                        $tinGhepXe->dia_chi_di, $tinGhepXe->dia_chi_den, $tinGhepXe->noi_den_tinh, $tinGhepXe->ma_loai_xe_ghep, $tinGhepXe->ngay_khoi_hanh, $tinGhepXe->ma_tin
                 );
                 $this->redirect(array('admin'));
             }
         }
-        
+
         $this->render('updateTinGhepXe', array(
             'tinKhachHang' => $tinKhachHang,
             'tinGhepXe' => $tinGhepXe
@@ -141,37 +133,30 @@ class Manage_user_newsController extends Controller {
      * If deletion is successful, the browser will be redirected to the 'admin' page.
      * @param integer $id the ID of the model to be deleted
      */
-    public function actionDelete_user_news($id,$type) {
-        //xóa dữ liệu tin đăng khách hàng và redirect trang
+    public function actionDelete_user_news($id, $type) {
         $tinKhachHang = $this->loadModel($id);
-        if($tinKhachHang->ma_loai_tin == Tinraovat::CODE_RV){
-            Tinraovat::model()->deleteAll('ma_tin ='.$tinKhachHang->ma_tin);
-        }else{
-            Tinghepxe::model()->deleteAll('ma_tin ='.$tinKhachHang->ma_tin);
-        }
         
+        if ($tinKhachHang->ma_loai_tin == Tinraovat::CODE_RV) {
+            Tinraovat::model()->deleteAll('ma_tin =' . $tinKhachHang->ma_tin);
+        } else {
+            Tinghepxe::model()->deleteAll('ma_tin =' . $tinKhachHang->ma_tin);
+        }
+
         $tinKhachHang->delete();
         $this->redirect(array('admin'));
-    }
-
-    /**
-     * Lists all models.
-     */
-    public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Tinkhachhang');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
     }
 
     /**
      * Manages all models.
      */
     public function actionAdmin() {
+//        $this->_checkAccess('admin');
         $model = new Tinkhachhang('search');
         $model->unsetAttributes();  // clear any default values
-        if (isset($_GET['Tinkhachhang']))
+
+        if (isset($_GET['Tinkhachhang'])){
             $model->attributes = $_GET['Tinkhachhang'];
+        }
 
         $this->render('admin', array(
             'model' => $model,

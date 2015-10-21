@@ -14,7 +14,6 @@ class Manage_administratorController extends Controller {
     public function filters() {
         return array(
             'accessControl', // perform access control for CRUD operations
-//            'postOnly + delete', // we only allow deletion via POST request
         );
     }
 
@@ -25,32 +24,13 @@ class Manage_administratorController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view'),
+            array('allow', // allow all admin have permission
+                'users' => Phanquyenquantri::getALlAdminByRole(Phanquyenquantri::MANAGE_ADMIN),
+            ),
+            array('deny', // deny all users
                 'users' => array('*'),
             ),
-//			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-//				'actions'=>array('create','update'),
-//				'users'=>array('@'),
-//			),
-//			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-//				'actions'=>array('admin','delete'),
-//				'users'=>array('admin'),
-//			),
-//			array('deny',  // deny all users
-//				'users'=>array('*'),
-//			),
         );
-    }
-
-    /**
-     * Displays a particular model.
-     * @param integer $id the ID of the model to be displayed
-     */
-    public function actionView($id) {
-        $this->render('view', array(
-            'model' => $this->loadModel($id),
-        ));
     }
 
     /**
@@ -58,6 +38,7 @@ class Manage_administratorController extends Controller {
      * If creation is successful, the browser will be redirected to the 'view' page.
      */
     public function actionCreate() {
+        $this->_checkAccess('create');
         $quanTriVien = new Quantrivien('create');
 
         if (isset($_POST['Quantrivien'])) {
@@ -95,6 +76,7 @@ class Manage_administratorController extends Controller {
      * @param integer $id the ID of the model to be updated
      */
     public function actionUpdate($id) {
+        $this->_checkAccess('update');
         $quanTriVien = $this->loadModel($id);
         $PhanQuyen = Phanquyenquantri::model()->getAllAuthorizationById($quanTriVien->ma_qtv);
 
@@ -142,6 +124,7 @@ class Manage_administratorController extends Controller {
      * @param integer $id the ID of the model to be deleted
      */
     public function actionDelete($id) {
+        $this->_checkAccess('delete');
         Phanquyenquantri::model()->deleteAllByAttributes(array('ma_qtv' => $id));
         $this->loadModel($id)->delete();
 
@@ -149,23 +132,15 @@ class Manage_administratorController extends Controller {
         if (!isset($_GET['ajax']))
             $this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
     }
-
-    /**
-     * Lists all models.
-     */
-    public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Quantrivien');
-        $this->render('index', array(
-            'dataProvider' => $dataProvider,
-        ));
-    }
-
+    
     /**
      * Manages all models.
      */
     public function actionAdmin() {
+        $this->_checkAccess('admin');
         $model = new Quantrivien('search');
         $model->unsetAttributes();  // clear any default values
+        
         if (isset($_GET['Quantrivien']))
             $model->attributes = $_GET['Quantrivien'];
 
@@ -199,4 +174,12 @@ class Manage_administratorController extends Controller {
         }
     }
 
+    /**
+     * @param string $task
+     */
+    private function _checkAccess($task){
+//        if(!Yii::app()->user->checkAccess($task)){
+//            $this->redirect(Yii::app()->homeUrl);
+//        }
+    }
 }

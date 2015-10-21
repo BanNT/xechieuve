@@ -35,6 +35,7 @@ class Quantrivien extends CActiveRecord {
             array('ten_qtv,email,password,confirmPassword', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'create'),
             array('ten_qtv,email', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'update'),
             array('email', 'email', 'message' => 'Email không hợp lệ'),
+            array('email', 'unique', 'message' => '{attribute} này đã tồn tại '),
             array('trang_thai', 'numerical', 'integerOnly' => true),
             array('password', 'compare', 'compareAttribute' => 'confirmPassword', 'message' => 'Mật khẩu không khớp'),
             array('ten_qtv, email, password', 'length', 'max' => 80),

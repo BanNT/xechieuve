@@ -119,7 +119,7 @@ class Xe_tim_khachController extends Controller {
      * Đăng tin xe tìm khách
      */
     public function actionDang_tin() {
-         if (Yii::app()->user->name == 'Guest') {
+         if (Yii::app()->user->name == 'Guest'  || !isset(Yii::app()->user->userId)) {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
      

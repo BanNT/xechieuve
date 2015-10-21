@@ -33,7 +33,8 @@ class AdminLoginForm extends CFormModel {
         return array(
             //username and password are required
             array('username, password', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"'),
-            // rememberMe needs to be a boolean
+            // username have to be in email format
+            array('username', 'email','message'=>'Username phải là email'),
             array('rememberMe', 'boolean'),
             // password needs to be authenticated
             array('password', 'authenticate'),
@@ -61,18 +62,18 @@ class AdminLoginForm extends CFormModel {
         }
 
         $this->_identity = new AdminAuthentication($this->username, $this->password);
-        if (!$this->_identity->authenticate())
-            $this->addError('password', 'Mật khẩu và tên đăng nhập không khớp.');
-//        switch ((int)$this->_identity->authenticate()) {
-//            case CUserIdentity::ERROR_USERNAME_INVALID:
-//                $this->addError('username', 'Tài khoản này không tồn tại!');
-//                break;
-//            case CUserIdentity::ERROR_PASSWORD_INVALID:
-//                $this->addError('password', 'Bạn hãy nhập lại password!');
-//                break;
-//            default :
-//                die('login error');
-//        }
+        switch ((int)$this->_identity->authenticate()) {
+            case CUserIdentity::ERROR_USERNAME_INVALID:
+                $this->addError('username', 'Tài khoản này không tồn tại!');
+                break;
+            case CUserIdentity::ERROR_PASSWORD_INVALID:
+                $this->addError('password', 'Bạn hãy nhập lại password!');
+                break;
+            case CUserIdentity::ERROR_NONE:
+                return true;
+            default :
+                die("login error");
+        }
     }
 
     /**

@@ -13,6 +13,15 @@
  */
 class Phanquyenquantri extends CActiveRecord {
 
+    const ADMINISTRATOR = 1;
+    const CUSTOMER = 2;
+    const CUSTOMER_NEWS = 3;
+    const NEWS = 4;
+    const CAR_TYPE = 5;
+    const CUSTOMER_TASK = 6;
+    const MANAGE_ADMIN = 7;
+    const CUSTOMER_NEWS_TYPE = 8;
+
     /**
      * @return string the associated database table name
      */
@@ -58,7 +67,34 @@ class Phanquyenquantri extends CActiveRecord {
     }
 
     public function getAllAuthorizationById($maQTV) {
-        return $this->findAllByAttributes(array('ma_qtv'=>$maQTV));
+        return $this->findAllByAttributes(array('ma_qtv' => $maQTV));
+    }
+
+    /**
+     * @param integer $roleId
+     * @return array
+     */
+    public static function getALlAdminByRole($roleId) {
+        $condition = 'ma_quyen=' . self::ADMINISTRATOR . ' OR ma_quyen=' . $roleId;
+        $admins = Phanquyenquantri::model()->findAll($condition);
+        $adm = array();
+
+        foreach ($admins as $admin) {
+            array_push($adm, $admin->ma_qtv);
+        }
+
+        return $adm;
+    }
+    
+    public static function getALlAdminId(){
+        $admins = Phanquyenquantri::model()->findAll();
+        $adm = array();
+
+        foreach ($admins as $admin) {
+            array_push($adm, $admin->ma_qtv);
+        }
+
+        return $adm;
     }
 
     /**

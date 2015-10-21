@@ -60,7 +60,7 @@ class Rao_vatController extends Controller {
      * Đăng tin rao vặt
      */
     public function actionDang_tin($currentPage = 1) {
-         if (Yii::app()->user->name == 'Guest') {
+         if (Yii::app()->user->name == 'Guest' || !isset(Yii::app()->user->userId)) {
           $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
           } 
         

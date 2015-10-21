@@ -26,9 +26,7 @@ class Khach_hangController extends Controller {
      * Hiển thị những tin đã đăng của khách hàng dựa theo mã loại tin
      */
     public function actionTin_da_dang($maLoaiTin = null, $currentPage = 1) {
-        if (Yii::app()->user->name == 'Guest') {
-            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
-        }
+        $this->_checkLogin();
 
         /**
          * Nếu không tồn tại mã loại tin trong $_GET và cả session thì sẽ redirect
@@ -77,14 +75,14 @@ class Khach_hangController extends Controller {
      * tại để tin hiển thị lên trên và cũng bị trừ tiền như khi đăng tin mới
      */
     public function actionLam_moi_tin() {
-        if (Yii::app()->user->name == 'Guest') {
+        $this->_checkLogin();
+        if (Yii::app()->user->name == 'Guest'  || !isset(Yii::app()->user->userId)) {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
 
         $maTin = Yii::app()->request->getParam('id');
         $__message = '';
 
-        //Kiểm tra xem tin này có phải do khách hàng này đăng không
         if (!Tinkhachhang::model()->checkBelongToUser($maTin)) {
             $this->redirect(Yii::app()->homeUrl);
         }
@@ -93,7 +91,6 @@ class Khach_hangController extends Controller {
             $this->__message = 'Tài khoản của bạn không đủ để làm mới tin này';
         }
 
-        //Chuyển đến trang danh sách tin đã đăng
         $this->actionTin_da_dang(Yii::app()->session['maLoaiTin'], 1);
     }
 
@@ -101,10 +98,10 @@ class Khach_hangController extends Controller {
      * Xóa tin đăng
      */
     public function actionXoa_tin_da_dang() {
+        $this->_checkLogin();
         $maTin = Yii::app()->request->getParam('id');
         Tinkhachhang::model()->deleteTin($maTin, Yii::app()->session['maLoaiTin']);
 
-        //Chuyển đến trang danh sách tin đã đăng
         $this->actionTin_da_dang(Yii::app()->session['maLoaiTin']);
     }
 
@@ -113,8 +110,9 @@ class Khach_hangController extends Controller {
      * dựa vào mã loại tin
      */
     public function actionSua_tin_dang() {
+        $this->_checkLogin();
         $maTin = Yii::app()->request->getParam('id');
-        //Kiểm tra xem tin này có phải do khách hàng này đăng không
+
         if (!Tinkhachhang::model()->checkBelongToUser($maTin)) {
             $this->redirect(Yii::app()->homeUrl);
         }
@@ -143,6 +141,7 @@ class Khach_hangController extends Controller {
 
             if ($tinkhachhang->save(false)) {
                 $image = CUploadedFile::getInstance($tinraovat, 'anh');
+                
                 if ($image) {
                     //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
                     if ($anh) {
@@ -198,6 +197,7 @@ class Khach_hangController extends Controller {
         $khachHang = new Khachhang();
         $form = new CForm('application.views.user.khach_hang._formdangky', $khachHang);
         $khachHang->setScenario('Dang_ky');
+        
         if ($form->submitted('dangky') && $form->validate()) {
             $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
             if ($image) {
@@ -205,14 +205,16 @@ class Khach_hangController extends Controller {
                 $khachHang->anh_dai_dien = $newName;
                 $image->saveAs(Khachhang::AVARTAR_DIR . $newName);
             } else {
-                $khachHang->anh_dai_dien = $this->__defaultAvatar;
+                $khachHang->anh_dai_dien = Khachhang::DEFAULT_AVARTAR;
             }
+            
             $khachHang->password = md5($khachHang->password);
             $khachHang->save(false);
             $this->__message = "Đăng ký thành công!";
             //$this->redirect(Yii::app()->homeUrl);
             //return;
         }
+        
         $this->render('dang_ky', array(
             'form' => $form,
             'message' => $this->__message
@@ -225,10 +227,12 @@ class Khach_hangController extends Controller {
     public function actionDang_nhap() {
         $login = new LoginForm();
         $model = new CForm('application.views.user.khach_hang._formDangNhap', $login);
+        
         if ($model->submitted('Login') && $model->validate()) {
             $login->login();
             $this->redirect(Yii::app()->homeUrl);
         }
+        
         $this->render('dang_nhap', array('model' => $model));
     }
 
@@ -241,9 +245,7 @@ class Khach_hangController extends Controller {
     /* Sửa thông tin người dùng */
 
     public function actionChinh_sua_thong_tin() {
-        if (Yii::app()->user->name == 'Guest') {
-            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
-        }
+        $this->_checkLogin();
         $form = new CForm('application.views.user.khach_hang._formChinhsuathongtin');
         $khachHang = $form->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
         $pass = $khachHang->password;
@@ -253,8 +255,10 @@ class Khach_hangController extends Controller {
         $id = implode("_", $array);
         $khachHang->id =$id;
         $anh = $khachHang->anh_dai_dien;
+        
         if ($form->submitted('chinhsua') && $form->validate()) {
             $image = CUploadedFile::getInstance($khachHang, 'anh_dai_dien');
+            
             if ($image) {
                 //Nếu tồn tại ảnh trong CSDL thì sẽ xóa ảnh cũ trong thư mục ảnh
                 if ($anh) {
@@ -266,6 +270,7 @@ class Khach_hangController extends Controller {
             } else {
                 $khachHang->anh_dai_dien = $anh;
             }
+            
             if (md5($khachHang->password) == $pass) {
                 $khachHang->password = md5($khachHang->password);
                 $khachHang->save(FALSE);
@@ -274,9 +279,11 @@ class Khach_hangController extends Controller {
                 $this->__message = "Thất bại,bạn nhập sai mật khẩu bạn cần nhập chính xác mật khẩu hiện tại của bạn!";
             }
         }
+        
         $form2 = new CForm('application.views.user.khach_hang._formcapnhatpass');
         $khachHang2 = $form2->model = Khachhang::model()->findByPk(Yii::app()->user->userId);
         $khachHang2->setScenario('updatepass');
+        
         if ($form2->submitted('doimatkhau') && $form2->validate()) {
             Khachhang::updatepassword(md5($khachHang2["newPassword"]));
             $this->__message = "Sửa thông tin thành công!";
@@ -290,4 +297,9 @@ class Khach_hangController extends Controller {
         ));
     }
 
+    private function _checkLogin(){
+        if (Yii::app()->user->name == 'Guest'  || !isset(Yii::app()->user->userId)) {
+            $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
+        }
+    }
 }

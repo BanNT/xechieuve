@@ -19,7 +19,6 @@ return CMap::mergeArray(
                         'rao-vat' => 'rao_vat',
                         'lien-he' => 'lien_he',
                         'dang-tin' => 'dang_tin',
-                        
                         //url đăng itn rao vặt, khach tìm xe, xe tìm khách
                         'khach-tim-xe/dang-tin' => 'khach_tim_xe/dang_tin',
                         'xe-tim-khach/dang-tin' => 'xe_tim_khach/dang_tin',
@@ -35,14 +34,14 @@ return CMap::mergeArray(
                         //url đăng ký tài khoản
                         'dang-ky' => 'khach_hang/dang_ky',
                         //url chỉnh sửa thông tin khách
-                        'sua-thong-tin-khach'=>'khach_hang/chinh_sua_thong_tin',
+                        'sua-thong-tin-khach' => 'khach_hang/chinh_sua_thong_tin',
                         //url quản lý của khách hàng
-                        'dang-nhap'=>'khach_hang/dang_nhap',
-                         'dang-xuat'=>'khach_hang/dang_xuat',
-                        'tin-da-dang/<title>/<id:\d+>'=>'khach_hang/tin_da_dang',
-                        'lam-moi-tin-dang/<title>/<id:\d+>'=>'khach_hang/lam_moi_tin',
-                        'xoa-tin/<title>/<id:\d+>'=>'khach_hang/xoa_tin_da_dang',
-                        'sua-tin/<title>/<id:\d+>'=>'khach_hang/sua_tin_dang',
+                        'dang-nhap' => 'khach_hang/dang_nhap',
+                        'dang-xuat' => 'khach_hang/dang_xuat',
+                        'tin-da-dang/<title>/<id:\d+>' => 'khach_hang/tin_da_dang',
+                        'lam-moi-tin-dang/<title>/<id:\d+>' => 'khach_hang/lam_moi_tin',
+                        'xoa-tin/<title>/<id:\d+>' => 'khach_hang/xoa_tin_da_dang',
+                        'sua-tin/<title>/<id:\d+>' => 'khach_hang/sua_tin_dang',
                         //url mặc định của yii
                         '<controller:\w+>/<id:\d+>' => '<controller>/view',
                         '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
