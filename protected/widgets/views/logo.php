@@ -41,7 +41,7 @@
 <div class="col-md-12">
     <div class="logo" >
         <div class="anh_logo" style="float: left">
-            <img style="height: 135px; margin-left: -16px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo/eximbank_logo.jpg" />
+            <img style="height: 135px; margin-left: -16px;" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo/logo.png" />
         </div>
         <div id="dang" class="pull-right">
             <?php if (Yii::app()->user->isGuest || !isset(Yii::app()->user->userId)): ?>
