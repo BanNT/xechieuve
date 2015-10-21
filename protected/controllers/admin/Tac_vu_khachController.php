@@ -7,6 +7,7 @@ class Tac_vu_khachController extends Controller {
      */
     public $layout = '//layouts/column2';
 
+    private $__message;
     /**
      * @return array action filters
      */
@@ -41,21 +42,29 @@ class Tac_vu_khachController extends Controller {
         
         if ($form->submitted('dangtinkhach') && $form->validate()) {
             $id = $khachhang->idkhach;
-            $id = explode("_",$id);
-            $id=$id[1];
-            
-            if ($user = Khachhang::model()->TTkhach($id)) {
-                 $dangtin->username=$user['ten_dang_nhap'];
-                  $dangtin->password=$user['password']; 
-               // Yii::app()->user->name = $dangtin->username;
-               $dangtin->_identity=new UserIdentity($dangtin->username,$dangtin->password);
-               $dangtin->_identity->authenticate();
-                $dangtin->login();
-               
+
+            $arry = explode("_", $id);
+            $username = $arry[0];
+            if (isset($arry[1])) {
+                $id = $arry[1];
+                if ($user = Khachhang::model()->TTkhach($id, $username)) {
+
+                    $dangtin->username = $user['ten_dang_nhap'];
+                    $dangtin->password = $user['password'];
+                    $dangtin->_identity = new UserIdentity($dangtin->username, $dangtin->password);
+                    $dangtin->_identity->authenticate();
+                    $dangtin->login();
+                    $this->redirect(Yii::app()->request->baseUrl . '/dang-tin');
+                } else {
+                    $this->__message = "Nhập sai id khách hàng!";
+                }
+            } else {
+                $this->__message = "Nhập sai cú pháp!";
             }
         }
         $this->render('tac_vu_khach', array(
             'form' => $form,
+            'message' => $this->__message
         ));
     }
 

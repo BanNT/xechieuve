@@ -97,7 +97,7 @@
 
                 <div class="col-md-3" id="col-left-adm" style="background: #444;height: 100%;">
                     <ul>
-                        <a><span class="h3"><span class='glyphicon glyphicon-globe'></span> Danh mục quản lý:</span></a>
+                        <a href="<?php echo Yii::app()->baseUrl; ?>/admin.php"><span class="h3"><span class='glyphicon glyphicon-globe'></span> Danh mục quản lý:</span></a>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-khach-hang">Quản lý khách hàng</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-quan-tri-vien">Quản lý quản trị viên</a></li>
                         <li><a href="<?php echo Yii::app()->baseUrl; ?>/admin.php/quan-ly-tin-dang-khach-hang">Quản lý tin đăng khách hàng</a></li>

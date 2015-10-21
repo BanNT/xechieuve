@@ -240,12 +240,12 @@ class Khachhang extends CActiveRecord {
                 . " WHERE ma_khach_hang = $ma_khach_hang";
         Yii::app()->db->createCommand($sql)->execute();
     }
-    public function TTkhach($id)
+    public function TTkhach($id,$user)
     {
         return Yii::app()->db->createCommand()
                         ->select('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password ,so_du_tai_khoan')
                         ->from('khachhang')
-                        ->where("ma_khach_hang=$id")
+                        ->where("ma_khach_hang=$id and ten_dang_nhap='$user'")
                         ->queryRow()
         ;
     }

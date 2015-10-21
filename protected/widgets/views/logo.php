@@ -47,7 +47,7 @@
             <?php if (Yii::app()->user->isGuest || !isset(Yii::app()->user->userId)): ?>
                 <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-nhap" style="border-right:1px solid #fff;padding-right: 2px;">Đăng nhập</a>
                 <a href="<?php echo CHtml::encode(Yii::app()->request->baseUrl); ?>/dang-ky">Đăng Ký</a>
-           <?php else: ?>
+            <?php else: ?>
                 <div class="dropdown" style="position:relative">
                     <a href="#" class="btn btn-block dropdown-toggle" data-toggle="dropdown"><?php echo ucfirst(CHtml::encode(Yii::app()->user->name)); ?>
                         &nbsp;<span class="glyphicon glyphicon-cog"></span>
