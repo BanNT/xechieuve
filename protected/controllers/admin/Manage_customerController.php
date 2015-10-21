@@ -78,8 +78,9 @@ class Manage_customerController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
-        $model->setScenario('update');
+        $model->setScenario('updateSDTK');
         $model->password = $message ='';
+        
         if (isset($_POST['Khachhang'])) {
             $model->attributes = $_POST['Khachhang'];
             $model->confirmPassword = $_POST['Khachhang']['confirmPassword'];

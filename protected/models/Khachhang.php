@@ -70,6 +70,10 @@ class Khachhang extends CActiveRecord {
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi,id', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'update'
             ),
+            //update thông tin
+            array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
+                'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'updateSDTK'
+            ),
             array('password', 'required','message' => 'Bạn không được bỏ trống "{attribute}" ', 'on' => 'update'),
             //update pass
             array('oldPassword,newPassword,newconfirmPassword', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'updatepass'),
@@ -90,6 +94,7 @@ class Khachhang extends CActiveRecord {
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
                 'message' => '{attribute} phải dưới 80 kí tự'
             ),
+            array('so_du_tai_khoan', 'length', 'max' => 14,'message'=>'Số dư tài khoản có chiều dài tối đa 14 kí tự'),
             array('email', 'email', 'message' => 'Email không hợp lệ'),
             array('password', 'length', 'max' => 40),
             array('so_dien_thoai', 'length', 'max' => 11),

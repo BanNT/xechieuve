@@ -11,7 +11,7 @@ class m150921_134553_khachhang extends CDbMigration {
             'email' => 'VARCHAR(80)',
             'dia_chi' => 'VARCHAR(2)',
             'so_dien_thoai' => 'VARCHAR(11) NOT NULL',
-            'so_du_tai_khoan' => 'INT(12) DEFAULT 0',
+            'so_du_tai_khoan' => 'BIGINT(14) DEFAULT 0',
             'anh_dai_dien' => 'VARCHAR(255) NULL'
         ));
     }

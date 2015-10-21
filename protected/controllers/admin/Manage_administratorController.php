@@ -25,7 +25,7 @@ class Manage_administratorController extends Controller {
     public function accessRules() {
         return array(
             array('allow', // allow all admin have permission
-                'users' => Phanquyenquantri::getALlAdminByRole(Phanquyenquantri::MANAGE_ADMIN),
+                'users' => Phanquyenquantri::getALlAdminByRole(Phanquyenquantri::ADMINISTRATOR),
             ),
             array('deny', // deny all users
                 'users' => array('*'),

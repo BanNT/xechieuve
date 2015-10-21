@@ -43,7 +43,8 @@ $form = $this->beginWidget('CActiveForm', array(
         echo $form->passwordField($model, 'password', array(
             'size' => 40,
             'maxlength' => 40,
-            'class' => 'form-control'
+            'class' => 'form-control',
+            'placeholder'=>'Để rỗng nếu không update password'
         ));
         ?>
         <?php echo $form->error($model, 'password'); ?>
@@ -54,7 +55,8 @@ $form = $this->beginWidget('CActiveForm', array(
         echo $form->passwordField($model, 'confirmPassword', array(
             'size' => 40,
             'maxlength' => 40,
-            'class' => 'form-control'
+            'class' => 'form-control',
+            'placeholder'=>'Để rỗng nếu không update password'
         ));
         ?>
         <?php echo $form->error($model, 'confirmPassword'); ?>
