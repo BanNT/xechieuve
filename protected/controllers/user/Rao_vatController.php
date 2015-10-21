@@ -18,7 +18,7 @@ class Rao_vatController extends Controller {
     /**
      * Số bản ghi rao vặt tối đa được hiên thị ở trang đăng tin rao vặt
      */
-    const LIMITED_REDCORD_RV = 3;
+    const LIMITED_REDCORD_RV = 1;
 
     /**
      * Hiển thị danh sách tin rao vặt

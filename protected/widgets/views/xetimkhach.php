@@ -1,4 +1,5 @@
-<?php // /* @var $this Controller */    
+<?php
+// /* @var $this Controller */    
 $provinces = Province::listProvinces();
 ?>
 <section id="tableXTK">
@@ -18,12 +19,12 @@ $provinces = Province::listProvinces();
             <tbody>
                 <?php
                 foreach ($this->xetimkhach as $data):
-                         $urlChiTietTin = Yii::app()->request->baseUrl . '/xe-tim-khach/xem-chi-tiet/' . ConvertURL::refine($data['tieu_de_tin']) . '/' . $data['ma_tin'];
+                    $urlChiTietTin = Yii::app()->request->baseUrl . '/xe-tim-khach/xem-chi-tiet/' . ConvertURL::refine($data['tieu_de_tin']) . '/' . $data['ma_tin'];
                     ?>
                     <tr>
                     <tr>
                         <td><a title="<?php echo CHtml::encode($data['tieu_de_tin']) ?>" href="<?php echo $urlChiTietTin ?>"><?php echo CHtml::encode($data['tieu_de_tin']); ?></a></td>
-                       
+
                         <td><?php
                             echo CHtml::encode($data['dia_chi_di']);
                             echo "<br>" . CHtml::encode($provinces[$data['tinh_thanh']]);
@@ -37,7 +38,7 @@ $provinces = Province::listProvinces();
                         <td><?php echo CHtml::encode($data['ngay_khoi_hanh']); ?></td>
                         <td>
                             <?php echo CHtml::encode($data['nguoi_lien_lac']); ?>
-                            <?php echo CHtml::encode($data['so_dien_thoai']); ?>
+    <?php echo CHtml::encode($data['so_dien_thoai']); ?>
                         </td>
                         <td>Đang chờ</td>
                     </tr>

@@ -7,9 +7,19 @@
 class Khach_tim_xeController extends Controller {
 
     /**
+     * @var string
+     */
+    private $__message;
+
+    /**
      * Số bản ghi khách tìm xe tối đa được hiển thị
      */
-    const LIMITED_RECORD_KTX = 1;
+    const LIMITED_RECORD_KTX = 10;
+
+    /**
+     * Số bản ghi xe tìm khách tối đa được hiên thị ở trang đăng tin khách tìm xe
+     */
+    const LIMITED_REDCORD_KTXD = 1;
 
     /**
      * Hiển thị trang index khách tìm xe
@@ -111,10 +121,10 @@ class Khach_tim_xeController extends Controller {
     public function actionLoc_theo_xe() {
         $maLoaiXe = Yii::app()->request->getParam('id');
         //Nếu không tồn tại mã loại xe thì sẽ redirect về trang chủ
-        if(!$maLoaiXe){
+        if (!$maLoaiXe) {
             $this->redirect(Yii::app()->homeUrl);
         }
-        
+
         $matins = Tinghepxe::listMaTin(Tinghepxe::CODE_KTX, ' AND ma_loai_xe_ghep= ' . $maLoaiXe);
 
         $ma = '(';
@@ -130,8 +140,8 @@ class Khach_tim_xeController extends Controller {
     /**
      * Đăng tin khách tìm xe
      */
-    public function actionDang_tin() {
-        if (Yii::app()->user->name == 'Guest'  || !isset(Yii::app()->user->userId)) {
+    public function actionDang_tin($currentPage = 1) {
+        if (Yii::app()->user->name == 'Guest' || !isset(Yii::app()->user->userId)) {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
 
@@ -150,15 +160,27 @@ class Khach_tim_xeController extends Controller {
                 if ($tinkhachhang->save(false)) {
                     $tinghepxe->ma_tin = $tinkhachhang->ma_tin;
                     $tinghepxe->save(false);
-                    $noticeMessage = "<h4 style='color:green'>Tin đăng của bạn đã được hiển thị tại trang rao vặt<h4>";
+                    $this->__message = "Tin đăng của bạn đã được hiển thị tại trang khách tìm xe";
                 }
             } else {
-                $noticeMessage = "<h4 style='color:red'>Tài khoản của bạn không đủ để đăng tin này</h4>";
+                $this->__message = "Tài khoản của bạn không đủ để đăng tin này";
             }
         }
 
+        $tinghepxe = new Tinghepxe();
+        $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMITED_REDCORD_KTXD, ' ma_loai_tin = ' . Tinghepxe::CODE_KTX);
+        $listTinKTX = $tinghepxe->listTinGhepXeByType($paginator, Tinghepxe::CODE_KTX);
         $data = array(
             'form' => $form
+        );
+
+        $data = array(
+            'form' => $form,
+            'listTinKTX' => $listTinKTX,
+            'paginator' => $paginator,
+            'urlPaginatorKTX' => 'khach_tim_xe/pagedtxtk?page=',
+            'ajaxElementId' => '#dang-tin-ktx',
+            'message' => $this->__message
         );
 
         if (Yii::app()->request->isAjaxRequest) {
@@ -168,15 +190,19 @@ class Khach_tim_xeController extends Controller {
         }
     }
 
+    public function actionPagedtxtk() {
+        $this->actionDang_tin(Yii::app()->request->getParam('page'));
+    }
+
     /**
      * Xem chi tiết tin khách tìm xe
      */
     public function actionXem_chi_tiet() {
         $maTin = Yii::app()->request->getParam('id');
-        if($maTin == ''){
+        if ($maTin == '') {
             $this->redirect(Yii::app()->homeUrl);
         }
-        
+
         $modelKTX = new Tinghepxe();
         if (!$tinKTX = $modelKTX->getTinGhepXe($maTin)) {
             $this->redirect(['site/index']);

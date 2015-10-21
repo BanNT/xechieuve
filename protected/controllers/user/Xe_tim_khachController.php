@@ -5,7 +5,17 @@
  */
 class Xe_tim_khachController extends Controller {
 
+    /**
+     * @var string
+     */
+    private $__message;
+
     const LIMITED_RECORD_XTK = 10;
+
+    /**
+     * Số bản ghi xe tìm khách tối đa được hiên thị ở trang đăng tin xe tìm khách
+     */
+    const LIMITED_REDCORD_XTKD = 1;
 
     /**
      * @param integer $currentPage
@@ -118,11 +128,11 @@ class Xe_tim_khachController extends Controller {
     /**
      * Đăng tin xe tìm khách
      */
-    public function actionDang_tin() {
-         if (Yii::app()->user->name == 'Guest'  || !isset(Yii::app()->user->userId)) {
+    public function actionDang_tin($currentPage = 1) {
+        if (Yii::app()->user->name == 'Guest' || !isset(Yii::app()->user->userId)) {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
-     
+
         $form = new CForm('application.views.user.xe_tim_khach.dang_tinForm');
         $form['tinkhachhang']->model = new Tinkhachhang();
         $form['tinghepxe']->model = $tinghepxe = new Tinghepxe();
@@ -138,15 +148,24 @@ class Xe_tim_khachController extends Controller {
                 if ($tinkhachhang->save(false)) {
                     $tinghepxe->ma_tin = $tinkhachhang->ma_tin;
                     $tinghepxe->save(false);
-                    $noticeMessage = "<h4 style='color:green'>Tin đăng của bạn đã được hiển thị tại trang rao vặt<h4>";
+                    $this->__message = "Tin đăng của bạn đã được hiển thị tại trang xe tìm khách";
                 }
             } else {
-                $noticeMessage = "<h4 style='color:red'>Tài khoản của bạn không đủ để đăng tin</h4>";
+                $this->__message = "Tài khoản của bạn không đủ để đăng tin";
             }
         }
 
+        $tinghepxe = new Tinghepxe();
+        $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMITED_REDCORD_XTKD, ' ma_loai_tin = ' . Tinghepxe::CODE_XTK);
+        $listTinXTK = $tinghepxe->listTinGhepXeByType($paginator, Tinghepxe::CODE_XTK);
+
         $data = array(
-            'form' => $form
+            'form' => $form,
+            'listTinXTK' => $listTinXTK,
+            'paginator' => $paginator,
+            'urlPaginatorXTK' => 'xe_tim_khach/pagedtxtk?page=',
+            'ajaxElementId' => '#dang-tin-xtk',
+            'message' => $this->__message
         );
 
         if (Yii::app()->request->isAjaxRequest) {
@@ -155,6 +174,11 @@ class Xe_tim_khachController extends Controller {
             $this->render('dang_tin', $data);
         }
     }
+
+    public function actionPagedtxtk() {
+        $this->actionDang_tin(Yii::app()->request->getParam('page'));
+    }
+
     /**
      * Xem chi tiết tin Xe tìm khách
      */
@@ -169,4 +193,5 @@ class Xe_tim_khachController extends Controller {
             'tinXTK' => $tinXTK
         ]);
     }
+
 }
