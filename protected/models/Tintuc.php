@@ -34,7 +34,7 @@ class Tintuc extends CActiveRecord {
         return array(
             array('tieu_de, tom_tat, noi_dung', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"',),
             array('trang_thai', 'numerical', 'integerOnly' => true),
-            array('tieu_de', 'length', 'max' => 80),
+            array('tieu_de', 'length', 'max' => 120),
             array('tom_tat', 'length', 'max' => 250),
             array('anh', 'length', 'max' => 255),
             array('meta_keyword', 'length', 'max' => 90),

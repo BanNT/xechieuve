@@ -7,9 +7,4 @@ $this->breadcrumbs=array(
 	'Error',
 );
 ?>
-
-<h2>Error <?php echo $code; ?></h2>
-
-<div class="error">
-<?php echo CHtml::encode($message); ?>
-</div>
+<a href="<?php echo Yii::app()->homeUrl?>"><img src="<?php echo Yii::app()->homeUrl?>/images/404.png" width="710" height="500"></a>
