@@ -77,7 +77,7 @@ class AdminLoginForm extends CFormModel {
     }
 
     /**
-     * Logs in the user using the given username and password in the model.
+     * Logs in the admin page using the given username and password in the model.
      * @return boolean whether login is successful
      */
     public function login() {

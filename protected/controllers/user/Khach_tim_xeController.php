@@ -64,6 +64,7 @@ class Khach_tim_xeController extends Controller {
      * Tìm kiếm khách dựa theo nơi di, nới đến, ngày khởi hành
      */
     public function actionTim_kiem_khach() {
+        //Chỉ chấp nhận ajax request
         if (Yii::app()->request->isAjaxRequest) {
             $condition = $listMaTin = $listMaTin1 = $listMaTin2 = '';
             $noiDi = Yii::app()->request->getParam('noi-di');
@@ -145,37 +146,35 @@ class Khach_tim_xeController extends Controller {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
 
-        $form = new CForm('application.views.user.khach_tim_xe.dang_tinForm');
-        $form['tinkhachhang']->model = new Tinkhachhang();
-        $form['tinghepxe']->model = $tinghepxe = new Tinghepxe();
+        $tinKhachHang = new Tinkhachhang();
+        $khachTimXe = new Tinghepxe();
         $noticeMessage = '';
 
-        if ($form->submitted('dangtin') && $form->validate()) {
+        if (isset($_POST['submit'])) {
+            $tinKhachHang->attributes = $_POST['Tinkhachhang'];
+            $khachTimXe->attributes = $_POST['Tinghepxe'];
 
-            $tinkhachhang = $form['tinkhachhang']->model;
-            $tinghepxe = $form['tinghepxe']->model;
-
-            if ($tinkhachhang->trutien(Tinghepxe::CODE_KTX)) {
-                $tinkhachhang->ma_loai_tin = Tinghepxe::CODE_KTX;
-                if ($tinkhachhang->save(false)) {
-                    $tinghepxe->ma_tin = $tinkhachhang->ma_tin;
-                    $tinghepxe->save(false);
-                    $this->__message = "Tin đăng của bạn đã được hiển thị tại trang khách tìm xe";
+            if ($tinKhachHang->validate(array('noi_dung_tin')) && $khachTimXe->validate()) {
+                if ($tinKhachHang->trutien(Tinghepxe::CODE_KTX)) {
+                    $tinKhachHang->ma_loai_tin = Tinghepxe::CODE_KTX;
+                    
+                    if ($tinKhachHang->save(false)) {
+                        $khachTimXe->ma_tin = $tinKhachHang->ma_tin;
+                        $khachTimXe->save(false);
+                        $this->__message = "Tin đăng của bạn đã được hiển thị tại trang khách tìm xe";
+                    }
+                } else {
+                    $this->__message = "Tài khoản của bạn không đủ để đăng tin này";
                 }
-            } else {
-                $this->__message = "Tài khoản của bạn không đủ để đăng tin này";
             }
         }
 
-        $tinghepxe = new Tinghepxe();
-        $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMITED_REDCORD_KTXD, ' ma_loai_tin = ' . Tinghepxe::CODE_KTX);
-        $listTinKTX = $tinghepxe->listTinGhepXeByType($paginator, Tinghepxe::CODE_KTX);
-        $data = array(
-            'form' => $form
-        );
+        $paginator = new Paginate($currentPage, $tinKhachHang, self::LIMITED_REDCORD_KTXD, ' ma_loai_tin = ' . Tinghepxe::CODE_KTX);
+        $listTinKTX = $khachTimXe->listTinGhepXeByType($paginator, Tinghepxe::CODE_KTX);
 
         $data = array(
-            'form' => $form,
+            'khachTimXe' => $khachTimXe,
+            'tinKhachHang' => $tinKhachHang,
             'listTinKTX' => $listTinKTX,
             'paginator' => $paginator,
             'urlPaginatorKTX' => 'khach_tim_xe/pagedtxtk?page=',

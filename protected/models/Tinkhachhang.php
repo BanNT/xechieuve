@@ -38,7 +38,7 @@ class Tinkhachhang extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('trang_thai,nguoi_lien_lac, so_dien_thoai, tieu_de_tin,noi_dung_tin,tinh_thanh', 'required',
-                'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
+                'message' => 'Bạn cần nhập thông tin vào ô trên'
             ),
             array('ma_khach_hang, ma_loai_tin,so_dien_thoai', 'numerical', 'integerOnly' => true,
                 'message' => '{attribute} không hợp lệ'
