@@ -188,10 +188,6 @@ body,ul,h4{
     line-height: 40px;
     padding: 0 20px;
 }
-.ct{width: 710px; height: auto; margin: -10px 0 0 -20px; border: 1px solid #ccc;}
-.ct td{border: 1px solid #ccc;}
-.ct1{width: 30%;}
-.ct2{width: 70%;}
 td{width: 100px}
 /*----------------------------end slide/table---------------------------------*/
 /*----------------------------------------------------------------------------*/
@@ -350,8 +346,10 @@ td{width: 100px}
 }
 /*--------END DANG KI-----------*/
 #detail-ktx section{
-    margin: 10px 0 0 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
 }
+#detail-ktx span{ width:auto; height:auto; float:left; margin-right: 5px;}
 
 .blue-text{
     color: blue;
