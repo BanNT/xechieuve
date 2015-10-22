@@ -17,8 +17,8 @@ $urlChiTietTin = Yii::app()->request->baseUrl . '/tin-tuc/xem-chi-tiet/' . Conve
             <header>
                 <h4> <a href="<?php echo $urlChiTietTin; ?>"><?php echo CHtml::encode($data->tieu_de); ?></a></h4>
             </header>
-            Ngày đăng:
-            <time datetime="+07:00" itemprop="datePublished" style="font-style: italic"><?php echo CHtml::encode($data->ngay_dang); ?></time>
+            
+            <time datetime="+07:00" itemprop="datePublished" style="font-style: italic"><?php echo CHtml::encode(date("h:i:sa d-m-Y", strtotime($data->ngay_dang))); ?></time>
             <article>
                 <br/><?php echo CHtml::encode($data->tom_tat); ?>
             </article>

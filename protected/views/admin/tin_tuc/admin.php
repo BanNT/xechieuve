@@ -65,9 +65,9 @@ $this->widget('zii.widgets.grid.CGridView', array(
             'value' => '$data->tieu_de',
             'header' => '<span ></span> Tiêu Đề',
         ),
-        array(
+        array( 
             'name' => 'ngay_dang',
-            'value' => '$data->ngay_dang',
+            'value' => 'date("h:i:sa d-m-Y", strtotime($data->ngay_dang))',
             'header' => '<span ></span> Ngày Đăng',
         ),
         array(
