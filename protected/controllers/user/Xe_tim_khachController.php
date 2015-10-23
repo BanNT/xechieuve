@@ -140,12 +140,17 @@ class Xe_tim_khachController extends Controller {
         if (isset($_POST['submit'])) {
             $tinKhachHang->attributes = Yii::app()->request->getParam('Tinkhachhang');
             $xeTimKhach->attributes = Yii::app()->request->getParam('Tinghepxe');
-
+            $xeTimKhach->ngay_khoi_hanh = Yii::app()->request->getParam('ngay_khoi_hanh');
+            
+//            Fixbug::var_dump(array($tinKhachHang->attributes,$xeTimKhach->attributes));
             if ($xeTimKhach->validate() && $tinKhachHang->validate()) {
-                if ($tinkhachhang->trutien(Tinghepxe::CODE_XTK)) {
-                    $tinkhachhang->ma_loai_tin = Tinghepxe::CODE_XTK;
-                    if ($tinkhachhang->save(false)) {
-                        $xeTimKhach->ma_tin = $tinkhachhang->ma_tin;
+                if ($tinKhachHang->trutien(Tinghepxe::CODE_XTK)) {
+                    $tinKhachHang->ma_loai_tin = Tinghepxe::CODE_XTK;
+                    $tinKhachHang->ma_khach_hang = Yii::app()->user->userId;
+                    
+//                    Fixbug::var_dump(array($tinKhachHang->attributes,$xeTimKhach->attributes));
+                    if ($tinKhachHang->save(false)) {
+                        $xeTimKhach->ma_tin = $tinKhachHang->ma_tin;
                         $xeTimKhach->save(false);
                         $this->__message = "Tin đăng của bạn đã được hiển thị tại trang xe tìm khách";
                     }
