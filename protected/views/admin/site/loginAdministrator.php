@@ -32,26 +32,26 @@
                     height: 38px !important;
                     border-radius: 8px !important;
                 }
-                input[type="submit"]{
+/*                input[type="submit"]{
                     background: none;
                     border: none;
                     outline:none;
                     color: #cccccc !important;
                     height: 20px !important;
-                }
-
+                }*/
+/*
                 input[type="submit"]:hover{
                     color: #fff !important;
-                }
+                }*/
                 .errorMessage{
-                    color: #FFF;
-                    background: #000;
+                    color: #ff0;
+                    font-family: cursive;
                 }
             </style>
     </head>
     <body>
 
-        <img src="<?php echo Yii::app()->baseUrl; ?>/images/background/hinh-nen-phong-canh-full-hd-dep.jpg" width="100%" style="position:fixed; z-index:-11111;" />
+        <img src="<?php echo Yii::app()->baseUrl; ?>/images/background/2_3.jpg" width="100%" style="position:fixed; z-index:-11111;" />
         <div class="container">
             <div class="row">
                 <?php
@@ -69,7 +69,7 @@
                 <div class="col-md-5">
                     <?php
                     echo $form->textField($model, 'username', array(
-                        'placeholder' => 'Username...',
+                        'placeholder' => 'Username',
                         'class' => 'form-control mo'
                     ));
                     ?>
@@ -79,7 +79,7 @@
                 <div class="col-md-5">
                     <?php
                     echo $form->passwordField($model, 'password', array(
-                        'placeholder' => 'Password...',
+                        'placeholder' => 'Password',
                         'class' => 'form-control mo'
                     ));
                     ?>
@@ -89,7 +89,7 @@
                 <div class="col-md-5">
                     <?php
                     echo CHtml::submitButton('Login', array(
-                        'class' => 'pull-right'
+                        'class' => 'pull-right btn btn-primary'
                     ));
                     ?>
                 </div>
