@@ -153,12 +153,11 @@ class Khach_tim_xeController extends Controller {
         if (isset($_POST['submit'])) {
             $tinKhachHang->attributes = Yii::app()->request->getParam('Tinkhachhang');
             $khachTimXe->attributes = Yii::app()->request->getParam('Tinghepxe');
-            $khachTimXe->ngay_khoi_hanh = Yii::app()->request->getParam('ngay_khoi_hanh');
+            //$khachTimXe->ngay_khoi_hanh = Yii::app()->request->getParam('ngay_khoi_hanh');
 
             if ($khachTimXe->validate() && $tinKhachHang->validate()) {
                 if ($tinKhachHang->trutien(Tinghepxe::CODE_KTX)) {
                     $tinKhachHang->ma_loai_tin = Tinghepxe::CODE_KTX;
-                    $tinKhachHang->ngay_dang = getdate();
                     $tinKhachHang->ma_khach_hang = Yii::app()->user->userId;
 
                     if ($tinKhachHang->save(false)) {

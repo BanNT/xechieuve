@@ -29,10 +29,10 @@ class Xe_tim_khachController extends Controller {
             Yii::app()->session['condition'] = null;
         }
 
-        $tinghepxe = new Tinghepxe();
+        $xeTimKhach = new Tinghepxe();
         //table xe tim khach
         $paginatorXTK = new Paginate($currentPage, new Tinkhachhang(), self::LIMITED_RECORD_XTK, ' ma_loai_tin = ' . Tinghepxe::CODE_XTK . $condition);
-        $xetimkhach = $tinghepxe->listTinGhepXeByType($paginatorXTK, Tinghepxe::CODE_XTK, $condition);
+        $xetimkhach = $xeTimKhach->listTinGhepXeByType($paginatorXTK, Tinghepxe::CODE_XTK, $condition);
         //render view
         $data = array(
             'xetimkhach' => $xetimkhach,
@@ -133,34 +133,34 @@ class Xe_tim_khachController extends Controller {
             $this->redirect(Yii::app()->homeUrl . 'dang-nhap');
         }
 
-        $form = new CForm('application.views.user.xe_tim_khach.dang_tinForm');
-        $form['tinkhachhang']->model = new Tinkhachhang();
-        $form['tinghepxe']->model = $tinghepxe = new Tinghepxe();
+        $tinKhachHang = new Tinkhachhang();
+        $xeTimKhach = new Tinghepxe();
         $noticeMessage = '';
 
-        if ($form->submitted('dangtin') && $form->validate()) {
+        if (isset($_POST['submit'])) {
+            $tinKhachHang->attributes = Yii::app()->request->getParam('Tinkhachhang');
+            $xeTimKhach->attributes = Yii::app()->request->getParam('Tinghepxe');
 
-            $tinkhachhang = $form['tinkhachhang']->model;
-            $tinghepxe = $form['tinghepxe']->model;
-
-            if ($tinkhachhang->trutien(Tinghepxe::CODE_XTK)) {
-                $tinkhachhang->ma_loai_tin = Tinghepxe::CODE_XTK;
-                if ($tinkhachhang->save(false)) {
-                    $tinghepxe->ma_tin = $tinkhachhang->ma_tin;
-                    $tinghepxe->save(false);
-                    $this->__message = "Tin đăng của bạn đã được hiển thị tại trang xe tìm khách";
+            if ($xeTimKhach->validate() && $tinKhachHang->validate()) {
+                if ($tinkhachhang->trutien(Tinghepxe::CODE_XTK)) {
+                    $tinkhachhang->ma_loai_tin = Tinghepxe::CODE_XTK;
+                    if ($tinkhachhang->save(false)) {
+                        $xeTimKhach->ma_tin = $tinkhachhang->ma_tin;
+                        $xeTimKhach->save(false);
+                        $this->__message = "Tin đăng của bạn đã được hiển thị tại trang xe tìm khách";
+                    }
+                } else {
+                    $this->__message = "Tài khoản của bạn không đủ để đăng tin";
                 }
-            } else {
-                $this->__message = "Tài khoản của bạn không đủ để đăng tin";
             }
         }
 
-        $tinghepxe = new Tinghepxe();
         $paginator = new Paginate($currentPage, new Tinkhachhang(), self::LIMITED_REDCORD_XTKD, ' ma_loai_tin = ' . Tinghepxe::CODE_XTK);
-        $listTinXTK = $tinghepxe->listTinGhepXeByType($paginator, Tinghepxe::CODE_XTK);
+        $listTinXTK = $xeTimKhach->listTinGhepXeByType($paginator, Tinghepxe::CODE_XTK);
 
         $data = array(
-            'form' => $form,
+            'xeTimKhach' => $xeTimKhach,
+            'tinKhachHang' => $tinKhachHang,
             'listTinXTK' => $listTinXTK,
             'paginator' => $paginator,
             'urlPaginatorXTK' => 'xe_tim_khach/pagedtxtk?page=',

@@ -49,7 +49,7 @@ class Tinghepxe extends CActiveRecord {
                 'message' => '"{attribute}" của bạn vượt quá 200 kí tự cho phép'
             ),
             array('noi_den_tinh', 'length', 'max' => 2),
-//            array('ngay_khoi_hanh', 'safe'),
+            array('ngay_khoi_hanh', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_tin, dia_chi_di, dia_chi_den, noi_den_tinh, ngay_khoi_hanh, ma_loai_xe_ghep', 'safe', 'on' => 'search'),
@@ -130,15 +130,16 @@ class Tinghepxe extends CActiveRecord {
      */
     public function listTinGhepXeByType(Paginate $paginator, $maLoaiTin, $condition = null) {
         return Yii::app()->db->createCommand()
-                        ->select('tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,nguoi_lien_lac,so_dien_thoai,'
+                        ->select('tinghepxe.ma_tin,tieu_de_tin,date(ngay_dang) as ngay_dang_tin,tinh_thanh,dia_chi_di,dia_chi_den,noi_den_tinh,ngay_khoi_hanh,khachhang.ten_khach_hang as nguoi_lien_lac,khachhang.so_dien_thoai,'
                                 . 'CASE '
                                     . 'WHEN trang_thai=0 THEN "Đang chờ" '
                                     . 'WHEN trang_thai=1 THEN "Đã tìm được" '
                                 . 'END AS trang_thai_tin'
                         )
-                        ->from('tinghepxe')
+                        ->from('tinkhachhang')
                         ->where('ma_loai_tin = ' . $maLoaiTin . $condition)
-                        ->join('tinkhachhang', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
+                        ->join('tinghepxe', 'tinkhachhang.ma_tin = tinghepxe.ma_tin')
+                        ->join('khachhang', 'khachhang.ma_khach_hang = tinkhachhang.ma_khach_hang')
                         ->limit($paginator->limit, $paginator->offset)
                         ->order('trang_thai,ngay_dang DESC')
                         ->queryAll()

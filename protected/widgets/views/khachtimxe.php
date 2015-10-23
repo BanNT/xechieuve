@@ -38,7 +38,7 @@ $provinces = Province::listProvinces();
                             ?>
                         </td>
                         <td><?php echo CHtml::encode(date("d-m-Y", strtotime($data['ngay_khoi_hanh']))); ?></td>
-                        <td><?php echo CHtml::encode($data['nguoi_lien_lac']); ?></td>
+                        <td><?php echo CHtml::encode($data['nguoi_lien_lac']); ?><br/><?php echo CHtml::encode($data['so_dien_thoai']); ?></td>
                         <td><?php echo CHtml::encode($data['trang_thai_tin']);?></td>
 
                     </tr>
