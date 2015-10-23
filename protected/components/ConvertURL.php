@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Tạo URL đẹp bằng cách chuyển dổi chúng thành dạng non unicode và chữ thường
+ * Tạo frendly URL
  * @author Tran Van Hoang <phatradang@gmail.com>
  */
 class ConvertURL extends CComponent {

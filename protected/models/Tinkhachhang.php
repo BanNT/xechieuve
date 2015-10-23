@@ -34,10 +34,8 @@ class Tinkhachhang extends CActiveRecord {
      * @return array validation rules for model attributes.
      */
     public function rules() {
-        // NOTE: you should only define rules for those attributes that
-        // will receive user inputs.
         return array(
-            array('trang_thai,nguoi_lien_lac, so_dien_thoai, tieu_de_tin,noi_dung_tin,tinh_thanh', 'required',
+            array('tieu_de_tin,noi_dung_tin,tinh_thanh', 'required',
                 'message' => 'Bạn cần nhập thông tin vào ô trên'
             ),
             array('ma_khach_hang, ma_loai_tin,so_dien_thoai', 'numerical', 'integerOnly' => true,
@@ -50,7 +48,6 @@ class Tinkhachhang extends CActiveRecord {
             array('tinh_thanh', 'length', 'max' => 2),
             array('noi_dung_tin, ngay_dang', 'safe'),
             // The following rule is used by search().
-            // @todo Please remove those attributes that should not be searched.
             array('ma_tin, ma_khach_hang, nguoi_lien_lac, so_dien_thoai, tieu_de_tin, noi_dung_tin, tinh_thanh, ngay_dang, ma_loai_tin', 'safe', 'on' => 'search'),
         );
     }
@@ -132,7 +129,7 @@ class Tinkhachhang extends CActiveRecord {
      * trừ tiền dựa theo mã loại tin
      */
     public function trutien($maLoaiTin) {
-        //lấy giá tiền cần có để đăng tin rao vặt
+        //lấy giá tiền cần có để đăng tin
         $giaTien = Loaitin::model()->findByPk($maLoaiTin)->gia_dang;
         //lấy tổng số tiền trong tài khoản của khách hàng
         $tongTien = Khachhang::model()->findByPk(Yii::app()->user->userId)->so_du_tai_khoan;
@@ -147,6 +144,8 @@ class Tinkhachhang extends CActiveRecord {
                 ))) {
             return true;
         }
+        
+        return false;
     }
 
     /**

@@ -151,15 +151,19 @@ class Khach_tim_xeController extends Controller {
         $noticeMessage = '';
 
         if (isset($_POST['submit'])) {
-            $tinKhachHang->attributes = $_POST['Tinkhachhang'];
-            $khachTimXe->attributes = $_POST['Tinghepxe'];
+            $tinKhachHang->attributes = Yii::app()->request->getParam('Tinkhachhang');
+            $khachTimXe->attributes = Yii::app()->request->getParam('Tinghepxe');
+            $khachTimXe->ngay_khoi_hanh = Yii::app()->request->getParam('ngay_khoi_hanh');
 
-            if ($tinKhachHang->validate(array('noi_dung_tin')) && $khachTimXe->validate()) {
+            if ($khachTimXe->validate() && $tinKhachHang->validate()) {
                 if ($tinKhachHang->trutien(Tinghepxe::CODE_KTX)) {
                     $tinKhachHang->ma_loai_tin = Tinghepxe::CODE_KTX;
-                    
+                    $tinKhachHang->ngay_dang = getdate();
+                    $tinKhachHang->ma_khach_hang = Yii::app()->user->userId;
+
                     if ($tinKhachHang->save(false)) {
                         $khachTimXe->ma_tin = $tinKhachHang->ma_tin;
+
                         $khachTimXe->save(false);
                         $this->__message = "Tin đăng của bạn đã được hiển thị tại trang khách tìm xe";
                     }

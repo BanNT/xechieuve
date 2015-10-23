@@ -41,7 +41,7 @@ class Tinghepxe extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('dia_chi_di,ngay_khoi_hanh, dia_chi_den, noi_den_tinh, ma_loai_xe_ghep', 'required',
+            array('dia_chi_di,ngay_khoi_hanh,dia_chi_den', 'required',
                 'message' => 'Bạn cần nhập thông tin vào ô "{attribute}"'
             ),
             array('ma_tin, ma_loai_xe_ghep', 'numerical', 'integerOnly' => true),
@@ -49,7 +49,7 @@ class Tinghepxe extends CActiveRecord {
                 'message' => '"{attribute}" của bạn vượt quá 200 kí tự cho phép'
             ),
             array('noi_den_tinh', 'length', 'max' => 2),
-            array('ngay_khoi_hanh', 'safe'),
+//            array('ngay_khoi_hanh', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('ma_tin, dia_chi_di, dia_chi_den, noi_den_tinh, ngay_khoi_hanh, ma_loai_xe_ghep', 'safe', 'on' => 'search'),

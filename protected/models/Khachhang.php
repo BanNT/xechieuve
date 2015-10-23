@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 /**
  * This is the model class for table "khachhang".
@@ -42,8 +42,9 @@ class Khachhang extends CActiveRecord {
     public $oldPassword;
     public $newPassword;
     public $newconfirmPassword;
-   public $idkhach;
-   public $id;
+    public $idkhach;
+    public $id;
+
     /**
      * @return string the associated database table name
      */
@@ -74,7 +75,7 @@ class Khachhang extends CActiveRecord {
             array('ten_khach_hang, ten_dang_nhap,email, so_dien_thoai, dia_chi', 'required',
                 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'updateSDTK'
             ),
-            array('password', 'required','message' => 'Bạn không được bỏ trống "{attribute}" ', 'on' => 'update'),
+            array('password', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}" ', 'on' => 'update'),
             //update pass
             array('oldPassword,newPassword,newconfirmPassword', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'updatepass'),
             array('newPassword', 'compare', 'compareAttribute' => 'newconfirmPassword',
@@ -82,8 +83,7 @@ class Khachhang extends CActiveRecord {
             ),
             //dang tin khach
             array('idkhach', 'required', 'message' => 'Bạn không được bỏ trống "{attribute}"', 'on' => 'dang_tin_khach'
-                ),
-            
+            ),
             //array('oldPassword', 'compare', 'compareAttribute' => 'password',
             //  'message' => 'Mật khẩu không khớp','on'=>'updatepass'
             //),
@@ -94,7 +94,7 @@ class Khachhang extends CActiveRecord {
             array('ten_khach_hang, ten_dang_nhap, email', 'length', 'max' => 80,
                 'message' => '{attribute} phải dưới 80 kí tự'
             ),
-            array('so_du_tai_khoan', 'length', 'max' => 14,'message'=>'Số dư tài khoản có chiều dài tối đa 14 kí tự'),
+            array('so_du_tai_khoan', 'length', 'max' => 14, 'message' => 'Số dư tài khoản có chiều dài tối đa 14 kí tự'),
             array('email', 'email', 'message' => 'Email không hợp lệ'),
             array('password', 'length', 'max' => 40),
             array('so_dien_thoai', 'length', 'max' => 11),
@@ -153,11 +153,11 @@ class Khachhang extends CActiveRecord {
             'anh_dai_dien' => 'Ảnh đại diện:',
             'confirmPassword' => 'Nhập lại mật khẩu:',
             'dia_chi' => 'Địa chỉ:',
-            'id'=>'ID:',
+            'id' => 'ID:',
             'oldPassword' => 'Mật khẩu cũ:',
             'newPassword' => 'Mật khẩu mới',
             'newconfirmPassword' => 'Nhập lại mật khẩu mới',
-            'idkhach'=>'ID khách hàng:',
+            'idkhach' => 'ID khách hàng:',
             'dieukhoan' => '
                 <a type="button" data-toggle="modal" data-target=".bs-example-modal-lg">Điều khoản sử dụng.</a>
                 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -245,8 +245,8 @@ class Khachhang extends CActiveRecord {
                 . " WHERE ma_khach_hang = $ma_khach_hang";
         Yii::app()->db->createCommand($sql)->execute();
     }
-    public function TTkhach($id,$user)
-    {
+
+    public function TTkhach($id, $user) {
         return Yii::app()->db->createCommand()
                         ->select('ma_khach_hang, ten_khach_hang, ten_dang_nhap, password ,so_du_tai_khoan')
                         ->from('khachhang')
@@ -254,4 +254,5 @@ class Khachhang extends CActiveRecord {
                         ->queryRow()
         ;
     }
+
 }

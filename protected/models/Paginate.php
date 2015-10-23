@@ -79,10 +79,9 @@ class Paginate {
         
         $sql = 'SELECT COUNT(*) FROM ' . $table->tableName();
         $sql .= isset($this->__condition) ? " WHERE " . $this->__condition : '';
-        
         $quantityRecord = $table->countBySql($sql);
-        $RecordDisplay = $this->limit;
-        $this->totalPage = ceil($quantityRecord / $RecordDisplay);
+        $this->totalPage = ceil($quantityRecord / $this->limit);
+        
         return $this->totalPage;
     }
 
@@ -92,11 +91,13 @@ class Paginate {
     private function __getOffset() {
         $limitedRecord = $this->limit;
         $currentPage = $this->currentPage;
+        
         if (($currentPage == null) || ($currentPage == 1)) {
             $offset = 0;
         } else {
             $offset = ($currentPage - 1) * $limitedRecord;
         }
+        
         return $offset;
     }
 
