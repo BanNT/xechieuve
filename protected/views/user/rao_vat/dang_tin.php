@@ -6,7 +6,7 @@ if ($message) {
     ));
 }
 ?>
-
+<div class="pribox">ĐĂNG TIN</div>
 <section id="dangtinrv">
     <script src="<?php echo Yii::app()->baseUrl . '/js/ckeditor/ckeditor.js'; ?>"></script>
     <?php echo $form; ?>

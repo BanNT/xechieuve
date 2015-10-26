@@ -1,5 +1,4 @@
 <?php
-
 return array(
     'enctype' => 'multipart/form-data',
     'elements' => array(
@@ -13,34 +12,34 @@ return array(
                 '<div class="col-xs-12 col-sm-6 col-md-6">',
                 'nguoi_lien_lac' => array(
                     'type' => 'text',
-                    'class' => 'form-control'
+                    'class' => 'form-control gray'
                 ),
                 '</div>'
                 . '<div class="col-xs-12 col-sm-5 col-md-5 pull-right">',
                 'so_dien_thoai' => array(
                     'type' => 'text',
-                    'class' => 'form-control'
+                    'class' => 'form-control gray'
                 ),
                 '</div>'
                 . '<div class="clearfix"></div>'
                 . '<div class="col-xs-12 col-sm-6 col-md-6">',
                 'tieu_de_tin' => array(
                     'type' => 'text',
-                    'class' => 'form-control',
+                    'class' => 'form-control gray',
                 ),
                 '</div>'
                 . '<div class="col-xs-12 col-sm-5 col-md-5 pull-right">',
                 'tinh_thanh' => array(
                     'type' => 'dropdownlist',
                     'items' => Province::listProvinces(),
-                    'class' => 'form-control'
+                    'class' => 'form-control gray'
                 ),
                 '</div>'
                 . '<div class="col-md-12">',
                 'noi_dung_tin' => array(
                     'type' => 'textarea',
                     'rows' => '10',
-                    'class' => 'form-control',
+                    'class' => 'form-control gray',
                     'id' => 'noi-dung-tin'
                 ),
                 '</div>'
@@ -53,13 +52,13 @@ return array(
                 'ma_loai_tin_rv' => array(
                     'type' => 'dropdownlist',
                     'items' => Loaitinraovat::optionLoaiTinRV(),
-                    'class' => 'form-control'
+                    'class' => 'form-control gray'
                 ),
                 '</div>'
                 . '<div class="col-xs-12 col-sm-5 col-md-5 pull-right">',
                 'gia_rao_vat' => array(
                     'type' => 'text',
-                    'class' => 'form-control'
+                    'class' => 'form-control gray'
                 ),
                 '</div>'
                 . '<div class="col-xs-12 col-md-5">',
@@ -75,8 +74,9 @@ return array(
         'dangtin' => array(
             'type' => 'submit',
             'label' => 'Đăng tin',
-            'class' => 'btn-success'
+            'class' => 'btn-success but'
         ),
         '</div>'
     ),
 );
+?>

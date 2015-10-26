@@ -305,6 +305,8 @@ td{width: 100px}
 
 #dangtinrv{
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 .formdangkytaikhoan
 {
@@ -530,4 +532,52 @@ td{width: 100px}
 }
 #dangtinkhach .btndangki
 {margin-top: 5px;
+}
+/*------------------------------dang tin bo sung----------------------------------*/
+#error
+{
+    padding-left: 20px;
+}
+.box-dangtin
+{
+    border: 1px solid #ccc;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.dangtin
+{
+    border-radius: 0px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.ma
+{
+    background: #dad8d9;
+    border-radius: 0px;
+    float: left;
+    height: 100%;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.la
+{
+    color: #0163a2;
+    float: left;
+    margin-left: 20px;
+}
+.but
+{
+    background: #0163a2;
+    border: none;
+    color: #fff;
+    height: 35px;
+    width: 100px;
+}
+.gray
+{
+    background: #dad8d9;
+    border: 1px solid #ccc;
+    border-radius: 0px;
 }

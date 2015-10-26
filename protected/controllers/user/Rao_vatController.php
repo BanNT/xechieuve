@@ -67,7 +67,6 @@ class Rao_vatController extends Controller {
             $form = new CForm('application.views.user.rao_vat._form');
             $form['tinkhachhang']->model = new Tinkhachhang();
             $form['tinraovat']->model = $tinraovat = new Tinraovat();
-            $form->title = 'Đăng tin rao vặt:';
             $noticeMessage = '';
 
             if ($form->submitted('dangtin') && $form->validate()) {
